@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="epistles">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests epistles -->
+    <test>
+       <url>/context:epistles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:epistles (Home) tests -->
+	<test>
+       <url>/context:epistles</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles</url>
+       <xpath>//xhtml:img/@src[.='/epistles/images/home/salisbury_home.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles</url>
+       <xpath>//xhtml:figcaption[contains(.,'Folio from Salisbury')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles</url>
+       <xpath>//xhtml:p[contains(.,'Saint Patrick of Ireland')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles</url>
+       <xpath>//xhtml:a[contains(.,'Saint Patrick’s Confessio')]</xpath>
+    </test>
+
+<!-- /o:epistles.1400 (D-Text) tests -->    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:a[contains(.,'D-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:h3[contains(.,'Electronic transcription')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:a[contains(.,'Transcription view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:p[contains(.,'The chapter, page')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:span[contains(.,'Editor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:span[contains(.,'redulitatis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400</url>
+       <xpath>//xhtml:span[contains(.,'between the canonical lines 243.17')]</xpath>
+    </test>
+    
+    <!-- Transcription view -->
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'D-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h3[contains(.,'Electronic transcription')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'Transcription view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'The chapter, page')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'Editor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'redulitatis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'between the canonical lines 243.17')]</xpath>
+    </test>
+	
+	<!-- Canonical view -->
+	<test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:p[contains(.,'The canonical presentation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 1]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'autem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'Substantial text')]</xpath>
+    </test>
+    
+    <!-- About the manuscript -->
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Liber Ardmachanus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:strong[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'The Book of Armagh')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1400/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'Liber Ardmachanus = The Book')]</xpath>
+    </test>
+	
+<!-- /o:epistles.1401 (P-Text) tests -->    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:a[contains(.,'P-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:p[contains(.,'The chapter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:span[contains(.,'[235.01]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401</url>
+       <xpath>//xhtml:span[contains(.,'(14)')]</xpath>
+    </test>
+
+    <!-- Transcription view -->
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'P-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'The chapter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'[235.01]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'(14)')]</xpath>
+    </test>
+    
+    <!-- Canonical view -->
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:p[contains(.,'The folio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'terre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 10]')]</xpath>
+    </test>
+    
+    <!-- About the manuscript -->
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Bibliothèque nationale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'Epistola of St Patrick')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1401/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'R. Bleier')]</xpath>
+    </test>
+    
+<!-- /o:epistles.1402 (V-Text) tests -->
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:a[contains(.,'V-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:p[contains(.,'The diplomatic transcription')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:span[contains(.,'cito')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402</url>
+       <xpath>//xhtml:span[contains(.,'Substantial text missing')]</xpath>
+    </test>
+    
+    <!-- Transcription view -->
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'V-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'The diplomatic transcription')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'cito')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'Substantial text missing')]</xpath>
+    </test>
+    
+    <!-- Canonical view -->
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:p[contains(.,'line numbers')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'sicut')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <!-- About the manuscript -->
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Médiathèque municipale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'According to Bieler')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1402/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'ischer and A. Harvey')]</xpath>
+    </test>
+
+<!-- /o:epistles.1403 (R-Text) tests -->    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:a[contains(.,'R-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403</url>
+       <xpath>//xhtml:span[contains(.,'[235.13]')]</xpath>
+    </test>
+    
+    <!-- Transcription view -->
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'R-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'[235.13]')]</xpath>
+    </test>
+    
+    <!-- Canonical view -->
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'canonical numbers from')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 13]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'ancxietatem')]</xpath>
+    </test>
+    
+    <!-- About the manuscript -->
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Bibliothèque municipale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'The R-text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1403/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'Libri epistolarum')]</xpath>
+    </test>
+    
+<!-- /o:epistles.1404 (C-Text) tests -->
+	<test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:a[contains(.,'C-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404</url>
+       <xpath>//xhtml:span[contains(.,'[235.10]')]</xpath>
+    </test>
+
+	<!-- Transcription view -->
+	<test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'C-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'[235.10]')]</xpath>
+    </test>
+    
+	<!-- Canonical view -->
+	<test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'canonical numbers from')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 4]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'fugam')]</xpath>
+    </test>
+    
+	<!-- About the manuscript -->
+	<test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'British Library, London')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'The common ancestor of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1404/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'Libri epistolarum')]</xpath>
+    </test>
+	
+<!-- /o:epistles.1405 (G-Text) tests -->
+	<test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:a[contains(.,'G-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405</url>
+       <xpath>//xhtml:span[contains(.,'[237.23]')]</xpath>
+    </test>
+    
+    <!-- Transcription view -->
+	<test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'G-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'[237.23]')]</xpath>
+    </test>
+    
+	<!-- Canonical view -->
+	<test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'canonical numbers from')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 4]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'abunde')]</xpath>
+    </test>
+    
+	<!-- About the manuscript -->
+	<test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Cathedral Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'The common ancestor of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1405/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'Libri epistolarum')]</xpath>
+    </test>
+    
+<!-- /o:epistles.1406 (F-Text) tests -->
+	<test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:a[contains(.,'F-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406</url>
+       <xpath>//xhtml:span[contains(.,'[241.06]')]</xpath>
+    </test>
+    
+    <!-- Transcription view -->
+	<test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:a[contains(.,'F-Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:p[contains(.,'of the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=transcription</url>
+       <xpath>//xhtml:span[contains(.,'[241.06]')]</xpath>
+    </test>
+    
+	<!-- Canonical view -->
+	<test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:a[contains(.,'Canonical view')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'canonical numbers from')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'[Chap. 4]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=canonical</url>
+       <xpath>//xhtml:span[contains(.,'inuoca')]</xpath>
+    </test>
+    
+	<!-- About the manuscript -->
+	<test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:a[contains(.,'About the manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Cathedral Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:p[contains(.,'The common ancestor of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1406/sdef:TEI/get?mode=msdesc</url>
+       <xpath>//xhtml:li[contains(.,'Libri epistolarum')]</xpath>
+    </test>
+    
+<!-- /context:epistles?mode=intro-general (Introduction) tests -->        
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <xpath>//xhtml:a[contains(.,'Introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <xpath>//xhtml:h3[contains(.,'Introduction to the project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-general</url>
+       <xpath>//xhtml:p[contains(.,'Patrick of Ireland')]</xpath>
+    </test>
+    
+    <!-- The manuscript witness -->
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <xpath>//xhtml:a[contains(.,'manuscript witnesses')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <xpath>//xhtml:h3[contains(.,'The manuscript witnesses')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-manuscripts</url>
+       <xpath>//xhtml:p[contains(.,'No autograph of Patrick')]</xpath>
+    </test>
+    
+    <!-- Brief editorial history -->    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <xpath>//xhtml:a[contains(.,'Brief editorial history')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <xpath>//xhtml:h3[contains(.,'Brief editorial history of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editions</url>
+       <xpath>//xhtml:p[contains(.,'The first print editions')]</xpath>
+    </test>
+    
+    <!-- Editorial conventions -->
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:a[contains(.,'Editorial conventions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:h3[contains(.,'Editorial conventions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:p[contains(.,'The digital edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=intro-editorial</url>
+       <xpath>//xhtml:li[contains(.,'Abbreviations are styled')]</xpath>
+    </test>
+
+<!-- /context:epistles?mode=about (About) tests -->    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:span[contains(.,'Project title:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Initial work on')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:li[contains(.,'Susan Schreibman')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epistles?mode=about</url>
+       <xpath>//xhtml:img/@src[.='/epistles/images/logos/funding_logos.png']</xpath>
+    </test>
+
+<!-- /o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro (Compare transcriptions) tests -->    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:a[contains(.,'Compare transcriptions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:h3[contains(.,'InCritApp')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:img/@src[.='/epistles/images/icons/JSON_logo.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:span[contains(.,'Compare the versions of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:p[contains(.,'was developed as')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp_Intro</url>
+       <xpath>//xhtml:h5[contains(.,'General information about')]</xpath>
+    </test>
+
+<!-- /o:epistles.1996/sdef:TEI/get?mode=InCritApp (InCritApp) tests -->    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:a[contains(.,'InCritApp')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:img/@src[.='/epistles/images/icons/JSON_logo.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:button/@id[.='infobox_button']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:h4[contains(.,'Citation information:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:h5[contains(.,'Overview Heatmap')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:div/@id[.='heatmap']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:li[contains(.,'Number of Texts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epistles.1996/sdef:TEI/get?mode=InCritApp</url>
+       <xpath>//xhtml:input[contains(.,'Graph')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint (Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Project lead, modelling')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'All content and')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epistles/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Centre for Information Modelling')]</xpath>
+    </test>	
+      	          
+</TestCase>

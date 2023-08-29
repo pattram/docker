@@ -1,0 +1,46 @@
+<gml:FeatureCollection xmlns:ex="http://example.org/" xmlns:gdas="http://cm4f.org/gdas/"
+ 	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml"
+ 	xmlns:ogr="http://ogr.maptools.org/">
+    <gml:name>Feature Collection</gml:name>
+    <gdas:PID>o:emile.ingest.gml.1</gdas:PID>
+    <gml:boundedBy>
+        <gml:Box srsName="EPSG:3857">
+        	<gml:coord>
+				<gml:X>0.0</gml:X>
+				<gml:Y>0.0</gml:Y>
+			</gml:coord>
+			<gml:coord>
+				<gml:X>100.0</gml:X>
+				<gml:Y>100.0</gml:Y>
+			</gml:coord>
+        </gml:Box>
+    </gml:boundedBy>
+    <gml:featureMember>
+        <ex:Landmark>
+            <ogr:geometryProperty>
+                <gml:Point srsName="EPSG:3857">
+                    <gml:coord>
+						<gml:X>2.35237</gml:X>
+						<gml:Y>48.8606</gml:Y>
+					</gml:coord>
+                </gml:Point>
+            </ogr:geometryProperty>
+            <dc:identifier>http://example.org/centrePompidou</dc:identifier>
+            <dc:title>Centre Georges Pompidou</dc:title>
+         </ex:Landmark>
+    </gml:featureMember>
+     <gml:featureMember>
+        <ex:Landmark>
+            <ogr:geometryProperty>
+                <gml:Point srsName="EPSG:3857">
+                    <gml:coord>
+						<gml:X>2.33587</gml:X>
+						<gml:Y>48.86102</gml:Y>
+					</gml:coord>
+              	</gml:Point>
+            </ogr:geometryProperty>
+            <dc:identifier>http://example.org/museeLouvre</dc:identifier>
+            <dc:title>Musée du Louvre </dc:title>
+        </ex:Landmark>
+    </gml:featureMember>
+  </gml:FeatureCollection>

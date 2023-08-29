@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="dipko">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests dipko -->
+    <test>
+       <url>/context:dipko</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rbe</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hbg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=team</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=intro</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=ack</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=usage</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=gl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=abbr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=terms</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=tech</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.lit</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.persons</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.places</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.events</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.glossary</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.sachkommentare</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hinreise</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rueckreise</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rbe/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Adipko.rb%2FDC%2F2020-08-31T11%3A43%3A24.745Z&amp;style=https%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Adipko.rb%2Fmethods%2Fsdef%3ATEI%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Adipko.rb&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Adipko.rb%2Fcanvas%2FIMG.A</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/viewer/viewer.html?mets=https://gams.uni-graz.at/cocoon/mets2json?source=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Adipko.rb%2FMETS_SOURCE#page/1/mode/2up</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/METS_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hbg/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.persons/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.persons/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.places/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.places/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.events/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.events/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.glossary/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.glossary/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.sachkommentare/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dipko.sachkommentare/RDF</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:dipko (Home) tests -->
+	<test>
+       <url>/context:dipko</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko</url>
+       <xpath>//xhtml:h3[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko</url>
+       <xpath>//xhtml:p[contains(.,'Im Rahmen des')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko</url>
+       <xpath>//xhtml:a[contains(.,'Zum Historischen Kontext')]</xpath>
+    </test>
+
+<!-- /o:dipko.rbe (Reisebericht/Einleitung) tests -->    
+    <test>
+       <url>/o:dipko.rbe</url>
+       <xpath>//xhtml:a[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rbe</url>
+       <xpath>//xhtml:p[contains(.,'Die Reisebeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rbe</url>
+       <xpath>//xhtml:img/@src[.='/o:dipko.rbe/ABB3']</xpath>
+    </test>
+
+<!-- /o:dipko.rb (Reisebericht/Edition) tests -->    
+    <test>
+       <url>/o:dipko.rb</url>
+       <xpath>//xhtml:a[contains(.,'Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb</url>
+       <xpath>//xhtml:div[contains(.,'Schrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb</url>
+       <xpath>//xhtml:div[contains(.,'Eine Kopie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb</url>
+       <xpath>//xhtml:img/@src[.='/o:dipko.rb/IMG.A']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,' - 328 -')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:p[contains(.,'Darin werden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <xpath>//xhtml:a[contains(.,'Von entlaßung deß baylo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/iiif/o:dipko.rb/IMG.24a/full/,400/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <xpath>//xhtml:span[contains(.,'stäblein an den')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <xpath>//xhtml:span[contains(.,'Sachkommentar ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rb/sdef:TEI/get?mode=view:read</url>
+       <xpath>//xhtml:input/@id[.='checkboxGloSa']</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=about (Über das Projekt) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Zum Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'liegt die These')]</xpath>
+    </test>
+
+<!-- /o:dipko.hbg (Historischer Kontext) tests -->    
+    <test>
+       <url>/o:dipko.hbg</url>
+       <xpath>//xhtml:a[contains(.,'Historischer Kontext')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hbg</url>
+       <xpath>//xhtml:h4[contains(.,'Konfliktmanagement')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hbg</url>
+       <xpath>//xhtml:blockquote[contains(.,'er halte mich')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=team (Team) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:img/@src[.='/context:dipko/TEAMIMAGE_8']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:p[contains(.,'ist spezialisiert auf')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:h3[contains(.,'Team')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=intro (Einführung in die Edition) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=intro</url>
+       <xpath>//xhtml:a[contains(.,'Einführung in die Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=intro</url>
+       <xpath>//xhtml:p[contains(.,'Gesandtschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=intro</url>
+       <xpath>//xhtml:h3[contains(.,'Einführung in die Edition')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=ack (Danksagung) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=ack</url>
+       <xpath>//xhtml:a[contains(.,'Danksagung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=ack</url>
+       <xpath>//xhtml:h3[contains(.,'Danksagung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=ack</url>
+       <xpath>//xhtml:p[contains(.,'Stadtarchivar Herrn')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=usage (Zur Benützung) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=usage</url>
+       <xpath>//xhtml:a[contains(.,'Benützung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=usage</url>
+       <xpath>//xhtml:h3[contains(.,'Benützung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=usage</url>
+       <xpath>//xhtml:li[contains(.,'Landschaften und Gewässer')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=gl (Editionsrichtlinien) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=gl</url>
+       <xpath>//xhtml:a[contains(.,'Editionsrichtlinien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=gl</url>
+       <xpath>//xhtml:h3[contains(.,'Editionsrichtlinien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=gl</url>
+       <xpath>//xhtml:span[contains(.,'Datumsangaben, Zahlzeichen')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=abbr (Abkürzungsverzeichnis) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:a[contains(.,'Abkürzungsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:h3[contains(.,'Abkürzungsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:th[contains(.,'iuris utriusque studiosus')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=terms (Zitierweise und Nutzungsrechte) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:a[contains(.,'Zitierweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:h3[contains(.,'Zitierweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:p[contains(.,'Johann Georg Metzger')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=tech (Technische Umsetzung) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=tech</url>
+       <xpath>//xhtml:a[contains(.,'Technische Umsetzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=tech</url>
+       <xpath>//xhtml:h3[contains(.,'Technische Umsetzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=tech</url>
+       <xpath>//xhtml:code[contains(.,'t:div')]</xpath>
+    </test>
+
+<!-- /o:dipko.lit (Literaturverzeichnis) tests -->    
+    <test>
+       <url>/o:dipko.lit</url>
+       <xpath>//xhtml:a[contains(.,'Literaturverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.lit</url>
+       <xpath>//xhtml:h3[contains(.,'Literaturliste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.lit</url>
+       <xpath>//xhtml:li[contains(.,'Bürgermeisterakten')]</xpath>
+    </test>
+
+<!-- /o:dipko.persons (Personenregister) tests -->    
+    <test>
+       <url>/o:dipko.persons</url>
+       <xpath>//xhtml:a[contains(.,'Personenregister')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.persons</url>
+       <xpath>//xhtml:button[contains(.,'D')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.persons</url>
+       <xpath>//xhtml:span[contains(.,'Báan, János')]</xpath>
+    </test>
+
+<!-- /o:dipko.places (Ortsregister) tests -->    
+    <test>
+       <url>/o:dipko.places</url>
+       <xpath>//xhtml:a[contains(.,'Ortsregister')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.places</url>
+       <xpath>//xhtml:button[contains(.,'T')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.places</url>
+       <xpath>//xhtml:span[contains(.,'Alexandria')]</xpath>
+    </test>
+
+<!-- /o:dipko.events (Ereignisregister) tests -->    
+    <test>
+       <url>/o:dipko.events</url>
+       <xpath>//xhtml:a[contains(.,'Ereignisregister')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.events</url>
+       <xpath>//xhtml:strong[contains(.,'übertritt in den')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.events</url>
+       <xpath>//xhtml:span[contains(.,'12.01.1649')]</xpath>
+    </test>
+
+<!-- /o:dipko.glossary (Glossar) tests -->    
+    <test>
+       <url>/o:dipko.glossary</url>
+       <xpath>//xhtml:a[contains(.,'Glossar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.glossary</url>
+       <xpath>//xhtml:span[contains(.,'bir heffda')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.glossary</url>
+       <xpath>//xhtml:div[contains(.,'türk. Kapı/Tor/Tür')]</xpath>
+    </test>
+
+<!-- /o:dipko.sachkommentare (Sachkommentare) tests -->    
+    <test>
+       <url>/o:dipko.sachkommentare</url>
+       <xpath>//xhtml:a[contains(.,'Sachkommentare')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.sachkommentare</url>
+       <xpath>//xhtml:h3[contains(.,'Sachkommentare')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.sachkommentare</url>
+       <xpath>//xhtml:span[contains(.,'Aufstand der Sipahi')]</xpath>
+    </test>
+
+<!-- /o:dipko.hinreise (Reiseroute/Wien-Konstantinopel) tests -->    
+    <test>
+       <url>/o:dipko.hinreise</url>
+       <xpath>//xhtml:a[contains(.,'Wien - Konstantinopel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.hinreise</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /o:dipko.rueckreise (Reiseroute/Konstantinopel - Wien) tests -->    
+    <test>
+       <url>/o:dipko.rueckreise</url>
+       <xpath>//xhtml:a[contains(.,'Konstantinopel - Wien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:dipko.rueckreise</url>
+       <xpath>//xhtml:div/@id[contains(.,'storymap-embed')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=search (Erweiterte Suche) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:form/@id[.='erweitertesuche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:i[contains(.,'werden. | worden.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:code[contains(.,'+')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:input/@id[.='extendedquery']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:label[contains(.,'Register')]</xpath>
+    </test>
+
+<!-- /context:dipko/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Universität Salzburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dipko/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h4[contains(.,'Technische Infrastruktur')]</xpath>
+    </test>				
+      	          
+</TestCase>

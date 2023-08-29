@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="rehi">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests rehi -->
+    <test>
+       <url>/context:rehi</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=searchHelp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:rehi.5002/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.11627/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:rehi.11627/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:rehi (Home) tests -->
+	<test>
+       <url>/context:rehi</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rehi</url>
+       <xpath>//xhtml:h2[contains(.,'Willkommen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rehi</url>
+       <xpath>//xhtml:p[contains(.,'Die Rechtsikonographische Datenbank')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rehi</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rehi</url>
+       <xpath>//xhtml:img/@src[.='/rehi/img/4485_home.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:rehi/methods/sdef:Context/get?mode=collection (Suche) tests -->    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h2[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Hilfe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:option[contains(.,'Kirchenrecht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Enthauptung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:img/@src[.='/o:rehi.5002/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /archive/objects/context:rehi/methods/sdef:Context/get?mode=searchHelp (Hilfe) tests -->    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:h2[contains(.,'Hilfe zur Volltextsuche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:p[contains(.,'Die im Folgenden beschriebenen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h2[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Internes Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rehi/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Informationsmodellierung')]</xpath>
+    </test>
+
+<!-- /archive/get/o:rehi.5002/sdef:TEI/get (object sample) tests -->    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <xpath>//xhtml:h2[contains(.,'Enthauptung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <xpath>//xhtml:td[contains(.,'Der hl. Bartholomäus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rehi.5002/sdef:TEI/get</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/o:rehi.5002')]</xpath>
+    </test>
+      	          
+</TestCase>

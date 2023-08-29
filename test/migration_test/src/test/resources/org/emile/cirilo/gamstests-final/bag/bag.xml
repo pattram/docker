@@ -1,0 +1,2477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="bag">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests bag -->
+    <test>
+       <url>/context:bag</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=brentano</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-nachlass</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=schule</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=gesch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=erreich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=benutz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bio</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=lehre</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=vortr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=tafel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-el</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=addressee</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=year</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=sender</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=year</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-other</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-a?mode=manu-wiss-a</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-aesth?mode=manu-wiss-aesth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-el?mode=manu-wiss-el</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-eth?mode=manu-wiss-eth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-h?mode=manu-wiss-h</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-meg?mode=manu-wiss-meg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-m?mode=manu-wiss-m</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-n?mode=manu-wiss-n</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ps?mode=manu-wiss-ps</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-r?mode=manu-wiss-r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-v?mode=manu-wiss-v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ts?mode=manu-wiss-ts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-divschriften?mode=manu-nwiss-divschriften</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-raetsel?mode=manu-nwiss-raetsel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-sonstiges?mode=manu-nwiss-sonstiges</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-schach?mode=manu-nwiss-schach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-from?mode=corr-from</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-to</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-to-3?mode=corr-to-3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-to-1?mode=corr-to-1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-to-2?mode=corr-to-2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-docs?mode=docs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll-eigene?mode=coll-eigene</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll-fremde?mode=coll-fremde</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll-sonstiges?mode=coll-sonstiges</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll-schach?mode=coll-schach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=archivgraz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=verstreutes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=edition</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=logik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.el.80-html-diplo/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.el.80-html-norm/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=handbib</url>
+       <status>200</status>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_prim</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_trans</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:bag-cit</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:bag.cit1/sdef:BibTeX/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:bag.cit2/sdef:BibTeX/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:bag.cit3/sdef:BibTeX/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-stumpf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-marty</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hertling</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-schell</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-husserl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-meinong</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-ehrenfels</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hoefler</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-twardowski</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hillebrand</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-masaryk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kastil</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kraus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-bergmann</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-eisenmeier</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-utitz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-katkov</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mitter</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mayerhillebrand</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-chisholm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=contact</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:bag.el.80/IMG.12.956</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/bag/html/Legend_diplo.htm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=bag&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fbag%2F3bag-search.xsl</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:bag (Home) tests -->
+	<test>
+       <url>/context:bag</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag</url>
+       <xpath>//xhtml:h1[contains(.,'Das Franz Brentano Archiv Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/about2.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag</url>
+       <xpath>//xhtml:p[contains(.,'Das Franz Brentano-Archiv Graz beherbergt')]</xpath>
+    </test>
+    
+	<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=about (alternative Home link) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h1[contains(.,'Das Franz Brentano Archiv Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/about2.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Das Franz Brentano-Archiv Graz beherbergt')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=gesch (Geschichte des Archivs) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=gesch</url>
+       <xpath>//xhtml:a[contains(.,'Geschichte des Archivs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=gesch</url>
+       <xpath>//xhtml:h2[contains(.,'Geschichte des Archivs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=gesch</url>
+       <xpath>//xhtml:p[contains(.,'Als Mitte der Siebzigerjahre')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=erreich (Erreichbarkeit) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=erreich</url>
+       <xpath>//xhtml:a[contains(.,'Erreichbarkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=erreich</url>
+       <xpath>//xhtml:h2[contains(.,'Erreichbarkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=erreich</url>
+       <xpath>//xhtml:li[contains(.,'Vom Hauptbahnhof Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=erreich</url>
+       <xpath>//xhtml:a[contains(.,'Link zum interaktiven Stadtplan')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=benutz (Benutzung) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=benutz</url>
+       <xpath>//xhtml:a[contains(.,'Benutzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=benutz</url>
+       <xpath>//xhtml:h2[contains(.,'Benutzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=benutz</url>
+       <xpath>//xhtml:li[contains(.,'1. Die Benützungsordnung')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=brentano (Franz Brentano) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=brentano</url>
+       <xpath>//xhtml:a[contains(.,'Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=brentano</url>
+       <xpath>//xhtml:h2[contains(.,'Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=brentano</url>
+       <xpath>//xhtml:p[contains(.,'ist einer der bedeutendsten Philosophen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=brentano</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/franzbrentano.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=bio (Kurzbiographie) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bio</url>
+       <xpath>//xhtml:a[contains(.,'Kurzbiographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bio</url>
+       <xpath>//xhtml:h2[contains(.,'Kurzbiographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bio</url>
+       <xpath>//xhtml:p[contains(.,'Aufgewachsen in Aschaffenburg')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=lehre (Lehrtätigkeit) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=lehre</url>
+       <xpath>//xhtml:a[contains(.,'Lehrtätigkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=lehre</url>
+       <xpath>//xhtml:h2[contains(.,'Lehrtätigkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=lehre</url>
+       <xpath>//xhtml:i[contains(.,'Geschichte der Philosophie')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=vortr (Vorträge) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=vortr</url>
+       <xpath>//xhtml:a[contains(.,'Vorträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=vortr</url>
+       <xpath>//xhtml:h2[contains(.,'Vorträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=vortr</url>
+       <xpath>//xhtml:i[contains(.,'Über Schellings Philosophie')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=tafel (Zeittafel) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=tafel</url>
+       <xpath>//xhtml:a[contains(.,'Zeittafel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=tafel</url>
+       <xpath>//xhtml:h2[contains(.,'Zeittafel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=tafel</url>
+       <xpath>//xhtml:td[contains(.,'Franz Clemens Honoratus Hermann Brentano')]</xpath>
+    </test>
+
+<!-- /context:bag-nachlass (Nachlass) tests -->
+	<test>
+       <url>/context:bag-nachlass</url>
+       <xpath>//xhtml:a[contains(.,'Nachlass')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-nachlass</url>
+       <xpath>//xhtml:h2[contains(.,'Nachlass')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-nachlass</url>
+       <xpath>//xhtml:p[contains(.,'Aus dem Nachlass')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-nachlass</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/nachlass.jpg']</xpath>
+    </test>
+    
+<!-- /context:bag-houghton (Houghton library) tests -->
+	<test>
+       <url>/context:bag-houghton</url>
+       <xpath>//xhtml:a[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton</url>
+       <xpath>//xhtml:p[contains(.,'Nach langem Abwägen')]</xpath>
+    </test>
+    
+ 	<!-- /context:bag-houghton-manu (Werkmanuskripte) tests -->
+    <test>
+       <url>/context:bag-houghton-manu</url>
+       <xpath>//xhtml:a[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu</url>
+       <xpath>//xhtml:p[contains(.,'Nach langem Abwägen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/houghton.jpg']</xpath>
+    </test>
+
+	<!-- /context:bag-houghton-manu-aesth (Ästhetik) tests -->
+	<test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <xpath>//xhtml:a[contains(.,'Ästhetik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <xpath>//xhtml:h2[contains(.,'Ästhetik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <xpath>//xhtml:a[contains(.,'Vorarbeiten zum Vortrag über')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-aesth</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.aesth.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-el (Erkenntnislehre und Logik) tests -->
+	<test>
+       <url>/context:bag-houghton-manu-el</url>
+       <xpath>//xhtml:a[contains(.,'Erkenntnislehre und Logik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-el</url>
+       <xpath>//xhtml:h2[contains(.,'Erkenntnislehre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-el</url>
+       <xpath>//xhtml:a[contains(.,'Zur Axiomatik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-el</url>
+       <xpath>//xhtml:p[contains(.,'Gesetz des Widerspruchs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-el</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.el.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-eth (Ethik) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <xpath>//xhtml:a[contains(.,'Ethik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <xpath>//xhtml:h2[contains(.,'Ethik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <xpath>//xhtml:a[contains(.,'Vom Guten durch Zuordnung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <xpath>//xhtml:p[contains(.,'Ethisches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-eth</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.eth.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-frschr (Frühe Schriften) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <xpath>//xhtml:a[contains(.,'Frühe Schriften')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <xpath>//xhtml:h2[contains(.,'Frühe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <xpath>//xhtml:a[contains(.,'De principio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <xpath>//xhtml:p[contains(.,'Format und Umfang')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-frschr</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.frschr.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-h (Geschichte der Philosophie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <xpath>//xhtml:a[contains(.,'Geschichte der Philosphie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <xpath>//xhtml:h2[contains(.,'Geschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <xpath>//xhtml:a[contains(.,'Berkeley')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <xpath>//xhtml:p[contains(.,'Originalmanuskript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-h</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.h.2/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-ls (Leib und Seele) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <xpath>//xhtml:a[contains(.,'Leib und Seele')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <xpath>//xhtml:h2[contains(.,'Leib und Seele')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <xpath>//xhtml:a[contains(.,'Unsterblichkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ls</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.ls.1a/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-meg (Megethologie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <xpath>//xhtml:a[contains(.,'Megethologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <xpath>//xhtml:h2[contains(.,'Megethologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <xpath>//xhtml:a[contains(.,'Definitionen der Mathematiker')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-meg</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.meg.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-m (Metaphysik) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <xpath>//xhtml:a[contains(.,'Metaphysik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <xpath>//xhtml:h2[contains(.,'Metaphysik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <xpath>//xhtml:a[contains(.,'Die Weisheit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-m</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.m.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-n (Naturwissenschaft) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <xpath>//xhtml:a[contains(.,'Naturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <xpath>//xhtml:h2[contains(.,'Naturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <xpath>//xhtml:a[contains(.,'Auerbach')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-n</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.n.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-ps (Psychologie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <xpath>//xhtml:a[contains(.,'Psychologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <xpath>//xhtml:h2[contains(.,'Psychologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <xpath>//xhtml:a[contains(.,'Gegen den Nominalimus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ps</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.ps.2/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-r (Religionsphilosophie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <xpath>//xhtml:a[contains(.,'Religionsphilosophie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <xpath>//xhtml:h2[contains(.,'Religionsphilosophie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <xpath>//xhtml:a[contains(.,'Über die Wunder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-r</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.r.2a/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-sps (Sinnespsychologie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <xpath>//xhtml:a[contains(.,'Sinnespsychologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <xpath>//xhtml:h2[contains(.,'Sinnespsychologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <xpath>//xhtml:a[contains(.,'Über einige Folgen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sps</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.sps.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-sp (Sprachphilosophie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <xpath>//xhtml:a[contains(.,'Sprachphilosophie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <xpath>//xhtml:h2[contains(.,'Sprachphilosophie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <xpath>//xhtml:a[contains(.,'Durch die Sprache')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-sp</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.sp.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-th (Theologie) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <xpath>//xhtml:a[contains(.,'Theologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <xpath>//xhtml:h2[contains(.,'Theologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <xpath>//xhtml:a[contains(.,'Zum Kontingenzbeweis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-th</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.th.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-v (Varia) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <xpath>//xhtml:h2[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <xpath>//xhtml:a[contains(.,'Ehehindernis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-v</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.v.3/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-t (Zeit) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <xpath>//xhtml:a[contains(.,'Zeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <xpath>//xhtml:h2[contains(.,'Zeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <xpath>//xhtml:a[contains(.,'Polemisches gegen Marty')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-t</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.t.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-manu-ts (Zeit und Raum) tests -->
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <xpath>//xhtml:a[contains(.,'Zeit und Raum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <xpath>//xhtml:h2[contains(.,'Zeit und Raum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <xpath>//xhtml:a[contains(.,'Empirismus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-manu-ts</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.ts.1/THUMBNAIL']</xpath>
+    </test>
+    
+	<!-- /context:bag-houghton-corr (Korrespondenzen) tests -->    
+    <test>
+       <url>/context:bag-houghton-corr</url>
+       <xpath>//xhtml:a[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr</url>
+       <xpath>//xhtml:p[contains(.,'Nach langem Abwägen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/houghton.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-from (Briefe von Brentano) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-from</url>
+       <xpath>//xhtml:a[contains(.,'Briefe von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from</url>
+       <xpath>//xhtml:h1[contains(.,'Brentanos wissenschaftliche Korrespondenz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from</url>
+       <xpath>//xhtml:p[contains(.,'Brentanos wissenschaftliche')]</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-from?mode=addressee (Nach Empfänger) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=addressee</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=addressee</url>
+       <xpath>//xhtml:a[contains(.,'1914')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=addressee</url>
+       <xpath>//xhtml:a[contains(.,'Brentano Franz an Akademie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=addressee</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.brl.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-from?mode=year (Nach Jahr) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=year</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=year</url>
+       <xpath>//xhtml:a[contains(.,'Hillebrand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=year</url>
+       <xpath>//xhtml:a[contains(.,'Brentano Franz an Hillebrand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-from?mode=year</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.brl.257/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-to (Briefe an Brentano) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-to</url>
+       <xpath>//xhtml:a[contains(.,'Briefe an')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to</url>
+       <xpath>//xhtml:h1[contains(.,'Brentanos wissenschaftliche Korrespondenz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to</url>
+       <xpath>//xhtml:p[contains(.,'Brentanos wissenschaftliche')]</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-to?mode=sender (nach Absender) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=sender</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=sender</url>
+       <xpath>//xhtml:a[contains(.,'1901')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=sender</url>
+       <xpath>//xhtml:a[contains(.,'Abadessa Salvatore')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=sender</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.brl.1734/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-to?mode=year (nach Jahr) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=year</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=year</url>
+       <xpath>//xhtml:a[contains(.,'Clemens')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=year</url>
+       <xpath>//xhtml:a[contains(.,'Clemens Franz Jacob')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-to?mode=year</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.brl.1885/THUMBNAIL']</xpath>
+    </test>
+    
+    <!-- /context:bag-houghton-corr-other (Briefe Dritter) tests -->
+    <test>
+       <url>/context:bag-houghton-corr-other</url>
+       <xpath>//xhtml:h1[contains(.,'Houghton Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-other</url>
+       <xpath>//xhtml:a[contains(.,'Amato-Pojero')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-other</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-houghton-corr-other</url>
+       <xpath>//xhtml:img/@src[.='/o:bag.brl.3038/THUMBNAIL']</xpath>
+    </test>
+    
+<!-- /context:bag-schoen (Schönbühel) tests-->
+	<test>
+       <url>/context:bag-schoen</url>
+       <xpath>//xhtml:a[contains(.,'Schönbühel')]</xpath>
+    </test>
+	
+    <test>
+       <url>/context:bag-schoen</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu (Werkmanuskripte) tests -->
+    <test>
+       <url>/context:bag-schoen-manu</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss (Wissenschaftliche Schriften) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-wiss</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-a?mode=manu-wiss-a (Aristoteles) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-a?mode=manu-wiss-a</url>
+       <xpath>//xhtml:a[contains(.,'Aristoteles')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-a?mode=manu-wiss-a</url>
+       <xpath>//xhtml:i[contains(.,'Von der mannigfachen Bedeutung')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-aesth?mode=manu-wiss-aesth (Ästhetik) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-aesth?mode=manu-wiss-aesth</url>
+       <xpath>//xhtml:a[contains(.,'Ästhetik')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-aesth?mode=manu-wiss-aesth</url>
+       <xpath>//xhtml:i[contains(.,'Zur Ästhetik')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-el?mode=manu-wiss-el (Erkenntnislehre und Logik) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-el?mode=manu-wiss-el</url>
+       <xpath>//xhtml:a[contains(.,'Erkenntnislehre und Logik')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-el?mode=manu-wiss-el</url>
+       <xpath>//xhtml:i[contains(.,'Zur Erkenntnistheorie')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-eth?mode=manu-wiss-eth (Ethik) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-eth?mode=manu-wiss-eth</url>
+       <xpath>//xhtml:a[contains(.,'Ethik')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-eth?mode=manu-wiss-eth</url>
+       <xpath>//xhtml:i[contains(.,'Moralansicht')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-h?mode=manu-wiss-h (Geschichte der Philosophie) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-h?mode=manu-wiss-h</url>
+       <xpath>//xhtml:a[contains(.,'Geschichte der Philosophie')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-h?mode=manu-wiss-h</url>
+       <xpath>//xhtml:i[contains(.,'Zur griechischen Philosophie')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-meg?mode=manu-wiss-meg (Megethologie) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-meg?mode=manu-wiss-meg</url>
+       <xpath>//xhtml:a[contains(.,'Megethologie')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-meg?mode=manu-wiss-meg</url>
+       <xpath>//xhtml:i[contains(.,'Continuum')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-m?mode=manu-wiss-m (Metaphysik) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-m?mode=manu-wiss-m</url>
+       <xpath>//xhtml:a[contains(.,'Metaphysik')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-m?mode=manu-wiss-m</url>
+       <xpath>//xhtml:i[contains(.,'Metaphysik')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-n?mode=manu-wiss-n (Naturwissenschaften) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-n?mode=manu-wiss-n</url>
+       <xpath>//xhtml:a[contains(.,'Naturwissenschaften')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-n?mode=manu-wiss-n</url>
+       <xpath>//xhtml:i[contains(.,'Beweis in den Naturwissenschaften')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-ps?mode=manu-wiss-ps (Psychologie) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ps?mode=manu-wiss-ps</url>
+       <xpath>//xhtml:a[contains(.,'Psychologie')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ps?mode=manu-wiss-ps</url>
+       <xpath>//xhtml:i[contains(.,'Primäres und sekundäres')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-r?mode=manu-wiss-r (Religion) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-r?mode=manu-wiss-r</url>
+       <xpath>//xhtml:a[contains(.,'Religion')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-r?mode=manu-wiss-r</url>
+       <xpath>//xhtml:i[contains(.,'Gespräch mit Müller')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-v?mode=manu-wiss-v (Varia) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-v?mode=manu-wiss-v</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-v?mode=manu-wiss-v</url>
+       <xpath>//xhtml:i[contains(.,'Erste Vorlesung')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-wiss-ts?mode=manu-wiss-ts (Zeit und Raum) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ts?mode=manu-wiss-ts</url>
+       <xpath>//xhtml:a[contains(.,'Zeit und Raum')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-wiss-ts?mode=manu-wiss-ts</url>
+       <xpath>//xhtml:i[contains(.,'Zur Proterose')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-nwiss (nichtwissenschaftliche Schriften) tests -->      
+    <test>
+       <url>/context:bag-schoen-manu-nwiss</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-manu-nwiss</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-nwiss-divschriften?mode=manu-nwiss-divschriften (Sonstige Schriften) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-divschriften?mode=manu-nwiss-divschriften</url>
+       <xpath>//xhtml:a[contains(.,'Sonstige Schriften')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-divschriften?mode=manu-nwiss-divschriften</url>
+       <xpath>//xhtml:i[contains(.,'General Zubov')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-nwiss-raetsel?mode=manu-nwiss-raetsel (Rätsel) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-raetsel?mode=manu-nwiss-raetsel</url>
+       <xpath>//xhtml:a[contains(.,'Rätsel')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-raetsel?mode=manu-nwiss-raetsel</url>
+       <xpath>//xhtml:i[contains(.,'Das Landmädchen')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-nwiss-sonstiges?mode=manu-nwiss-sonstiges (Sonstiges) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-sonstiges?mode=manu-nwiss-sonstiges</url>
+       <xpath>//xhtml:a[contains(.,'Sonstiges')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-sonstiges?mode=manu-nwiss-sonstiges</url>
+       <xpath>//xhtml:i[contains(.,'Zeichnungen und graphische Entwürfe')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-manu-nwiss-schach?mode=manu-nwiss-schach (Schach) tests -->
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-schach?mode=manu-nwiss-schach</url>
+       <xpath>//xhtml:a[contains(.,'Schach')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-manu-nwiss-schach?mode=manu-nwiss-schach</url>
+       <xpath>//xhtml:i[contains(.,'Falkbeerpartien')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr (Korrespondenzen) tests -->      
+    <test>
+       <url>/context:bag-schoen-corr</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr-from?mode=corr-from (Briefe von Brentano) tests -->
+    <test>
+       <url>/context:bag-schoen-corr-from?mode=corr-from</url>
+       <xpath>//xhtml:a[contains(.,'Briefe von Brentano')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-corr-from?mode=corr-from</url>
+       <xpath>//xhtml:td[contains(.,'K.2.1.1.')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr-to (Briefe an Brentano) tests -->
+    <test>
+       <url>/context:bag-schoen-corr-to</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-corr-to</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr-to-3?mode=corr-to-3 (Briefpartner Q-Z) tests -->
+    <test>
+       <url>/context:bag-schoen-corr-to-3?mode=corr-to-3</url>
+       <xpath>//xhtml:a[contains(.,'Briefpartner')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-corr-to-3?mode=corr-to-3</url>
+       <xpath>//xhtml:td[contains(.,'K.1.72.1.')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr-to-1?mode=corr-to-1 (Briefpartner A-H) tests -->
+    <test>
+       <url>/context:bag-schoen-corr-to-1?mode=corr-to-1</url>
+       <xpath>//xhtml:a[contains(.,'Briefpartner A-H')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-corr-to-1?mode=corr-to-1</url>
+       <xpath>//xhtml:td[contains(.,'K.1.1.1.')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-corr-to-2?mode=corr-to-2 (Briefpartner I-P) tests -->
+    <test>
+       <url>/context:bag-schoen-corr-to-2?mode=corr-to-2</url>
+       <xpath>//xhtml:a[contains(.,'Briefpartner I-P')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-corr-to-2?mode=corr-to-2</url>
+       <xpath>//xhtml:td[contains(.,'K.1.40.1.')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-docs?mode=docs (Lebensdokumente) tests -->
+    <test>
+       <url>/context:bag-schoen-docs?mode=docs</url>
+       <xpath>//xhtml:a[contains(.,'Lebensdokumente')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-docs?mode=docs</url>
+       <xpath>//xhtml:i[contains(.,'Versicherungspolizzen')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-coll (Sammlungen) tests -->
+    <test>
+       <url>/context:bag-schoen-coll</url>
+       <xpath>//xhtml:p[contains(.,'Als Franz Brentano')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:bag-schoen-coll</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schoen.jpg']</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-coll-eigene?mode=coll-eigene (Eigene Publikationen) tests -->
+    <test>
+       <url>/context:bag-schoen-coll-eigene?mode=coll-eigene</url>
+       <xpath>//xhtml:a[contains(.,'Eigene Publikationen')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-coll-eigene?mode=coll-eigene</url>
+       <xpath>//xhtml:i[contains(.,'Promotionsthesen')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-coll-fremde?mode=coll-fremde (Fremde Publikationen) tests -->
+    <test>
+       <url>/context:bag-schoen-coll-fremde?mode=coll-fremde</url>
+       <xpath>//xhtml:a[contains(.,'Fremde Publikationen')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-coll-fremde?mode=coll-fremde</url>
+       <xpath>//xhtml:i[contains(.,'Grundzüge der Logik')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-coll-sonstiges?mode=coll-sonstiges (Sonstiges) tests -->
+    <test>
+       <url>/context:bag-schoen-coll-sonstiges?mode=coll-sonstiges</url>
+       <xpath>//xhtml:a[contains(.,'Sonstiges')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-coll-sonstiges?mode=coll-sonstiges</url>
+       <xpath>//xhtml:i[contains(.,'Bibliographie')]</xpath>
+    </test>
+    
+    <!-- /context:bag-schoen-coll-schach?mode=coll-schach (Schachschriften) tests -->
+    <test>
+       <url>/context:bag-schoen-coll-schach?mode=coll-schach</url>
+       <xpath>//xhtml:a[contains(.,'Schachschriften')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-schoen-coll-schach?mode=coll-schach</url>
+       <xpath>//xhtml:i[contains(.,'Vorstudie zu Schachpartie')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=archivgraz (Franz Brentano Archiv Graz) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=archivgraz</url>
+       <xpath>//xhtml:a[contains(.,'Brentano Archiv Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=archivgraz</url>
+       <xpath>//xhtml:p[contains(.,'Der Hauptbestand des Archivs')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=archivgraz</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bueste_Zumbusch.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=verstreutes (Verstreutes) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=verstreutes</url>
+       <xpath>//xhtml:a[contains(.,'Verstreutes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=verstreutes</url>
+       <xpath>//xhtml:p[contains(.,'Neben den Hauptstandorten')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=edition (Edition) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=edition</url>
+       <xpath>//xhtml:a[contains(.,'Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=edition</url>
+       <xpath>//xhtml:p[contains(.,'Das Fehlen einer verlässlichen')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=edition</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/lehre.jpg']</xpath>
+    </test>
+
+	<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=logik (Logik EL 80) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=logik</url>
+       <xpath>//xhtml:a[contains(.,'Logik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=logik</url>
+       <xpath>//xhtml:p[contains(.,'Der vorliegende Text')]</xpath>
+    </test>
+
+	<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=logik-en (Logik EL 80 English) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=logik-en</url>
+       <xpath>//xhtml:a[contains(.,'Logik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=logik-en</url>
+       <xpath>//xhtml:p[contains(.,'The present text')]</xpath>
+    </test>
+    
+	<!-- /archive/objects/o:bag.el.80-html-diplo/methods/sdef:HTML/get (Diplomatische Edition) tests -->
+	<test>
+       <url>/archive/objects/o:bag.el.80-html-diplo/methods/sdef:HTML/get</url>
+       <matcher>a:matches(^Diplomatische Edition$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.el.80-html-diplo/methods/sdef:HTML/get</url>
+       <matcher>A:matches(^EL80.12.956$)</matcher>
+    </test>
+    
+	<!-- /archive/objects/o:bag.el.80-html-norm/methods/sdef:HTML/get (Normalisierte Edition) tests -->
+	<test>
+       <url>/archive/objects/o:bag.el.80-html-norm/methods/sdef:HTML/get</url>
+       <matcher>a:matches(^Normalisierte Edition$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.el.80-html-norm/methods/sdef:HTML/get</url>
+       <matcher>A:matches(^EL80.12.956$)</matcher>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=handbib (Handbibliothek) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=handbib</url>
+       <xpath>//xhtml:a[contains(.,'Handbibliothek')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=handbib</url>
+       <xpath>//xhtml:p[contains(.,'Neben den Originalmanuskripten')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=handbib</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/handbibliothek.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=bib (Bibliographie) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib</url>
+       <xpath>//xhtml:a[contains(.,'Bibliographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib</url>
+       <xpath>//xhtml:p[contains(.,'Die Bibliographie der Primärliteratur')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bib.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=bib_prim (Primärliteratur) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_prim</url>
+       <xpath>//xhtml:a[contains(.,'Primärliteratur')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_prim</url>
+       <xpath>//xhtml:i[contains(.,'Von der mannigfachen Bedeutung')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=bib_trans (Übersetzungen) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_trans</url>
+       <xpath>//xhtml:a[contains(.,'Übersetzungen')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=bib_trans</url>
+       <xpath>//xhtml:i[contains(.,'The origin of the knowledge')]</xpath>
+    </test>
+    
+<!-- /context:bag-cit (Sekundärliteratur) tests -->
+    <test>
+       <url>/context:bag-cit</url>
+       <xpath>//xhtml:a[contains(.,'Sekundärliteratur')]</xpath>
+    </test>
+
+    <test>
+       <url>/context:bag-cit</url>
+       <xpath>//xhtml:i[contains(.,'Franz Brentano')]</xpath>
+    </test>
+    
+    <!-- /archive/get/o:bag.cit1/sdef:BibTeX/get (Sekundärliteratur ab 2000) tests -->
+    <test>
+       <url>/archive/get/o:bag.cit1/sdef:BibTeX/get</url>
+       <xpath>//xhtml:a[contains(.,'ab 2000')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/get/o:bag.cit1/sdef:BibTeX/get</url>
+       <xpath>//xhtml:i[contains(.,'Metaphysics and Psychology')]</xpath>
+    </test>
+    
+    <!-- /archive/get/o:bag.cit2/sdef:BibTeX/get (Sekundärliteratur 1950-1999) tests -->
+    <test>
+       <url>/archive/get/o:bag.cit2/sdef:BibTeX/get</url>
+       <xpath>//xhtml:a[contains(.,'1950-1999')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/get/o:bag.cit2/sdef:BibTeX/get</url>
+       <xpath>//xhtml:i[contains(.,'The School of Franz Brentano')]</xpath>
+    </test>
+    
+    <!-- /archive/get/o:bag.cit3/sdef:BibTeX/get (Sekundärliteratur bis 1949) tests -->
+    <test>
+       <url>/archive/get/o:bag.cit3/sdef:BibTeX/get</url>
+       <xpath>//xhtml:a[contains(.,'bis 1949')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/get/o:bag.cit3/sdef:BibTeX/get</url>
+       <xpath>//xhtml:i[contains(.,'Wiener Zeitschrift für Philosophie')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=schule (Die Brentano Schule) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=schule</url>
+       <xpath>//xhtml:a[contains(.,'Die Brentano-Schule')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=schule</url>
+       <xpath>//xhtml:p[contains(.,'Mit seiner äußerst')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=schule</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bschule.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1 (Die erste Generation) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1</url>
+       <xpath>//xhtml:a[contains(.,'Die erste Generation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1</url>
+       <xpath>//xhtml:p[contains(.,'Mit seiner äußerst')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bschule.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-stumpf (Carl Stumpf) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-stumpf</url>
+       <xpath>//xhtml:a[contains(.,'Carl Stumpf')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-stumpf</url>
+       <xpath>//xhtml:p[contains(.,'Beeindruckt von Brentanos')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-stumpf</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/stumpf.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-marty (Anton Marty) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-marty</url>
+       <xpath>//xhtml:a[contains(.,'Anton Marty')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-marty</url>
+       <xpath>//xhtml:p[contains(.,'Anton Marty stammt aus dem')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-marty</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/marty.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hertling (Georg von Hertling) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hertling</url>
+       <xpath>//xhtml:a[contains(.,'Georg von Hertling')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hertling</url>
+       <xpath>//xhtml:p[contains(.,'Hertling war großmütterlicherseits')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hertling</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/hertling.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-schell (Hermann Schell) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-schell</url>
+       <xpath>//xhtml:a[contains(.,'Hermann Schell')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-schell</url>
+       <xpath>//xhtml:p[contains(.,'Schell kam 1870')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-schell</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/schell.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-husserl (Edmund Husserl) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-husserl</url>
+       <xpath>//xhtml:a[contains(.,'Edmund Husserl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-husserl</url>
+       <xpath>//xhtml:p[contains(.,'Nachdem Edmund Husserl im')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-husserl</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/husserl.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-meinong (Alexius Meinong) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-meinong</url>
+       <xpath>//xhtml:a[contains(.,'Alexius Meinong')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-meinong</url>
+       <xpath>//xhtml:p[contains(.,'Alexius Meinong begann')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-meinong</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/meinong.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-ehrenfels (Christian von Ehrenfels) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-ehrenfels</url>
+       <xpath>//xhtml:a[contains(.,'Christian von Ehrenfels')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-ehrenfels</url>
+       <xpath>//xhtml:p[contains(.,'Christian v. Ehrenfels studierte')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-ehrenfels</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/ehrenfels.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hoefler (Alois Höfler) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hoefler</url>
+       <xpath>//xhtml:a[contains(.,'Alois Höfler')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hoefler</url>
+       <xpath>//xhtml:p[contains(.,'Alois Höfler studierte Mathematik')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hoefler</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/hoefler.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-twardowski (Kazimierz Twardowski) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-twardowski</url>
+       <xpath>//xhtml:a[contains(.,'Kazimierz Twardowski')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-twardowski</url>
+       <xpath>//xhtml:p[contains(.,'Kazimierz Twardowski studierte an')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-twardowski</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/twardowski.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hillebrand (Franz Hillebrand) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hillebrand</url>
+       <xpath>//xhtml:a[contains(.,'Franz Hillebrand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hillebrand</url>
+       <xpath>//xhtml:p[contains(.,'Nachdem Franz Hillebrand')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-hillebrand</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/hillebrand.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-masaryk (Thomas G. Masaryk) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-masaryk</url>
+       <xpath>//xhtml:a[contains(.,'Thomas G. Masaryk')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-masaryk</url>
+       <xpath>//xhtml:p[contains(.,'Obwohl Thomas G. Masaryk')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation1-masaryk</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/masaryk.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2 (Die zweite Generation) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2</url>
+       <xpath>//xhtml:a[contains(.,'Die erste Generation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2</url>
+       <xpath>//xhtml:p[contains(.,'Mit seiner äußerst')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bschule.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kastil (Alfred Kastil) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kastil</url>
+       <xpath>//xhtml:a[contains(.,'Alfred Kastil')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kastil</url>
+       <xpath>//xhtml:p[contains(.,'Alfred Kastil wurde als Sohn')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kastil</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/kastil.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kraus (Oskar Kraus) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kraus</url>
+       <xpath>//xhtml:a[contains(.,'Oskar Kraus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kraus</url>
+       <xpath>//xhtml:p[contains(.,'Nach dem Besuch des k.k.')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-kraus</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/kraus.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-bergmann (Hugo Bergmann) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-bergmann</url>
+       <xpath>//xhtml:a[contains(.,'Hugo Bergmann')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-bergmann</url>
+       <xpath>//xhtml:p[contains(.,'Der in Prag geborene Hugo Bergmann')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-bergmann</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bergmann.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-eisenmeier (Joseph Eisenmeier) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-eisenmeier</url>
+       <xpath>//xhtml:a[contains(.,'Josef Eisenmeier')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-eisenmeier</url>
+       <xpath>//xhtml:p[contains(.,'Nach dem Besuch des Gymnasiums')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-eisenmeier</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/eisenmeier.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-utitz (Emil Utitz) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-utitz</url>
+       <xpath>//xhtml:a[contains(.,'Emil Utitz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-utitz</url>
+       <xpath>//xhtml:p[contains(.,'Der in Prag geborene')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation2-utitz</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/utitz.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation3 (Die dritte Generation) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3</url>
+       <xpath>//xhtml:a[contains(.,'Die erste Generation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3</url>
+       <xpath>//xhtml:p[contains(.,'Mit seiner äußerst')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/bschule.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-katkov (Georg Katkov) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-katkov</url>
+       <xpath>//xhtml:a[contains(.,'Georg Katkov')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-katkov</url>
+       <xpath>//xhtml:p[contains(.,'Der in Moskau geborene')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-katkov</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/katkov.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mitter (Otto Mitter) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mitter</url>
+       <xpath>//xhtml:a[contains(.,'Otto Mitter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mitter</url>
+       <xpath>//xhtml:p[contains(.,'Otto Mitter besuchte')]</xpath>
+    </test>
+	
+	<!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mayerhillebrand (Franziska Mayer-Hillebrand) tests -->
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mayerhillebrand</url>
+       <xpath>//xhtml:a[contains(.,'Franziska Mayer-Hillebrand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mayerhillebrand</url>
+       <xpath>//xhtml:p[contains(.,'Franziska Mayer-Hillebrand wurde')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-mayerhillebrand</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/mayerhillebrand.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-chisholm (Roderick M. Chisholm) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-chisholm</url>
+       <xpath>//xhtml:a[contains(.,'Roderick M. Chisholm')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-chisholm</url>
+       <xpath>//xhtml:p[contains(.,'Von 1934 bis 1938 studierte Chisholm')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=generation3-chisholm</url>
+       <xpath>//xhtml:img/@src[.='/bag/img/chisholm.jpg']</xpath>
+    </test>
+    
+    <!-- /archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery1 (Bildgalerie Franz Brentano) tests -->
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery1</url>
+       <xpath>//xhtml:a[contains(.,'Bildgalerie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery1</url>
+       <xpath>//xhtml:p[contains(.,'Hinweis: Um die Metadaten')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery1</url>
+       <xpath>//xhtml:div[@id[.='galleria']]/xhtml:img/@src[.='/o:bag.bilder/IMAGE.1']</xpath>
+    </test>
+    
+    <!-- /archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery2 (Die Aschaffenburger Brentanos) tests -->
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery2</url>
+       <xpath>//xhtml:a[contains(.,'Die Aschaffenburger Brentanos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery2</url>
+       <xpath>//xhtml:p[contains(.,'Hinweis: Um die Metadaten')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery2</url>
+       <xpath>//xhtml:div[@id[.='galleria']]/xhtml:img/@src[.='/o:bag.bilder/IMAGE.32']</xpath>
+    </test>
+    
+    <!-- /archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery3 (Schauplätze) tests -->
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery3</url>
+       <xpath>//xhtml:a[contains(.,'Schauplätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery3</url>
+       <xpath>//xhtml:p[contains(.,'Hinweis: Um die Metadaten')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:bag.bilder/methods/sdef:TEI/get?mode=gallery3</url>
+       <xpath>//xhtml:div[@id[.='galleria']]/xhtml:img/@src[.='/o:bag.bilder/IMAGE.45']</xpath>
+    </test>
+    
+   
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=bag&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fbag%2F3bag-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'Incipit')]</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=contact (Kontakt) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'Kontakt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:p[contains(.,'Benutzername und Passwort')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:h1[contains(.,'Kontakt')]</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:bag/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:li[contains(.,'Austrian Centre for Digital Humanities')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:bag/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h1[contains(.,'Impressum')]</xpath>
+    </test>
+    			   
+</TestCase>

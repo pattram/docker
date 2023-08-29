@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="kmw">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests kmw -->
+    <test>
+       <url>/context:kmw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=download</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.introduction</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.konkordanz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.auswertung2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.auswertung4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.auswertung5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.auswertung1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.auswertung3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.ereignis-sk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.190</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.325</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.134</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.529</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.237</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.88</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kmw.ereignis-fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.14</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.34</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.521</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.51</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.514</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.143</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:kmw (Home) tests -->
+	<test>
+       <url>/context:kmw</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kmw</url>
+       <xpath>//xhtml:h1[contains(.,'Religionsdissens')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kmw</url>
+       <xpath>//xhtml:h2[contains(.,'Der Schmalkaldische Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kmw</url>
+       <xpath>//xhtml:h5[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kmw</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/home_sk.jpg']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung (Dokumentation/Einleitung) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:a[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:a/@title[.='Document in English as PDF']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:h3[contains(.,'Einleitung zur Datenbank')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:p[contains(.,'Zu den zentralen Erkenntnissen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:span[contains(.,'Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:a[contains(.,'http://www.e-rara.ch/')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=einleitung</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/beispiel_tei.png']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang1 (Dokumentation/Anhang 1) tests -->
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang1</url>
+       <xpath>//xhtml:a[contains(.,'Anh. I: Publikationen Haug-Moritz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang1</url>
+       <xpath>//xhtml:h3[contains(.,'ANHANG I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang1</url>
+       <xpath>//xhtml:p[contains(.,'Geschwinde Welt.')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2 (Dokumentation/Anhang 2) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2</url>
+       <xpath>//xhtml:a[contains(.,'Anh. II: Besuchte Bibliotheken und Archive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2</url>
+       <xpath>//xhtml:h3[contains(.,'ANHANG II')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2</url>
+       <xpath>//xhtml:p[contains(.,'Auf einen detaillierten Nachweis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang2</url>
+       <xpath>//xhtml:span[contains(.,'1. Deutschland')]</xpath>
+    </test>   
+    
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3 (Dokumentation/Anhang 3) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3</url>
+       <xpath>//xhtml:a[contains(.,'Anh. III: Konkordanz (frz. Drucke)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3</url>
+       <xpath>//xhtml:h3[contains(.,'ANHANG III')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3</url>
+       <xpath>//xhtml:span[contains(.,'P01')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang3</url>
+       <xpath>//xhtml:td[contains(.,'Estienne')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4 (Dokumentation/Anhang 4) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <xpath>//xhtml:a[contains(.,'Anh. IV: Abkürzungen und Editionen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <xpath>//xhtml:h3[contains(.,'ANHANG IV')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <xpath>//xhtml:span[contains(.,'Abgekürzt zitierte Titel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <xpath>//xhtml:p[contains(.,'Eb = Einblattdruck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang4</url>
+       <xpath>//xhtml:a[contains(.,'Archives curieuses')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5 (Dokumentation/Anhang 5) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <xpath>//xhtml:a[contains(.,'Anh. V: Auswertungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <xpath>//xhtml:h3[contains(.,'ANHANG V')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <xpath>//xhtml:h4[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <xpath>//xhtml:a/@title[contains(.,'Drucke, datiert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang5</url>
+       <xpath>//xhtml:span[contains(.,'Drucke, Preisangaben')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start (Schmalkaldischer Krieg/Ereignis) tests -->
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:a[contains(.,'Ereignis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:h3[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:a[contains(.,'Texte und Ausgaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:p[contains(.,'Mehr als 100.000 Reiter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/home_sk.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=sk_start</url>
+       <xpath>//xhtml:a[contains(.,'hier')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel (Schmalkaldischer Krieg/Texte und Ausgaben) tests -->    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:a[contains(.,'Texte und Ausgaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:h2[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:a[contains(.,'Warhafftiger Abdruck')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:li[contains(.,'Abdruck, Artikel')]</xpath>
+    </test> 
+
+<!-- /archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser (Schmalkaldischer Krieg/Verfasser) tests -->    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:a[contains(.,'Verfasser')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:h2[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:a[contains(.,'AD PASTORES VER')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:li[contains(.,'Agricola, Johann')]</xpath>
+    </test> 
+
+<!-- /archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker (Schmalkaldischer Krieg/Drucker) tests -->    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:a[contains(.,'Drucker')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:h2[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:a[contains(.,'Abconterfectung')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:li[contains(.,'Andreae, Hieronymus')]</xpath>
+    </test>
+    
+<!-- /archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte (Schmalkaldischer Krieg/Druckorte) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:a[contains(.,'Druckorte')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:h2[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:a[contains(.,'Artickel // Des')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:li[contains(.,'Augsburg')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start (Erster Französischer Religionskrieg/Ereignis) tests -->
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:a[contains(.,'Ereignis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:h3[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:a[contains(.,'Texte und Ausgaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:p[contains(.,'Im Sommer 1562 fiel am')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/home_fr.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=fr_start</url>
+       <xpath>//xhtml:a[contains(.,'hier')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel (Erster Französischer Religionskrieg/Texte und Ausgaben) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:a[contains(.,'Texte und Ausgaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:h2[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:a[contains(.,'AMPLE ADVERTISSEMENT')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=kurztitel</url>
+       <xpath>//xhtml:li[contains(.,'Ample avertissement')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser (Erster Französischer Religionskrieg/Verfasser) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:a[contains(.,'Verfasser')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:h2[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:a[contains(.,'(Ausgabe nicht nachzuweisen)')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=verfasser</url>
+       <xpath>//xhtml:li[contains(.,'Abbé de Conars')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker (Erster Französischer Religionskrieg/Drucker) tests-->
+	<test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:a[contains(.,'Drucker')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:h2[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:a[contains(.,'RELIGIONIS ET')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=drucker</url>
+       <xpath>//xhtml:li[contains(.,'Arriuabenus, Andreas')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte (Erster Französischer Religionskrieg/Druckorte) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:a[contains(.,'Druckorte')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:h2[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:input/@placeholder[.='Filtern Sie die Liste ...']</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:a[contains(.,'ADVIS ET CONSEIL')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=orte</url>
+       <xpath>//xhtml:li[contains(.,'Angoulême')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Institut für Geschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=download (Download) tests -->    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=download</url>
+       <xpath>//xhtml:a[contains(.,'Download')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=download</url>
+       <xpath>//xhtml:h3[contains(.,'Download')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=download</url>
+       <xpath>//xhtml:a[contains(.,'Anleitung für MitarbeiterInnen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6 (Anhang 6) tests -->   
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:h3[contains(.,'Das Ereignis: Der Schmalkaldische Krieg - diachron')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:td[contains(.,'OBERDEUTSCHLAND')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:span[contains(.,'1546')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:p[contains(.,'The Emperor’s party')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:h3[contains(.,'Ereignisgeschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang6</url>
+       <xpath>//xhtml:p[contains(.,'Kirch, Hermann')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7 (Anhang 7) tests -->
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:h3[contains(.,'Ereignis „Erster Französischer Religionskrieg“ - diachron')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:td[contains(.,'Januar,17')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:span[contains(.,'VORGESCHICHTE')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:img/@src[.='/kmw/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:p[contains(.,'De facto Louis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:h3[contains(.,'vergleichend systematisch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kmw/methods/sdef:Context/get?mode=anhang7</url>
+       <xpath>//xhtml:p[contains(.,'Gellard, Matthieu')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155 (Object Sample) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:h2[contains(.,'Schmalkaldischer Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:h4[contains(.,'Informationen zum Druck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:a[contains(.,'vorheriger Druck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:h4[contains(.,'Anonym')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:div[contains(.,'Datenbank-Nr. 367')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:td[contains(.,'Bibliographische Angaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:h3[contains(.,'Warhafftiger Abdruck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:td[contains(.,'Titel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.1/methods/sdef:TEI/get?mode=SK.155</url>
+       <xpath>//xhtml:td[contains(.,'Auf der Vorderseite')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488 (Object Sample) tests -->
+	<test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:h2[contains(.,'Erster Französischer Religionskrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:h4[contains(.,'Informationen zum Druck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:a[contains(.,'vorheriger Druck')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:h4[contains(.,'Anonym')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:div[contains(.,'Datenbank-Nr. 598')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:td[contains(.,'Bibliographische Angaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:h3[contains(.,'AMPLE ADVERTISSEMENT')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:td[contains(.,'Titel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kmw.2/methods/sdef:TEI/get?mode=FR.488</url>
+       <xpath>//xhtml:td[contains(.,'1562')]</xpath>
+    </test>              
+</TestCase>

@@ -1,0 +1,16 @@
+<TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <text>CMDI corpus</text>
+    <tokens>
+        <token ID="t_0">CMDI</token>
+        <token ID="t_1">corpus</token>
+        <token ID="t_2">.</token>
+    </tokens>
+    <sentences>
+        <sentence ID="s_0" tokenIDs="t_0 t_1 t_2"></sentence>
+    </sentences>
+    <POStags tagset="stts">
+        <tag ID="pt_0" tokenIDs="t_0">NE</tag>
+        <tag ID="pt_1" tokenIDs="t_1">NE</tag>
+        <tag ID="pt_11" tokenIDs="t_11">$.</tag>
+    </POStags>
+</TextCorpus>

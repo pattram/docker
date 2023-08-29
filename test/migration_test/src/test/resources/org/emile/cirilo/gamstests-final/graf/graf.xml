@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="graf">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests graf -->
+    <test>
+       <url>/context:graf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=project</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=inhaltsuebersicht</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=team</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=doku</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=infomaterial</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=literatur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=ressourcen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressachtzehn</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressneunzehn</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fabelworkshop</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fableintro</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=textkritik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=metrik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=aesop</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=babrios</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=phaedrus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=avian</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=bibliographie</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=overview</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=vglstellen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/DOKUPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/POSTERDT/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/POSTEREN/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/FLYERJAHR1/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/FLYERJAHR2/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/RESSOURCENPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/FABLEINTRO/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/FABELPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/TEXTKRITIK/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/TEXTKRITIKPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/METRIK/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/METRIKPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/AESOP/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/AESOPPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/BABRIOS/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/BABRIOSPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/PHAEDRUS/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/PHAEDRUSPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/AVIAN/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/AVIANPDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/BIBLIOGRAPHIE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5276</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5276/sdef:TEI/get?mode=metadata</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5276/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5276/sdef:TEI/get?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5276/sdef:TEI/get?mode=vergleichsstellen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5276/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5276/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5276/methods/sdef:Object/getDC?</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5276/methods/sdef:TEI/getLaTeXPDF?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5271</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5271/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5271/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5271/methods/sdef:Object/getDC?</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5271/sdef:TEI/get?mode=metadata</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5271/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5271/sdef:TEI/get?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5271/methods/sdef:TEI/getLaTeXPDF?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5271/sdef:TEI/get?mode=vergleichsstellen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5529</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5529/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5529/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5529/methods/sdef:Object/getDC?</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5529/sdef:TEI/get?mode=metadata</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5529/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5529/sdef:TEI/get?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:graf.5529/methods/sdef:TEI/getLaTeXPDF?mode=interpretation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:graf.5529/sdef:TEI/get?mode=vergleichsstellen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:graf/datastreams/VGLSTELLEN/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=graf&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fgraf%2Fgraf-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:graf (Home) tests -->
+	<test>
+       <url>/context:graf</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf</url>
+       <xpath>//xhtml:h1[contains(.,'Willkommen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf</url>
+       <xpath>//xhtml:li[contains(.,'Möchten Sie einführende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/tiere-transparent-beige.png']</xpath>
+    </test>
+    	
+    <test>
+       <url>/context:graf</url>
+       <xpath>//xhtml:span[contains(.,'Zufallsfabel')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=project (Projektbeschreibung) tests -->    
+    <test>
+       <url>/context:graf?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=project</url>
+       <xpath>//xhtml:p[contains(.,'Lateintag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=project</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/logo-sparkling-science.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'BG Rein')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=inhaltsuebersicht (Inhaltsübersicht) tests -->    
+    <test>
+       <url>/context:graf?mode=inhaltsuebersicht</url>
+       <xpath>//xhtml:a[contains(.,'Inhaltsübersicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=inhaltsuebersicht</url>
+       <xpath>//xhtml:h1[contains(.,'Über das Portal')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=inhaltsuebersicht</url>
+       <xpath>//xhtml:b[contains(.,'Zitiervorschlag')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=benutzungsanleitung (Zur Benutzung des Portals) tests -->    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <xpath>//xhtml:a[contains(.,'Benutzung des Portals')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <xpath>//xhtml:p[contains(.,'Home-Seite')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/graf-logo-rot.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=benutzungsanleitung</url>
+       <xpath>//xhtml:a[contains(.,'ursula.gaertner')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=team (Team) tests -->    
+    <test>
+       <url>/context:graf?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=team</url>
+       <xpath>//xhtml:p[contains(.,'am Wörthersee')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=team</url>
+       <xpath>//xhtml:h2[contains(.,'Team')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=doku (Dokumentation) tests -->    
+    <test>
+       <url>/context:graf?mode=doku</url>
+       <xpath>//xhtml:a[contains(.,'Dokumentation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=doku</url>
+       <xpath>//xhtml:code[contains(.,'listBibl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=doku</url>
+       <xpath>//xhtml:p[contains(.,'Primärtexte')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=infomaterial (Infomaterial) tests -->    
+    <test>
+       <url>/context:graf?mode=infomaterial</url>
+       <xpath>//xhtml:a[contains(.,'Infomaterial')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=infomaterial</url>
+       <xpath>//xhtml:b[contains(.,'Zitiervorschlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=infomaterial</url>
+       <xpath>//xhtml:h1[contains(.,'Folder')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=literatur (Publikationen zu GRaF) tests -->    
+    <test>
+       <url>/context:graf?mode=literatur</url>
+       <xpath>//xhtml:a[contains(.,'Publikationen zu GRaF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=literatur</url>
+       <xpath>//xhtml:p[contains(.,'Trauben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=literatur</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/graf-logo-rot.png']</xpath>
+    </test>
+
+<!-- /context:graf?mode=ressourcen (Ressourcenliste) tests -->    
+    <test>
+       <url>/context:graf?mode=ressourcen</url>
+       <xpath>//xhtml:a[contains(.,'Ressourcenliste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=ressourcen</url>
+       <xpath>//xhtml:p[contains(.,'Weiten des')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=ressourcen</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+
+<!-- /context:graf?mode=glt1 (Grazer Latein-Tag 2016) tests -->    
+    <test>
+       <url>/context:graf?mode=glt1</url>
+       <xpath>//xhtml:a[contains(.,'Latein-Tag 2016')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt1</url>
+       <xpath>//xhtml:p[contains(.,'jährliche Veranstaltung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt1</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/glt1/1.jpg']</xpath>
+    </test>
+
+<!-- /context:graf?mode=glt2 (Grazer Latein-Tag 2017) tests -->
+	<test>
+       <url>/context:graf?mode=glt2</url>
+       <xpath>//xhtml:a[contains(.,'Latein-Tag 2017')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt2</url>
+       <xpath>//xhtml:p[contains(.,'Niklas Holzberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt2</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/glt2/phaedr5.jpg']</xpath>
+    </test>
+
+<!-- /context:graf?mode=glt3 (Grazer Latein-Tag 2018) tests -->
+	<test>
+       <url>/context:graf?mode=glt3</url>
+       <xpath>//xhtml:a[contains(.,'Latein-Tag 2018')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt3</url>
+       <xpath>//xhtml:p[contains(.,'Begrüßt wurden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=glt3</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/glt3/glt3-1.JPG']</xpath>
+    </test>
+
+<!-- /context:graf?mode=kongressachtzehn (Schülerinnenkongress 2018) tests -->    	    
+    <test>
+       <url>/context:graf?mode=kongressachtzehn</url>
+       <xpath>//xhtml:a[contains(.,'SchülerInnenkongress Mai 2018')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressachtzehn</url>
+       <xpath>//xhtml:p[contains(.,'SchülerInnenkongress')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressachtzehn</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/kongress18/publikum.jpg']</xpath>
+    </test>
+
+<!-- /context:graf?mode=kongressneunzehn (Schülerinnenkongress 2019) tests -->
+	<test>
+       <url>/context:graf?mode=kongressneunzehn</url>
+       <xpath>//xhtml:a[contains(.,'SchülerInnenkongress Mai 2019')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressneunzehn</url>
+       <xpath>//xhtml:p[contains(.,'Frau Prof. Gärtner')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=kongressneunzehn</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/kongress19/publikum2.JPG']</xpath>
+    </test>
+
+<!-- /context:graf?mode=fabelworkshop (Fabelworkshop 2018) tests-->	    
+    <test>
+       <url>/context:graf?mode=fabelworkshop</url>
+       <xpath>//xhtml:a[contains(.,'Fabelworkshop')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fabelworkshop</url>
+       <xpath>//xhtml:p[contains(.,'Den Samstag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fabelworkshop</url>
+       <xpath>//xhtml:img/@src[.='/graf/img/glt2/phaedr2.jpg']</xpath>
+    </test>
+
+<!-- /context:graf?mode=fableintro (Einführung zur antiken Fabel) tests -->    
+    <test>
+       <url>/context:graf?mode=fableintro</url>
+       <xpath>//xhtml:a[contains(.,'Einführung zur antiken Fabel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fableintro</url>
+       <xpath>//xhtml:blockquote[contains(.,'Auch jene')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=fableintro</url>
+       <xpath>//xhtml:td[contains(.,'Babrius')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=textkritik (Textkritik) tests -->    
+    <test>
+       <url>/context:graf?mode=textkritik</url>
+       <xpath>//xhtml:a[contains(.,'Textkritik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=textkritik</url>
+       <xpath>//xhtml:p[contains(.,'Hierzu müssen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=textkritik</url>
+       <xpath>//xhtml:td[contains(.,'Weißenberger')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=metrik (Metrik) tests -->    
+    <test>
+       <url>/context:graf?mode=metrik</url>
+       <xpath>//xhtml:a[contains(.,'Metrik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=metrik</url>
+       <xpath>//xhtml:p[contains(.,'Eine Verbindung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=metrik</url>
+       <xpath>//xhtml:li[contains(.,'—◡◡ | —◡◡ | —//—◡◡ | —◡◡ | x')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=aesop (Aesop) tests -->    
+    <test>
+       <url>/context:graf?mode=aesop</url>
+       <xpath>//xhtml:a[contains(.,'Aesop')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=aesop</url>
+       <xpath>//xhtml:p[contains(.,'Was hier')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=aesop</url>
+       <xpath>//xhtml:blockquote[contains(.,'Aesopus auctor')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=babrios (Babrios) tests -->    
+    <test>
+       <url>/context:graf?mode=babrios</url>
+       <xpath>//xhtml:a[contains(.,'Babrios')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=babrios</url>
+       <xpath>//xhtml:p[contains(.,'Dies deckt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=babrios</url>
+       <xpath>//xhtml:blockquote[contains(.,'Die Fabel')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=phaedrus (Phaedrus) tests -->    
+    <test>
+       <url>/context:graf?mode=phaedrus</url>
+       <xpath>//xhtml:a[contains(.,'Phaedrus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=phaedrus</url>
+       <xpath>//xhtml:p[contains(.,'Wir wissen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=phaedrus</url>
+       <xpath>//xhtml:blockquote[contains(.,'are to be interpreted')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=avian (Avian) tests -->    
+    <test>
+       <url>/context:graf?mode=avian</url>
+       <xpath>//xhtml:a[contains(.,'Avian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=avian</url>
+       <xpath>//xhtml:p[contains(.,'überlieferte Gesamtwerk')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=avian</url>
+       <xpath>//xhtml:blockquote[contains(.,'Nam quis tecum')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=bibliographie (Bibliographie zur antiken Fabel) tests -->    
+    <test>
+       <url>/context:graf?mode=bibliographie</url>
+       <xpath>//xhtml:a[contains(.,'Bibliographie zur antiken Fabel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=bibliographie</url>
+       <xpath>//xhtml:td[contains(.,'Adrados, F. R.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=bibliographie</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- /context:graf?mode=overview (Übersicht) tests -->    
+    <test>
+       <url>/context:graf?mode=overview</url>
+       <xpath>//xhtml:a[contains(.,'Übersicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=overview</url>
+       <xpath>//xhtml:a[contains(.,'Avian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=overview</url>
+       <xpath>//xhtml:span[contains(.,'Mensch-Mensch-Fabel')]</xpath>
+    </test>
+
+<!-- /context:graf?mode=vglstellen (Vergleichsstellen) tests -->    
+    <test>
+       <url>/context:graf?mode=vglstellen</url>
+       <xpath>//xhtml:a[contains(.,'Vergleichsstellen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=vglstellen</url>
+       <xpath>//xhtml:a[contains(.,'Papin')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=vglstellen</url>
+       <xpath>//xhtml:h5[contains(.,'Die Dohle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=vglstellen</url>
+       <xpath>//xhtml:a[contains(.,'Epikt.')]</xpath>
+    </test>
+    
+<!-- Object sample tests -->    
+    <test>
+       <url>/o:graf.5341</url>
+       <xpath>//xhtml:p[contains(.,'ἄγριος')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341</url>
+       <xpath>//xhtml:p[contains(.,'So darf man')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341</url>
+       <xpath>//xhtml:h3[contains(.,'Vokabelangaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:p[contains(.,'ἄγριος')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:p[contains(.,'So darf man')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:h3[contains(.,'Vokabelangaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:td[contains(.,'Philosophie/Weltsicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:th[contains(.,'Textgrundlage')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:b[contains(.,'[2019-09 bis 2019-10]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:a[contains(.,'Paraphrasieren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:h3[contains(.,'Arbeitsaufträge ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:a[contains(.,'Download LehrerInnenversion')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:em[contains(.,'cani perpasto')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:a[contains(.,'Luzzatto')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.5341/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:a[contains(.,'Babr.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786</url>
+       <xpath>//xhtml:td[contains(.,'potentem dum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786</url>
+       <xpath>//xhtml:p[contains(.,'Jene verneinten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786</url>
+       <xpath>//xhtml:h3[contains(.,'Vokabelangaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786</url>
+       <xpath>//xhtml:button[contains(.,'Übersetzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:td[contains(.,'potentem dum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:p[contains(.,'Jene verneinten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:h3[contains(.,'Vokabelangaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:button[contains(.,'Übersetzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:td[contains(.,'Latein vierjährig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:a[contains(.,'Aisop. 268 P.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=metadata</url>
+       <xpath>//xhtml:th[contains(.,'Permalink')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:a[contains(.,'Gliedern Sie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:h3[contains(.,'Arbeitsaufträge ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=interpretation</url>
+       <xpath>//xhtml:a[contains(.,'Download LehrerInnenversion')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:em[contains(.,'ἦλθεν πάχιστον')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:a[contains(.,'Shackleton')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:graf.2786/sdef:TEI/get?mode=vergleichsstellen</url>
+       <xpath>//xhtml:a[contains(.,'Mart.')]</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=graf&x2=https%3A%2F%2Fgams.uni-graz.at%2Fgraf%2Fgraf-search.xsl (Suche) tests -->    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=graf&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fgraf%2Fgraf-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'Werden mehrere')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=graf&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fgraf%2Fgraf-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Phaedr. 1 prol.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=graf&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fgraf%2Fgraf-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/o:graf.5272/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /context:graf?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/context:graf?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Univ.-Prof. Dr.phil. Ursula Gärtner ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'GAMS-Geistes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:graf?mode=imprint</url>
+       <xpath>//xhtml:h4[contains(.,'Herausgeberin')]</xpath>
+    </test>	
+      	          
+</TestCase>

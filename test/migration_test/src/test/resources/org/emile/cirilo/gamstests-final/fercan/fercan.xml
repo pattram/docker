@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="fercan">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests fercan -->
+    <test>
+       <url>/context:fercan</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=map</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=concordance</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:fercan.bibl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=abbr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=notes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=legal</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=implementation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:fercan#top</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 tests fercan (Inschriften) exemplarily -->    
+    <test>
+       <url>/context:fercan.dce.abirenes/sdef:Context/get?context=context:fercan.dce!context:fercan.dce.abirenes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:fercan.dcn.abirenes/sdef:Context/get?context=context:fercan.person.dcn!context:fercan.dcn.abirenes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:fercan.dcd.abirenes.ambiorenesibus/sdef:Context/get?context=context:fercan.person.dcd!context:fercan.dcd.abirenes.ambiorenesibus</url>
+       <status>200</status>
+    </test>  
+    
+    <test>
+       <url>/context:fercan.arch.abschrift/sdef:Context/get?context=context:fercan.arch!context:fercan.arch.abschrift</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:fercan.geog.modern.aachen/sdef:Context/get?context=context:fercan.geog.modern!context:fercan.geog.modern.aachen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:fercan.condition-o.groeszere_fehlstelle_n/sdef:Context/get?context=context:fercan.condition-o!context:fercan.condition-o.groeszere_fehlstelle_n</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:fercan.106/sdef:TEI/get?mode=object&amp;context=context:fercan.dce!context:fercan.dce.abirenes</url>
+       <status>200</status>
+    </test>  
+    
+    <test> <!-- TEI SOURCE status 200 test -->
+       <url>/o:fercan.1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test> <!-- SKOS status 200 test -->
+       <url>/o:fercan.arch/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test> <!-- Another SKOS example status 200 test -->
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/getConceptByURI?uri=https%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Afercan.arch%2F%23110110</url>
+       <status>200</status>
+    </test>
+    
+    <test> <!-- BibTex status 200 test -->
+       <url>/archive/objects/o:fercan.bibl/methods/sdef:BibTeX/getBIBTEX</url>
+       <status>200</status>
+    </test>
+    
+<!-- context:fercan (Home) tests -->
+	<test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:h3[.='Kurzbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:p[contains(.,'This database provides')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:img/@src[.='/o:fercan.5/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan#top</url>
+       <xpath>//xhtml:h3[.='Kurzbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:button/@id[.='gototop']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:fercan</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&context=context:fercan (Inschriften) tests -->    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:a[contains(.,'Inschriften')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:h3[.='Index']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:div[@id[.='MainMenu']]/xhtml:div/xhtml:a[contains(.,'Keltische Götternamen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:div[@id[.='MainMenu']]/xhtml:div/xhtml:div[@id[.='dce']]/xhtml:a[.='Abirenes']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:p[.='Anzahl der gefundenen Einträge: 440']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:a[contains(.,'Mercurius Gebrinius')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:img/@src[.='/o:fercan.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test> <!-- Index -> Keltische Götternamen -> Abirenes: map viewer -->
+       <url>/context:fercan.dce.abirenes/sdef:Context/get?context=context:fercan.dce!context:fercan.dce.abirenes</url>
+       <xpath>//xhtml:div[@id[.='results']]/xhtml:script</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:button/@id[.='gototop']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=collection&amp;context=context:fercan</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- single object sample tests -->    
+	<test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:a[contains(.,'nächster Eintrag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:h3[.='Mercurius Gebrinius']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:td[.='Apparatus criticus']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:div[@id[.='vwr-content']]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:script[@src[.='/osdviewer/gamsOsd.js']]</xpath>
+    </test>
+    
+	<test>
+       <url>/o:fercan.1/sdef:TEI/get?mode=object&amp;context=context:fercan</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=map (Fundorte) tests -->
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=map</url>
+       <matcher>a:matches(^Fundorte$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=map</url>
+       <matcher>span:matches(^Volltextsuche$)</matcher>
+    </test>
+
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=concordance (Konkordanz) tests --> 
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=concordance</url>
+       <xpath>//xhtml:a[contains(.,'Konkordanz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=concordance</url>
+       <xpath>//xhtml:table[@id[.='conc']]/xhtml:tr/xhtml:td[.='Matronis']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=concordance</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- o:fercan.bibl (Literatur) tests -->
+	<test>
+       <url>/o:fercan.bibl</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.bibl</url>
+       <xpath>//xhtml:p[contains(.,'Zelle, Michael')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:fercan.bibl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=abbr (Abkürzungen) tests-->    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:a[contains(.,'Abkürzungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:p[contains(.,'Antike Welt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=abbr</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- archive/objects/o:fercan.arch/methods/sdef:SKOS/get (Archäologische Klassifikation) tests-->
+	<test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'Archäologische Klassifikation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Ziel dieses Thesaurus ist es')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'SKOS/XML anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:li/xhtml:span/xhtml:span/xhtml:a[contains(.,'https://gams.uni-graz.at/o:fercan.arch#C.210100')]</xpath>
+    </test>
+	    
+    <test>
+       <url>/archive/objects/o:fercan.arch/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=notes (Hinweise zur Benutzung) tests -->
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:a[contains(.,'Hinweise zur Benutzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:p[contains(.,'Über den ersten Indexeintrag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=legal (Rechtliches) tests -->
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=legal</url>
+       <xpath>//xhtml:a[contains(.,'Rechtliches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=legal</url>
+       <xpath>//xhtml:p[contains(.,'Alle Metadaten aus der')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=legal</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=implementation (Zur technischen Umsetzung) tests -->
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=implementation</url>
+       <xpath>//xhtml:a[contains(.,'Zur technischen Umsetzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=implementation</url>
+       <xpath>//xhtml:p[contains(.,'Die hier vorliegende digitale Inschriftenedition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=implementation</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:fercan/methods/sdef:Context/get?mode=imprint (Impressum und Dank) tests -->
+	<test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum und Dank')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Wolfgang Spickermann')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:fercan/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- fercan tests sind fertig, aber die 3 (Fundorte) tests haben alle einen Fatal error produziert, den ich nicht verstehe -->	
+		
+</TestCase>

@@ -1,0 +1,7 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+construct  {?s ?p ?o}
+where {
+    bind (<http://gams.uni-graz.at/skos/scheme/o:pth/#170010> as ?s)
+    bind (rdf:type as ?p)
+	?s ?p ?o 
+} limit 10

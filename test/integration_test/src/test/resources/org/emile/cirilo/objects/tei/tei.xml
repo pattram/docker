@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description xmlns:xsl="http://cm4f.org/xsl/" 
+    xmlns:rel="info:fedora/fedora-system:def/relations-external#" 
+    xmlns:model="info:fedora/fedora-system:def/model#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:cm4f="http://cm4f.org/"
+    rdf:about="info:fedora/o:emile.tei">
+    <dc:identifier>o:emile.tei</dc:identifier>
+    <dc:title>Test Object</dc:title>
+    <dc:description>This is a test object</dc:description>
+    <dc:creator>Otto Geist</dc:creator>
+    <dc:contributor>Wilhelm Dilthey</dc:contributor>>
+    <dc:publisher>emile.org</dc:publisher>
+    <dc:type>CompoundObject</dc:type>
+    <dc:source>Born digital</dc:source>
+    <dc:language>en</dc:language>
+    <dc:coverage>Austria</dc:coverage>
+    <dc:date>2003-2018</dc:date>
+    <dc:rights>Resource licensed under Creative Commons BY-NC-SA 4.0</dc:rights>
+    <dc:rights>http://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+    <dc:relation>http://cm4f.org</dc:relation>
+    <dcterms:isPartOf>http://apache:82/context:emile</dcterms:isPartOf>   
+    <model:hasModel rdf:resource="info:fedora/cm:TEI"/>
+    <rel:isMemberOf rdf:resource="http://apache:82/context:emile"/>
+    <rel:isMemberOf rdf:resource="http://apache:82/corpus:emile"/>
+    <oai:itemID>hdl:11471/1001</oai:itemID>
+    <cm4f:hasComponentMetadata rdf:resource="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1562754657284"/>
+    <rdf:type rdf:resource="http://cm4f.org/Object" />
+    <xsl:hasXsltToDefaultView rdf:resource="http://apache:82/xsl/dc2html.xsl"/>
+    <xsl:hasXsltToDC rdf:resource="http://apache:82/xsl/tei2dc.xsl"/>
+    <xsl:hasXsltToHTML rdf:resource="http://apache:82/tei/html/html.xsl"/>
+    <xsl:hasXsltToFO rdf:resource="http://apache:82/tei/fo/fo.xsl"/>
+    <xsl:hasXsltToLATEX rdf:resource="http://apache:82/tei/latex/latex.xsl"/>
+    <xsl:hasXsltBibTeXToHTML rdf:resource="http://apache:82/xsl/bibtex2html.xsl"/>
+    <xsl:hasXsltBibTeXToFO rdf:resource="http://apache:82/xsl/bibtex2fo.xsl"/>
+    <xsl:hasXsltToHSSF rdf:resource="http://apache:82/xsl/tei2hssf.xsl"/>
+    <xsl:hasXsltToRDF_Triples rdf:resource="http://apache:82/xsl/tei2rdf.xsl"/>
+    <xsl:hasXsltToXML_Snippet rdf:resource="http://apache:82/xsl/tei2snippet.xsl"/>
+    <xsl:hasXsltToR_Dataset rdf:resource="http://apache:82/xsl/tei2dataset.xsl"/>
+    <xsl:hasXsltToMETS rdf:resource="http://apache:82/xsl/tei2mets.xsl"/>
+    <xsl:hasXsltForCustomization rdf:resource="http://apache:82/xsl/customization4tei.xsl"/>
+   </rdf:Description>
+</rdf:RDF>

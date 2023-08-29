@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="rpb">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests rpb -->
+    <test>
+       <url>/context:rpb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=home</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-volumes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-18jh</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-almosenamt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-irat</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-16jh</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-17jh</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-bauamt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-hansgericht</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-stadtgericht</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-steueramt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-ungeldamt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-vormundamt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rpb-arat</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-c-0097/sdef:TEI/get?mode=pp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-06-text/sdef:TEI/get?context=info:fedora/o:rpb-06-102r_s</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-06-text/sdef:TEI/get?context=info:fedora/o:rpb-06-104r_s</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-c-0155/sdef:TEI/get?mode=pp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-06-text/sdef:TEI/get?context=info:fedora/o:rpb-06-055r_s</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-c-0010/sdef:TEI/get?mode=pp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rpb-06-text/sdef:TEI/get?context=info:fedora/o:rpb-06-058r_s</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/podcasts/2012/0/rpb-01.mp4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Frpb%2F3rpb_search.xsl&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=rpb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=links</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:rpb (Home) tests -->
+	<test>
+       <url>/context:rpb</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb</url>
+       <matcher>h3:matches(^"Der Geschichte ein Gesicht geben"$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb</url>
+       <matcher>span:matches(^Herausgegeben vom Zentrum für Informationsmodellierung$)</matcher>
+    </test>
+    
+     
+    <test>
+       <url>/context:rpb</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:rpb/methods/sdef:Context/get?mode=home (alternative Home link) tests -->
+	<test>
+       <url>/context:rpb</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb</url>
+       <matcher>h3:matches(^"Der Geschichte ein Gesicht geben"$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb</url>
+       <matcher>span:matches(^Herausgegeben vom Zentrum für Informationsmodellierung$)</matcher>
+    </test>
+        
+    <test>
+       <url>/context:rpb</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /context:rpb-volumes (Gesamtbestand) tests -->    
+    <test>
+       <url>/context:rpb-volumes</url>
+       <xpath>//xhtml:a[contains(.,'Gesamtbestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-volumes</url>
+       <matcher>h3:matches(^Gesamtbestand$)</matcher>
+    </test>
+    
+    
+    <test>
+       <url>/context:rpb-volumes</url>
+       <matcher>h4:matches(^Band 01: Wappen- und Porträtbuch der Ratsherren$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-volumes</url>
+       <matcher>p:matches(^Signatur: StAR I Aa 1$)</matcher>
+    </test>
+
+<!-- /context:rpb-person (Porträts) tests -->
+    <test>
+       <url>/context:rpb-person</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-person</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    
+    <test>
+       <url>/context:rpb-person</url>
+       <matcher>a:matches(^Bauamt$)</matcher>
+    </test>
+    
+<!-- /archive/objects/context:rpb/methods/sdef:Context/get?mode=about (Projektbeschreibung) tests -->
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=about</url>
+       <matcher>h3:matches(^Projektbeschreibung$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=about</url>
+       <matcher>a:matches(^EuroMACHS$)</matcher>
+    </test>
+    
+
+<!-- /search/gsearch?query=&x2=https%3A%2F%2Fgams.uni-graz.at%2Frpb%2F3rpb_search.xsl&hitPageSize=10&hitPageStart=1&pid=rpb (Suche) tests -->    
+    <test>
+       <url>/search/gsearch?query=&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Frpb%2F3rpb_search.xsl&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=rpb</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Frpb%2F3rpb_search.xsl&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=rpb</url>
+       <xpath>//xhtml:h3[contains(.,'Suchanfrage')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Frpb%2F3rpb_search.xsl&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=rpb</url>
+       <xpath>//xhtml:a[contains(.,'Johann Christoph Wild')]</xpath>
+    </test>
+
+<!-- /context:rpb-16jh (16. Jahrhundert) tests -->
+	<test>
+       <url>/context:rpb-16jh</url>
+       <matcher>a:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-16jh</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-16jh</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-16jh</url>
+       <matcher>a:matches(^Pruner Hans Georg$)</matcher>
+    </test>
+    
+<!-- /context:rpb-17jh (17. Jahrhundert) tests -->
+	<test>
+       <url>/context:rpb-17jh</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-17jh</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-17jh</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-17jh</url>
+       <matcher>a:matches(^Pruner Hans Georg$)</matcher>
+    </test>
+        
+<!-- /context:rpb-18jh (18. Jahrhundert) tests -->
+	<test>
+       <url>/context:rpb-18jh</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-18jh</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-18jh</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-18jh</url>
+       <matcher>a:matches(^Gritsch Johann Georg$)</matcher>
+    </test>
+    
+<!-- /context:rpb-almosenamt (Almosenamt) tests -->
+	<test>
+       <url>/context:rpb-almosenamt</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-almosenamt</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-almosenamt</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-almosenamt</url>
+       <matcher>a:matches(^Harrer Daniel$)</matcher>
+    </test>
+    
+<!-- /context:rpb-bauamt (Bauamt) tests -->    
+    <test>
+       <url>/context:rpb-bauamt</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-bauamt</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-bauamt</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-bauamt</url>
+       <matcher>a:matches(^Fugger Stephan$)</matcher>
+    </test>
+
+<!-- /context:rpb-hansgericht (Handgericht) tests -->
+	<test>
+       <url>/context:rpb-hansgericht</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-hansgericht</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-hansgericht</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-hansgericht</url>
+       <matcher>a:matches(^Zirolt Johann Georg$)</matcher>
+    </test>
+    
+<!-- /context:rpb-stadtgericht (Stadtgericht) tests -->
+	<test>
+       <url>/context:rpb-stadtgericht</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-stadtgericht</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-stadtgericht</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-stadtgericht</url>
+       <matcher>a:matches(^Wolfsteiner Johann Andreas$)</matcher>
+    </test>
+
+<!-- /context:rpb-steueramt (Steueramt) tests -->    
+    <test>
+       <url>/context:rpb-steueramt</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-steueramt</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-steueramt</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-steueramt</url>
+       <matcher>a:matches(^Mämminger Paul$)</matcher>
+    </test>
+
+<!-- /context:rpb-ungeldamt (Ungeldamt) tests -->
+    <test>
+       <url>/context:rpb-ungeldamt</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-ungeldamt</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-ungeldamt</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-ungeldamt</url>
+       <matcher>a:matches(^Wild Michael Friedrich$)</matcher>
+    </test>
+    
+<!-- /context:rpb-vormundamt (Vormundamt) tests -->
+	<test>
+       <url>/context:rpb-vormundamt</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-vormundamt</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-vormundamt</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-vormundamt</url>
+       <matcher>a:matches(^Pruner Hans Georg$)</matcher>
+    </test>
+
+<!-- /context:rpb-irat (Innerer Rat) tests -->
+	<test>
+       <url>/context:rpb-irat</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-irat</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-irat</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-irat</url>
+       <matcher>a:matches(^Gritsch Johann Georg$)</matcher>
+    </test>
+
+<!-- /context:rpb-arat (Äußerer Rat) tests -->
+	<test>
+       <url>/context:rpb-arat</url>
+       <xpath>//xhtml:a[contains(.,'Porträts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rpb-arat</url>
+       <matcher>h3:matches(^Porträts$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-arat</url>
+       <matcher>h5:matches(^Auswahl$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:rpb-arat</url>
+       <matcher>a:matches(^Eybeck Dionysius$)</matcher>
+    </test>
+        
+    <test>
+       <url>/o:rpb-c-0097/sdef:TEI/get?mode=pp</url>
+       <matcher>a:matches(^viafID:69270756$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:rpb-c-0097/sdef:TEI/get?mode=pp</url>
+       <matcher>a:matches(^pb-06-104r_s$)</matcher>
+    </test>
+
+
+	<test>
+       <url>/o:rpb-06-text/sdef:TEI/get?context=info:fedora/o:rpb-06-102r_s</url>
+       <matcher>a:matches(^Zur Ansicht des Bandes im DFG-Viewer >$)</matcher>
+    </test>    
+    
+
+<!-- /archive/objects/context:rpb/methods/sdef:Context/get?mode=links (Links) tests -->
+	<test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=links</url>
+       <matcher>a:matches(^Stadt Regensburg$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=links</url>
+       <matcher>a:matches(^Fontes Civitatis Ratisponensis$)</matcher>
+    </test>
+    
+
+<!-- /archive/objects/context:rpb/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=imprint</url>
+       <matcher>b:matches(^Herausgeber$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:rpb/methods/sdef:Context/get?mode=imprint</url>
+       <matcher>a:matches(^Wappen- und Porträtbuchs des Vormundamtes:$)</matcher>
+    </test>
+      	          
+</TestCase>

@@ -1,0 +1,185 @@
+version: "3.4"
+
+
+
+
+services:
+
+  activemq:
+    volumes:
+      - activemq-vol:/opt/activemq/data
+    ports:
+      - "61616:61616"
+      - "4051:8161" 
+
+  apache:
+    ports:
+      - "443:443"
+
+
+    volumes:
+      - apache-volume:/var/www/html
+      - apache-config-volume:/etc/apache2/extra-sites:ro
+
+  blazegraph:
+    volumes:
+      - blazegraph-vol:/shared/blazegraph
+    ports:
+      - "4040:8080"
+
+  cocoon:
+    volumes:
+      - cocoon-config-volume:/data
+    ports:
+      - "4047:8080"
+
+  fcgate:
+    volumes:
+      - apache-volume:/var/apache
+
+  fcrepo4:
+    volumes:
+      - fcrepo-vol:/var/lib/fcrepo
+
+  fits:        
+    ports:
+      - "4044:8082"
+
+  latex:
+    ports:
+      - "4048:8888"
+
+  loris:
+    volumes:
+      - loriscache-vol:/var/cache/loris
+
+  rdf4j:
+    volumes:
+      - rdf4j-vol:/data
+
+  nexuscube:
+    ports:
+      - 4049:8080
+
+  postgres:
+    volumes:
+      - postgres-vol:/var/lib/postgresql/data
+
+  proai:
+    volumes:
+      - proai-vol:/var/proai
+    ports:
+      - "4050:8080"
+
+  skosifier:
+    ports:
+      - "4045:5000"
+
+  solr:     
+    volumes:
+      - solr-vol:/var/solr
+    ports: 
+      - "4046:8983"
+
+
+  treetagger:
+    ports:
+      - "4043:8080"
+
+
+  triplestore:
+    volumes:
+      - triplestore-vol:/shared/blazegraph
+    ports:
+      - "4041:8080"
+
+  verovio:  
+    ports:
+      - 4052:8080
+      
+  minio:
+    volumes:
+      - minio-vol:/data
+    ports:
+      - 9000:9000
+      - 9001:9001
+
+volumes:
+  activemq-vol:
+    driver_opts:
+      type: none
+      device: ${ACTIVEMQ_DATA_DEVICE}
+      o: bind
+
+  blazegraph-vol:
+    driver_opts:
+      type: none
+      device: ${BLAZEGRAPH_DATA_DEVICE}
+      o: bind
+
+  fcrepo-vol:
+    driver_opts:
+      type: none
+      device: ${FCREPO_DATA_DEVICE}
+      o: bind
+
+  loriscache-vol:
+    driver_opts:
+      type: none
+      device: ${LORIS_CACHE_DEVICE}
+      o: bind
+
+  rdf4j-vol:
+    driver_opts:
+      type: none
+      device: ${RDF4J_DATA_DEVICE}
+      o: bind
+
+  postgres-vol:
+    driver_opts:
+      type: none
+      device: ${POSTGRES_DATA_DEVICE}
+      o: bind
+
+  proai-vol:
+    driver_opts:
+      type: none
+      device: ${PROAI_DATA_DEVICE}
+      o: bind
+
+  solr-vol:
+    driver_opts:
+      type: none
+      device: ${SOLR_DATA_DEVICE}
+      o: bind
+
+  triplestore-vol:
+    driver_opts:
+      type: none
+      device: ${TRIPLESTORE_DATA_DEVICE}
+      o: bind
+
+  minio-vol:
+    driver_opts:
+      type: none
+      device: ${MINIO_DATA_DEVICE}
+      o: bind
+
+
+  apache-volume:
+    driver_opts:
+      type: none
+      device: ${APACHE_DATA_DEVICE}
+      o: bind
+
+  apache-config-volume:
+    driver_opts:
+      type: none
+      device: ${APACHE_CONFIG_DEVICE}
+      o: bind
+
+  cocoon-config-volume:
+    driver_opts:
+      type: none
+      device: ${COCOON_CONFIG_DEVICE}
+      o: bind

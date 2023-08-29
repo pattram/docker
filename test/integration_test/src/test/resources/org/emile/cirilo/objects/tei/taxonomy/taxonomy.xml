@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader type="contextualizations">
+        <fileDesc>
+            <titleStmt>
+                <title>Description of Context Structure for Object Referencing</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Center for Information Modelling, University Graz</publisher>
+                <idno type="PID">o:emile.taxonomy.tei</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy>
+                    <category xml:id="context:gz.taxonomy">
+                        <catDesc>Titel der Taxonomie</catDesc>
+                        <category xml:id="context:gz.countries">
+                            <catDesc>Länder</catDesc>
+                            <category xml:id="context:gz.italy">
+                                <catDesc>Italien</catDesc>
+                            </category>
+                            <category xml:id="context:gz.greek">
+                                <catDesc>Griechenland</catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="context:gz.regions">
+                            <catDesc>Regionen</catDesc>
+                            <category xml:id="context:gz.umbria">
+                                <catDesc>Umbrien</catDesc>
+                            </category>
+                            <category xml:id="context:gz.apulien">
+                                <catDesc>Apulien</catDesc>
+                            </category>
+                            <category xml:id="context:gz.latium">
+                                <catDesc>Latium</catDesc>
+                            </category>
+                            <category xml:id="context:gz.liguria">
+                                <catDesc>Ligurien</catDesc>
+                            </category>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p> Die heutige <ref type="context" target="context:gz.latium">Region Latium</ref>
+                erstreckt sich von Nordwest nach Südost in etwa um das „Knie“ Italiens entlang des
+                Tyrrhenischen Meeres, das einen Teil des Mittelmeers darstellt. </p>
+        </body>
+    </text>
+</TEI>

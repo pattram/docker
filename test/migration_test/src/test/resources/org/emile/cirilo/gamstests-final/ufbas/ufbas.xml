@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ufbas">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ufbas -->
+    <test>
+       <url>/context:ufbas</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/datastreams/ABOUT/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonTäter%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonTäter%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonMittäter%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonMittäter%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonOpfer%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonOpfer%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonKläger%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonKläger%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonZeuge%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonZeuge%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonAnwesende%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonAnwesende%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonHehler%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonHehler%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonNotar%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523PersonNotar%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523male%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523female%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Beiname%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Beruf%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Beruf%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Zivilstand%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Zivilstand%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Status%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Status%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Verwandtschaftsgrad%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Verwandtschaftsgrad%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtHerkunft%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtHerkunft%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtWohnort%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtWohnort%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtTatort%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523OrtTatort%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Vorinstanz%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Vorinstanz%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523FrüheresUrfehdeverfahren%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523FrüheresUrfehdeverfahren%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523AnderesUrfehdeverfahren%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523AnderesUrfehdeverfahren%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Untersuchungshaft%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Untersuchungshaft%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatAlkoholmissbrauch%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatAlkoholmissbrauch%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatArbeitsverweigerung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatArbeitsverweigerung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatAusdemHausfordern%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatAusdemHausfordern%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBewaffneteAuseinandersetzung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBewaffneteAuseinandersetzung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeihilfe%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeihilfe%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeihilfeMord%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeihilfeMord%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeleidigungVerleumdung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBeleidigungVerleumdung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBestechung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBestechung%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBetrug%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBetrug%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBetteln%253E</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523TatBetteln%253E</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:ufbas (Home) tests -->
+	<test>
+       <url>/context:ufbas</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ufbas</url>
+       <xpath>//xhtml:h3[contains(.,'Urfehdebücher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ufbas</url>
+       <xpath>//xhtml:img/@src[.='/ufbas/img/Startbild.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ufbas</url>
+       <xpath>//xhtml:p[contains(.,'herausgegeben von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ufbas</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+<!-- /archive/objects/context:ufbas/methods/sdef:Context/get?mode=home (alternative Home Link) tests -->
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:h3[contains(.,'Urfehdebücher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:img/@src[.='/ufbas/img/Startbild.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:p[contains(.,'herausgegeben von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:ufbas/methods/sdef:Context/get?mode=about (Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h4[contains(.,'Digitale Edition des Urfehdebuches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Die hier veröffentlichte Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/context:ufbas/NUM_ENTRY']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/TEISYMBOL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:th[contains(.,'Heinrich Veldbach')]</xpath>
+    </test>
+
+<!-- /o:ufbas.1563 (Urfehdebuch) tests -->    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:a[contains(.,'Urfehdebuch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:h3[contains(.,'Ratsbücher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/RDFSYMBOL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:span[contains(.,'Bastean Doldter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:a[contains(.,'Datum: 1563-01-03')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:button[contains(.,'Mittäter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.1563</url>
+       <xpath>//xhtml:td[contains(.,'Tüllicken')]</xpath>
+    </test>
+
+<!-- /o:ufbas.kategorien (Kategorien) tests -->    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:h3[contains(.,'Erschliessungskategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/TEISYMBOL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:p[contains(.,'Dieses Dokument enthält')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:a[contains(.,'show as graph')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:a[contains(.,'Tatort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ufbas.kategorien</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb (Datenkorb) tests -->    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:a[contains(.,'Datenkorb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:h3[contains(.,'Datenkorb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:p[contains(.,'Dieses virtuelle Dokument')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:button[contains(.,'Datenkorb leeren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:ufbas/datastreams/TABELLENSYMBOL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:h3[contains(.,'Einträge im Datenkorb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=datenkorb</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params= (Suche) tests -->    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:a[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:h3[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:label[contains(.,'Reguläre Ausdrücke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:p[contains(.,'Mehrere Suchbegriffe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.volltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:input/@id[contains(.,'Vor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:a[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:h3[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:label[contains(.,'Reguläre Ausdrücke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:p[contains(.,'Mehrere Suchbegriffe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:input/@id[contains(.,'Vor')]</xpath>
+    </test>
+
+<!-- Kategorien Sample tests -->    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523male%253E</url>
+       <xpath>//xhtml:h4[contains(.,'Mann')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523male%253E</url>
+       <xpath>//xhtml:span[contains(.,'Hansen Geiger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523male%253E</url>
+       <xpath>//xhtml:p[contains(.,'Barbel Gygery von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Verwandtschaftsgrad%253E</url>
+       <xpath>//xhtml:h4[contains(.,'Verwandtschaftsgrad')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Verwandtschaftsgrad%253E</url>
+       <xpath>//xhtml:a[contains(.,'Gertrudt Karsti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Verwandtschaftsgrad%253E</url>
+       <xpath>//xhtml:span[contains(.,'Verwandtschaftsgrad')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523StrafeAusweisung%253E</url>
+       <xpath>//xhtml:p[contains(.,'kommt in einem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523StrafeAusweisung%253E</url>
+       <xpath>//xhtml:h3[contains(.,'Anna Trëfftz von Muttentz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.kategorien/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523StrafeAusweisung%253E</url>
+       <xpath>//xhtml:h4[contains(.,'Ausweisung')]</xpath>
+    </test>
+
+<!-- Show as graph sample tests -->    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Beruf%253E</url>
+       <xpath>//xhtml:h3[contains(.,'Graphendarstellung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Beruf%253E</url>
+       <xpath>//xhtml:div[@class='svg']/xhtml:svg/@width</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Vorinstanz%253E</url>
+       <xpath>//xhtml:h3[contains(.,'Graphendarstellung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Vorinstanz%253E</url>
+       <xpath>//xhtml:div[@class='svg']/xhtml:svg/@width</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Urfehdeeid%253E</url>
+       <xpath>//xhtml:h3[contains(.,'Graphendarstellung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:ufbas.graph/methods/sdef:Query/get?params=%241%7C%253Chttp%3A%2F%2Fgams.uni-graz.at%2Fufbas%2F%2523Urfehdeeid%253E</url>
+       <xpath>//xhtml:div[@class='svg']/xhtml:svg/@width</xpath>
+    </test>
+
+<!-- /archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Susanna Burghartz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ufbas/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+     
+      	          
+</TestCase>

@@ -1,0 +1,14 @@
+<rdf:RDF xmlns:rdf= "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    
+    <rdfs:Class rdf:about="http://example.org#Animal"/>
+    
+    <rdfs:Class rdf:about="http://example.org#Chamois">
+        <rdfs:subClassOf rdf:resource="http://example.org#Animal"/>
+     </rdfs:Class>
+    
+    <rdf:Description rdf:about="http://cm4f.org">
+        <rdf:type rdf:resource="http://example.org#Chamois"/>
+    </rdf:Description>                   
+    
+</rdf:RDF>

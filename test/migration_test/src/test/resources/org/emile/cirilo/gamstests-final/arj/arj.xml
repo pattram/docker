@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="arj">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests arj -->
+    <test>
+       <url>/context:arj</url>
+       <status>200</status>
+    </test>
+    
+   <test>
+       <url>/context:arj-fritz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-maurisperg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-zara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-rattkay</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-denis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-gedruckte-texte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-manuskripte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-aufsaetze</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-erlaeuterungen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-kurzbiographien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arj-uebersetzungen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arj/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <!-- PDF example status tests -->
+    <test>
+       <url>/archive/objects/o:arj-06A-1/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:arj-081-21/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:arj-083-25/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:arj-078-13/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:arj-07B-17/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/archive/objects/o:arj-06B-2/methods/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:arj (Home) tests -->
+	<test>
+       <url>/context:arj</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj</url>
+       <xpath>//xhtml:h3[contains(.,'Die Antikerezeption an der Grazer Jesuitenuniversität')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj</url>
+       <xpath>//xhtml:h5[contains(.,'Inhalt des Projekts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj</url>
+       <xpath>//xhtml:p[contains(.,'Von 1573 bis zum Jahre 1773')]</xpath>
+    </test>
+
+<!-- /context:arj-fritz (Autor Fritz) tests -->
+	<test>
+       <url>/context:arj-fritz</url>
+       <xpath>//xhtml:a[contains(.,'Fri(t)z')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-fritz</url>
+       <xpath>//xhtml:h3[contains(.,'Andreas Fri(t)z')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-fritz</url>
+       <xpath>//xhtml:li[contains(.,'Andreas Friz e S. J.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-fritz</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-maurisperg (Autor Maurisperg) tests -->
+	<test>
+       <url>/context:arj-maurisperg</url>
+       <xpath>//xhtml:a[contains(.,'Anton Maurisperg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-maurisperg</url>
+       <xpath>//xhtml:h3[contains(.,'Anton Maurisperg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-maurisperg</url>
+       <xpath>//xhtml:li[contains(.,'Anton Maurisperg S. J.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-maurisperg</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-zara (Autor Zara) tests -->
+	<test>
+       <url>/context:arj-zara</url>
+       <xpath>//xhtml:a[contains(.,'Antonius Zara')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-zara</url>
+       <xpath>//xhtml:h3[contains(.,'Antonius Zara')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-zara</url>
+       <xpath>//xhtml:li[contains(.,'Ulrike Syrou')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-zara</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-rattkay (Autor Rattkay) tests -->
+	<test>
+       <url>/context:arj-rattkay</url>
+       <xpath>//xhtml:a[contains(.,'Rat(t)kay')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-rattkay</url>
+       <xpath>//xhtml:h3[contains(.,'Johannes Rat(t)kay')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-rattkay</url>
+       <xpath>//xhtml:li[contains(.,'Joannes Rattkay')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-rattkay</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-denis (Autor Denis) tests -->
+	<test>
+       <url>/context:arj-denis</url>
+       <xpath>//xhtml:a[contains(.,'Michael Denis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-denis</url>
+       <xpath>//xhtml:h3[contains(.,'Michael Denis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-denis</url>
+       <xpath>//xhtml:li[contains(.,'Ludwig Fladerer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-denis</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-gedruckte-texte (Gedruckte Texte) tests -->
+	<test>
+       <url>/context:arj-gedruckte-texte</url>
+       <xpath>//xhtml:a[contains(.,'Gedruckte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-gedruckte-texte</url>
+       <xpath>//xhtml:h3[contains(.,'Gedruckte Texte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-gedruckte-texte</url>
+       <xpath>//xhtml:li[contains(.,'Anton Maurisperg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-gedruckte-texte</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+	
+<!-- /context:arj-manuskripte (Manuskripte) tests -->
+	<test>
+       <url>/context:arj-manuskripte</url>
+       <xpath>//xhtml:a[contains(.,'Manuskripte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-manuskripte</url>
+       <xpath>//xhtml:h3[contains(.,'Manuskripte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-manuskripte</url>
+       <xpath>//xhtml:li[contains(.,'Andreas Friz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-manuskripte</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-aufsaetze (Aufsätze) tests -->
+	<test>
+       <url>/context:arj-aufsaetze</url>
+       <xpath>//xhtml:a[contains(.,'Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-aufsaetze</url>
+       <xpath>//xhtml:h3[contains(.,'Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-aufsaetze</url>
+       <xpath>//xhtml:li[contains(.,'Ulrike Syrou')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-aufsaetze</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+    
+<!-- /context:arj-erlaeuterungen (Erläuterungen und Kommentar) tests -->
+	<test>
+       <url>/context:arj-erlaeuterungen</url>
+       <xpath>//xhtml:a[contains(.,'Erläuterungen und Kommentar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-erlaeuterungen</url>
+       <xpath>//xhtml:h3[contains(.,'Erläuterungen und Kommentar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-erlaeuterungen</url>
+       <xpath>//xhtml:li[contains(.,'Ulrike Syrou')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-erlaeuterungen</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+
+<!-- /context:arj-kurzbiographien (Kurzbiographien) tests -->	
+	<test>
+       <url>/context:arj-kurzbiographien</url>
+       <xpath>//xhtml:a[contains(.,'Kurzbiographien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-kurzbiographien</url>
+       <xpath>//xhtml:h3[contains(.,'Kurzbiographien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-kurzbiographien</url>
+       <xpath>//xhtml:li[contains(.,'Mareike Einfalt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-kurzbiographien</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+	
+<!-- /context:arj-uebersetzungen (Übersetzungen) tests -->						   
+	<test>
+       <url>/context:arj-uebersetzungen</url>
+       <xpath>//xhtml:a[contains(.,'Dokumente')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-uebersetzungen</url>
+       <xpath>//xhtml:h3[contains(.,'Übersetzungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-uebersetzungen</url>
+       <xpath>//xhtml:li[contains(.,'Anton Maurisperg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arj-uebersetzungen</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:arj/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+    <test>
+       <url>/archive/objects/context:arj/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arj/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arj/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h5[contains(.,'Projektleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arj/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Zentrum für Informationsmodellierung')]</xpath>
+    </test>
+    			    					   
+</TestCase>

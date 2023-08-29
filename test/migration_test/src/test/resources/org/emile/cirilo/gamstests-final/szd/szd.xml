@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="szd">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>v
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests szd -->
+    <test>
+       <url>/context:szd</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>  
+
+	<test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Aszd.6820%2FDC%2F2020-05-19T02%3A10%3A04.169Z&amp;style=https%3A%2F%2Fglossa.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Aszd.6820%2Fmethods%2Fsdef%3AdfgMETS%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6820&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6820%2Fcanvas%2FDIV.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Aszd.6831%2FDC%2F2020-05-19T02%3A10%3A07.625Z&amp;style=https%3A%2F%2Fglossa.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Aszd.6831%2Fmethods%2Fsdef%3AdfgMETS%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6831&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6831%2Fcanvas%2FDIV.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Aszd.6837%2FDC%2F2020-05-19T02%3A10%3A09.347Z&amp;style=https%3A%2F%2Fglossa.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Aszd.6837%2Fmethods%2Fsdef%3AdfgMETS%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6837&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6837%2Fcanvas%2FDIV.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Aszd.6829%2FDC%2F2020-05-19T02%3A10%3A06.834Z&amp;style=https%3A%2F%2Fglossa.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Aszd.6829%2Fmethods%2Fsdef%3AdfgMETS%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6829&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6829%2Fcanvas%2FDIV.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/toHTM?source=http%3A%2F%2Fgams.uni-graz.at%3A8380%2Farchive%2Fget%2Fo%3Aszd.6813%2FDC%2F2020-05-19T02%3A10%3A01.398Z&amp;style=https%3A%2F%2Fglossa.uni-graz.at%2Farchive%2Fobjects%2Fcirilo%3ABackbone%2Fdatastreams%2FOBJECTtoMIRADORHTML%2Fcontent&amp;mode=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fobjects%2Fo%3Aszd.6813%2Fmethods%2Fsdef%3AdfgMETS%2Fget&amp;locale=&amp;model=&amp;context=&amp;view=BookView&amp;manifest=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6813&amp;canvas=https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.6813%2Fcanvas%2FDIV.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:szd.glossar/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cde</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cen</url>
+       <status>200</status>
+    </test>    
+  
+<!-- /context:szd (Home/Startseite) tests -->
+	<test>
+       <url>/context:szd</url>
+       <xpath>//xhtml:img/@src[.='/szd/img/SZlogo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:szd/datastreams/STARTBILD/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd</url>
+       <xpath>//xhtml:h3[contains(.,'Willkommen bei STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd</url>
+       <xpath>//xhtml:p[contains(.,'Im Zentrum des Projekts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <xpath>//xhtml:img/@src[.='/szd/img/SZlogo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:szd/datastreams/STARTBILD/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <xpath>//xhtml:h3[contains(.,'Willkommen bei STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <xpath>//xhtml:p[contains(.,'Im Zentrum des Projekts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=de&amp;mode=</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/img/SZlogo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:szd/datastreams/STARTBILD/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Willkommen bei STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Im Zentrum des Projekts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?locale=en&mode= (English Home/Startseite) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:img/@src[.='/szd/img/SZlogo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:szd/datastreams/STARTBILD/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:h3[contains(.,'Welcome to STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:p[contains(.,'At the heart of the project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/szd/img/SZlogo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:szd/datastreams/STARTBILD/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Welcome to STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'At the heart of the project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:szd/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+
+<!-- /o:szd.werke/sdef:TEI/get?locale=de (Werke) tests -->
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Werke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Werke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Ich bin am 28. November')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'ESSAYS/REDEN/FEUILLETONS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Ein Schimmer Licht im Dunkel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/RDF_icon.png']</xpath>
+    </test>
+
+<!-- /o:szd.werke/sdef:TEI/get?locale=en (English works) tests -->
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Works')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Works')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Ich bin am 28. November')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'ESSAYS/SPEECHES/FEUILLETONS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Ein Schimmer Licht im Dunkel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.werke/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/RDF_icon.png']</xpath>
+    </test>
+
+<!-- /o:szd.lebensdokumente/sdef:TEI/get?locale=de (Lebensdokumente) tests -->    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Lebensdokumente')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Lebensdokumente')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Bestellzettel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Zürich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:input/@type[.='checkbox']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- /o:szd.lebensdokumente/sdef:TEI/get?locale=en (English Personal Documents) tests -->
+	<test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Personal Documents')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Personal Documents')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Bestellzettel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Zürich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:input/@type[.='checkbox']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebensdokumente/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- /o:szd.autographen/sdef:TEI/get?locale=de (Autographensammlung) tests -->        
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Autographensammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Autographensammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Ady, Endre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Nagy lopások büne')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Zitiervorschlag')]</xpath>
+    </test>
+
+<!-- /o:szd.autographen/sdef:TEI/get?locale=en (English Autograph Collection) tests -->
+	<test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Autograph Collection')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Autograph Collection')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Ady, Endre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Nagy lopások büne')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.autographen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Citation')]</xpath>
+    </test>
+
+<!-- /o:szd.bibliothek/sdef:TEI/get?locale=de (Bibliothek) tests -->        
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Bibliothek')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Bibliothek')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Arens, Hanns')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Wien : Krystall-Verlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Zitiervorschlag')]</xpath>
+    </test>
+
+<!-- /o:szd.bibliothek/sdef:TEI/get?locale=en (English Library) tests -->
+	<test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Library')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Arens, Hanns')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Wien : Krystall-Verlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.bibliothek/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Citation')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.4/sdef:TEI/get?locale=de (Stefan Zweigs Autographensammlung) tests -->        
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Stefan Zweigs Autographensammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.4/TITELBILD']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[contains(.,'/o:szd.thema.4/IMG.2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Parallel zu seinem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'TEILAUFLÖSUNG DER SAMMLUNG')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.4/sdef:TEI/get?locale=en (English Stefan Zweigs Autograph Collection) tests -->
+	<test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Stefan Zweigs Autograph Collection')]</xpath>
+    </test>
+        
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.4/TITELBILD_EN']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.4/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'English version coming soon')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.2/sdef:TEI/get?locale=de (Wie Stefan Zweig schreibt) tests -->    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Wie Stefan Zweig schreibt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.2/TITELBILD']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Dieses weltbedeutsame Jahr 1837')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[contains(.,'/o:szd.thema.2/IMG.2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Zeiten des Fort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:li[contains(.,'Das Geheimnis des')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.2/sdef:TEI/get?locale=en (English Stefan Zweig at Work) tests -->    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Stefan Zweig at work')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.2/TITELBILD_EN']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.2/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Das erste Wort über den Ozean')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.3/sdef:TEI/get?locale=de (Stefan Zweigs Bibliotheken) tests -->    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Stefan Zweigs Bibliotheken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.3/TITELBILD']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Bereits als Schüler und')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[contains(.,'/o:szd.thema.3/IMG.2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Zur Leseprobe')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.3/sdef:TEI/get?locale=en (English Stefan Zweigs Libraries) tests -->    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Stefan Zweigs Libraries')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.3/TITELBILD_EN']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Even in his school days')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[contains(.,'/o:szd.thema.3/IMG.2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.3/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Read an extract here')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.1/sdef:TEI/get?locale=de (Marie Antoinette) tests -->    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Marie Antoinette')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.1/TITELBILD']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Nach einer Pause')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.6835/IMG.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Tagebuch 1931')]</xpath>
+    </test>
+
+<!-- /o:szd.thema.1/sdef:TEI/get?locale=en (English Marie Antoinette) tests -->    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Marie Antoinette')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.thema.1/TITELBILD_EN']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'After a more than decade-long')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:szd.6835/IMG.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.thema.1/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Tagebuch 1931')]</xpath>
+    </test>
+
+<!-- /o:szd.lebenskalender/sdef:TEI/get?locale=de (Biographie) tests -->    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Biographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Biographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1897')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Moriz Zweig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:u[contains(.,'stefanzweig.digital/o:szd.lebenskalender')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Westerwede bei Bremen')]</xpath>
+    </test>
+
+<!-- /o:szd.lebenskalender/sdef:TEI/get?locale=en (English Biography) tests -->      
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'biography')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Biography')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1897')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Moriz Zweig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:u[contains(.,'stefanzweig.digital/o:szd.lebenskalender')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.lebenskalender/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Westerwede near Bremen')]</xpath>
+    </test>
+
+<!-- /o:szd.personen/sdef:TEI/get?locale=de (Personen) tests -->    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Personen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Personen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Albrecht, Fran')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/gnd.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/wikidata.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/wiki.jpg']</xpath>
+    </test>
+
+<!-- /o:szd.personen/sdef:TEI/get?locale=en (English Persons) tests -->    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Persons')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Persons')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Albrecht, Fran')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/gnd.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/wikidata.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.personen/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/wiki.jpg']</xpath>
+    </test>
+
+<!-- /o:szd.standorte/sdef:TEI/get?locale=de (Standorte) tests -->    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Standorte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'STANDORTE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'David H. Lowenherz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/gnd.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a/@href[.='https://lionheartautographs.com/about-us/about/']</xpath>
+    </test>
+
+<!-- /o:szd.standorte/sdef:TEI/get?locale=en (English Repositories) tests -->    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Repositories')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'REPOSITORIES')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'David H. Lowenherz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/gnd.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:szd.standorte/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a/@href[.='https://lionheartautographs.com/about-us/about/']</xpath>
+    </test>
+
+<!-- /archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de (Glossar) tests -->    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Glossar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Glossar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'BIBLIOTHEK')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die hier an einem Zeitstrahl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'EINZELBUCHSTABE UND ZIFFER')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='https://gams.uni-graz.at/o:szd.glossar/GROSSBUCHSTABE']</xpath>
+    </test>
+
+<!-- /archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&mode= (English Glossary) tests -->    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:a[contains(.,'Glossary')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:h2[contains(.,'Glossary')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:h2[contains(.,'LIBRARY')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:p[contains(.,'At the time of its greatest')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:h3[contains(.,'SINGLE LETTER PLUS DIGIT')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en&amp;mode=</url>
+       <xpath>//xhtml:img/@src[.='https://gams.uni-graz.at/o:szd.glossar/GROSSBUCHSTABE']</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?mode=about&locale=de (Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Der österreichische Schriftsteller')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?locale=en&mode=about (English About) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=about</url>
+       <xpath>//xhtml:h2[contains(.,'STEFAN ZWEIG DIGITAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=about</url>
+       <xpath>//xhtml:p[contains(.,'It is his novellas and')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&params= (Volltextsuche) tests -->    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=</url>
+       <xpath>//xhtml:h2[contains(.,'SUCHERGEBNISSE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=</url>
+       <xpath>//xhtml:p[contains(.,'Zur Suchanfrage konnten keine')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=</url>
+       <xpath>//xhtml:h3[contains(.,'Trunkierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=</url>
+       <xpath>//xhtml:button[contains(.,'Alle öffnen')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&params= (English Full-Text Search) tests -->    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=</url>
+       <xpath>//xhtml:h2[contains(.,'SEARCH RESULTS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=</url>
+       <xpath>//xhtml:p[contains(.,'No results matched your')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=</url>
+       <xpath>//xhtml:h3[contains(.,'Truncation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=</url>
+       <xpath>//xhtml:button[contains(.,'Expand all entries')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&locale=de (Datenkorb) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'DATENKORB')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/datenkorb.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Im Datenkorb können Datensätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <xpath>//xhtml:button[contains(.,'DATENKORB LEEREN')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=de</url>
+       <xpath>//xhtml:th[contains(.,'Standort, Signatur, URL')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?locale=en&mode=databasket (English Databasket) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=databasket</url>
+       <xpath>//xhtml:h2[contains(.,'DATABASKET')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=databasket</url>
+       <xpath>//xhtml:img/@src[.='/szd/icons/datenkorb.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=databasket</url>
+       <xpath>//xhtml:p[contains(.,'Records can be saved')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=databasket</url>
+       <xpath>//xhtml:button[contains(.,'CLEAR DATA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=databasket</url>
+       <xpath>//xhtml:th[contains(.,'Location, Signature, URL')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&locale=de (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'IMPRESSUM')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Für Rat und Unterstützung danken wir')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Alle Inhalte lizenziert')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:szd/methods/sdef:Context/get?locale=en&mode=imprint (English Site Notice) tests -->    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Site notice')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=imprint</url>
+       <xpath>//xhtml:h2[contains(.,'SITE NOTICE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'For their advice and support we are indebted to')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:szd/methods/sdef:Context/get?locale=en&amp;mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'All content licensed')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&params=%241%7Cstefan%2520zweig%3B%242%7Cde (Sample Search) tests -->    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cde</url>
+       <xpath>//xhtml:h2[contains(.,'SUCHERGEBNISSE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cde</url>
+       <xpath>//xhtml:span[contains(.,'Wien 28. November')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cde</url>
+       <xpath>//xhtml:h3[contains(.,'Personen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=de&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cde</url>
+       <xpath>//xhtml:span[contains(.,'Aus einer Studie über Autografensammeln')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&params=%241%7Cstefan%2520zweig%3B%242%7Cen (English Sample Search) -->    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cen</url>
+       <xpath>//xhtml:h2[contains(.,'SEARCH RESULTS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cen</url>
+       <xpath>//xhtml:span[contains(.,'Vienna, 10 March')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cen</url>
+       <xpath>//xhtml:h3[contains(.,'Persons')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:szd.fulltext/methods/sdef:Query/get?locale=en&amp;params=%241%7Cstefan%2520zweig%3B%242%7Cen</url>
+       <xpath>//xhtml:span[contains(.,'Aus einer Studie über Autografensammeln')]</xpath>
+    </test>
+      	          
+</TestCase>

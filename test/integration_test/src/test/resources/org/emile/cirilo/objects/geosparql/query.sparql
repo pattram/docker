@@ -1,0 +1,13 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX ex: <http://example.org/>
+SELECT *
+WHERE {
+  ?lmA a ex:Landmark ;
+       geo:hasGeometry [ geo:asWKT ?coord1 ].
+  ?lmB a ex:Landmark ;
+       geo:hasGeometry [ geo:asWKT ?coord2 ].
+  BIND((geof:distance(?coord1, ?coord2, uom:metre)/1000) as ?dist) .
+  FILTER (str(?lmA) < str(?lmB))
+}

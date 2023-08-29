@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://cm4f.org/o:emile.ingest.rdf.2> a void:Dataset .
+
+
+<http://example.org#Animal> a rdfs:Class .
+
+<http://example.org#Chamois>
+  a rdfs:Class ;
+  rdfs:subClassOf <http://example.org#Animal> .
+ 
+
+<http://cm4f.org> a <http://example.org#Chamois> .

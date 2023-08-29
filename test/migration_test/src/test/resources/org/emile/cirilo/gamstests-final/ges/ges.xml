@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ges">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ges -->
+<!-- status 200 tests ges navbar links -->
+    <test>
+       <url>/context:ges</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 tests ges footer links -->
+	<test>
+       <url>/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <status>200</status>
+    </test>
+    
+    <test> <!-- matcher test ZIM -->
+       <url>https://informationsmodellierung.uni-graz.at/</url>
+       <matcher>h1:matches(^Institut Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities$)</matcher>
+    </test>
+    
+    <test> <!-- matcher test creative commons -->
+       <url>https://creativecommons.org/licenses/by-nc-sa/4.0//</url>
+       <matcher>p:matches(^Help us build a vibrant, collaborative global commons$)</matcher>
+    </test>
+    
+    <test> <!-- matcher test Geräte DARIAH Geo Browser -->
+       <url>https://geobrowser.de.dariah.eu/?kml=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fcontext%3Ages%2FKML</url>
+       <matcher>h1:matches(^Geo-Browser$)</matcher>
+    </test>
+    
+    <test> <!-- matcher test Diapositive DARIAH Geo Browser -->
+       <url>https://geobrowser.de.dariah.eu/?kml=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fcontext%3Adias%2FKML</url>
+       <matcher>h1:matches(^Geo-Browser$)</matcher>
+    </test>
+    
+<!-- context:ges (= Home) tests -->
+<!-- context:ges navbar links-->
+	<test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges footer links -->
+	<test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges other tests -->     
+	<test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:h3[.='Willkommen in der Meringer Sammlung Online']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:div[@class[.='panel-image']]/xhtml:a/xhtml:img[@src[.='&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;/ges/img/home_ges.jpg&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:h4[.=' Geräte ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:div[@class[.='panel-image']]/xhtml:a/xhtml:img[@src[.='&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;/ges/img/home_dias.jpg&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:h4[.=' Diapositive ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:div[@class[.='panel-image']]/xhtml:a/xhtml:img[@src[.='&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;/ges/img/home_story.jpg&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ges</url>
+       <xpath>//xhtml:a/xhtml:h4[.=' Virtueller Rundgang ']</xpath>
+    </test>
+
+<!-- context:ges/methods/sdef:Context/get?mode=about (= Über die Sammlung) tests -->
+<!-- context:ges/methods/sdef:Context/get?mode=about navbar links-->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=about footer links -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=about other tests -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h4[.='Zu Rudolf Meringer']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Viktor Geramb erwarb 1931')]</xpath>
+    </test>
+
+<!-- context:ges/methods/sdef:Context/get?mode=collection (= Geräte) tests -->
+<!-- context:ges/methods/sdef:Context/get?mode=collection navbar links-->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=collection footer links -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=collection other tests -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h3[.='Suche']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-info-sign']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='    Hilfe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:input[@id[.='query'] and @title[.='Volltextsuche']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Ort']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:select/xhtml:option[.='Altaussee']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Land']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:select/xhtml:option[.='Österreich']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Material']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:select/xhtml:option[.='Metall']</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Funktionsgruppe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:select/xhtml:option[.='Natur und Umwelt']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Vitrine']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:select/xhtml:option[.='Ofenkacheln']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:span/xhtml:button[.='Suchen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:div/@id[.='results']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h3[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:p[contains(.,'Anzahl der gefundenen Einträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Alle verorteten auf Karte anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/@href[.='/o:ges.a-102/sdef:LIDO/get?mode=object&amp;context=context:ges']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:img/@src[.='/o:ges.a-102/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Inventarnummer: A:102')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:span/xhtml:a[@href[.='/o:ges.a-102/LIDO_SOURCE']]/xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+<!-- context:dias (= Diapositive) tests -->
+<!-- context:dias navbar links-->
+	<test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:dias footer links -->
+	<test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:dias other tests -->
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:h3[.='Suche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-info-sign']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[.='    Hilfe']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:input[@id[.='query'] and @title[.='Volltextsuche']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:form/xhtml:div[@class[.='form-group']]/xhtml:label[.='Bildort']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:optgroup/@label[.='Italien']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:select/xhtml:optgroup/xhtml:option[.='Lignano']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:span/xhtml:button[.='Suchen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:div/@id[.='results']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:h3[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:p[contains(.,'Anzahl der gefundenen Einträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[contains(.,'Alle verorteten auf Karte anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a/@href[.='/o:dias.86/sdef:LIDO/get?mode=object&amp;context=context:dias']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:img/@src[.='/o:dias.86/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:a[contains(.,'Inventarnummer: 86')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:dias</url>
+       <xpath>//xhtml:span/xhtml:a[@href[.='/o:dias.86/LIDO_SOURCE']]/xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+
+<!-- o:ges.story (= Virtueller Rundgang) tests -->
+<!-- o:ges.story navbar links-->
+	<test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- o:ges.story footer links -->
+	<test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- o:ges.story other tests -->
+	<!-- Storymap wegen dynamischem Inhalt schwierig zu testen -->
+	<test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:p[contains(.,'Tiles:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='Stamen Design']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='CC BY 3.0']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='OpenStreetMap']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:a[.='ODbL']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ges.story</url>
+       <xpath>//xhtml:script/@src[.='/storymap/js/storymap-core.js']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=imprint (= Impressum) tests -->
+<!-- context:ges/methods/sdef:Context/get?mode=imprint navbar links-->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=imprint footer links -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=imprint other tests -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Repositorium
+            Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='GAMS - Geisteswissenschaftliches Asset Management
+              System']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Zentrum für
+              Informationsmodellierung - Austrian Centre for Digital Humanities']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='wukonig.com']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Bootstrap']</xpath>
+    </test>
+
+<!-- context:ges/methods/sdef:Context/get?mode=history (= Projektgeschichte) tests -->
+<!-- context:ges/methods/sdef:Context/get?mode=history navbar links-->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=history footer links -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=history other tests -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:h3[.='Projektgeschichte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='EuroMACHS']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:ul/xhtml:li[.='Katharina Kothgasser (Projektleitung)']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='https://gams.uni-graz.at/vm']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Lightweight Information Describing Objects']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Handle']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='IIIF']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='GeoNames']</xpath>
+    </test>
+
+<!-- context:ges/methods/sdef:Context/get?mode=searchHelp (= Hilfe zur Volltextsuche) tests -->
+<!-- context:ges/methods/sdef:Context/get?mode=searchHelp navbar links-->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Bestand  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Geräte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Diapositive']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=searchHelp footer links -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Projektgeschichte']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+     
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- context:ges/methods/sdef:Context/get?mode=searchHelp other tests -->
+	<test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:h3[.='Hilfe zur Volltextsuche']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ges/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:p[.='Groß-/Kleinschreibung spielt bei der Suche keine Rolle.']</xpath>
+    </test> 
+         
+</TestCase>

@@ -1,0 +1,18 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:prov="http://www.w3.org/ns/prov#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dha="https://digital-humanities.at/schema#"
+    xmlns:void="http://rdfs.org/ns/void#" xmlns:dcterms="http://purl.org/dc/terms/">
+ 
+    <void:Dataset rdf:about="http://cm4f.org/rdo.1">
+        <dc:title>Welcome to Jupyter!</dc:title>
+        <dc:identifier>o:emile.ingest.rdo.1</dc:identifier>
+    </void:Dataset>
+ 
+    <prov:SoftwareAgent rdf:about="file:///jupiter.ipynb">
+        <dc:title>Jupyter Notebook</dc:title>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+        <dcterms:identifier>DS.1</dcterms:identifier>
+        <dha:hasMimeType>application/x-ipynb+json</dha:hasMimeType>
+    </prov:SoftwareAgent>
+ 
+ </rdf:RDF>

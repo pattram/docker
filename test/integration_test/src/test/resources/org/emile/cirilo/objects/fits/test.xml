@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Test Object</dc:title>
+    <dc:creator>Otto Geist</dc:creator>
+    <dc:publisher>Center for Information Modeling, University of Graz</dc:publisher>
+    <dc:identifier>o:emile.tei</dc:identifier>
+    <dc:type>CompoundObject</dc:type>
+    <dc:language>en</dc:language>
+    <dc:relation>Geisteswissenschaftliches Asset Management System</dc:relation>
+    <dc:coverage>Austria</dc:coverage>
+    <dc:rights>Resource licensed under Creative Commons BY-NC-SA 4.0</dc:rights>
+    <dc:rights>http://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+</oai_dc:dc>

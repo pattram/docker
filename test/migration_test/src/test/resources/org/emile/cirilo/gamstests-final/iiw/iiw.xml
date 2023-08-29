@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="iiw">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests iiw -->
+    <test>
+       <url>/context:iiw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:iiw.interpreters/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:iiw.interpreters/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=bibl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:iiw-fulltext/methods/sdef:Query/get?params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:iiw (Home) tests -->
+	<test>
+       <url>/context:iiw</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:iiw</url>
+       <xpath>//xhtml:p[contains(.,'IIW ist eine Datenbank')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/context:iiw</url>
+       <xpath>//xhtml:h3[contains(.,'Interpreting In War')]</xpath>
+    </test>	
+
+<!-- /archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object (Datenbank) tests -->    
+    <test>
+       <url>/archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object</url>
+       <xpath>//xhtml:a[contains(.,'Datenbank')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object</url>
+       <xpath>//xhtml:h3[contains(.,'Abramson (Mamsurova), Paulina')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object</url>
+       <xpath>//xhtml:td[contains(.,'Spanischen Bürgerkrieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:iiw.interpreters/methods/sdef:TEI/get?mode=object</url>
+       <xpath>//xhtml:p[contains(.,'Permalink: https://gams.uni-graz.at/o:iiw.interpreters#pers.14')]</xpath>
+    </test>	
+
+<!-- /archive/objects/context:iiw/methods/sdef:Context/get?mode=about (Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Projekt')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Interpreting In War')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Dolmetscherinnen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:iiw/methods/sdef:Context/get?mode=bibl (Literatur) tests -->    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:h3[contains(.,'Archive und Primärliteratur')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:li[contains(.,'Aleksandrovskaja')]</xpath>
+    </test>	
+
+<!-- /archive/objects/query:iiw-fulltext/methods/sdef:Query/get?params= (Suche) tests -->    
+    <test>
+       <url>/archive/objects/query:iiw-fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:input/@id[.='n$1']</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/query:iiw-fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:span[contains(.,'Suchergebnisse: ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:iiw-fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:p[contains(.,'Werden mehrere')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:iiw/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Projektverantwortliche')]</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/context:iiw/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Michaela Wolf')]</xpath>
+    </test>				
+      	          
+</TestCase>

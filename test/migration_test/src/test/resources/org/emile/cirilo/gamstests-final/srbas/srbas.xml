@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="srbas">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests srbas -->
+    <test>
+       <url>/context:srbas</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=chrono</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/context:srbas?mode=projekt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=rechnungen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=datenkorb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.fulltext/methods/sdef:Query/get?params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get?mode=page&amp;context=fol.1r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get?mode=page&amp;context=fol.3r#bs_Bischofviehzoll-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get?mode=page&amp;context=fol.4v#bs_Hausgeld-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get?mode=page&amp;context=fol.16r#bs_IttingenEinnahmen-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/sdef:TEI/get?mode=tab</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/viewer/viewer.html?mets=https://gams.uni-graz.at/cocoon/mets2json?source=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Asrbas.1537%2FMETS_SOURCE#page/1/mode/2up</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1537/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get?mode=page&amp;context=fol.1r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get?mode=page&amp;context=fol.3r#bs_Weinsticherbüchse-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get?mode=page&amp;context=fol.7r#bs_Messe-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get?mode=page&amp;context=fol.18v#bs_MuttenzEinnahmen-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/sdef:TEI/get?mode=tab</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/viewer/viewer.html?mets=https://gams.uni-graz.at/cocoon/mets2json?source=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Asrbas.1563%2FMETS_SOURCE#page/1/mode/2up</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1563/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/sdef:TEI/get?mode=page&amp;context=fol.3v#bs_Tore-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/sdef:TEI/get?mode=page&amp;context=fol.11r#bs_ZinsenSchirmBurgrechtgeld-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/sdef:TEI/get?mode=page&amp;context=fol.22r#bs_BettingenEinnahmen-div-0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/sdef:TEI/get?mode=tab</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/viewer/viewer.html?mets=https://gams.uni-graz.at/cocoon/mets2json?source=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Asrbas.1602%2FMETS_SOURCE#page/1/mode/2up</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1602/RDF</url>
+       <status>200</status>
+    </test>
+    
+    
+    <test>
+       <url>/context:srbas/PROJEKT</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas/RECHNUNGEN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:srbas/datastreams/KEINETABELLE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:srbas/datastreams/NOFACSIMILE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:srbas/DATENKORB</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:srbas (Home) tests -->
+	<test>
+       <url>/context:srbas</url>
+       <xpath>//xhtml:strong[contains(.,'HOME')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas</url>
+       <xpath>//xhtml:p[contains(.,'herausgegeben von Susanna Burghartz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas</url>
+       <xpath>//xhtml:img/@src[.='/context:srbas/STARTBILD']</xpath>
+    </test>
+
+<!-- /context:srbas?mode=chrono (Chronologische Liste) tests -->    
+    <test>
+       <url>/context:srbas?mode=chrono</url>
+       <xpath>//xhtml:a[contains(.,'Chronologische Liste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=chrono</url>
+       <xpath>//xhtml:a[contains(.,'Jahrrechnung Stadt Basel 1548/1549')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=chrono</url>
+       <xpath>//xhtml:p[contains(.,'herausgegeben von')]</xpath>
+    </test>
+
+
+<!-- /context:srbas?mode=projekt (Projektbeschreibung) tests -->    
+    <test>
+       <url>/context:srbas?mode=projekt</url>
+       <xpath>//xhtml:a[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=projekt</url>
+       <xpath>//xhtml:li[contains(.,'die Transkriptionsregeln')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=projekt</url>
+       <xpath>//xhtml:button[contains(.,'Leeren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=projekt</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/TEISYMBOL/content']</xpath>
+    </test>
+
+<!-- /context:srbas?mode=rechnungen (Basler Jahrrechnungen: Erläuterungen, Struktur, Aufbau) tests -->    
+    <test>
+       <url>/context:srbas?mode=rechnungen</url>
+       <xpath>//xhtml:a[contains(.,'Basler Jahrrechnungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=rechnungen</url>
+       <xpath>//xhtml:p[contains(.,'Mit dem Aufstieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=rechnungen</url>
+       <xpath>//xhtml:button[contains(.,'Leeren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=rechnungen</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/PRINTSYMBOL/content']</xpath>
+    </test>
+
+<!-- /o:srbas.konten (Kontenbeschreibungen) tests -->    
+    <test>
+       <url>/o:srbas.konten</url>
+       <xpath>//xhtml:a[contains(.,'Kontenbeschreibungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten</url>
+       <xpath>//xhtml:span[contains(.,'Literatur:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/KEINETABELLE/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.konten</url>
+       <xpath>//xhtml:p[contains(.,'Zitiervorschlag')]</xpath>
+    </test>
+
+<!-- /context:srbas?mode=datenkorb (Datenkorb) tests -->    
+    <test>
+       <url>/context:srbas?mode=datenkorb</url>
+       <xpath>//xhtml:a[contains(.,'Datenkorb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=datenkorb</url>
+       <xpath>//xhtml:p[contains(.,'diesem Computer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=datenkorb</url>
+       <xpath>//xhtml:button[contains(.,'Leeren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=datenkorb</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:srbas/datastreams/TEISYMBOL/content']</xpath>
+    </test>
+
+<!-- /archive/objects/query:srbas.search/methods/sdef:Query/get?locale=&mode=&params= (Erweiterte Suche) tests -->    
+    <test>
+       <url>/archive/objects/query:srbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:button[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:option[contains(.,'Alle Konten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.search/methods/sdef:Query/get?locale=&amp;mode=&amp;params=</url>
+       <xpath>//xhtml:li[contains(.,'Dehnungs-h')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:srbas.fulltext/methods/sdef:Query/get?params= (Suche) tests -->
+	<test>
+       <url>/archive/objects/query:srbas.fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:button[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:option[contains(.,'Alle Konten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:srbas.fulltext/methods/sdef:Query/get?params=</url>
+       <xpath>//xhtml:li[contains(.,'Dehnungs-h')]</xpath>
+    </test>
+
+<!-- /context:srbas?mode=imprint (Impressum) tests -->	    
+    <test>
+       <url>/context:srbas?mode=imprint</url>
+       <xpath>//xhtml:li[contains(.,'Transkriptionen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:srbas?mode=imprint</url>
+       <xpath>//xhtml:img/@src[.='https://i.creativecommons.org/l/by-sa/4.0/88x31.png']</xpath>
+    </test>
+
+   
+  
+<!-- object sample tests -->    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get</url>
+       <xpath>//xhtml:a[contains(.,'fol. 1r')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Prima angaria')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get</url>
+       <xpath>//xhtml:li[contains(.,'Jonas Sagelsdorff')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get</url>
+       <xpath>//xhtml:input/@name[contains(.,'bs_FremdenHindersassenpfundzoll-1')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=page&amp;context=fol.1r</url>
+       <xpath>//xhtml:div[contains(.,'Jarrechnung a festo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=page&amp;context=fol.1r</url>
+       <xpath>//xhtml:span[contains(.,'Verhört Donstag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=page&amp;context=fol.1r</url>
+       <xpath>//xhtml:span[contains(.,'Textkritsche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=tab</url>
+       <xpath>//xhtml:a[contains(.,'StABS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=tab</url>
+       <xpath>//xhtml:b[contains(.,'Vom wynumbgellt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:srbas.1556/sdef:TEI/get?mode=tab</url>
+       <xpath>//xhtml:td[contains(.,'Prima angaria')]</xpath>
+    </test>
+				
+      	          
+</TestCase>

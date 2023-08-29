@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="polos">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests polos -->
+    <test>
+       <url>/context:polos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=statistics</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=literature</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=team</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=terms</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=partners</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=polos&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fpolos%2Fpolos-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:polos.story</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:polos.bib</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:polos.locationger/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>      
+    
+    <test>
+       <url>/context:polos.linguisticinterest</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.nationalframing</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:polos.4001</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:polos.4001/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.location.slv.andraznadpolzelo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:polos.1201</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:polos.1201/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.location.ger.abstall</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.producer.georgadlercelje</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.postmark.ger</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.ocm.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:polos.repository.domej</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;dc.coverageAsPhrase=&amp;date=&amp;producerAsPhrase=&amp;dc.subjectAsPhrase=&amp;printlangAsPhrase=&amp;individuallangAsPhrase=&amp;stampAsPhrase=&amp;sentto=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=polos&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fpolos%2Fpolos-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=help</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:polos (Home) tests -->
+	<test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:h2[contains(.,'Lower Styria')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:p[contains(.,'The POLOS online archive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:a[contains(.,'Enter Collection')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:img/@src[.='/polos/img/SteiermarkPerthes18552.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos</url>
+       <xpath>//xhtml:span[contains(.,'Stories of Ivan')]</xpath>
+    </test>    
+    
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=about (About) tests -->
+	<test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h2[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'The collection contains')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:b[contains(.,'Slovene, German, Bilingual')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=map (Map) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <xpath>//xhtml:a[contains(.,'Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <xpath>//xhtml:h2[contains(.,'Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <xpath>//xhtml:p[contains(.,'Postcards can be')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <xpath>//xhtml:embed/@src[.='//geobrowser.de.dariah.eu/embed/?kml1=https://gams.uni-graz.at/context:polos/KML']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=map</url>
+       <xpath>//xhtml:embed/@src[.='https://geobrowser.de.dariah.eu/embed/index.html?kml1=https://gams.uni-graz.at/context:polos/KMLALL']</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=statistics (Statistics) tests -->
+	<test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=statistics</url>
+       <xpath>//xhtml:a[contains(.,'Statistics')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=statistics</url>
+       <xpath>//xhtml:h2[contains(.,'Statistics')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=statistics</url>
+       <xpath>//xhtml:p[contains(.,'During the monarchy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=statistics</url>
+       <xpath>//xhtml:img/@src[.='/context:polos/NUK']</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=literature (Literature) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:a[contains(.,'Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:h2[contains(.,'Publications')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:li[contains(.,'The Linguistic and Visual Portrayal')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:a[contains(.,'PDF Download')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=team (team) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:h2[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:img/@src[.='/context:polos/TEAMIMAGE']</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=terms (Terms of use) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:a[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:h2[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:p[contains(.,'None of the materials provided')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=partners (Partners) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=partners</url>
+       <xpath>//xhtml:a[contains(.,'Partners')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=partners</url>
+       <xpath>//xhtml:h2[contains(.,'Partner Institutions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=partners</url>
+       <xpath>//xhtml:p[contains(.,'Benediktinerstift Admont')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=partners</url>
+       <xpath>//xhtml:a[contains(.,'https://www.stiftadmont.at')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=collection (collection) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Collection')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Collections')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Place names, Slovene')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:p[contains(.,'Number of entries found')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:img/@src[.='/iiif/o:polos.4001/VERSO/full/280,/0/default.jpg']</xpath>
+    </test>
+
+
+<!-- /o:polos.story (Stories of Ivan) tests -->    
+    <test>
+       <url>/o:polos.story</url>
+       <xpath>//xhtml:h2[contains(.,'Stories of Ivan/Hans')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:polos.story</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- /archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&mode=tagcloud&params (Home/Locations) tests -->    
+    <test>
+       <url>/archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:h2[contains(.,'Tagcloud Location')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:polos.locationger/methods/sdef:Query/get?locale=&mode=tagcloud&params (Home/Locations German) tests -->    
+    <test>
+       <url>/archive/objects/query:polos.locationger/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:h2[contains(.,'Tagcloud Location')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:polos.locationger/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:a[contains(.,'German')]</xpath>
+    </test>
+
+<!-- /archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&mode=tagcloud&params (Home/Locations Slovene) tests -->    
+    <test>
+       <url>/archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:h2[contains(.,'Tagcloud Location')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:polos.locationslv/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:a[contains(.,'Slovene')]</xpath>
+    </test>
+
+<!-- /context:polos.linguisticinterest (Postcards with Specific Language Use) tests -->    
+    <test>
+       <url>/context:polos.linguisticinterest</url>
+       <xpath>//xhtml:h2[contains(.,'Postcards with Specific Language Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos.linguisticinterest</url>
+       <xpath>//xhtml:a[contains(.,'Postcards with Specific Language Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos.linguisticinterest</url>
+       <xpath>//xhtml:img/@src[.='/iiif/o:polos.4003/VERSO/full/280,/0/default.jpg']</xpath>
+    </test>
+
+<!-- /context:polos.nationalframing (Postcards with National Framing) tests -->    
+    <test>
+       <url>/context:polos.nationalframing</url>
+       <xpath>//xhtml:h2[contains(.,'Postcards with National Framing')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos.nationalframing</url>
+       <xpath>//xhtml:a[contains(.,'Postcards with National Framing')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:polos.nationalframing</url>
+       <xpath>//xhtml:img/@src[.='/iiif/o:polos.4006/VERSO/full/280,/0/default.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=tiles (tile view) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:p[contains(.,'ROHITSCH-SAUERBRUNN')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/iiif/o:polos.4001/VERSO/full/350,/0/default.jpg']</xpath>
+    </test>
+
+<!-- /o:polos.4001 (Object sample) tests -->    
+    <test>
+       <url>/o:polos.4001</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:polos.4001</url>
+       <xpath>//xhtml:h3[contains(.,'ROHITSCH-SAUERBRUNN')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:polos.4001</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:polos.4001</url>
+       <xpath>//xhtml:td[contains(.,'Producer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:polos.4001</url>
+       <xpath>//xhtml:a[contains(.,'Georg Adler')]</xpath>
+    </test>
+
+  
+<!-- /context:polos.location.ger.abstall (Historical place names, German) tests -->    
+    <test>
+       <url>/context:polos.location.ger.abstall</url>
+       <xpath>//xhtml:a[contains(.,'Abstall')]</xpath>
+    </test>
+    
+<!-- /context:polos.producer.georgadlercelje (Postcard producers) tests -->    
+    <test>
+       <url>/context:polos.producer.georgadlercelje</url>
+       <xpath>//xhtml:a[contains(.,'Adler Georg, Celje')]</xpath>
+    </test>
+    
+<!-- /context:polos.postmark.ger (Postmark) tests -->    
+    <test>
+       <url>/context:polos.postmark.ger</url>
+       <xpath>//xhtml:a[contains(.,'German')]</xpath>
+    </test>
+    
+
+<!-- /context:polos.ocm.100 (Keywords) tests -->    
+    <test>
+       <url>/context:polos.ocm.100</url>
+       <xpath>//xhtml:a[contains(.,'Orientation')]</xpath>
+    </test>
+    
+    
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=imprint (Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+        
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Carina Koch')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:polos/methods/sdef:Context/get?mode=help (help) tests -->    
+    <test>
+       <url>/archive/objects/context:polos/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:li[contains(.,'A. Beer, Klagenfurt')]</xpath>
+    </test>
+      	          
+</TestCase>

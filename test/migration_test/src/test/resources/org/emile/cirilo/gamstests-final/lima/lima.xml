@@ -1,0 +1,2113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="lima">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests lima -->
+    <test>
+       <url>/context:lima</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=anleitung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=project</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=teilprojekte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=research</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=platzhalter</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=blog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team_nama</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=digitaleedition</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=dichterleben</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.2/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.3/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.11</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.kochrezepte/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.12/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=downloads</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=timeline</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.1/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.1/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.1/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_II_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_II_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_III_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_III_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_III_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_IV_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_IV_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/UE_IV_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.2/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=faksimile</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.2/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.2/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_I_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_II_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_II_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_II_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_II_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.3/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.3/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.3/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.3/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.3/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.6/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.6/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.6/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.7/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>http://gams.uni-graz.at/o:lima.7/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.7/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.7/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_II_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_II_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_II_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_III_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIA_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIA_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIB_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIB_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIC_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIIC_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIID_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/UE_IIID_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.8/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.8/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.8/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/INFO1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/INFO2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_PLAN1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_PLAN2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_PLAN3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/UE_I_COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/PROJEKTE_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/PROJEKTE_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.9/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=faksimile</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/INFO2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.9/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.9/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_II_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_II_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_II_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_III_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/UE_III_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/UE_III_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.5/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.5/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.5/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/INFO1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/PROJEKTE_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/PROJEKTE_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/PROJEKTE_COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/PROJEKTE_COPY4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/PROJEKTE_COPY5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.10/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.10/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.10/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/UE_I_INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/UE_I_PLAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/PROJEKTE_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/PROJEKTE_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/PROJEKTE_COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/PROJEKTE_COPY4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/PROJEKTE_COPY5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.13/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.13/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.13/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/INFO1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/PROJEKTE_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.11/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=faksimile</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=revision</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.11/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.11/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.4/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.4/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.4/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.4/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.4/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.kochrezepte/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=faksimile</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/REZEPT1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/REZEPT2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/REZEPT3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.12/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.12/sdef:TEI/get?mode=text</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.12/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.12/INFO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.12/methods/sdef:TEI/getLaTeXPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.12/methods/sdef:TEI/getLaTeXPDF?mode=translation</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.zaubersprueche/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche/UE_I_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche/UE_I_COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.klassiker/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/sdef:TEI/get?mode=material</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_1_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_2_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_3_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_4_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_5_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_6_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_7_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_8_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_9_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_10_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_11_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_12_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_13_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_14_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_15_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_16_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_17_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_18_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_19_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_20_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_21_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_22_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/UE_23_COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/KOFFERLIN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/KOFFERLIN_TIERE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/KOFFERLIN_DICHTERLEBEN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/viewer/viewer.html?mets=https://gams.uni-graz.at/cocoon/mets2json?source=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Alima.7323%2FMETS_SOURCE#page/1/mode/2up</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=literaturerlebnisse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/PDF-FRAUENFREUDE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/PDF-BARTHOLOMAEUS</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/PDF-VORAUERNOVELLE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=contact</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/ABSCHLUSSBERICHT1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima/ABSCHLUSSBERICHT2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.14/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.14/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.16/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.16/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.15/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lima.15/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/lima/dichterleben360/</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich/COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich/COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich/COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich/COPY4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand/COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand/COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand/COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo/COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo/COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo/COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo/COPY4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.philipp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.philipp/COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann/COPY1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann/COPY2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann/COPY3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann/COPY4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=imprint</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:lima (Home) tests -->
+	<test>
+       <url>/context:lima</url>
+       <xpath>//xhtml:a[contains(.,'HOME')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima</url>
+       <xpath>//xhtml:h3[contains(.,'Texte und Unterrichtsmaterialien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima</url>
+       <xpath>//xhtml:div/@class[.='panel']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima</url>
+       <xpath>//xhtml:li[contains(.,'Kochrezepte')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=team (Team) tests -->    
+    <test>
+       <url>/context:lima?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team</url>
+       <xpath>//xhtml:p[contains(.,'Ylva Schwinghammer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/team/team_schwinghammer.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=anleitung (Anleitung zum Umgang mit dem Textportal) -->    
+    <test>
+       <url>/context:lima?mode=anleitung</url>
+       <xpath>//xhtml:a[contains(.,'Anleitung zum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=anleitung</url>
+       <xpath>//xhtml:p[contains(.,'In den Textbereichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=anleitung</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/anleitung/textbereich.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=project (Arbeitskoffer/Projektbeschreibung) tests -->    
+    <test>
+       <url>/context:lima?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'ARBEITSKOFFER')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=project</url>
+       <xpath>//xhtml:p[contains(.,'Dimensionen literarischen Lernens')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=project</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/project/logo-ak2.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=teilprojekte (Arbeitskoffer/Teilprojekte) tests -->    
+    <test>
+       <url>/context:lima?mode=teilprojekte</url>
+       <xpath>//xhtml:a[contains(.,'Teilprojekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=teilprojekte</url>
+       <xpath>//xhtml:p[contains(.,'In folgenden Abschlussberichten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=teilprojekte</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/teilprojekte/Teilprojekte1.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=research (Arbeitskoffer/Wissenschaftliches) tests -->    
+    <test>
+       <url>/context:lima?mode=research</url>
+       <xpath>//xhtml:a[contains(.,'Wissenschaftliches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=research</url>
+       <xpath>//xhtml:a[contains(.,'Sammelband')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=research</url>
+       <xpath>//xhtml:p[contains(.,'Öffentliche Lernorte')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=platzhalter (Arbeitskoffer/Partnerschulen) tests -->    
+    <test>
+       <url>/context:lima?mode=platzhalter</url>
+       <xpath>//xhtml:a[contains(.,'Partnerschulen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=platzhalter</url>
+       <xpath>//xhtml:p[contains(.,'Dâ von mac')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=platzhalter</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/platzhalter.png']</xpath>
+    </test>
+
+<!-- /context:lima?mode=blog (Arbeitskoffer/Projektblog) tests -->    
+    <test>
+       <url>/context:lima?mode=blog</url>
+       <xpath>//xhtml:a[contains(.,'Projektblog')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=blog</url>
+       <xpath>//xhtml:h1[contains(.,'Der Blog des Arbeitskoffers zieht um!')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=blog</url>
+       <xpath>//xhtml:p[contains(.,'Der 9.12. stand')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=team_nama (Nahrhaftes Mittelalter/Projektbeschreibung) tests -->    
+    <test>
+       <url>/context:lima?mode=team_nama</url>
+       <xpath>//xhtml:a[contains(.,'NAHRHAFTES MITTELALTER')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team_nama</url>
+       <xpath>//xhtml:p[contains(.,'Kulturen ein wichtiges')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=team_nama</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/project/team_nahrhaftesma.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=digitaleedition (Nahrhaftes Mittelalter/Digitale Edition) tests -->    
+    <test>
+       <url>/context:lima?mode=digitaleedition</url>
+       <xpath>//xhtml:a[contains(.,'Digitale Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=digitaleedition</url>
+       <xpath>//xhtml:h3[contains(.,'Digitale Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=digitaleedition</url>
+       <xpath>//xhtml:p[contains(.,'Auf diesem Portal')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.14/sdef:TEI/get (Minhadj al-bayan) tests -->    
+    <test>
+       <url>/archive/get/o:lima.14/sdef:TEI/get</url>
+       <xpath>//xhtml:h3[contains(.,'Minhadj al-bayan')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.14/sdef:TEI/get</url>
+       <xpath>//xhtml:label[contains(.,'Übersetzung anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.14/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Feuer und gibt')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.16/sdef:TEI/get (Liber de ferculis) tests -->    
+    <test>
+       <url>/archive/get/o:lima.16/sdef:TEI/get</url>
+       <xpath>//xhtml:h3[contains(.,'Liber de ferculis et condimentis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.16/sdef:TEI/get</url>
+       <xpath>//xhtml:label[contains(.,'Übersetzung anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.16/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'similia')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.15/sdef:TEI/get (púch von den chósten) tests -->    
+    <test>
+       <url>/archive/get/o:lima.15/sdef:TEI/get</url>
+       <xpath>//xhtml:h3[contains(.,'púch von den chósten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.15/sdef:TEI/get</url>
+       <xpath>//xhtml:label[contains(.,'Übersetzung anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.15/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Judeb von')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=dichterleben (Dichterleben) tests -->    
+    <test>
+       <url>/context:lima?mode=dichterleben</url>
+       <xpath>//xhtml:a[contains(.,'DICHTERLEBEN')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=dichterleben</url>
+       <xpath>//xhtml:p[contains(.,'Die Ausstellung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=dichterleben</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/dichterleben.jpg']</xpath>
+    </test>
+
+<!-- /context:lima.ulrich (Ulrich von Liechtenstein) tests -->    
+    <test>
+       <url>/context:lima.ulrich</url>
+       <xpath>//xhtml:p[contains(.,'Über sein Leben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich</url>
+       <xpath>//xhtml:img/@src[.='/context:lima.ulrich/MINIATUR']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.ulrich</url>
+       <xpath>//xhtml:source/@src[.='/context:lima.ulrich/AUDIO1']</xpath>
+    </test>
+
+<!-- /context:lima.herrand (Herrand von Wildon) tests -->    
+    <test>
+       <url>/context:lima.herrand</url>
+       <xpath>//xhtml:p[contains(.,'danach Ottokar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand</url>
+       <xpath>//xhtml:img/@src[.='/context:lima.herrand/MINIATUR']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.herrand</url>
+       <xpath>//xhtml:a[contains(.,'Broschüre der')]</xpath>
+    </test>
+
+<!-- /context:lima.hugo (Hugo von Montfort) tests -->    
+    <test>
+       <url>/context:lima.hugo</url>
+       <xpath>//xhtml:p[contains(.,'stammte aus Vorarlberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo</url>
+       <xpath>//xhtml:img/@src[.='/context:lima.hugo/MINIATUR']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo</url>
+       <xpath>//xhtml:source/@src[.='/context:lima.hugo/AUDIO1']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.hugo</url>
+       <xpath>//xhtml:source/@src[.='/context:lima.hugo/VIDEO1']</xpath>
+    </test>
+
+<!-- /context:lima.philipp (Philipp von Seitz) tests -->    
+    <test>
+       <url>/context:lima.philipp</url>
+       <xpath>//xhtml:p[contains(.,'Die dichterische Mission')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.philipp</url>
+       <xpath>//xhtml:img/@src[.='/context:lima.philipp/MINIATUR']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.philipp</url>
+       <xpath>//xhtml:a[contains(.,'Steirischen Literaturpfade')]</xpath>
+    </test>
+
+<!-- /context:lima.andreas-kurzmann (Andreas Kurzmann) tests -->    
+    <test>
+       <url>/context:lima.andreas-kurzmann</url>
+       <xpath>//xhtml:span[contains(.,'Lieb den recht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann</url>
+       <xpath>//xhtml:img/@src[.='/context:lima.andreas-kurzmann/MINIATUR']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima.andreas-kurzmann</url>
+       <xpath>//xhtml:a[contains(.,'Textausgabe')]</xpath>
+    </test>
+
+<!-- /o:lima.1 (Rudolf von Stadeck: Minnelieder) tests -->    
+    <test>
+       <url>/o:lima.1</url>
+       <xpath>//xhtml:p[contains(.,'Die drei Minnelieder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.1</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.1</url>
+       <xpath>//xhtml:h4[contains(.,'Bibliographische Angaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'Winter und diu')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:label[contains(.,'Übersetzung anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.1/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Informationen zum Text PDF')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.2/sdef:TEI/get (Seckauer Monatsregeln) tests -->    
+    <test>
+       <url>/archive/get/o:lima.2/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'nach ihrem heutigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.2/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'JANUAR Indem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=faksimile</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.2/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'monatstypisch PDF')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.3/sdef:TEI/get (Konrad von Megenberg: Das Buch der Natur. Tiere) tests -->    
+    <test>
+       <url>/archive/get/o:lima.3/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Buch der Natur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.3/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.3/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'Daz tier')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.3/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Buch der Natur mit Übersetzung PDF')]</xpath>
+    </test>
+
+<!-- /o:lima.6 (Andreas Kurzmann: Soliloquium Marie cum Jhesu) tests -->    
+    <test>
+       <url>/o:lima.6</url>
+       <xpath>//xhtml:p[contains(.,'Mönch Andreas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.6</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'Do gotes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.6/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Verlaufsplanung')]</xpath>
+    </test>
+
+<!-- /o:lima.7 (Vorauer Novelle) tests -->    
+    <test>
+       <url>/o:lima.7</url>
+       <xpath>//xhtml:p[contains(.,'kunstvolle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.7</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'mit worte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.7/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'https://www.youtube.com/channel/UCi-XM5wzHB-mgEi_PEJXJqA')]</xpath>
+    </test>
+
+<!-- /o:lima.8 (Herrand von Wildon) tests -->    
+    <test>
+       <url>/o:lima.8</url>
+       <xpath>//xhtml:p[contains(.,'Herrands von Wildonie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.8</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'ich bin snel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.8/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Materialsammlung')]</xpath>
+    </test>
+
+<!-- /o:lima.9 (Konrad von Megenberg: Deutsche Sphaera) tests -->    
+    <test>
+       <url>/o:lima.9</url>
+       <xpath>//xhtml:p[contains(.,'Autoren und')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.9</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'chraft gar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=faksimile</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.9/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Informationen')]</xpath>
+    </test>
+
+<!-- /o:lima.5 (Ulrich von Liechtenstein: Frauendienst) tests -->    
+    <test>
+       <url>/o:lima.5</url>
+       <xpath>//xhtml:p[contains(.,'Über sein Leben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.5</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'nâch dienest')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.5/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'ohne Übersetzung')]</xpath>
+    </test>
+
+<!-- /o:lima.10 (Hugo von Montfort: Rede an den Sohn) tests -->    
+    <test>
+       <url>/o:lima.10</url>
+       <xpath>//xhtml:p[contains(.,'die Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.10</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'der fromen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.10/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'der BaKip Bruck')]</xpath>
+    </test>
+
+<!-- /o:lima.13 (Philipp von Seitz: Marienleben) tests -->    
+    <test>
+       <url>/o:lima.13</url>
+       <xpath>//xhtml:p[contains(.,'überlieferte Dichtung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.13</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'des hilf mir')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.13/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'PDF Textblätter ohne Übersetzung')]</xpath>
+    </test>
+
+<!-- /o:lima.11 (Seckauer Margaretenlegende) tests -->    
+    <test>
+       <url>/o:lima.11</url>
+       <xpath>//xhtml:p[contains(.,'antiken Legende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.11</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'Gebezzert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=faksimile</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=revision</url>
+       <xpath>//xhtml:div[contains(.,'wie gern')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.11/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Seckauer Margaretenlegende MHD PDF')]</xpath>
+    </test>
+
+<!-- /o:lima.4 (Admonter Bartholomäus) tests -->    
+    <test>
+       <url>/o:lima.4</url>
+       <xpath>//xhtml:p[contains(.,'Frühneuhochdeutschen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.4</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.4/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'der sol')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.4/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Admonter Bartholomäus MHD PDF')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.kochrezepte/sdef:TEI/get (Grazer Kochrezepte) tests -->    
+    <test>
+       <url>/archive/get/o:lima.kochrezepte/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Landwirtschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.kochrezepte/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'vnd nymb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=faksimile</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.kochrezepte/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Faltrezept Mandeligel')]</xpath>
+    </test>
+
+<!-- /archive/get/o:lima.12/sdef:TEI/get (Andreas Kurzmann: De quodam moriente) tests -->    
+    <test>
+       <url>/archive/get/o:lima.12/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'frühneuhochdeutscher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:lima.12/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.12/sdef:TEI/get?mode=text</url>
+       <xpath>//xhtml:div[contains(.,'vnd sol')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.12/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Informationen zum Text PDF')]</xpath>
+    </test>
+
+<!-- /o:lima.zaubersprueche (Zaubersprüche) tests -->    
+    <test>
+       <url>/o:lima.zaubersprueche</url>
+       <xpath>//xhtml:p[contains(.,'Die vorliegenden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.zaubersprueche/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Zaubersprüche verstehen lernen')]</xpath>
+    </test>
+
+<!-- /o:lima.klassiker (Unterrichtsmaterialien zu Klassikern) tests -->    
+    <test>
+       <url>/o:lima.klassiker</url>
+       <xpath>//xhtml:p[contains(.,'kritische Fragen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/grid/timeline.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:a[contains(.,'Schulbuch PDF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:lima.klassiker/sdef:TEI/get?mode=material</url>
+       <xpath>//xhtml:img/@src[.='/o:lima.klassiker/UE_2_PNG']</xpath>
+    </test>
+
+<!-- /context:lima?mode=downloads (Downloads) tests -->    
+    <test>
+       <url>/context:lima?mode=downloads</url>
+       <xpath>//xhtml:p[contains(.,'Im Rahmen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=downloads</url>
+       <xpath>//xhtml:a[contains(.,'Downloads')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=timeline (Zeitleiste) tests -->    
+    <test>
+       <url>/context:lima?mode=timeline</url>
+       <xpath>//xhtml:p[contains(.,'Bildung der')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=timeline</url>
+       <xpath>//xhtml:strong[contains(.,'um 900')]</xpath>
+    </test>
+
+<!-- /context:lima?mode=literaturerlebnisse (Kreative Literaturerlebnisse) tests -->    
+    <test>
+       <url>/context:lima?mode=literaturerlebnisse</url>
+       <xpath>//xhtml:p[contains(.,'Diese vielschichtigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=literaturerlebnisse</url>
+       <xpath>//xhtml:a[contains(.,'https://www.youtube.com/watch?v=ZTD3BWWe-94')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=literaturerlebnisse</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/literaturerlebnisse/paradiesrede.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=contact (Kontakt) tests -->    
+    <test>
+       <url>/context:lima?mode=contact</url>
+       <xpath>//xhtml:h2[contains(.,'Steirische Literaturpfade des Mittelalters')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=contact</url>
+       <xpath>//xhtml:img/@src[.='/lima/img/project/logo-yt.jpg']</xpath>
+    </test>
+
+<!-- /context:lima?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/context:lima?mode=imprint</url>
+       <xpath>//xhtml:h2[contains(.,'Herausgeber')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lima?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Mag. Dr. Ylva Schwinghammer')]</xpath>
+    </test>
+	
+      	          
+</TestCase>

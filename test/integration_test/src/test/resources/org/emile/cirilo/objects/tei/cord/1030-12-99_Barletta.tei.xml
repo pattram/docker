@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/GVogeler/CEI2TEI/master/relax_ng_compact/tei_cei.rnc"?><t:TEI xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cei="http://www.monasterium.net/NS/cei" xmlns:bf="http://betterform.sourceforge.net/xforms" xmlns:xrx="http://www.monasterium.net/NS/xrx" xmlns:xalan="http://xml.apache.org/xslt">
+   <t:teiHeader>
+      <t:fileDesc>
+         <t:titleStmt>
+            <t:title>IlluminierteUrkunden/1030-12-99_Barletta (Cannae 1030-12-99)</t:title>
+            <t:editor>
+               <t:persName>
+                  <t:forename>Projekt</t:forename>
+                  <t:surname>Illuminierte Urkunden</t:surname>
+                  <t:email>illuminierteurkunden@gmail.com</t:email>
+               </t:persName>
+            </t:editor>
+            <t:principal>
+               <t:persName xml:id="gv">
+                  <t:forename>Georg</t:forename>
+                  <t:surname>Vogeler</t:surname>
+                  <t:idno type="ORCID">0000-0002-1726-1712</t:idno>
+               </t:persName>
+            </t:principal>
+            <t:principal>
+               <t:persName xml:id="mr">
+                  <t:forename>Martin</t:forename>
+                  <t:surname>Roland</t:surname>
+                  <t:idno type="ORCID">0000-0002-9503-7097</t:idno>
+               </t:persName>
+            </t:principal>
+            <t:principal>
+               <t:persName xml:id="az">
+                  <t:forename>Andreas</t:forename>
+                  <t:surname>Zajic</t:surname>
+                  <t:idno type="ORCID">0000-0002-1967-6022</t:idno>
+               </t:persName>
+            </t:principal>
+            <t:respStmt>
+               <t:resp>Art historical description</t:resp>
+               <t:persName sameAs="#mr">
+                  <t:forename>Martin</t:forename>
+                  <t:surname>Roland</t:surname>
+               </t:persName>
+            </t:respStmt>
+            <t:respStmt>
+               <t:resp>Art historical description</t:resp>
+               <t:persName xml:id="gb">
+                  <t:forename>Gabriele</t:forename>
+                  <t:surname>Bartz</t:surname>
+                  <t:idno type="ORCID">0000-0002-8406-0785</t:idno>
+               </t:persName>
+            </t:respStmt>
+            <t:respStmt>
+               <t:resp>Diplomatic description</t:resp>
+               <t:persName xml:id="mg">
+                  <t:forename>Markus</t:forename>
+                  <t:surname>Gneiß</t:surname>
+                  <t:idno type="ORCID">0000-0003-3269-453X</t:idno>
+               </t:persName>
+            </t:respStmt>
+            <t:respStmt>
+               <t:resp>Diplomatic description</t:resp>
+               <t:persName sameAs="#az">
+                  <t:forename>Andreas</t:forename>
+                  <t:surname>Zajic</t:surname>
+                  <t:idno type="ORCID">0000-0002-1967-6022</t:idno>
+               </t:persName>
+            </t:respStmt>
+            <t:respStmt>
+               <t:resp>Digital transformation; modelling</t:resp>
+               <t:persName xml:id="sw">
+                  <t:forename>Sean</t:forename>
+                  <t:surname>Winslow</t:surname>
+                  <t:idno type="ORCID">0000-0002-5114-0594</t:idno>
+               </t:persName>
+            </t:respStmt>
+            <t:respStmt>
+               <t:resp>Digital transformation</t:resp>
+               <t:persName xml:id="mb">
+                  <t:forename>Martina</t:forename>
+                  <t:surname>Bürgermeister</t:surname>
+                  <t:idno type="ORCID">0000-0003-0594-1902</t:idno>
+               </t:persName>
+            </t:respStmt>
+            <t:funder>
+               <t:orgName ref="https://www.fwf.ac.at/">
+                  <t:choice>
+                     <t:expan>Fonds zur Förderung der wissenschaftlichen
+                        Forschung</t:expan>
+                     <t:abbr>FWF</t:abbr>
+                  </t:choice>
+               </t:orgName> projekt P 26706-G21 "Illuminierten Urkunden als
+            Gesamtkunstwerk" and project FWF-ORD84 "Erhalt fachspezifischer
+            Funktionalitäten bei Langzeitarchivierung in einem allgemeinen
+            Datenarchiv für die Geisteswissenschaften."</t:funder>
+         </t:titleStmt>
+         <t:publicationStmt>
+            <t:publisher>
+               <t:orgName ref="http://d-nb.info/gnd/1137284463" corresp="https://informationsmodellierung.uni-graz.at">Zentrum für
+                                Informationsmodellierung - Austrian Centre for Digital Humanities,
+                                Karl-Franzens-Universität Graz</t:orgName>
+               <t:idno type="PID" resp="https://illuminierte-urkunden.uni-graz.at/">o:cord.c3bd5335.df73.3143.9718.147bb2671071</t:idno>
+               <t:ref target="context:cord.illuminierteurkunden" type="context">context:cord.illuminierteurkunden</t:ref>
+            </t:publisher>
+            <t:distributor>
+               <t:orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</t:orgName>
+            </t:distributor>
+            <t:availability>
+               <t:p>The content of this file is usable under a <ref xmlns="http://www.tei-c.org/ns/1.0" target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Comments 4.0 Attribution - Non-Commercial licence.</ref>. Furthermore, all rights of publication and duplication of the pictorial reproductions of the documents are held by the respective archive’s proprietor.</t:p>
+               <t:p>The place of
+                                jurisdiction for all disputes arising from this agreement is the
+                                court nearest to the respective archive.</t:p>
+               <t:p>Conditions of use of printed editions and depictions apply in the
+                                same way to scientific utilization. Citation according to good
+                                scientific practice is therefore expected. (URL, author,
+                                archive)</t:p>
+               <t:p>When publishing or duplicating research results (including
+                                unpublished theses and dissertations) obtained from data provided by
+                                Monasterium.Net, we would like to ask every user to pass a free
+                                sample copy to the respective holder of the originals (archive).</t:p>
+            </t:availability>
+            <t:pubPlace>
+               <t:placeName>Graz</t:placeName>
+            </t:pubPlace>
+            <t:date when="2020-12-04T17:16:29.491859+01:00">2020-12-04T17:16:29.491859+01:00</t:date>
+         </t:publicationStmt>
+         <t:sourceDesc>
+            <t:bibl>Originally converted to TEI based upon a CEI file from <t:ref target="http://monasterium.net/">Monasterium</t:ref>, <t:idno type="Monasterium">IlluminierteUrkunden/1030-12-99_Barletta</t:idno>, created on <t:date when="2020-11-05T16:34:08.144Z">2020-11-5</t:date> and last updated on <t:date when="2020-11-05T16:34:08.144Z">2020-11-5</t:date>. </t:bibl>
+            <t:bibl>FWF Projekt P 26706-G21 "Illuminierte Urkunden"<t:lb />Bearbeitungsstand: MITTEL</t:bibl>
+            <t:listWit>
+               <t:witness>
+                  <msDesc xmlns="http://www.tei-c.org/ns/1.0">
+                     <t:msIdentifier>
+                        <t:settlement>Barletta</t:settlement>
+                        <t:repository>Archivio Diocesano</t:repository>
+                        <t:idno>9 (ADB0009)</t:idno>
+                     </t:msIdentifier>
+                     <t:physDesc>
+                        <t:objectDesc>
+                           <t:supportDesc>
+                              <t:support />
+                           </t:supportDesc>
+                        </t:objectDesc>
+                        <t:decoDesc>
+                           <t:p n="Ekphrasis">Am Ende des Textes ein Notariatssignet in der Form einer gezeichneten „Zeilenschlussleiste“ mit einem Flechtknopf und Zeigehand mit Armansatz.</t:p>
+                           <t:p n="Stil und Einordnung">Das figürliche Zeichen weist dieselbe Tintenfarbe wie Schrift auf und kann daher wohl dem Notar Gregorius diaconus zugeordnet werden (vgl. weitere Urkunden desselben Notars mit demselben Zeichen).</t:p>
+                           <t:p n="Autorensigle">Martin Roland</t:p>
+                        </t:decoDesc>
+                     </t:physDesc>
+                     <diploDesc>
+                        <copyStatus type="original">Original</copyStatus>
+                        <t:listBibl type="other">
+                           <t:bibl>Codice Diplomatico Barese 8: Barletta, 1914, S. 14–15, Nr. 7, online:<t:ref target="http://www.sapuglia.it/Repository_Perg/21_Diocesano_Barletta/Trascrizioni/ADB_0009.pdf">http://www.sapuglia.it/Repository_Perg/21_Diocesano_Barletta/Trascrizioni/ADB_0009.pdf</t:ref>
+                           </t:bibl>
+                           <t:bibl>
+                              <t:ref target="http://www.sapuglia.it/Schedatura/Pergamene/04_04_view_data.php?id_perg=4980">http://www.sapuglia.it/Schedatura/Pergamene/04_04_view_data.php?id_perg=4980</t:ref>(Datenbank)</t:bibl>
+                           <t:bibl>
+                              <t:ref target="http://www.sapuglia.it/Schedatura/Pergamene/iviewer/viewer/viewer.php?offset=1&amp;amp;numimg=&amp;&amp;id_perg=4980">http://www.sapuglia.it/Schedatura/Pergamene/iviewer/viewer/viewer.php?offset=1&amp;numimg=&amp;&amp;id_perg=4980</t:ref>(Bild)</t:bibl>
+                        </t:listBibl>
+                        <issued>
+                           <t:placeName type="Ausstellungsort">Cannae</t:placeName>
+                           <t:date when-custom="10301299" when="1030-12">1030-12-99</t:date>
+                        </issued>
+                     </diploDesc>
+                  </msDesc>
+               </t:witness>
+            </t:listWit>
+         </t:sourceDesc>
+      </t:fileDesc>
+      <t:encodingDesc>
+         <t:projectDesc>
+            <t:p>This is a data set imported from <t:ref target="http://www.monasterium.net">Monasterium.net</t:ref> into the <t:ref target="http://gams.uni-graz.at">GAMS
+                repository</t:ref> in the context of the project FWF-ORD84 "Erhalt
+            fachspezifischer Funktionalitäten bei Langzeitarchivierung in einem allgemeinen
+            Datenarchiv für die Geisteswissenschaften."</t:p>
+         </t:projectDesc>
+         <t:listPrefixDef>
+            <t:prefixDef ident="zotero" matchPattern="([a-z]+[a-z0-9]*)" replacementPattern="http://zotero.org/groups/257864/items/$1">
+               <t:p part="N"> Private URIs using the bibl prefix can be expanded to form
+                                URIs which retrieve the relevant bibliographical reference from
+                                Zotero. </t:p>
+            </t:prefixDef>
+         </t:listPrefixDef>
+      </t:encodingDesc>
+      <t:profileDesc>
+         <t:abstract>
+            <t:p>Donazione (Schenkung).<t:quote rend="italic">„</t:quote>Risando, f.Gundelgardi“, di Canne, giacendo infermo, dona „pro anima“ alla chiesa di S. Maria dell’Episcopio di Canne, rappresentata da „Risando primicerius“, una terra in „loco Ferulito“ (nach CDB 8).</t:p>
+         </t:abstract>
+         <t:textClass>
+            <t:keywords scheme="https://gams.uni-graz.at/o:cord.controlledvocabulary.illurk-vocabulary">
+               <t:term key="figural" ref="https://gams.uni-graz.at/o:cord.controlledvocabulary.illurk-vocabulary#figural">N2: figürlich</t:term>
+               <t:term key="SignumNotarile" ref="https://gams.uni-graz.at/o:cord.controlledvocabulary.illurk-vocabulary#SignumNotarile">N3: Notarssignet</t:term>
+            </t:keywords>
+         </t:textClass>
+         <t:settingDesc>
+            <t:listPlace>
+               <t:place>
+                  <t:placeName>
+                     <t:region>Italien</t:region>
+                  </t:placeName>
+               </t:place>
+            </t:listPlace>
+         </t:settingDesc>
+      </t:profileDesc>
+   </t:teiHeader>
+   <t:facsimile>
+      <t:graphic url="http://images.monasterium.net/illum/IllUrk/1030-12-99_Barletta_sapuglia.jpg" />
+      <t:graphic url="http://images.monasterium.net/illum/IllUrk/1030-12-99_Barletta_sapuglia_det-natarssignet.jpg" />
+   </t:facsimile>
+   <t:text>
+      <t:body>
+         <t:div type="tenor">
+            <t:p />
+         </t:div>
+      </t:body>
+   </t:text>
+</t:TEI>

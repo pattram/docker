@@ -1,0 +1,1573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="roth">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests roth -->
+    <test>
+       <url>/context:roth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=description</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;date=&amp;phototype=&amp;colourAsPhrase=&amp;dc.coverageAsPhrase=&amp;locality=&amp;personAsAnd=&amp;dc.subject=&amp;references=&amp;pbook=&amp;page=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=roth&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Froth%2Froth-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=terms</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth/DICTIONARYPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:roth.schlagworte/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.anlegestellehafen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bahnhof/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.flughafen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.haltestelle/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.auto/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bootschiff/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.eisenbahn/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fahrrad/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fahrzeug/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.flugzeug/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.lastwagen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.luftfahrzeug/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.motorrad/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strassenbahn/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.traktor/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.ubahn/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.brueckesteg/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.parkplatz/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.platz/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strasse/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.weg/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.garten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.obstgartenplantage/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.park/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.klapotetz/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.mastenleitung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.vogelscheuche/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.zaun/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.muellschutt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.ortschaft/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.stadt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strassenansicht/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.arbeit/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.dreharbeiten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.ernte/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.feldarbeit/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fischerei/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.heuarbeit/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.holzarbeit/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.imkerei/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schlachten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bekleidung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gefaessbehaelter/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.haushaltsgegenstand/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.moebel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.souvenir/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.textilie/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.uhr/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.waffe/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bestattung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.brauchtum/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hochzeit/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.religioesefeierritus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.essenundtrinken/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.frauen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kinder/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.maenner/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.menschen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>context:roth.sw.fussball/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.jagd/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kegeln/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.musik/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.spiel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.sport/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.stierkampf/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hand/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strassenszene/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.archaeologischestaette/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.archiv/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bibliothek/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.konzentrationslager/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.museum/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.archivale/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.deponat/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.exponat/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bild/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.buch/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.denkmal/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fotografie/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gemaelde/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.graffiti/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.landkarteplan/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.mosaik/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.plakatposter/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.relief/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schrift/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schriftstueck/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.skulpturstatue/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.wandmalerei/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.zeichnung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bildstockkapelle/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.friedhof/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.grab/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kirche/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kloster/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.moschee/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schreintempel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.synagoge/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.forschenlernen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.lesung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.heiligenbildheiligenstatue/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kreuz/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.knochenskelett/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.modellpraeparat/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.atelierwerkstatt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.baustelle/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schiffswerft/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.werk/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.brunnen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fassade/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fenster/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fliese/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gang/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gebaeudedetail/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hof/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.keller/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.leuchte/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.mauerwand/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.pflasterstein/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.raumzimmer/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.stiege/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tor/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tuer/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.buchhandlung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fischmarkt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.geschaeft/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.markt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strassenhandel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tankstelle/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.ware/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.casino/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gasthausrestaurant/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hotel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kaffeehaus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.kino/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.nachtclub/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.oper/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.theater/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tiergarten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.vergnuegungspark/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.zirkus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fluechtlingslager/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.justizanstalt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.klinik/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gebaeude/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.haus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hochhaus/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.hofundstall/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.huette/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.palastschlossburg/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.turm/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.verfallenebauten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.leuchtreklame/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schildgebaeudebeschriftung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.baum/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.blatt/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.blumebluete/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.flechtepilzalge/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fruchtsamen/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.holz/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.pflanze/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.berggebirge/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.boden/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.feld/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gewaesser/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.landschaft/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.strand/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.wald/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.wiese/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.wueste/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.eis/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.eisblume/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.nebel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.raureif/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schnee/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.feuer/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.gestein/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.wasser/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.fischmeerestier/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tier/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.totestier/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.himmel/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.nacht/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bildschirmbild/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.portrait/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.selbstportrait/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.stillleben/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.mauerfleck/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.oberflaeche/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.rost/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.schatten/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.spiegelung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.spur/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.verfremdung/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.00.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.01.D01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.02.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.03.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.04.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.05.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.06.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.07.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.08.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.09.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.10.AF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.11.DF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.12.DF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.13.DF01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.00.AF01.portraitskuenstlerundfreunde.097</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.00.D01</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.01.D02.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.01.D03.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.02.D04.1.bienenzucht</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.02.D09.09</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.03.AF02.21</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.04.AF02.03</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.05.AF01.03</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.06.AF02.04</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.07.AF05.04</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.08.DF02.nationalbibliothek</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.09.AF01.03</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.10.AF01.04</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.11.DF01.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.12.DF01.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:roth.13.DF01.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth.00.AF01.portraitskuenstlerundfreunde.097/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth.01.D03.2/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth.04.AF02.06/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth.09.AF01.03/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth.13.DF01.2/methods/sdef:Context/get?mode=tiles</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:roth.100051</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:roth.100051/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:roth.500090</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:roth.500090/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:roth.300136</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:roth.300136/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:roth.1000062</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:roth.1000062/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:roth.1300854</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:roth.1300854/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:roth (Home) tests -->
+	<test>
+       <url>/context:roth</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+	
+	<test>
+       <url>/context:roth</url>
+       <xpath>//xhtml:p[contains(.,'Land Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth</url>
+       <xpath>//xhtml:img/@src[.='/roth/img/flaticon/png/001-box.png']</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=about (Über das Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h2[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Nach einer')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary (Wörterbuch der Bilder) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <xpath>//xhtml:a[contains(.,'Wörterbuch der Bilder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <xpath>//xhtml:h5[contains(.,'Schlagwortwolke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <xpath>//xhtml:h6[contains(.,'Luftfahrzeug')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <xpath>//xhtml:p[contains(.,'Beschlagwortung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=dictionary</url>
+       <xpath>//xhtml:li[contains(.,'Essen und Trinken')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=description (Gerhard Roth und Fotografie) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=description</url>
+       <xpath>//xhtml:a[contains(.,'Gerhard Roth und Fotografie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=description</url>
+       <xpath>//xhtml:b[contains(.,'der Neugierde')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=search (Suche) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:option[contains(.,'Koppitsch, Franz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;date=&amp;phototype=&amp;colourAsPhrase=&amp;dc.coverageAsPhrase=&amp;locality=&amp;personAsAnd=&amp;dc.subject=&amp;references=&amp;pbook=&amp;page=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=roth&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Froth%2Froth-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;date=&amp;phototype=&amp;colourAsPhrase=&amp;dc.coverageAsPhrase=&amp;locality=&amp;personAsAnd=&amp;dc.subject=&amp;references=&amp;pbook=&amp;page=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=roth&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Froth%2Froth-search.xsl</url>
+       <xpath>//xhtml:option[contains(.,'Koppitsch, Franz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;date=&amp;phototype=&amp;colourAsPhrase=&amp;dc.coverageAsPhrase=&amp;locality=&amp;personAsAnd=&amp;dc.subject=&amp;references=&amp;pbook=&amp;page=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=roth&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Froth%2Froth-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.10000001/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=terms (Nutzung und Lizenz) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:a[contains(.,'Nutzung und Lizenz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:p[contains(.,'rechtlicher Einschränkungen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:roth/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:roth/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Projektleitung')]</xpath>
+    </test>
+
+<!-- Wörterbuch der Bilder sample tests -->	    
+    <test>
+       <url>/context:roth.sw.parkplatz/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.200914/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.menschen/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.200077/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.bild/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.300785/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.klinik/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.700470/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.sw.tier/sdef:Context/get?mode=tiles</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.200135/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /archive/objects/query:roth.schlagworte/methods/sdef:Query/get?locale=&mode=tagcloud&params (Word Cloud) tests -->       
+    <test>
+       <url>/archive/objects/query:roth.schlagworte/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:div/@id[.'tagskeywords']</xpath>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/query:roth.schlagworte/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:a[contains(.,'Jagd')]</xpath>
+    </test>
+
+<!-- Bestand am Franz-Nabl-Institut tests -->    
+    <test>
+       <url>/context:roth.00.AF01.portraitskuenstlerundfreunde.097</url>
+       <xpath>//xhtml:a[contains(.,'Tasche_097_Franz Killmeyer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.00.AF01.portraitskuenstlerundfreunde.097</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.10000045/THUMBNAIL']</xpath>
+    </test>    
+    
+    <test>
+       <url>/context:roth.04.AF02.08</url>
+       <xpath>//xhtml:a[contains(.,'Tasche_08')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.04.AF02.08</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.401925/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.10.AF01.04</url>
+       <xpath>//xhtml:a[contains(.,'Tasche_04')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:roth.10.AF01.04</url>
+       <xpath>//xhtml:img/@src[.='/o:roth.1000101/THUMBNAIL']</xpath>
+    </test>
+
+<!-- object sample tests -->    
+    <test>
+       <url>/o:roth.500523</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.500523</url>
+       <xpath>//xhtml:td[contains(.,'Fototyp')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.500523</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.900079</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.900079</url>
+       <xpath>//xhtml:td[contains(.,'Lokalität')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.900079</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.1300003</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.1300003</url>
+       <xpath>//xhtml:td[contains(.,'Entstehungsort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.1300003</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.200722</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.200722</url>
+       <xpath>//xhtml:td[contains(.,'Permalink')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.200722</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.500247</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.500247</url>
+       <xpath>//xhtml:td[contains(.,'Entstehungszeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:roth.500247</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>	
+      	          
+</TestCase>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="epsg">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests epsg -->
+    <test>
+       <url>/context:epsg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?genreAsPhrase=Grabinschrift&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epsg&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3epsg-search.xsl&amp;language=&amp;coverage=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;query=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg.corpus.cil.03/methods/sdef:Context/get?mode=container&amp;context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=bibl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epsg/KONKORDANZEN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epsg.3/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <status>200</status>
+    </test>
+    
+<!-- context:epsg (Home) tests -->    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='branding']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='search']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='nav']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='container']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='footer']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:input/@name[.='x2']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:a[.='Erweiterte Suche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epsg</url>
+       <xpath>//xhtml:a[contains(.,'Objekte anzeigen')]</xpath>
+    </test>
+    
+<!-- context:epsg/methods/sdef:Context/get?mode=search (search) tests -->
+	<test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:select/@id[.='genre']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:option/@value[.='Grabinschrift']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:input/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?genreAsPhrase=Grabinschrift&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epsg&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3epsg-search.xsl&amp;language=&amp;coverage=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;query=</url>
+       <xpath>//xhtml:a[contains(.,'EPSG 1001')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?genreAsPhrase=Grabinschrift&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epsg&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3epsg-search.xsl&amp;language=&amp;coverage=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;query=</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?genreAsPhrase=Grabinschrift&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epsg&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3epsg-search.xsl&amp;language=&amp;coverage=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;query=</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- context:epsg/methods/sdef:Context/get?mode=collection (objects) tests -->
+		<test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:li/xhtml:a[.='CIL 03']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg.corpus.cil.03/methods/sdef:Context/get?mode=container&amp;context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:li/xhtml:span/xhtml:a[contains(.,'EPSG 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg.corpus.cil.03/methods/sdef:Context/get?mode=container&amp;context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg.corpus.cil.03/methods/sdef:Context/get?mode=container&amp;context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+
+<!-- context:epsg/methods/sdef:Context/get?mode=bibl (Abkürzungsverzeichnis) tests -->
+	<test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'zurück')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epsg/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:dd[.='Archäologisch-Epigraphische Mitteilungen']</xpath>
+    </test>
+
+<!-- single object sample tests -->
+	<test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a[contains(.,'zur Kategoriensuche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a[contains(.,'nächste Inschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'T deutlich höher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a[.='Podkraj']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a[.='UBI ERAT LUPA 9251']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:epsg.2/sdef:TEI/get?context=context:epsg.corpus.cil!context:epsg.corpus.cil.03</url>
+       <xpath>//xhtml:a[contains(.,'Creative')]</xpath>
+    </test>
+   
+</TestCase>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="htx">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests htx -->
+    <test>
+       <url>/context:htx</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=records</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=advanced_search</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=databasket</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/query:htx.map</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.Durham</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.Hull</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.EastRiding</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.Kent</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR1</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/o:htx.WR6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WR8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WM1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.WM2</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/o:htx.WM3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.YC1670</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.YC1665</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.YC1674</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.norfex.E179-338</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.norfex.E179-335</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:htx.norfex.E179-337</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/o:htx.norfex.E179-336</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.ontology/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE179147625/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE179147625Part1m25E179238110Part1m4/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE179238110/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925227/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part1/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part2/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part3/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part4/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part5/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part6/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part8/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part9/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part10/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part11/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part16/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part18/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part19/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part20/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part211and2/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part22/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part25/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part30/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part31/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-LMAMRTH4/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-LMAMRTH6/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part261-3/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part27/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part28/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part29/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part32/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part33/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part34/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part35/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>	
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part36/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part371and2/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part38/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part39/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232Part40/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.SRY/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-LMAMRTH7/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:htx (Home) tests -->    
+    <test>
+       <url>/context:htx</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:htx</url>
+       <xpath>//xhtml:p[contains(.,'Low Countries')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:htx</url>
+       <xpath>//xhtml:img/@src[.='/htx/img/hearth_facsimile_4.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:htx/methods/sdef:Context/get?mode=about (About) tests -->    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'It acts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:img/@src[.='/htx/img/centre_for_hearth_tax_research.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:htx/methods/sdef:Context/get?mode=records (Records) tests -->    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Records')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:div[contains(.,'currently contains')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Staincliffe')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:htx/methods/sdef:Context/get?mode=advanced_search (Advanced Search) tests -->    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=advanced_search</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=advanced_search</url>
+       <xpath>//xhtml:div[contains(.,'hearth tax returns')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=advanced_search</url>
+       <xpath>//xhtml:input/@id[.='hearths_min']</xpath>
+    </test>
+
+<!-- /archive/objects/context:htx/methods/sdef:Context/get?mode=databasket (Databasket) tests -->    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=databasket</url>
+       <xpath>//xhtml:a[contains(.,'Databasket')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=databasket</url>
+       <xpath>//xhtml:td[contains(.,'SUM')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=databasket</url>
+       <xpath>//xhtml:th[contains(.,'place')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=databasket</url>
+       <xpath>//xhtml:img/@src[.='/htx/img/excel_icon.png']</xpath>
+    </test>
+
+  
+<!-- /archive/objects/context:htx/methods/sdef:Context/get?mode=imprint (Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Hearth Tax Data')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:htx/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Hearth Tax Digital')]</xpath>
+    </test>
+
+ 
+<!-- Object sample tests -->    
+    <test>
+       <url>/archive/objects/o:htx.CityMidx-TNAE17925232part2/methods/sdef:Ontology/get</url>
+       <xpath>//xhtml:a[contains(.,'London and Middlesex')]</xpath>
+    </test>
+      
+        	          
+</TestCase>

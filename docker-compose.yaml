@@ -1,0 +1,307 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: pattram/postgresql:13.2.0.3
+    container_name: postgres
+    stop_grace_period: 60s
+    secrets:
+      - postgres_pw
+    environment:
+      - POSTGRES_USER=postgres      
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_pw
+      - POSTGRES_DB=fcrepo  
+
+  minio:
+    image: pattram/minio:1.0.0.1
+    container_name: minio
+    environment:
+      - MINIO_ROOT_USER=${AWS_ACCESS_KEY_ID}
+      - MINIO_ROOT_PASSWORD=${AWS_SECRET_ACCESS_KEY}
+      - MINIO_STORAGE_CLASS_STANDARD=EC:0
+    command: server --console-address ":9001" /data
+
+  activemq:
+    image: pattram/activemq:5.15.9.1
+    container_name: activemq
+    environment:
+      - ACTIVEMQ_CONF=/opt/activemq/conf
+
+  apache:
+    image: pattram/apache:2.4.52.16
+    container_name: apache
+    environment:
+      - PUBLIC_HOST=${PUBLIC_HOST}      
+      - SERVER_ADMIN_MAIL=${SERVER_ADMIN_MAIL}  
+      - PUBLIC_REPOSITORY_HOST=fcrepo4
+      - APACHE_USE_PORT=${APACHE_USE_PORT:-443}   
+      - USE_IDC=${USE_IDC:-1}  
+      - KEYCLOAK_APACHE_SECRET_FILE=${KEYCLOAK_APACHE_SECRET_FILE:-/run/secrets/apache_keycloak_secret}
+      - OIDC_PASSPHRASE_FILE=${OIDC_PASSPHRASE_FILE:-/run/secrets/oidc_passphrase}
+      - OIDC_PROVIDER_METADATA_URL=${OIDC_PROVIDER_METADATA_URL}  
+      - SECRETS_PATH=/run/secrets  
+      - KEYCLOAK_CLIENT=${KEYCLOAK_CLIENT:-CiriloTest}
+      - KEYCLOAK_HOST=${KEYCLOAK_HOST}
+      - KEYCLOAK_REALM=${KEYCLOAK_REALM:-Cm4fTest} 
+      - USE_APACHE_PORT=${USE_APACHE_PORT:-443}  
+      - APACHE_LOG_LEVEL=${APACHE_LOG_LEVEL:-warn}  
+    ports:
+      - "443:443"  
+    secrets:
+      - server.crt
+      - server.key
+      - rootCA.crt
+      - apache_keycloak_secret   
+      - oidc_passphrase
+
+  fcgate:
+    image: pattram/fcgate:1.2.0.10
+    container_name: fcgate
+    secrets:
+      - postgres_pw
+      - hdladmpriv.bin
+    environment:
+      - PUBLIC_HOST=${PUBLIC_HOST}
+      - S3_PROVIDER_HOST=${S3_PROVIDER_HOST}
+      - S3_PROVIDER_REGION=${S3_PROVIDER_REGION}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - KEYCLOAK_HOST=${KEYCLOAK_HOST}
+      - KEYCLOAK_REALM=${KEYCLOAK_REALM}
+      - FCGATE_XMS=${FCGATE_XMS}
+      - FCGATE_XMX=${FCGATE_XMX}
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_pw
+      - POSTGRES_PASSWORD=
+      - GEONAMES_ACCOUNT=${GEONAMES_ACCOUNT}
+      - GEONAMES_FEATURECODES=${GEONAMES_FEATURECODES}
+      - HANDLE_PREFIX=${HANDLE_PREFIX}
+      - HANDLE_PRIVKEY=${HANDLE_PRIVKEY:-/run/secrets/hdladmpriv.bin}
+      - LOG_LEVEL=${FCGATE_LOG_LEVEL:-INFO}  
+    depends_on:
+      - fcrepo4
+      - postgres
+      - rdf4j
+      - minio
+ 
+
+#  tomee:
+#    image: pattram/tomee:9.0.71.0
+#    container_name: tomee
+#    depends_on:
+#      - postgres
+#    secrets:
+#      - postgres_pw
+#    environment:
+#      - PUBLIC_HOST=${PUBLIC_HOST}
+#      - STORAGE_LAYER=${STORAGE_LAYER}
+#      - KEYCLOAK_HOST=${KEYCLOAK_HOST}
+#      - KEYCLOAK_REALM=${KEYCLOAK_REALM}
+#      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_pw
+#      - POSTGRES_PASSWORD=
+#      - GEONAMES_ACCOUNT=${GEONAMES_ACCOUNT}
+#      - GEONAMES_FEATURECODES=${GEONAMES_FEATURECODES}
+#      - HANDLE_PREFIX=${HANDLE_PREFIX}
+#      - HANDLE_PRIVKEY=${HANDLE_PRIVKEY:-/run/secrets/hdladmpriv.bin}
+#    ports:
+#      - "9090:8080" 
+
+
+  treetagger:
+    image: pattram/treetagger:3.2.4.2
+    container_name: treetagger
+    environment:
+      - TREETAGGER_XMS=${TREETAGGER_XMS}
+      - TREETAGGER_XMX=${TREETAGGER_XMX}
+
+
+  proai:
+    image: pattram/proai:1.1.1.7
+    container_name: proai
+    depends_on:
+      - postgres
+    secrets:
+      - postgres_pw
+    environment:
+      - PROAI_XMS=${PROAI_XMS}
+      - PROAI_XMX=${PROAI_XMX}
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_pw
+
+  fcrepo4:
+    image: pattram/fcrepo:6.4.0.0
+    container_name: fcrepo4
+    stop_grace_period: 60s
+    secrets:
+      - postgres_pw
+    depends_on:
+      - postgres
+      - activemq  
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/fcrepo
+      - DB_USER=postgres      
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_pw
+      - PUBLIC_HOST=${PUBLIC_HOST}  
+      - LOGLEVEL=${FCREPO_LOG_LEVEL:-WARN}   
+      - FCREPO_HOST=${FCREPO_HOST}
+      - FCREPO_CONTEXT_PATH=${FCREPO_CONTEXT_PATH}
+      - FCREPO_BASEURI=${FCREPO_BASEURI}
+      - FCREPO_LOG_LEVEL=${FCREPO_LOG_LEVEL}
+      - FCREPO_PROXYURI=${FCREPO_PROXYURI}
+      - FCREPO_MODESHAPE_CONFIGURATION=${FCREPO_MODESHAPE_CONFIGURATION}
+      - ACTIVEMQ_BROKER_URI=${ACTIVEMQ_BROKER_URI}
+      - FCREPO_XMS=${FCREPO_XMS}  
+      - FCREPO_XMX=${FCREPO_XMX}  
+        
+  toolbox:
+    image: pattram/toolbox:4.7.2.14
+    container_name: toolbox
+    environment:
+      - PUBLIC_REPOSITORY_PORT=${PUBLIC_REPOSITORY_PORT}
+      - FCREPO_HOST=${FCREPO_HOST}
+      - FCREPO_PORT=${FCREPO_PORT}
+      - FCREPO_BASEURI=${FCREPO_BASEURI}
+      - FCREPO_PROXYURI=${FCREPO_PROXYURI}
+      - ACTIVEMQ_BROKER_URI=${ACTIVEMQ_BROKER_URI}
+      - CAMEL_FCREPO_AUTHUSERNAME=${CAMEL_FCREPO_AUTHUSERNAME}
+      - CAMEL_FCREPO_AUTHPASSWORD=${CAMEL_FCREPO_AUTHPASSWORD}
+      - APIX_PORT=8080
+      - APIX_LOADER_PORT=8081
+      - APIX_PROXY_PATH=fcrepo
+      - APIX_INTERCEPT_PATH=fcrepo/rest
+      - REINDEXING_PORT=9080
+      - JAVA_MIN_MEM=${TOOLBOX_XMS}
+      - JAVA_MAX_MEM=${TOOLBOX_XMX}
+      - JAVA_PERM_MEM=${TOOLBOX_PERM_MEM}
+      - JAVA_MAX_PERM_MEM=${TOOLBOX_MAX_PERM_MEM}
+    depends_on:
+      - fcrepo4
+
+  cm4f:
+    image: pattram/apix-cm4f:1.0.0.21
+    container_name: cm4f
+    environment:
+      - PUBLIC_HOST=${PUBLIC_HOST}
+      - FCREPO_HOST=${FCREPO_HOST}
+      - FCREPO_PORT=${FCREPO_PORT}
+      - FCREPO_BASEURI=${FCREPO_BASEURI}
+      - CAMEL_FCREPO_AUTHUSERNAME=${CAMEL_FCREPO_AUTHUSERNAME}
+      - CAMEL_FCREPO_AUTHPASSWORD=${CAMEL_FCREPO_AUTHPASSWORD}
+      - JAVA_MIN_MEM=${CM4F_XMS}
+      - JAVA_MAX_MEM=${CM4F_XMX}
+      - JAVA_PERM_MEM=${CM4F_PERM_MEM}
+      - JAVA_MAX_PERM_MEM=${CM4F_MAX_PERM_MEM}
+
+  cocoon:
+    image: pattram/cocoon:2.1.13.35
+    container_name: cocoon
+    environment:
+      - COCOON_XMS=${COCOON_XMS}
+      - COCOON_XMX=${COCOON_XMX}
+      - LOG_LEVEL=${COCOON_LOG_LEVEL:-info}
+
+  rdf4j:
+    image: pattram/rdf4j:3.6.0.2
+    container_name: rdf4j
+    stop_grace_period: 60s
+    environment:
+      - RDF4J_XMS=${RDF4J_XMS}
+      - RDF4J_XMX=${RDF4J_XMX}
+ 
+
+  blazegraph:
+    image: pattram/blazegraph:2.1.5.3
+    container_name: blazegraph
+    stop_grace_period: 60s
+    environment:
+      - BLAZEGRAPH_XMS=${BLAZEGRAPH_XMS}
+      - BLAZEGRAPH_XMX=${BLAZEGRAPH_XMX}
+      - LOG_LEVEL=${BLAZEGRAPH_LOG_LEVEL:-INFO}  
+
+
+  triplestore:
+    image: pattram/triplestore:2.1.5.3
+    container_name: triplestore
+    stop_grace_period: 60s
+    environment:
+      - TRIPLESTORE_XMS=${TRIPLESTORE_XMS}
+      - TRIPLESTORE_XMX=${TRIPLESTORE_XMX}
+      - LOG_LEVEL=${TRIPLESTORE_LOG_LEVEL:-INFO}  
+
+  solr:
+    image: pattram/solr:8.8.2.9
+    container_name: solr
+    stop_grace_period: 60s
+    environment:
+      - user=solr 
+      - CREATE_FCREPO=true   
+
+  fits:
+    image: pattram/fits:1.5.0.2
+    container_name: fits
+    environment:
+      - FITS_XMS=${FITS_XMS}
+      - FITS_XMX=${FITS_XMX}
+
+  rscript:
+    image: pattram/rscript:1.0.0.4
+    container_name: rscript
+    environment:
+      - RSCRIPT_XMS=${RSCRIPT_XMS}
+      - RSCRIPT_XMX=${RSCRIPT_XMX}
+
+  loris:
+    image: pattram/loris:3.2.1.5
+    container_name: loris
+    environment:
+      - WORKERS=${LORIS_WORKERS:-2}
+      - TIMEOUT=${LORIS_TIMEOUT:-30}
+      - CACHE_CHECK_INTERVAL=${LORIS_CACHE_CHECK_INTERVAL:-10}  
+
+  skosifier:
+    image: pattram/skosifier:1.0.2.1
+    container_name: skosifier
+        
+  latex:
+    image: pattram/latex:1.0.1.3
+    container_name: latex
+    environment:
+      - WORKERS=${LATEX_WORKERS:-2}
+      - LOG_LEVEL=${LATEX_LOG_LEVEL:-info}  
+ 
+  nexuscube:
+    image: pattram/nexuscube:4.2.2.3
+    container_name: nexuscube
+    environment:
+      - NEXUSCUBE_XMS=${NEXUSCUBE_XMS}
+      - NEXUSCUBE_XMX=${NEXUSCUBE_XMX}
+
+  relight:
+    image: pattram/relight:1.0.0.2
+    container_name: relight
+    environment:
+      - RELIGHT_XMS=${RELIGHT_XMS}
+      - RELIGHT_XMX=${RELIGHT_XMX}
+
+  verovio:
+    image: pattram/verovio:3.4.0.1
+    container_name: verovio
+    environment:
+      - VEROVIO_XMS=${VEROVIO_XMS}
+      - VEROVIO_XMX=${VEROVIO_XMX}
+
+     
+secrets:
+  postgres_pw:
+    file: ./secrets/postgres_pw.txt
+  server.crt:
+    file: ./secrets/server.crt
+  server.key:
+    file: ./secrets/server.key
+  rootCA.crt:
+    file: ./secrets/rootCA.crt
+  hdladmpriv.bin:
+    file: ./secrets/hdladmpriv.bin
+  apache_keycloak_secret: 
+    file: ./secrets/apache_keycloak_secret.txt
+  oidc_passphrase:
+    file: ./secrets/oidc_passphrase.txt      

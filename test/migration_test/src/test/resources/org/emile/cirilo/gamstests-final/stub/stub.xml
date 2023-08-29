@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="stub">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests stub -->
+    <test>
+       <url>/collection:stub</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/stub/historie.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/stub/hausmann-vita.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/stub/links.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/container:stub-archive/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/container:stub-chronologie/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/container:stub-empfaenger/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=stub&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fstub%2F3stub-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/stub/impressum.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-m-scha/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-wi-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-a-sb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-stp-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-l-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-i-tlmf/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-l-ars/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-re-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-re-sb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-v-bc/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-m-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-w-oenb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-h-as/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-u-bcvj/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-v-ac/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-p-bf/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-cv-bav/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-m-bha/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-g-asp/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-l-bm/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-s-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-g-sla/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-c-za/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-l-na/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-p-fk/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-v-as/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-m-bsb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-r-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-k-kla/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-k-sb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-l-ooela/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-a-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-sd-bcg/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-u-ac/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-we-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-c-man/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-v-bnm/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-stp-noela/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-me-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-sstp-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-w-hhsa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-archive-sn-sa/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-0850/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-1000/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-1050/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-1100/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-1150/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-chronologie-unbekannt/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-mi/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-aq/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-we/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-ard/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-os/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-la/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-gai/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-ma/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-grz/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-en/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-tr/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-mog/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-spp/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-bel/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-sei/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-ob/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-ga/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-aqsm/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-rei/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-eb/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-gl/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-sp/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-sn/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-su/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-me/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-kre/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-wi/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/fedora/get/container:stub-empfaenger-si/bdef:Container/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.37/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.54/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.43/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.143/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.120/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.123/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.100/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.143/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.109/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.56/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.145/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.85/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.122/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.13/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.57/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.70/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.130/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.165/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:stub.106/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+<!-- /collection:stub (Startseite) tests -->
+	<test>
+       <url>/collection:stub</url>
+       <xpath>//xhtml:a[contains(.,'Startseite')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:stub</url>
+       <xpath>//xhtml:img/@src[.='/stub/img/hm-header.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:stub</url>
+       <xpath>//xhtml:h1[contains(.,'Vorbemerkung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:stub</url>
+       <xpath>//xhtml:a[contains(.,'Historische Landeskommission')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:stub</url>
+       <xpath>//xhtml:p[contains(.,'zusammengestellten 164 Texten')]</xpath>
+    </test>
+      	          
+</TestCase>

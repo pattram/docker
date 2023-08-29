@@ -1,0 +1,14 @@
+/archive/get/o:rem.2267/sdef:TEI/get
+/o:rollett.1877/IMG.10
+#/context:srbas
+#/archive/objects/o:lge-146/methods/sdef:TEI/get?locale=de
+/context:fercan/FUNDORTE
+/o:km.story
+#/oaiprovider/?verb=Identify
+"/iiif/o:numis.1151/IMAGE_1/full/!120,120/0/default.jpg"
+/context:cantus
+/archive/get/o:stub.42/sdef:PDF/get
+/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query
+/fonts/DroidSerif/DroidSerif.woff2
+/search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=gm&search=simple&x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl
+

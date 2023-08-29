@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="reko">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests reko -->
+    <test>
+       <url>/context:reko</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:reko-allg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:reko-art</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=themen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=concept</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=reko&amp;search=simple&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/archive/get/o:reko.baud.1976/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.witt.1918/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.luhm.1984/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:reko.baud.1976/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:reko.ador.1965/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:reko (Home) tests -->
+	<test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:strong[contains(.,'HOME')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:h3[contains(.,'Realität und')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:p[contains(.,'In dieser Datenbank')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:div/@id[contains(.,'random')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:input/@id[contains(.,'query')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko</url>
+       <xpath>//xhtml:img/@src[contains(.,'/reko/img/allgemein.jpg')]</xpath>
+    </test>
+
+<!-- /context:reko-allg (Allgemeine Texte) tests -->    
+    <test>
+       <url>/context:reko-allg</url>
+       <xpath>//xhtml:a[contains(.,'Allgemeine Texte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-allg</url>
+       <xpath>//xhtml:h3[contains(.,'Texte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-allg</url>
+       <xpath>//xhtml:a[contains(.,'Jean Baudrillard')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-allg</url>
+       <xpath>//xhtml:p[contains(.,'Allgemeine philosophische')]</xpath>
+    </test>
+
+<!-- /context:reko-art (Literatur, Kunst, Fotografie und Film) tests -->    
+    <test>
+       <url>/context:reko-art</url>
+       <xpath>//xhtml:a[contains(.,'Literatur, Kunst, Fotografie und Film')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-art</url>
+       <xpath>//xhtml:h3[contains(.,'Texte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-art</url>
+       <xpath>//xhtml:a[contains(.,'Theodor W')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:reko-art</url>
+       <xpath>//xhtml:p[contains(.,'Spezielle Texte')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:reko/methods/sdef:Context/get?mode=themen (Themen) tests -->    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=themen</url>
+       <xpath>//xhtml:a[contains(.,'Themen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=themen</url>
+       <xpath>//xhtml:h3[contains(.,'Themen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=themen</url>
+       <xpath>//xhtml:li[contains(.,'Nicht mehr das')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=themen</url>
+       <xpath>//xhtml:input/@id[contains(.,'query')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien (Kategorien) tests -->    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien</url>
+       <xpath>//xhtml:h3[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien</url>
+       <xpath>//xhtml:span[contains(.,'Robbe-Grillet')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=kategorien</url>
+       <xpath>//xhtml:input/@id[contains(.,'query')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:reko/methods/sdef:Context/get?mode=manual (User Manual) tests -->    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <xpath>//xhtml:a[contains(.,'User Manual')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <xpath>//xhtml:h3[contains(.,'User Manual')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <xpath>//xhtml:p[contains(.,'Die vorliegende Textsammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <xpath>//xhtml:dt[contains(.,'Ästhetik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=manual</url>
+       <xpath>//xhtml:input/@id[contains(.,'query')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:reko/methods/sdef:Context/get?mode=concept (Konzept) tests -->    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=concept</url>
+       <xpath>//xhtml:a[contains(.,'Konzept')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=concept</url>
+       <xpath>//xhtml:h3[contains(.,'Realitäts- und Wirklichkeitskonzepte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=concept</url>
+       <xpath>//xhtml:p[contains(.,'Beginnen lässt sich mit')]</xpath>
+    </test>
+
+<!-- /archive/get/o:reko.baud.1976/sdef:TEI/get (Object Sample) tests -->    
+    <test>
+       <url>/archive/get/o:reko.baud.1976/sdef:TEI/get</url>
+       <xpath>//xhtml:h3[contains(.,'Der Hyperrealismus der Simulation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.baud.1976/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Der Hyperrealismus der Simulation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.baud.1976/sdef:TEI/get</url>
+       <xpath>//xhtml:span[contains(.,'Codes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.baud.1976/sdef:TEI/get</url>
+       <xpath>//xhtml:li[contains(.,'Reale, das')]</xpath>
+    </test>
+
+<!-- /archive/get/o:reko.ador.1965/sdef:TEI/get (Object Sample) tests -->    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <xpath>//xhtml:h3[contains(.,'Engagement, 1965')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Essay')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <xpath>//xhtml:span[contains(.,'Geist')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:reko.ador.1965/sdef:TEI/get</url>
+       <xpath>//xhtml:li[contains(.,'Abstraktheit')]</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=reko&search=simple&x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl (Suche) tests -->
+	<test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=reko&amp;search=simple&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Suchergebnisse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=reko&amp;search=simple&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Roland Barthes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=reko&amp;search=simple&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/reko/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=reko&amp;search=simple&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Freko%2F3reko-search.xsl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:reko/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Minerva Peinador Pérez')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:reko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+      	          
+</TestCase>

@@ -1,0 +1,750 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <skos:ConceptScheme rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth">
+    <dc:title xml:lang="deu">Thesaurus für Perioden und Stile</dc:title>
+    <dc:title xml:lang="eng">Thesaurus for time periods and styles</dc:title>
+    <dc:creator>Carina Koch, Elisabeth Steiner</dc:creator>
+    <dc:identifier rdf:resource="info:fedora/o:ontology"/>
+    <dc:publisher>Zentrum für Informationsmodellierung, Karl-Franzens-Universität
+            Graz</dc:publisher>
+    <dc:publisher rdf:resource="http://d-nb.info/gnd/1137284463"></dc:publisher>
+    <dc:date>2017-10-18</dc:date>
+    <dc:description xml:lang="deu">Zweisprachige kontrollierte Liste von historischen Perioden
+            und Stilen; abgeglichen mit Getty Arts &amp; Architecture Thesaurus; entwickelt im
+            Rahmen des Projektes &quot;Repositorium Steirisches Wissenschaftserbe&quot;
+            (https://wissenschaftserbe.uni-graz.at/).</dc:description>
+    <dc:description xml:lang="eng">Controlled bilingual list of historical time periods; in
+            alignment with the Getty Arts &amp; Architecture Thesaurus; developed in the course of
+            the project &quot;Repository of Styrian Cultural Heritage&quot;
+            (https://wissenschaftserbe.uni-graz.at/).</dc:description>
+    <skos:hasTopConcept rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:hasTopConcept>
+    <skos:hasTopConcept rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:hasTopConcept>
+    <dc:rights rdf:resource="http://creativecommons.org/licenses/by-nc/4.0/"></dc:rights>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170000">
+    <skos:prefLabel xml:lang="deu">Periode</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Time period</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170010"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170020"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170030"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170040"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170050"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170060"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170070"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170080"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170090"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170100"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170110"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170120"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170130"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170140"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170150"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170160"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170170"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170180"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170190"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170200"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170210"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170220"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170230"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170240"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170250"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170260"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170270"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170280"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170300"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170320"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170330"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170340"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170350"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170360"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170370"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170380"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170390"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170400"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170410"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170420"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170430"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170440"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170450"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170460"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170470"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170480"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170490"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170500"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170510"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170520"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170530"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170540"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170550"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170560"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170570"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170580"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170590"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170600"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170610"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170620"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170630"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170640"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170650"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170660"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170670"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170680"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170690"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170700"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170710"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170720"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170730"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170740"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170750"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170760"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170770"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170780"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170790"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170800"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170810"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170820"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170830"></skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170010">
+    <skos:prefLabel xml:lang="deu">Afrikanisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">African</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300015647"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170020">
+    <skos:prefLabel xml:lang="deu">Ägäisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Aegean</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020059"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170030">
+    <skos:prefLabel xml:lang="deu">Ägyptisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Egyptian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020251"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170040">
+    <skos:prefLabel xml:lang="deu">Anatolisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Anatolian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019755"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170050">
+    <skos:prefLabel xml:lang="deu">Apulisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Apulian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300312344"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170060">
+    <skos:prefLabel xml:lang="deu">Argivisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Argive</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300385960"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170070">
+    <skos:prefLabel xml:lang="deu">Attisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Attic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386850"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170080">    
+<skos:prefLabel xml:lang="deu">Böotisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Boeotian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300385975"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170090">
+    <skos:prefLabel xml:lang="deu">Elisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Eretrian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386029"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170100">
+    <skos:prefLabel xml:lang="deu">Etruskisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Etruscan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020471"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170110">
+    <skos:prefLabel xml:lang="deu">Ionisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Ionian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386027"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170120">
+    <skos:prefLabel xml:lang="deu">Islamisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Islamic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300380013"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170130">
+    <skos:prefLabel xml:lang="deu">Italisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Italic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020502"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170140">
+    <skos:prefLabel xml:lang="deu">Kampanisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Campanian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300312345"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170150">
+    <skos:prefLabel xml:lang="deu">Korinthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Corinthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386016"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170160">
+    <skos:prefLabel xml:lang="deu">Kretisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Cretan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020143"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170170">
+    <skos:prefLabel xml:lang="deu">Kykladisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Cycladic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020060"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170180">
+    <skos:prefLabel xml:lang="deu">Lukanisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Lucanian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300312346"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170190">
+    <skos:prefLabel xml:lang="deu">Messapisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Messapian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170200">
+    <skos:prefLabel xml:lang="deu">Minoisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Minoan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020224"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170210">
+    <skos:prefLabel xml:lang="deu">Mitteleuropäisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Central European</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300385999"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170220">
+    <skos:prefLabel xml:lang="deu">Mittelitalisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Central Italian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300141790"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170230">
+    <skos:prefLabel xml:lang="deu">Mykenisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Mycenaean</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020247"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170240">
+    <skos:prefLabel xml:lang="deu">Nordetruskisch-Rätisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">North Etruscan-Raetian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:closeMatch rdf:resource="http://vocab.getty.edu/aat/300020471"></skos:closeMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170250">
+    <skos:prefLabel xml:lang="deu">Norisch-Pannonisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Norico-Pannonian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:closeMatch rdf:resource="http://vocab.getty.edu/aat/300386488"></skos:closeMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170260">
+    <skos:prefLabel xml:lang="deu">Oberitalisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Northern Italian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386468"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170270">
+    <skos:prefLabel xml:lang="deu">Ostgriechisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">East Greek</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020146"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170280">
+    <skos:prefLabel xml:lang="deu">Provinzialrömisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Roman Provincial</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300141803"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170300">
+    <skos:prefLabel xml:lang="deu">Sizilisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Sicilian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300312339"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170320">
+    <skos:prefLabel xml:lang="deu">Unteritalisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">South Italian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300312340"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170330">
+    <skos:prefLabel xml:lang="deu">Zyprisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Cypriote</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020627"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170340">
+    <skos:prefLabel xml:lang="deu">Archaisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Archaic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020086"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170350">
+    <skos:prefLabel xml:lang="deu">Bronzezeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Bronze Age</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019275"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170360">
+    <skos:prefLabel xml:lang="deu">Claudisch/Neronisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Claudian/Neronian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+  </skos:Concept>  
+<skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170370">
+    <skos:prefLabel xml:lang="deu">Eisenzeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Iron Age</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019279"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170380">
+    <skos:prefLabel xml:lang="deu">Frühbronzezeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Bronze Age</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019276"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170390">
+    <skos:prefLabel xml:lang="deu">Frühgeometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Geometric</skos:prefLabel> 
+   <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020080"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170400">
+    <skos:prefLabel xml:lang="deu">Frühklassisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Classical</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020096"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170410">
+    <skos:prefLabel xml:lang="deu">Frühkorinthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Corinthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020140"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170420">
+    <skos:prefLabel xml:lang="deu">Frühminoisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Minoan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020226"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170430">
+    <skos:prefLabel xml:lang="deu">Frühneolithisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Neolithic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019270"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170440">
+    <skos:prefLabel xml:lang="deu">Frühzyprisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Early Cypriote</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300107593"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170450">
+    <skos:prefLabel xml:lang="deu">Hadrianisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Hadrianic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300107350"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170460">
+    <skos:prefLabel xml:lang="deu">Hellenistisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Hellenistic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020101"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170470">
+    <skos:prefLabel xml:lang="deu">Römische Kaiserzeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Roman Imperial</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020541"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170480">
+    <skos:prefLabel xml:lang="deu">Klassisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Classical</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020093"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170490">
+    <skos:prefLabel xml:lang="deu">Kypro-klassisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Cypro-Classical</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170500">
+    <skos:prefLabel xml:lang="deu">Latènezeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">La Tène</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019384"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170510">
+    <skos:prefLabel xml:lang="deu">Mittelhelladisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Middle Helladic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020169"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170520">
+    <skos:prefLabel xml:lang="deu">Mittelgeometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Middle Geometric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020081"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170530">
+    <skos:prefLabel xml:lang="deu">Mittelkorinthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Middle Corinthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020141"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170540">
+    <skos:prefLabel xml:lang="deu">Mittelminoisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Middle Minoan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020229"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170550">
+    <skos:prefLabel xml:lang="deu">Mittelzyprisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Middle Cypriote</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300107599"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170560">
+    <skos:prefLabel xml:lang="deu">Neolithisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Neolithic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019267"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170570">
+    <skos:prefLabel xml:lang="deu">Neuzeitlich</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Modern</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300264736"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170580">
+    <skos:prefLabel xml:lang="deu">Paläolithisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Paleolithic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019258"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170590">
+    <skos:prefLabel xml:lang="deu">Prähistorisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Prehistoric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019257"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170600">
+    <skos:prefLabel xml:lang="deu">Protoattisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Proto-Attic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300265031"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170610">
+    <skos:prefLabel xml:lang="deu">Protogeometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Protogeometric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020074"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170620">
+    <skos:prefLabel xml:lang="deu">Protokorinthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Proto-Corinthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300265030"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170630">
+    <skos:prefLabel xml:lang="deu">Spätantike</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Antique</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020666"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170640">
+    <skos:prefLabel xml:lang="deu">Spätarchaisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Archaic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300106995"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170650">
+    <skos:prefLabel xml:lang="deu">Spätgeometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Geometric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020083"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170660">
+    <skos:prefLabel xml:lang="deu">Späthelladisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Helladic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020171"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170670">
+    <skos:prefLabel xml:lang="deu">Spätklassisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Classical</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020100"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170680">
+    <skos:prefLabel xml:lang="deu">Spätkorinthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Corinthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020142"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170690">
+    <skos:prefLabel xml:lang="deu">Spätminoisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Minoan</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020230"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170700">
+    <skos:prefLabel xml:lang="deu">Spätneolithisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Neolithic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019272"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170710">
+    <skos:prefLabel xml:lang="deu">Spätzyprisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Late Cypriote</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300107602"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170720">
+    <skos:prefLabel xml:lang="deu">Subgeometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Sub-Geometric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020084"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170730">
+    <skos:prefLabel xml:lang="deu">Altgriechisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Ancient Greek</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020072"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170740">
+    <skos:prefLabel xml:lang="deu">Persisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Persian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019933"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170750">
+    <skos:prefLabel xml:lang="deu">Parthisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Parthian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019967"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170760">
+    <skos:prefLabel xml:lang="deu">Keltisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Celtic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019470"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170770">
+    <skos:prefLabel xml:lang="deu">Römisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Roman</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020533"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170780">
+    <skos:prefLabel xml:lang="deu">Römische Republik</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Republican</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020537"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170790">
+    <skos:prefLabel xml:lang="deu">Byzantinisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Byzantine</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020669"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170800">
+    <skos:prefLabel xml:lang="deu">Ostgotisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Ostrogothic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019490"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170810">
+    <skos:prefLabel xml:lang="deu">Westgotisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Visigothic</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300019494"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170820">
+    <skos:prefLabel xml:lang="deu">Mittelalter</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Medieval</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020756"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#170830">
+    <skos:prefLabel xml:lang="deu">Megarisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Megarian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#170000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300386414"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180000">
+    <skos:prefLabel xml:lang="deu">Keramikstil</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Pottery style</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180010"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180020"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180030"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180040"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180050"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180060"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180070"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180080"></skos:narrower>
+    <skos:narrower rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180090"></skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180010">
+    <skos:prefLabel xml:lang="deu">Gnathia</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Gnathian</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020174"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180020">   
+ <skos:prefLabel xml:lang="deu">Geometrisch</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Geometric</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020079"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180030">
+    <skos:prefLabel xml:lang="deu">Glanzton-Ware</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">black-gloss ware</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300387491"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180040">
+    <skos:prefLabel xml:lang="deu">Rotfigurig</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Red-figure</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020201"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180050">
+    <skos:prefLabel xml:lang="deu">Rotfigurig – Kertscher Stil</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Kerch style</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020202"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180060">
+    <skos:prefLabel xml:lang="deu">Schwarzfigurig</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Black-figure</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020195"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180070">
+    <skos:prefLabel xml:lang="deu">Weißgrundig</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">White-ground</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020204"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180080">
+    <skos:prefLabel xml:lang="deu">Bucchero</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Bucchero</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300020501"></skos:exactMatch>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://gams.uni-graz.at/skos/scheme/o:pth/#180090">
+    <skos:prefLabel xml:lang="deu">Terra Sigillata</skos:prefLabel>
+    <skos:prefLabel xml:lang="eng">Terra sigillata</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/"></skos:inScheme>
+    <skos:broader rdf:resource="http://gams.uni-graz.at/skos/scheme/o:pth/#180000"></skos:broader>
+    <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300107376"></skos:exactMatch>
+  </skos:Concept>
+</rdf:RDF>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dha="https://digital-humanities.at/schema#"
+    xmlns:void="http://rdfs.org/ns/void#" xmlns:dcterms="http://purl.org/dc/terms/">
+    
+    <void:Dataset rdf:about="http://cm4f.org/rdo.2">
+        <dc:title>DiSpecs research data process</dc:title>
+        <dc:title>Topic modeling of the Spanish corpus</dc:title>
+        <dc:creator>Sanja Sarić</dc:creator>
+        <dc:identifier>o:emile.ingest.rdo.2</dc:identifier>
+        <dc:description xml:lang="en">Topic modeling of the Spanish corpus for the project Distant Spectators.</dc:description>
+        <dc:language>en</dc:language>
+        <dc:publisher>DiSpecs</dc:publisher>
+        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
+        <dc:subject>Digital Literary Studies</dc:subject>
+        <dc:subject>Quantitative Analysis</dc:subject>
+        <dc:subject>Topic Modeling</dc:subject>
+        <dc:subject>Spanish</dc:subject>
+        <dc:date>2021-03-30</dc:date>
+        <dc:relation>Distant Spectators for Periodicals of the Enlightenment</dc:relation>
+    </void:Dataset>
+    
+    <prov:Entity rdf:about="file:///data/dispecs_es.zip">
+        <dc:title>Dataset</dc:title>
+        <dc:description xml:lang="en">Original data set in XML (TEI) derived from the Spectators project</dc:description>
+        <dcterms:identifier>DATASET</dcterms:identifier>
+        <dha:hasMimeType rdf:resource="https://www.iana.org/assignments/media-types/application/zip"/>
+        <dc:source>https://gams.uni-graz.at/spectators</dc:source>
+        <prov:wasAttributedTo rdf:resource="http://d-nb.info/gnd/1137284463"/>
+        <prov:wasAttributedTo rdf:resource="http://d-nb.info/gnd/1069331422"/>
+    </prov:Entity>
+    
+    <prov:Activity rdf:about="http://gams.uni-graz.at/o:dispecs/createPipelineBasedData">
+        <dc:title>Preprocessing</dc:title>
+        <dc:description xml:lang="en">Lemmatization and segmentation of the plain text files. Lemmatization uses the Python library spaCy
+            with corrections of the lemmatization using project specific dictionaries. Segmentation is based on paragraphs. Very short
+            paragraphs are added to previous or following paragraphs. This action is performed for each language
+            seperately.
+        </dc:description>
+        <prov:wasAssociatedWith rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+        <prov:wasAssociatedWith rdf:resource="info:fedora/o:emile.ingest.rdo.2/JUPYTER3"/>
+        <prov:wasAssociatedWith rdf:resource="info:fedora/o:emile.ingest.rdo.2/JUPYTER4"/>
+        <prov:used>
+            <prov:Entity rdf:about="info:fedora/o:emile.ingest.rdo.2/DATASET"/>
+        </prov:used>
+        <prov:generated>
+            <prov:Entity rdf:about="info:fedora/o:emile.ingest.rdo.2/CORPUS"/>
+        </prov:generated>
+    </prov:Activity>
+    
+    <prov:Entity rdf:about="file:///data/dispecs_es_lemmatized.zip">
+        <dc:title>Lemmatized and segmented Spanish corpus</dc:title>
+        <dc:description xml:lang="en">Plain text files containing lemmatized text segments</dc:description>
+        <dcterms:identifier>CORPUS</dcterms:identifier>
+        <dha:hasMimeType rdf:resource="https://www.iana.org/assignments/media-types/application/zip"/>
+        <prov:wasAttributedTo rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+    </prov:Entity>
+    
+    <prov:SoftwareAgent rdf:about="file:///notebooks/segmentation.ipynb">
+        <dc:title>Segmentation</dc:title>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+        <dc:description xml:lang="en">Jupyter Notebook for the segmentation of plain text files.</dc:description>
+        <dcterms:identifier>JUPYTER3</dcterms:identifier>
+        <dha:hasMimeType>application/x-ipynb+json</dha:hasMimeType>
+    </prov:SoftwareAgent>
+    
+    <prov:SoftwareAgent rdf:about="file:///notebooks/lemmatizing.ipynb">
+        <dc:title>Lemmatizing</dc:title>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+        <dc:description xml:lang="en">Jupyter Notebook for the lemmatization of plain text files using the Python library spaCy.</dc:description>
+        <dcterms:identifier>JUPYTER4</dcterms:identifier>
+        <dha:hasMimeType>application/x-ipynb+json</dha:hasMimeType>
+    </prov:SoftwareAgent>
+    
+    <prov:SoftwareAgent rdf:about="file:///notebooks/topic-modeling.ipynb">
+        <dc:title>Topic Modeling</dc:title>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-0802-6999"/>
+        <dc:description xml:lang="en">Jupyter Notebook based on the topic modeling workflow from DARIAH-DE</dc:description>
+        <dcterms:identifier>JUPYTER5</dcterms:identifier>
+        <dha:hasMimeType>application/x-ipynb+json</dha:hasMimeType>
+        <prov:wasDerivedFrom>
+            <prov:SoftwareAgent rdf:about="https://github.com/DARIAH-DE/Topics">
+                <dc:title>DARIAH Topics: Easy Topic Modeling in Python. V. 2.0.1</dc:title>
+                <dc:creator>DARIAH-DE</dc:creator>
+                <dc:date>2019-03-08</dc:date>
+            </prov:SoftwareAgent>
+        </prov:wasDerivedFrom>
+    </prov:SoftwareAgent>
+    
+    <prov:SoftwareAgent rdf:about="https://github.com/gephi/gephi/releases/tag/v0.9.2">
+        <dc:title>Gephi V. 0.9.2</dc:title>
+        <dc:creator>Gephi.org</dc:creator>
+        <dc:date>2008-2017</dc:date>
+    </prov:SoftwareAgent>
+    
+    <prov:Person rdf:about="https://orcid.org/0000-0002-0802-6999">
+        <dc:title>Sanja Sarić</dc:title>
+        <prov:actedOnBehalfOf rdf:resource="http://d-nb.info/gnd/1137284463"/>
+    </prov:Person>
+    
+    <prov:Organization rdf:about="http://d-nb.info/gnd/1137284463">
+        <dc:title>Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities, Universität Graz</dc:title>
+    </prov:Organization>
+    
+    <prov:Organization rdf:about="http://d-nb.info/gnd/1069331422">
+        <dc:title>Institut für Romanistik, Universität Graz</dc:title>
+    </prov:Organization>
+</rdf:RDF>

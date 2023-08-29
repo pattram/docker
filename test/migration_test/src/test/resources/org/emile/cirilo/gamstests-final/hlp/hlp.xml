@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="hlp">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests hlp -->
+    <test>
+       <url>/context:hlp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:hlp-eu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:hlp-atl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hlp.336/methods/sdef:BibTeX/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hlp.337/methods/sdef:BibTeX/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hlp-099-10/methods/sdef:BibTeX/getBIBTEX</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450-d/methods/sdef:Context/get?context=context:hlp-1450-d</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1450/methods/sdef:Context/get?context=context:hlp-atl-1450</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1450-c/methods/sdef:Context/get?context=context:hlp-atl-1450-c</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:hlp (Home) tests -->
+	<test>
+       <url>/context:hlp</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp</url>
+       <xpath>//xhtml:h3[contains(.,'Lernportal')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp</url>
+       <xpath>//xhtml:p[contains(.,'Die Fachbereiche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp</url>
+       <xpath>//xhtml:img/@src[.='/hlp/img/pergament-eu3.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /context:hlp-eu (Europa) tests -->    
+    <test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:a[contains(.,'Europa')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:h3[contains(.,'Auswahl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:a[contains(.,'Jahrhunderte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:p[contains(.,'Europa stellt keine')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+
+	<test>
+       <url>/context:hlp-eu</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /context:hlp-atl (Atlantische Welt) tests -->
+	<test>
+       <url>/context:hlp-atl</url>
+       <xpath>//xhtml:a[contains(.,'Atlantische Welt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-atl</url>
+       <xpath>//xhtml:h3[contains(.,'Auswahl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-atl</url>
+       <xpath>//xhtml:a[contains(.,'Jahrhunderte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hlp-atl</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+
+	<test>
+       <url>/context:hlp-atl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hlp/methods/sdef:Context/get?mode=notes (Nutzungshinweise) tests -->       
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:a[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:h3[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:p[contains(.,'Das Angebot richtet sich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:li[contains(.,'sich das Thema')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint (Impressum) tests -->   
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Institut für Geschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450 (Europa Sample) tests -->    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:a[contains(.,'1450-1550')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:h3[contains(.,'1450–1550')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:p[contains(.,'Betrachtet man das Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:a[contains(.,'Die reformatorische Lehre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:img/@src[.='/hlp/img/bibtex.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-1450/methods/sdef:Context/get?context=context:hlp-1450</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d (Atlantische Welt Sample) tests -->
+	<test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:a[contains(.,'Politik: Einführung (1550-1650)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:h3[contains(.,'Politik (1550-1650)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:p[contains(.,'Nach Beendigung der Eroberungskriege')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:a[contains(.,'Die politisch-administrative Organisation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:img/@src[.='/hlp/img/bibtex.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hlp-atl-1550-d/methods/sdef:Context/get?context=context:hlp-atl-1550-d</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>	    
+	              
+</TestCase>

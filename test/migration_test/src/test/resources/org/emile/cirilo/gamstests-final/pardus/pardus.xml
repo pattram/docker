@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="pardus">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests pardus -->
+    <test>
+       <url>/context:pardus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de#!/?q=&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en#!/?q=&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de#!/?q=*&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en#!/?q=*&amp;sa=edm_place&amp;sao=asc&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de#!/?q=*&amp;sa=dct_created_sort&amp;sao=asc&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en#!/?q=*&amp;sa=dct_created_sort&amp;sao=asc&amp;x=0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:oai.11471.144.10.308/EDM_STREAM</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.km/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.km/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.ges/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.ges/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.arch/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.arch/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.kug/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.kug/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.gm/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.gm/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.tug/methods/sdef:Story/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pardus.story.tug/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#dags</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#dags</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#gm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#gm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#kfug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#kfug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#la</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#la</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#tug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#tug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#kug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#kug</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:pardus (Home) tests -->
+	<test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:div/@id[.='carousel_stories']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:h2[contains(.,'Kultur- und Wissenschaftserbe Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:p[contains(.,'Das Webportal ermöglicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/home_highlights.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:pardus</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?locale=de (Home de. Alternative Link) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='carousel_stories']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Kultur- und Wissenschaftserbe Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Das Webportal ermöglicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/home_highlights.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=&locale=en (Home en) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='carousel_stories']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Cultural and Scientific Heritage of Styria')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The web portal offers')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/home_highlights.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=search&locale=de (Suche de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Entstehungsdatum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:label[contains(.,'Nur datierte Objekte anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:img/@class[contains(.,'img-responsive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=search&locale=en (Search en) tests-->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Creation Date')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:label[contains(.,'Show Dated Objects Only')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:img/@class[contains(.,'img-responsive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&locale=de (Virtuelle Rundgänge de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Rundgänge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Virtuelle Rundgänge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Hier können Sie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/gm_story.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Karten an Julia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&locale=en (Virtual Tours en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Virtual Tours')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Virtual Tours')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Here you can')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/gm_story.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Karten an Julia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=stories&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de (Sammlungen de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Sammlungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Sammlungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Karl-Franzens-Universität Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'wurde 1585 durch Erzherzog Karl II.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/KFUG_institution.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Alle Einträge im Portal anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en (Collections en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Collections')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Collections')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'University of Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'was founded in 1585 by Archduke Charles II')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/pardus/img/KFUG_institution.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Show all entries')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=about&locale=de (Über das Projekt de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Das aus Hochschulraumstrukturmitteln')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/pardus/img/gams_wordle.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=about&locale=en (About the Project en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'About the Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'About the Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/pardus/img/gams_wordle.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&locale=de (Impressum de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Peter Scherrer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&locale=en (Imprint en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Peter Scherrer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=help&locale=de (Hilfe de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Hilfe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Hilfe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Groß-/Kleinschreibung spielt bei der Suche keine Rolle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=help&locale=en (Help en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Help')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Help')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Search is not case-sensitive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+        
+<!-- /archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de (Object Sample de) tests -->    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Graz. Geidorfplatz.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Postkartensammlung Online')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:oai.11471.144.10.308/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?locale=de</url>
+       <xpath>//xhtml:input/@placeholder[.='Volltextsuche']</xpath>
+    </test>
+
+<!-- /archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&locale=en (Object Sample en) tests -->
+	<test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Graz. Geidorfplatz.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Description')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Postkartensammlung Online')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:oai.11471.144.10.308/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oai.11471.144.10.308/methods/sdef:OAIRecord/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:input/@placeholder[.='Full-text Search']</xpath>
+    </test>
+
+<!-- /archive/objects/o:pardus.story.km/methods/sdef:Story/get?locale=de (Virtual Tour km de) tests -->
+    <test>
+       <url>/archive/objects/o:pardus.story.km/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- /archive/objects/o:pardus.story.km/methods/sdef:Story/get?mode=&locale=en (Virtual Tour km en) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.km/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- /archive/objects/o:pardus.story.ges/methods/sdef:Story/get?locale=de (Virtual Tour ges de) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.ges/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- /archive/objects/o:pardus.story.ges/methods/sdef:Story/get?mode=&locale=en (Virtual Tour ges en) tests -->
+    <test>
+       <url>/archive/objects/o:pardus.story.ges/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- /archive/objects/o:pardus.story.arch/methods/sdef:Story/get?locale=de (Virtual Tour arch de) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.arch/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.arch/methods/sdef:Story/get?mode=&locale=en (Virtual Tour arch en) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.arch/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.kug/methods/sdef:Story/get?locale=de (Virtual Tour kug de) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.kug/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.kug/methods/sdef:Story/get?mode=&locale=en (Virtual Tour kug en) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.kug/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.gm/methods/sdef:Story/get?locale=de (Virtual Tour km de) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.gm/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.gm/methods/sdef:Story/get?mode=&locale=en (Virtual Tour km en) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.gm/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.tug/methods/sdef:Story/get?locale=de (Virtual Tour tug de) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.tug/methods/sdef:Story/get?locale=de</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:pardus.story.tug/methods/sdef:Story/get?mode=&locale=en (Virtual Tour tug en) tests -->
+	<test>
+       <url>/archive/objects/o:pardus.story.tug/methods/sdef:Story/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+        
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de#dags (Sammlungen/Diözesanarchiv de) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#dags</url>
+       <xpath>//xhtml:p[contains(.,'verwahrt die Akten und Urkunden')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en#dags (Collections/Archive of the Diocese en) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#dags</url>
+       <xpath>//xhtml:p[contains(.,'stores the files and charters')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de#gm (Sammlungen/GrazMuseum de) tests-->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#gm</url>
+       <xpath>//xhtml:p[contains(.,'ist das historische Museum')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en#gm (Collections/GrazMuserum en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#gm</url>
+       <xpath>//xhtml:p[contains(.,'of the history and culture of Graz')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de#la (Sammlungen/Steiermärkisches Landesarchiv de) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#la</url>
+       <xpath>//xhtml:p[contains(.,'wurde 1817 durch Erzherzog Johann')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en#la (Collections/Styrian Provincial Archives en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#la</url>
+       <xpath>//xhtml:p[contains(.,'were founded in 1817 by Archduke Johann')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de#tug (Sammlungen/TU Graz Archiv de) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#tug</url>
+       <xpath>//xhtml:p[contains(.,'wurde im Jahr 1811 von Erzherzog Johann')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en#tug (Collections/University of Technology Graz en) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#tug</url>
+       <xpath>//xhtml:p[contains(.,'was founded as a School of Technology')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=de#kug (Sammlungen/Universität für Musik und darstellende Kunst Graz de) tests -->
+	<test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=de#kug</url>
+       <xpath>//xhtml:p[contains(.,'kurz Kunstuniversität Graz')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&locale=en#kug (Collections/University of Music and Performing Arts Graz en) tests -->    
+    <test>
+       <url>/archive/objects/context:pardus/methods/sdef:Context/get?mode=collections&amp;locale=en#kug</url>
+       <xpath>//xhtml:p[contains(.,'the KUG')]</xpath>
+    </test>
+	              
+</TestCase>

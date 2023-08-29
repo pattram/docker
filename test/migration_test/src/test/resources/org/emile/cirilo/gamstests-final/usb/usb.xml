@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="usb">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests usb -->
+    <test>
+       <url>/container:usb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/einleitung.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/vita.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/autobiographie.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/register.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/material.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/img/1991_schulz-buschhaus_festakt_lind.jpg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/img/1998_schulz-buschhaus_festakt_pfeiffer.jpg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/img/schulz_buschhaus01.jpg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/img/1991_schulz-buschhaus_festakt_lind_001.jpg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/img/1998_schulz-buschhaus_festakt_pfeiffer_001.jpg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=Balzac&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-chronologie</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-1968</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-1971</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-1981</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-1991</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-autoren</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-balzac</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-berni</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-boccaccio</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-boileau</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-borges</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-bourget</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-calvino</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-dellacasa</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-eco</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-flaubert</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-gracian</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-bruyere</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-marinetti</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-parini</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-petrarca</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-pirandello</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-sciascia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-vargas</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-voltaire</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-gattungen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-krimi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-lyrik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-satire</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-trivial</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-originalsprache</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-deutsch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-franzoesisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-italienisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-portugiesisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-sprachen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-allg-lw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-fr-lw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-it-lw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-sp-lw</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-epochen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-14</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-15</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-16</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-17</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-18</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-19</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-20</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-manuskripte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/container:usb-texte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-12/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-13/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-1/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06A-284/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-21/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-11/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-24/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-9/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-14/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-20/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-4/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06C-343/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-19/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-8/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-2/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06C-345/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-26/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-5/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-16/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-319/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-330/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-324/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-3/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-6/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06C-353/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-15/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-25/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-10/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-18/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-23/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-255/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-27/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-38/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-41/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-064-88/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-37/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-31/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-066-165/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-55/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-064-69/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-066-173/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-064-66/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06C-340/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-315/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-307/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-60/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-069-262/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-069-269/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-337/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-065-149/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06B-321/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-06A-287/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-068-245/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-067-178/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-064-86/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-068-247/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-068-257/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-06B-316/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-067-181/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-063-3/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-063-24/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-063-36/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-069-263/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-069-272/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-066-167/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-06B-307/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:usb-06B-308/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-06B-315%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-063-9%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-063-4%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-063-5%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-065-149%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-067-236%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/cocoon/getDC?pid=http%3A%2F%2Fgams.uni-graz.at%2Farchive%2Fget%2Fo%3Ausb-072-361%2Fsdef%3ATEI%2Fget&amp;host=gams</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/usb/impressum.html</url>
+       <status>200</status>
+    </test>
+    
+<!-- /container:usb (Home) tests -->
+	<test>
+       <url>/container:usb</url>
+       <xpath>//a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb</url>
+       <xpath>//h1[contains(.,'Ulrich Schulz-Buschhaus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb</url>
+       <xpath>//p[contains(.,'Albert Göschl und Nora')]</xpath>
+    </test>
+
+<!-- /usb/einleitung.html (Einleitung) tests -->    
+    <test>
+       <url>/usb/einleitung.html</url>
+       <xpath>//a[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/einleitung.html</url>
+       <xpath>//h1[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/einleitung.html</url>
+       <xpath>//p[contains(.,'Während sich im Container')]</xpath>
+    </test>
+
+
+<!-- /usb/autobiographie.html (Autobiographie) tests -->    
+    <test>
+       <url>/usb/autobiographie.html</url>
+       <xpath>//h1[contains(.,'Autobiographische Mitteilungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/autobiographie.html</url>
+       <xpath>//p[contains(.,'Nachdem sich der')]</xpath>
+    </test>
+
+<!-- /usb/register.html (Register) tests -->    
+    <test>
+       <url>/usb/register.html</url>
+       <xpath>//a[contains(.,'Register')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/register.html</url>
+       <xpath>//h1[contains(.,'Register')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/register.html</url>
+       <xpath>//li[contains(.,'Anleitungen zum tadellosen')]</xpath>
+    </test>
+
+<!-- /usb/material.html (Bildmaterial) tests -->    
+    <test>
+       <url>/usb/material.html</url>
+       <xpath>//a[contains(.,'Bildmaterial')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/material.html</url>
+       <xpath>//h1[contains(.,'Bildmaterial')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/material.html</url>
+       <xpath>//img/@src[.='img/1998_schulz-buschhaus_festakt_pfeiffer.jpg']</xpath>
+    </test>
+
+<!-- /container:usb-chronologie (Chronologie) tests -->    
+    <test>
+       <url>/container:usb-chronologie</url>
+       <xpath>//a[contains(.,'Chronologische Ordnung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-chronologie</url>
+       <xpath>//h2[contains(.,'Chronologische Ordnung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-chronologie</url>
+       <xpath>//span[contains(.,'1981-1990')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1968</url>
+       <xpath>//h2[contains(.,'1968-1970')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1968</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-13/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1971</url>
+       <xpath>//h2[contains(.,'')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1971</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-9/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1981</url>
+       <xpath>//h2[contains(.,'1981-1990')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1981</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-072-356/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1991</url>
+       <xpath>//h2[contains(.,'1991-2003')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-1991</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-218/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-autoren (Autoren) tests -->    
+    <test>
+       <url>/container:usb-autoren</url>
+       <xpath>//a[contains(.,'Autoren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-autoren</url>
+       <xpath>//h2[contains(.,'Autoren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-autoren</url>
+       <xpath>//span[contains(.,'Boccaccio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-balzac</url>
+       <xpath>//h2[contains(.,'Balzac')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-balzac</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-14/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-berni</url>
+       <xpath>//h2[contains(.,'Berni')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-berni</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-6/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-boccaccio</url>
+       <xpath>//h2[contains(.,'Boccaccio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-boccaccio</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-35/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-boileau</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-33/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-borges</url>
+       <xpath>//h2[contains(.,'Borges')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-borges</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-151/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-bourget</url>
+       <xpath>//h2[contains(.,'Bourget')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-bourget</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-153/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-calvino</url>
+       <xpath>//h2[contains(.,'Calvino')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-calvino</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-064-68/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-dellacasa</url>
+       <xpath>//h2[contains(.,'Della Casa')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-dellacasa</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06A-291/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-eco</url>
+       <xpath>//h2[contains(.,'Eco')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-eco</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-148/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-flaubert</url>
+       <xpath>//h2[contains(.,'Flaubert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-flaubert</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-152/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-gracian</url>
+       <xpath>//h2[contains(.,'Gracián')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-gracian</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-210/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-bruyere</url>
+       <xpath>//h2[contains(.,'La Bruyère')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-bruyere</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06A-291/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-marinetti</url>
+       <xpath>//h2[contains(.,'Marinetti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-marinetti</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-186/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-parini</url>
+       <xpath>//h2[contains(.,'Parini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-parini</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-3/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-petrarca</url>
+       <xpath>//h2[contains(.,'Petrarca')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-petrarca</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-180/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-pirandello</url>
+       <xpath>//h2[contains(.,'Pirandello')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-pirandello</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06C-340/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sciascia</url>
+       <xpath>//h2[contains(.,'Sciascia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sciascia</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06C-353/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-vargas</url>
+       <xpath>//h2[contains(.,'Vargas Llosa')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-vargas</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06A-290/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-voltaire</url>
+       <xpath>//h2[contains(.,'Voltaire')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-voltaire</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06A-284/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-gattungen</url>
+       <xpath>//h2[contains(.,'Literarische Formen und Gattungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-gattungen</url>
+       <xpath>//span[contains(.,'Lyrik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-krimi</url>
+       <xpath>//h2[contains(.,'Kriminalroman')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-krimi</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-069-269/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-lyrik</url>
+       <xpath>//h2[contains(.,'Lyrik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-lyrik</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-177/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-satire</url>
+       <xpath>//h2[contains(.,'Satire und Burleske')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-satire</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-211/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-trivial</url>
+       <xpath>//h2[contains(.,'Trivialliteratur und Kanonfragen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-trivial</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-068-256/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-originalsprache (Originalsprache) tests -->    
+    <test>
+       <url>/container:usb-originalsprache</url>
+       <xpath>//a[contains(.,'Originalsprache')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-originalsprache</url>
+       <xpath>//h2[contains(.,'Originalsprache')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-originalsprache</url>
+       <xpath>//span[contains(.,'Italienische Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-deutsch</url>
+       <xpath>//h2[contains(.,'Deutsche Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-deutsch</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-069-263/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-franzoesisch</url>
+       <xpath>//h2[contains(.,'Französische Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-franzoesisch</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-066-167/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-italienisch</url>
+       <xpath>//h2[contains(.,'Italienische Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-italienisch</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-06B-305/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-portugiesisch</url>
+       <xpath>//h2[contains(.,'Portugiesische Aufsätze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-portugiesisch</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-069-265/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-sprachen (Teildisziplin) tests -->    
+    <test>
+       <url>/container:usb-sprachen</url>
+       <xpath>//a[contains(.,'Teildisziplin')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sprachen</url>
+       <xpath>//h2[contains(.,'Teildisziplin')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sprachen</url>
+       <xpath>//span[contains(.,'Italienische Literaturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-allg-lw</url>
+       <xpath>//h2[contains(.,'Allgemeine Literaturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-allg-lw</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-61/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-fr-lw</url>
+       <xpath>//h2[contains(.,'Französische Literaturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-fr-lw</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-21/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-it-lw</url>
+       <xpath>//h2[contains(.,'Italienische Literaturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-it-lw</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-177/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sp-lw</url>
+       <xpath>//h2[contains(.,'Spanische Literaturwissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-sp-lw</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-154/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-epochen (Epochen) tests -->    
+    <test>
+       <url>/container:usb-epochen</url>
+       <xpath>//a[contains(.,'Epochen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-epochen</url>
+       <xpath>//h2[contains(.,'Epochen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-epochen</url>
+       <xpath>//span[contains(.,'18. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-14</url>
+       <xpath>//h2[contains(.,'14. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-14</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-35/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-15</url>
+       <xpath>//h2[contains(.,'15. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-15</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-236/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-16</url>
+       <xpath>//h2[contains(.,'16. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-16</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-13/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-17</url>
+       <xpath>//h2[contains(.,'17. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-17</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-33/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-18</url>
+       <xpath>//h2[contains(.,'18. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-18</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-063-18/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-19</url>
+       <xpath>//h2[contains(.,'19. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-19</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-065-153/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-20</url>
+       <xpath>//h2[contains(.,'20. Jahrhundert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-20</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-068-261/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-manuskripte (Manuskripte) tests -->    
+    <test>
+       <url>/container:usb-manuskripte</url>
+       <xpath>//a[contains(.,'Manuskripte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-manuskripte</url>
+       <xpath>//h2[contains(.,'Weitere Manuskripte aus dem Nachlass')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-manuskripte</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-182/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /container:usb-texte (Digitale Primärtexte) tests-->    
+    <test>
+       <url>/container:usb-texte</url>
+       <xpath>//a[contains(.,'Digitale Primärtexte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-texte</url>
+       <xpath>//h2[contains(.,'Links zu digital zugänglichen Primärtexten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/container:usb-texte</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-067-222/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- Object Sample tests -->    
+    <test>
+       <url>/archive/get/o:usb-063-12/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Permalink: http://gams.uni-graz.at/o:usb-063-12')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-12/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Antipetrarkismus und barocke Lyrik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-12/sdef:TEI/get</url>
+       <xpath>//div[contains(.,'In einem materialreichen Aufsatz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-12/sdef:TEI/get</url>
+       <xpath>//td[contains(.,'Ungenauigkeiten und Mißverständnisse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-33/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Permalink: http://gams.uni-graz.at/o:usb-063-33')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-33/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Boileaus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-33/sdef:TEI/get</url>
+       <xpath>//div[contains(.,'Vom Herkömmlichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-063-33/sdef:TEI/get</url>
+       <xpath>//td[contains(.,'die entsprechende Passage')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-247/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Permalink: http://gams.uni-graz.at/o:usb-068-247')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-247/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'über die Mode')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-247/sdef:TEI/get</url>
+       <xpath>//div[contains(.,'Allgemeingültig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-247/sdef:TEI/get</url>
+       <xpath>//td[contains(.,'Ib. 187.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-245/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Permalink: http://gams.uni-graz.at/o:usb-068-245')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-245/sdef:TEI/get</url>
+       <xpath>//span[contains(.,'Aktuelle Formen und Tendenzen des Kriminalromans')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:usb-068-245/sdef:TEI/get</url>
+       <xpath>//div[contains(.,'Wenn man versucht')]</xpath>
+    </test>
+    
+        
+<!-- /search/gsearch?query=&hitPageSize=8&hitPageStart=1&pid=usb&x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl (Suche) tests -->    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//h2[contains(.,'Suchergebnis für')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//form[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//input/@name[.='query']</xpath>
+    </test>
+
+<!-- Suche Sample tests -->    
+    <test>
+       <url>/search/gsearch?query=Balzac&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//h2[contains(.,'Suchergebnis für: Balzac')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=Balzac&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//img/@src[.='/archive/objects/o:usb-068-252/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=Balzac&amp;hitPageSize=8&amp;hitPageStart=1&amp;pid=usb&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fusb%2Fusb-search.xsl</url>
+       <xpath>//input/@name[.='query']</xpath>
+    </test>
+
+<!-- /usb/impressum.html (Impressum) tests -->    
+    <test>
+       <url>/usb/impressum.html</url>
+       <xpath>//a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/impressum.html</url>
+       <xpath>//h1[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/usb/impressum.html</url>
+       <xpath>//span[contains(.,'Klaus-Dieter Ertler')]</xpath>
+    </test>  
+      	          
+</TestCase>

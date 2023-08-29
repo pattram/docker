@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="corema">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests corema -->
+    <test>
+       <url>/context:corema</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=map</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs-horizontal#B3_121r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs-horizontal#Bs1_001r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs-horizontal#Gr1_011r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:corema.editorialdec</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=model</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#zitier</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=todos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=dataprotection</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:corema (Home) tests -->
+	<test>
+       <url>/context:corema</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:corema</url>
+       <xpath>//xhtml:option[contains(.,'All Archives')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:corema</url>
+       <xpath>//xhtml:a[contains(.,'Transcription')]</xpath>
+    </test>
+    
+	<test>
+       <url>/context:corema</url>
+       <matcher>a:matches(^Home$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:corema</url>
+       <matcher>option:matches(^All Archives$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:corema</url>
+       <matcher>a:matches(^Transcription$)</matcher>
+    </test>
+
+	  
+    <test>
+       <url>/o:corema.b3</url>
+       <matcher>a:matches(^B3 - Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz –, Handschriftenabteilung; Ms. germ. qu. 1023$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <xpath>//xhtml:input/@placeholder[.='Search MS Signature..']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <xpath>//xhtml:b[contains(.,'Ain aersen muͦß')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <matcher>b:matches(^Ain aersen muͦß$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <xpath>//xhtml:span[contains(.,'unclear')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3</url>
+       <matcher>span:matches(^unclear$)</matcher>
+    </test>
+    
+     <test>
+       <url>/o:corema.b3</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- /o:corema.b3/sdef:TEI/get?mode=view:facs (B3 Synopsis) tests -->
+	<test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'B3 - Berlin')]</xpath>
+    </test>
+	
+	<test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <matcher>a:matches(^B3 - Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz –, Handschriftenabteilung; Ms. germ. qu. 1023$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:input/@placeholder[.='Search MS Signature..']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'Ain aersen muͦß')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <matcher>b:matches(^Ain aersen muͦß$)</matcher>
+    </test>
+        
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:span[contains(.,'unclear')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <matcher>span:matches(^unclear$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Content')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Overview')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:img/@src[.='/corema/img/cutouts/b3.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:i[contains(.,'Abbreviation')]</xpath>
+    </test>
+    
+    
+     <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:p[contains(.,'Main language: Alemannic')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Jump to recipes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.b3/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:div/@title[.='Show/Hide Functionalities']</xpath>
+    </test>
+
+<!-- /o:corema.bs1 (Manuscripts Bs1) tests -->    
+    <test>
+       <url>/o:corema.bs1</url>
+       <xpath>//xhtml:a[contains(.,'Bs1 - Basel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1</url>
+       <matcher>a:matches(^Bs1 - Basel, UB Basel, AN V 12$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'Search MS Signature..')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1</url>
+       <xpath>//xhtml:span[contains(.,'Hie hebt sich')]</xpath>
+    </test>
+      
+    <test>
+       <url>/o:corema.bs1</url>
+       <xpath>//xhtml:b[contains(.,'[2r]')]</xpath>
+    </test>
+    
+       
+     <test>
+       <url>/o:corema.bs1</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- /o:corema.bs1/sdef:TEI/get?mode=view:facs (Bs1 Synopsis) tests -->    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'Bs1 - Basel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <matcher>a:matches(^Bs1 - Basel, UB Basel, AN V 12$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'Search MS Signature..')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:span[contains(.,'Hie hebt sich')]</xpath>
+    </test>
+        
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'[2r]')]</xpath>
+    </test>
+     
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+       
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Content')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Overview')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:img/@src[.='/corema/img/cutouts/bs1.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:i[contains(.,'Abbreviation')]</xpath>
+    </test>
+      
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:p[contains(.,'Main language: Bavarian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Jump to recipes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.bs1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:div/@title[.='Show/Hide Functionalities']</xpath>
+    </test>
+   
+<!-- /o:corema.gr1 (Manuscripts Gr1) tests -->    
+    <test>
+       <url>/o:corema.gr1</url>
+       <xpath>//xhtml:a[contains(.,'Gr1 - Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'Search MS Signature..')]</xpath>
+    </test>
+    
+    
+    <test>
+       <url>/o:corema.gr1</url>
+       <xpath>//xhtml:b[contains(.,'[11r]')]</xpath>
+    </test>
+       
+    <test>
+       <url>/o:corema.gr1</url>
+       <xpath>//xhtml:span[contains(.,'editorial expansion: ')]</xpath>
+    </test>
+        
+    <test>
+       <url>/o:corema.gr1</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- /o:corema.gr1/sdef:TEI/get?mode=view:facs (Gr1 Synopsis) tests -->
+	<test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'Gr1 - Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'Search MS Signature..')]</xpath>
+    </test>
+    
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'[11r]')]</xpath>
+    </test>
+       
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:span[contains(.,'editorial expansion: ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Content')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Overview')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:img/@src[.='/corema/img/cutouts/gr1.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:i[contains(.,'Abbreviation')]</xpath>
+    </test>
+      
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:i[contains(.,'Kodikologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:p[contains(.,'Main language: Bavarian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Jump to recipes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:corema.gr1/sdef:TEI/get?mode=view:msdesc</url>
+       <xpath>//xhtml:div/@title[.='Show/Hide Functionalities']</xpath>
+    </test>
+	    
+    
+<!-- /o:corema.editorialdec (Editorial Model) tests -->        
+    <test>
+       <url>/o:corema.editorialdec</url>
+       <xpath>//xhtml:a[contains(.,'Editorial Model')]</xpath>
+    </test>
+   
+ 
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=model (Semantic Model) tests -->    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=model</url>
+       <xpath>//xhtml:a[contains(.,'Semantic Model')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=model</url>
+       <xpath>//xhtml:object/@id[.='corema_graph']</xpath>
+    </test>
+
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema (Project/Introduction) tests -->    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:a[contains(.,'Introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:h2[contains(.,'Introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <matcher>h2:matches(^Introduction$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:p[contains(.,'Food history')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:li[contains(.,'Adamson')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:a[contains(.,'Forschungsportal der Uni Graz')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#context (Project/Research Context) tests -->    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <xpath>//xhtml:a[contains(.,'Research Context')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <xpath>//xhtml:h2[contains(.,'Research Context')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <matcher>h2:matches(^Research Context$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <xpath>//xhtml:p[contains(.,'Food history')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <xpath>//xhtml:li[contains(.,'Adamson')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#context</url>
+       <xpath>//xhtml:a[contains(.,'Forschungsportal der Uni Graz')]</xpath>
+    </test>
+
+<!-- Other Project/... tests -->
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#relevance (Relevance and Originality) tests-->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#relevance</url>
+       <xpath>//xhtml:a[contains(.,'Relevance and Originality')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#relevance</url>
+       <xpath>//xhtml:h2[contains(.,'Relevance and Originality')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#goals (Project Goals) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#goals</url>
+       <xpath>//xhtml:a[contains(.,'Project Goals')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#goals</url>
+       <xpath>//xhtml:h2[contains(.,'Project Goals')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#methods (Research Methods) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#methods</url>
+       <xpath>//xhtml:a[contains(.,'Research Methods')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#methods</url>
+       <xpath>//xhtml:h2[contains(.,'Research Methods')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#impact (Impact of the Project) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#impact</url>
+       <xpath>//xhtml:a[contains(.,'Impact of the Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#impact</url>
+       <xpath>//xhtml:h2[contains(.,'Impact of the Project')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#lvz (Research Literature) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#lvz</url>
+       <xpath>//xhtml:a[contains(.,'Research Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#lvz</url>
+       <xpath>//xhtml:h2[contains(.,'Research Literature')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#mitarbeiter (Project staff) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <xpath>//xhtml:a[contains(.,'Project staff')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <xpath>//xhtml:h2[contains(.,'Project staff')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#finanzierung (Financial aspects) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <xpath>//xhtml:a[contains(.,'Financial aspects')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <xpath>//xhtml:h2[contains(.,'Financial aspects')]</xpath>
+    </test>
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=about#zitier -->
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#zitier</url>
+       <xpath>//xhtml:a[contains(.,'How to cite')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=about#zitier</url>
+       <xpath>//xhtml:h2[contains(.,'How to cite')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=todos (To-dos) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=todos</url>
+       <xpath>//xhtml:a[contains(.,'To-dos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=todos</url>
+       <xpath>//xhtml:h2[contains(.,'Corpus: Recipe collections to be edited')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=todos</url>
+       <xpath>//xhtml:li[contains(.,'Augsburg')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=imprint (Imprint) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h2[contains(.,'Funding')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'The project was granted')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:corema/methods/sdef:Context/get?mode=dataprotection (Privacy) tests -->
+	<test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=dataprotection</url>
+       <xpath>//xhtml:a[contains(.,'Privacy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=dataprotection</url>
+       <xpath>//xhtml:h2[contains(.,'Description and scope')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:corema/methods/sdef:Context/get?mode=dataprotection</url>
+       <xpath>//xhtml:p[contains(.,'When accessing the websites')]</xpath>
+    </test>
+    		   
+</TestCase>

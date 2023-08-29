@@ -1,0 +1,21 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files 
+*.zip
+*.tar.gz
+
+# Passwd Files
+*.key
+*.crt
+*.txt
+
+# Maven generated Files
+/target
+/bin
+
+# Mac stuff
+.DS_Store

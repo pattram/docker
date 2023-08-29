@@ -1,0 +1,24 @@
+version: "3"
+
+
+services:
+
+  locust:
+    image: zimgraz/locust:0.3.1
+    container_name: locust
+    environment:
+      - DATASET=${DATASET:-test}
+      - RESET_STATS=${RESET_STATS:-false}  
+      - TIMEOUT=${TIMEOUT:-60}
+      - TARGET_URL=""  
+    ports:
+      - "24141:8089"
+    #command: -f /home/locust/benchmark.py --reset-stats
+#    networks:
+#      - <gams4Network>     
+#
+#
+#networks:
+#  <gams4Network>:
+#    external: true     
+

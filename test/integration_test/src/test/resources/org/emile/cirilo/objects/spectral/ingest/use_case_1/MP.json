@@ -1,0 +1,77 @@
+{
+  "version": "4.5.6",
+  "flags": {},
+  "shapes": [
+   {
+      "label": "MP1",
+      "points": [
+        [
+          1047.774193548387,
+          748.3870967741935
+        ]
+      ],
+      "text": [
+        {
+            "label": "SKOS Concepts Materials",
+            "fileid": "SKOS.MATERIALS",
+            "betype": "IDREF",
+            "begin": [
+                "http://gams.uni-graz.at/thesaurus/iron-gall",
+                "http://gams.uni-graz.at/thesaurus/iron",
+                "http://gams.uni-graz.at/thesaurus/copper",
+                "http://gams.uni-graz.at/thesaurus/lead"
+            ]
+        },
+        {
+            "label": "SKOS Concepts Restauration",
+            "fileid": "SKOS.RESTAURATION",
+            "betype": "IDREF",
+            "begin": [
+                "http://gams.uni-graz.at/thesaurus/rest1",
+                "http://gams.uni-graz.at/thesaurus/rest2"
+            ] 
+        },
+        {
+            "label": "Descriptions Restauration",
+            "fileid": "TEI.RESTAURATION",
+            "betype": "IDREF",
+            "begin": [
+                "rest1",
+                "rest2"
+            ] 
+        }
+      ],
+      "group_id": null,
+      "shape_type": "point",
+      "flags": {}
+    },
+    {
+      "label": "MP2",
+      "points": [
+        [
+          1052.4193548387098,
+          858.8709677419355
+        ]
+      ],
+      "group_id": null,
+      "shape_type": "point",
+      "flags": {}
+    },
+    {
+      "label": "MP3",
+      "points": [
+        [
+          1152.4193548387098,
+          882.258064516129
+        ]
+      ],
+      "group_id": null,
+      "shape_type": "point",
+      "flags": {}
+    }
+  ],
+  "imagePath": "1r-D4___white_0.1.tif",
+  "imageData": null,
+  "imageHeight": 4928,
+  "imageWidth": 3280
+}

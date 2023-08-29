@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:aodl="http://pdr.bbaw.de/namespaces/aodl/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:void="http://rdfs.org/ns/void#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <void:Dataset rdf:about="http://gams.uni-graz.at/o:emile.ingest.ontology.1">
+    <dcterms:title>ProDomo pdrAo.000.000.100000001</dcterms:title>
+  </void:Dataset>
+  <aodl:aspect rdf:about="http://gams.uni-graz.at/prodomo/pdrAo.000.000.100000005">
+    <aodl:revision>0</aodl:revision>
+    <timestamp xmlns="http://pdr.bbaw.de/namespaces/aodl/">2015-06-08T12:45:32</timestamp>
+    <aodl:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+    <aodl:relationDim/>
+    <subject xmlns="http://pdr.bbaw.de/namespaces/aodl/">pdrAo.000.000.100000005</subject>
+    <aodl:semanticDim/>
+   <aodl:validation>
+      <aodl:validationStm>
+        <aodl:reference rdf:resource="http://gams.uni-graz.at/prodomo/"/>
+        <aodl:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+      </aodl:validationStm>
+    </aodl:validation>
+  </aodl:aspect>
+</rdf:RDF>

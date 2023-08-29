@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="tc">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests tc -->
+    <test>
+       <url>/context:tc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.professionals</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/transcomp.xsd.html</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-091-99</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-091-99/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-092-123</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-092-123/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-08B-42</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-08B-42/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-098-319</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-098-319/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-103-366</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-103-366/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-099-330</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-099-330/TEI_SOURCE</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-113-419</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-113-419/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-107-385</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-107-385/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-201</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-201/TEI_SOURCE</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-088-27</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-28</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-29</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-30</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-31</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-32</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-088-33</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-34</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-35</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-35</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-088-36</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-5</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-087-6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-10</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-11</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-087-12</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-13</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-087-14</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-15.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-16.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-17.xml</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-18.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-19.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-20.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-21.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-22.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-23.xml</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/transcomp/translog%20project%20files/tc-087-24.xml</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-114-20</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-101-12</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-11B-450</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-114-427</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-109-399</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-117-22</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-101-3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-101-4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-09C-344</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-187</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-112-18</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/o:tc-103-374</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-101-10</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tc-101-8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.BKR</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.CHA</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.EVE</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/context:tc.subjects.HHE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.JTH</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.JZE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.KBE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.KNI</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.LPE</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/context:tc.subjects.MLE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.SFR</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.STO</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.TDI</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.THI</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.AEF</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/context:tc.subjects.AIR</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.CAS</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.FLS</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.GEM</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.GOB</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.KEG</url>
+       <status>200</status>
+    </test> 
+    
+    <test>
+       <url>/context:tc.subjects.LEB</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.RAN</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects.RCH</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:tc (Home) tests -->
+	<test>
+       <url>/context:tc</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc</url>
+       <xpath>//xhtml:h3[contains(.,'The Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc</url>
+       <xpath>//xhtml:p[contains(.,'TransComp is a process')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc</url>
+       <xpath>//xhtml:img/@src[.='/transcomp/img/get.jpg']</xpath>
+    </test>
+
+<!-- /context:tc.groups.students (Experimental Waves/Students) tests -->    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <xpath>//xhtml:a[contains(.,'Students')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <xpath>//xhtml:h3[contains(.,'Students')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <xpath>//xhtml:a[contains(.,'Wave 1 / Source Text A1 / Student BKR')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.students</url>
+       <xpath>//xhtml:a[contains(.,'Wave 5 / Source Text B4 / Student HHE')]</xpath>
+    </test>
+
+<!-- /context:tc.groups.professionals (Experimental Waves/Professionals) tests -->    
+    <test>
+       <url>/context:tc.groups.professionals</url>
+       <xpath>//xhtml:a[contains(.,'Professionals')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.professionals</url>
+       <xpath>//xhtml:h3[contains(.,'Professionals')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.professionals</url>
+       <xpath>//xhtml:a[contains(.,'Wave 8 / Source Text A1 / Professional AEF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.groups.professionals</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations (Materials/Model Translations) tests -->    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations</url>
+       <xpath>//xhtml:a[contains(.,'Model Translations')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations</url>
+       <xpath>//xhtml:h3[contains(.,'Model Translations')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations</url>
+       <xpath>//xhtml:a[@href="/o:tc-088-30" and contains(.,'A4: Color Code of the Mind (popular science)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=model_translations</url>
+       <xpath>//xhtml:a[@href="/o:tc-088-33" and contains(.,'B2: How to Win Friends (popular science)')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts (Materials/Source Texts and Assignments) tests -->    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts</url>
+       <xpath>//xhtml:a[contains(.,'Source Texts and Assignments')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts</url>
+       <xpath>//xhtml:h3[contains(.,'Source Texts and Assignments')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts</url>
+       <xpath>//xhtml:a[@href="/o:tc-087-9" and contains(.,'A5: Moja (popular science)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=source_texts</url>
+       <xpath>//xhtml:a[@href="/transcomp/translog project files/tc-087-16.xml" and contains(.,'A2: Beginning with Names (popular science)')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:tc/methods/sdef:Context/get?mode=publications (Publications) tests -->    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:a[contains(.,'Publications')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:h3[contains(.,'Publications')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:i[contains(.,'Datendokumentation komplett')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:a[contains(.,'PDF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:a[contains(.,'Link')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=publications</url>
+       <xpath>//xhtml:span/@class[.='oi oi-globe']</xpath>
+    </test>
+
+<!-- /context:tc.subjects (Subjects) tests -->    
+    <test>
+       <url>/context:tc.subjects</url>
+       <xpath>//xhtml:a[contains(.,'Subjects')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects</url>
+       <xpath>//xhtml:h3[contains(.,'Subjects')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects</url>
+       <xpath>//xhtml:a[contains(.,'Students')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:tc.subjects</url>
+       <xpath>//xhtml:a[contains(.,'FLS')]</xpath>
+    </test>
+
+<!-- /transcomp/transcomp.xsd.html (Schema Documentation) tests -->    
+    <test>
+       <url>/transcomp/transcomp.xsd.html</url>
+       <xpath>//xhtml:h2[contains(.,'Table of Contents')]</xpath>
+    </test>
+    
+    <test>
+       <url>/transcomp/transcomp.xsd.html</url>
+       <xpath>//xhtml:a[contains(.,'Element:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/transcomp/transcomp.xsd.html</url>
+       <xpath>//xhtml:strong[contains(.,'div')]</xpath>
+    </test>
+    
+    <test>
+       <url>/transcomp/transcomp.xsd.html</url>
+       <xpath>//xhtml:span[contains(.,'Logical Diagram')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:tc/methods/sdef:Context/get?mode=imprint (Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Göpferich, Susanne')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tc/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Centre for Information')]</xpath>
+    </test>
+
+<!-- /o:tc-092-170 (Object Sample) tests -->    
+    <test>
+       <url>/o:tc-092-170</url>
+       <xpath>//xhtml:h3[contains(.,'Wave 3 / Source Text A2 / Student JTH')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-092-170</url>
+       <xpath>//xhtml:h4[contains(.,'Transcript of translation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-092-170</url>
+       <xpath>//xhtml:video/@id[contains(.,'player')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-092-170</url>
+       <xpath>//xhtml:a[contains(.,'recruitment')]</xpath>
+    </test>
+
+<!-- /o:tc-095-237 (Object sample) tests -->    
+    <test>
+       <url>/o:tc-095-237</url>
+       <xpath>//xhtml:h3[contains(.,'Wave 8 / Source Text B4 / Professional GEM')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-237</url>
+       <xpath>//xhtml:h4[contains(.,'Transcript of translation process')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-237</url>
+       <xpath>//xhtml:video/@id[contains(.,'player')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tc-095-237</url>
+       <xpath>//xhtml:a[contains(.,'hemmed in')]</xpath>
+    </test>  
+      	          
+</TestCase>

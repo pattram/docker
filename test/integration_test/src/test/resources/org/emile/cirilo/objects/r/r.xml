@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description xmlns:xsl="http://cm4f.org/xsl/" 
+    xmlns:rel="info:fedora/fedora-system:def/relations-external#" 
+    xmlns:model="info:fedora/fedora-system:def/model#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:cm4f="http://cm4f.org/"   
+    rdf:about="info:fedora/o:emile.r">
+    <dc:identifier>o:emile.r</dc:identifier>
+    <dc:title>Test Object</dc:title>
+    <dc:creator>Otto Geist</dc:creator>
+    <dc:publisher>emile.org</dc:publisher>
+    <dc:type>CompoundObject</dc:type>
+    <dc:language>en</dc:language>
+    <dc:coverage>Austria</dc:coverage>
+    <dc:rights>Resource licensed under Creative Commons BY-NC-SA 4.0</dc:rights>
+    <dc:rights>http://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+    <dc:relation>http://cm4f.org</dc:relation>
+    <model:hasModel rdf:resource="info:fedora/cm:R"/>
+    <rel:isMemberOf rdf:resource="http://apache:82/context:emile"/>
+    <oai:itemID>hdl:11471/1012</oai:itemID>
+    <rdf:type rdf:resource="http://cm4f.org/Object" />   
+    <xsl:hasXsltToDefaultView rdf:resource="http://apache:82/xsl/dc2html.xsl"/>
+    <xsl:hasXsltToDC rdf:resource="http://apache:82/xsl/dc2html.xsl"/>
+	</rdf:Description>
+</rdf:RDF>

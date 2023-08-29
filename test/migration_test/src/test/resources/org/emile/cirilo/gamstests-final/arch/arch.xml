@@ -1,0 +1,2372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="arch">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests arch -->
+<!-- status 200 tests arch navbar links -->
+    <test>
+       <url>/context:arch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 tests arch footer links -->
+	<test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=project</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+ 
+<!-- status 200 tests Originalsammlung Dropdown menus Notiz AF: so viele Tests wären nicht notwendig gewesen. Stichproben hätten gereicht -->
+<!-- nach Objekttyp -->
+
+	<test>
+       <url>/context:arch.g.typ.architektur?context=context:arch.g.typ!context:arch.g.typ.architektur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess?context=context:arch.g.typ!context:arch.g.typ.gefaess</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.amphora?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.amphora</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.aryballos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.aryballos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.askos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.askos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.becher?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.becher</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.deckel?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.deckel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.figurenvase?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.figurenvase</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.flasche?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.flasche</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.fragment?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.fragment</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.fruchtstaender?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.fruchtstaender</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.guttus?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.guttus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.hydria?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.hydria</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kanne?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kanne</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kantharos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kantharos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kessel?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kohlenbecken?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kohlenbecken</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.krater?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.krater</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.krug?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.krug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kyathos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kyathos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.kylix?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kylix</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.lebesgamikos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lebesgamikos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.lekanis?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lekanis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.lekythos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lekythos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.napf?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.napf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.oinochoe?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.oinochoe</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.oellampe?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.oellampe</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.patera?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.patera</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.pithos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.pithos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.pyxis?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.pyxis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.reibschuessel?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.reibschuessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.rhyton?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.rhyton</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.schale?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.schale</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.schuessel?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.schuessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.skyphos?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.skyphos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.stoepsel?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.stoepsel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.tasse?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.tasse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.teller?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.teller</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.topf?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.topf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.unguentarium?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.unguentarium</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.urne?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.urne</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.kleinfund?context=context:arch.g.typ!context:arch.g.typ.kleinfund</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.malerei?context=context:arch.g.typ!context:arch.g.typ.malerei</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.plastik?context=context:arch.g.typ!context:arch.g.typ.plastik</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Gattung -->    
+    <test>
+       <url>/context:arch.g.gattung.afrikanisch?context=context:arch.g.gattung!context:arch.g.gattung.afrikanisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.aegyptisch?context=context:arch.g.gattung!context:arch.g.gattung.aegyptisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.apulisch?context=context:arch.g.gattung!context:arch.g.gattung.apulisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.argivisch?context=context:arch.g.gattung!context:arch.g.gattung.argivisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.attisch?context=context:arch.g.gattung!context:arch.g.gattung.attisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.boeotisch?context=context:arch.g.gattung!context:arch.g.gattung.boeotisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.elisch?context=context:arch.g.gattung!context:arch.g.gattung.elisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.etruskisch?context=context:arch.g.gattung!context:arch.g.gattung.etruskisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.italisch?context=context:arch.g.gattung!context:arch.g.gattung.italisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.kampanisch?context=context:arch.g.gattung!context:arch.g.gattung.kampanisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.korinthisch?context=context:arch.g.gattung!context:arch.g.gattung.korinthisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.kretisch?context=context:arch.g.gattung!context:arch.g.gattung.kretisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.kykladisch?context=context:arch.g.gattung!context:arch.g.gattung.kykladisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.minoisch?context=context:arch.g.gattung!context:arch.g.gattung.minoisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.mittelitalisch?context=context:arch.g.gattung!context:arch.g.gattung.mittelitalisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.mykenisch?context=context:arch.g.gattung!context:arch.g.gattung.mykenisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.norischpannonisch?context=context:arch.g.gattung!context:arch.g.gattung.norischpannonisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.ostgriechisch?context=context:arch.g.gattung!context:arch.g.gattung.ostgriechisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.provinzialroemisch?context=context:arch.g.gattung!context:arch.g.gattung.provinzialroemisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.roemisch?context=context:arch.g.gattung!context:arch.g.gattung.roemisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.sizilisch?context=context:arch.g.gattung!context:arch.g.gattung.sizilisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.gattung.zyprisch?context=context:arch.g.gattung!context:arch.g.gattung.zyprisch</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Keramikstil -->    
+    <test>
+       <url>/context:arch.g.stil.bucchero?context=context:arch.g.stil!context:arch.g.stil.bucchero</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.gnathia?context=context:arch.g.stil!context:arch.g.stil.gnathia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.geometrisch?context=context:arch.g.stil!context:arch.g.stil.geometrisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.glanztonware?context=context:arch.g.stil!context:arch.g.stil.glanztonware</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.rotfigurig?context=context:arch.g.stil!context:arch.g.stil.rotfigurig</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.schwarzfigurig?context=context:arch.g.stil!context:arch.g.stil.schwarzfigurig</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.terrasigillata?context=context:arch.g.stil!context:arch.g.stil.terrasigillata</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.stil.weissgrundig?context=context:arch.g.stil!context:arch.g.stil.weissgrundig</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Land -->
+	<test>
+       <url>/context:arch.g.land.deutschland?context=context:arch.g.land!context:arch.g.land.deutschland</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.griechenland?context=context:arch.g.land!context:arch.g.land.griechenland</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.italien?context=context:arch.g.land!context:arch.g.land.italien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.kroatien?context=context:arch.g.land!context:arch.g.land.kroatien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.oesterreich?context=context:arch.g.land!context:arch.g.land.oesterreich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.slowenien?context=context:arch.g.land!context:arch.g.land.slowenien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.tschechien?context=context:arch.g.land!context:arch.g.land.tschechien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.tuerkei?context=context:arch.g.land!context:arch.g.land.tuerkei</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.ungarn?context=context:arch.g.land!context:arch.g.land.ungarn</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.land.zypern?context=context:arch.g.land!context:arch.g.land.zypern</url>
+       <status>200</status>
+    </test>
+    
+<!-- nach Region -->
+	<test>
+       <url>/context:arch.g.region.aegina?context=context:arch.g.region!context:arch.g.region.aegina</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.apulien?context=context:arch.g.region!context:arch.g.region.apulien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.attika?context=context:arch.g.region!context:arch.g.region.attika</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.boeotien?context=context:arch.g.region!context:arch.g.region.boeotien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.buekk?context=context:arch.g.region!context:arch.g.region.buekk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.dalmatien?context=context:arch.g.region!context:arch.g.region.dalmatien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.dilos?context=context:arch.g.region!context:arch.g.region.dilos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.istrien?context=context:arch.g.region!context:arch.g.region.istrien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.kampanien?context=context:arch.g.region!context:arch.g.region.kampanien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.kaernten?context=context:arch.g.region!context:arch.g.region.kaernten</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.kreta?context=context:arch.g.region!context:arch.g.region.kreta</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.latium?context=context:arch.g.region!context:arch.g.region.latium</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.maehren?context=context:arch.g.region!context:arch.g.region.maehren</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.milos?context=context:arch.g.region!context:arch.g.region.milos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.niederoesterreich?context=context:arch.g.region!context:arch.g.region.niederoesterreich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.paros?context=context:arch.g.region!context:arch.g.region.paros</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.peloponnes?context=context:arch.g.region!context:arch.g.region.peloponnes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.rhodos?context=context:arch.g.region!context:arch.g.region.rhodos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.sachsen?context=context:arch.g.region!context:arch.g.region.sachsen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.santorin?context=context:arch.g.region!context:arch.g.region.santorin</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.steiermark?context=context:arch.g.region!context:arch.g.region.steiermark</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.thessalien?context=context:arch.g.region!context:arch.g.region.thessalien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.tirol?context=context:arch.g.region!context:arch.g.region.tirol</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/context:arch.g.region.toskana?context=context:arch.g.region!context:arch.g.region.toskana</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.region.zypern?context=context:arch.g.region!context:arch.g.region.zypern</url>
+       <status>200</status>
+    </test>
+    
+<!-- nach Fundort -->
+	<test>
+       <url>/context:arch.g.ort.aquileia?context=context:arch.g.ort!context:arch.g.ort.aquileia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.athen?context=context:arch.g.ort!context:arch.g.ort.athen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.capua?context=context:arch.g.ort!context:arch.g.ort.capua</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.carrara?context=context:arch.g.ort!context:arch.g.ort.carrara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.chiusi?context=context:arch.g.ort!context:arch.g.ort.chiusi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.dimini?context=context:arch.g.ort!context:arch.g.ort.dimini</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.drnis?context=context:arch.g.ort!context:arch.g.ort.drnis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.eleusis?context=context:arch.g.ort!context:arch.g.ort.eleusis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.figaleia?context=context:arch.g.ort!context:arch.g.ort.figaleia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.fylakopi?context=context:arch.g.ort!context:arch.g.ort.fylakopi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.grande?context=context:arch.g.ort!context:arch.g.ort.grande</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.izmir?context=context:arch.g.ort!context:arch.g.ort.izmir</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.izola?context=context:arch.g.ort!context:arch.g.ort.izola</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.kainach?context=context:arch.g.ort!context:arch.g.ort.kainach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.kalsdorf?context=context:arch.g.ort!context:arch.g.ort.kalsdorf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.koeflach?context=context:arch.g.ort!context:arch.g.ort.koeflach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.korinth?context=context:arch.g.ort!context:arch.g.ort.korinth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.kouvaras?context=context:arch.g.ort!context:arch.g.ort.kouvaras</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.lamialianokladi?context=context:arch.g.ort!context:arch.g.ort.lamialianokladi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.luni?context=context:arch.g.ort!context:arch.g.ort.luni</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.megara?context=context:arch.g.ort!context:arch.g.ort.megara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.orchomenos?context=context:arch.g.ort!context:arch.g.ort.orchomenos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.orvieto?context=context:arch.g.ort!context:arch.g.ort.orvieto</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.pavlov?context=context:arch.g.ort!context:arch.g.ort.pavlov</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.penzendorf?context=context:arch.g.ort!context:arch.g.ort.penzendorf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.populonia?context=context:arch.g.ort!context:arch.g.ort.populonia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.rovinj?context=context:arch.g.ort!context:arch.g.ort.rovinj</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.sesklo?context=context:arch.g.ort!context:arch.g.ort.sesklo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.solin?context=context:arch.g.ort!context:arch.g.ort.solin</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.tanagra?context=context:arch.g.ort!context:arch.g.ort.tanagra</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.theben?context=context:arch.g.ort!context:arch.g.ort.theben</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.thessaloniki?context=context:arch.g.ort!context:arch.g.ort.thessaloniki</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.trient?context=context:arch.g.ort!context:arch.g.ort.trient</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.volterra?context=context:arch.g.ort!context:arch.g.ort.volterra</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.ort.zakros?context=context:arch.g.ort!context:arch.g.ort.zakros</url>
+       <status>200</status>
+    </test>
+    
+<!-- nach Grabungsplatz/Historische Bezeichnung -->
+	<test>
+       <url>/context:arch.g.grabungsplatz.aeginakolonna?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.aeginakolonna</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.agiatriada?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.agiatriada</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.agora?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.agora</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.akropolis?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.akropolis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.carnuntum?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.carnuntum</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.cumae?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.cumae</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.daphnikloster?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.daphnikloster</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.dionysion?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.dionysion</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.ephesos?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.ephesos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.idalion?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.idalion</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.iobakcheion?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.iobakcheion</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.kabirenheiligtum?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.kabirenheiligtum</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.kerameikos?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.kerameikos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.knossos?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.knossos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.milet?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.milet</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.mykenai?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.mykenai</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.nirouchani?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.nirouchani</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.norchia?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.norchia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.olympia?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.olympia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.patara?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.patara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.phaistos?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.phaistos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.porti?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.porti</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.priene?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.priene</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.salona?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.salona</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.smyrna?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.smyrna</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.tiryns?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.tiryns</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.troja?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.troja</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.grabungsplatz.westabhang?context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.westabhang</url>
+       <status>200</status>
+    </test>
+    
+<!-- status 200 tests Originalsammlung Objekte sample tests Notiz AF: so viele Tests wären nicht notwendig gewesen. Stichproben hätten gereicht -->
+<!-- nach Objekttyp -->
+	<test>
+       <url>/o:arch.2684/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ!context:arch.g.typ.architektur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ!context:arch.g.typ.gefaess</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2401/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.amphora</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2478/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.aryballos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3458/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.askos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2660/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.becher</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2390/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.deckel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2636/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.figurenvase</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2661/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.flasche</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3460/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.fragment</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2482/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.fruchtstaender</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.guttus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2523/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.hydria</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2410/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kanne</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2581/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kantharos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2580/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2391/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kohlenbecken</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2457/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.krater</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2641/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.krug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2696/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kyathos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3672/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.kylix</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3914/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lebesgamikos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2382/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lekanis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.lekythos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2650/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.napf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2688/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.oinochoe</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3449/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.oellampe</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4304/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.patera</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3566/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.pithos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2550/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.pyxis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4143/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.reibschuessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2594/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.rhyton</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2703/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.schale</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2483/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.schuessel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2328/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.skyphos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2665/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.stoepsel</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2712/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.tasse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2578/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.teller</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4070/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.topf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2673/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.unguentarium</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2456/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.urne</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2381/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ!context:arch.g.typ.kleinfund</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2458/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ!context:arch.g.typ.malerei</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2522/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ!context:arch.g.typ.plastik</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Gattung -->    
+    <test>
+       <url>/o:arch.2318/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.afrikanisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2325/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.aegyptisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2599/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.apulisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3810/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.argivisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.attisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2613/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.boeotisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2681/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.elisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2525/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.etruskisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2311/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.italisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.kampanisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2478/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.korinthisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2522/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.kretisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.kykladisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3566/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.minoisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2387/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.mittelitalisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3599/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.mykenisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2421/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.norischpannonisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2637/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.ostgriechisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2652/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.provinzialroemisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2684/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.roemisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2600/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.sizilisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2641/sdef:LIDO/get?mode=object&amp;context=context:arch.g.gattung!context:arch.g.gattung.zyprisch</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Keramikstil -->
+	<test>
+       <url>/o:arch.2525/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.bucchero</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2328/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.gnathia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2578/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.geometrisch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.glanztonware</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.rotfigurig</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2410/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.schwarzfigurig</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4052/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.terrasigillata</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2527/sdef:LIDO/get?mode=object&amp;context=context:arch.g.stil!context:arch.g.stil.weissgrundig</url>
+       <status>200</status>
+    </test>
+    
+<!-- nach Land -->
+	<test>
+       <url>/o:arch.2319/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.deutschland</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.griechenland</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.italien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3451/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.kroatien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2650/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.oesterreich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4082/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.slowenien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3490/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.tschechien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2684/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.tuerkei</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2516/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.ungarn</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2691/sdef:LIDO/get?mode=object&amp;context=context:arch.g.land!context:arch.g.land.zypern</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Region -->
+	<test>
+       <url>/o:arch.3579/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.aegina</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2599/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.apulien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.attika</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2530/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.boeotien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2516/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.buekk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.5049/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.dalmatien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2404/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.dilos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4346/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.istrien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.kampanien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2365/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.kaernten</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3554/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.kreta</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2526/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.latium</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3490/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.maehren</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.milos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2290/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.niederoesterreich</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4169/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.paros</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3455/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.peloponnes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4047/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.rhodos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2319/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.sachsen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3993/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.santorin</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2652/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.steiermark</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2474/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.thessalien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2650/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.tirol</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2525/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.toskana</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2448/sdef:LIDO/get?mode=object&amp;context=context:arch.g.region!context:arch.g.region.zypern</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Fundort -->
+	<test>
+       <url>/o:arch.2456/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.aquileia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2283/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.athen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.capua</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4166/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.carrara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2525/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.chiusi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2482/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.dimini</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3451/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.drnis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3585/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.eleusis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2361/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.figaleia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3442/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.fylakopi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2319/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.grande</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3887/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.izmir</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4082/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.izola</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4155/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.kainach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2472/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.kalsdorf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4146/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.koeflach</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3455/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.korinth</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2704/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.kouvaras</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2475/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.lamialianokladi</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4167/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.luni</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3963/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.megara</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2616/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.orchomenos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2438/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.orvieto</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.3490/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.pavlov</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2652/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.penzendorf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4144/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.populonia</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4349/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.rovinj</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2474/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.sesklo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.5049/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.solin</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2531/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.tanagra</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2530/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.theben</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2388/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.thessaloniki</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.2655/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.trient</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4160/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.volterra</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:arch.4029/sdef:LIDO/get?mode=object&amp;context=context:arch.g.ort!context:arch.g.ort.zakros</url>
+       <status>200</status>
+    </test>
+
+<!-- nach Grabungsplatz/Historische Bezeichnung -->
+	<test>
+       <url>/o:arch.3587/sdef:LIDO/get?mode=object&amp;context=context:arch.g.grabungsplatz!context:arch.g.grabungsplatz.aeginakolonna</url>
+       <status>200</status>
+    </test>
+
+<!-- context:arch (Home) tests -->
+<!-- context:arch navbar links -->
+	<test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- context:arch footer links -->
+	<test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>    
+
+<!-- context:arch other tests -->
+	<test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:a/xhtml:span[.='Onlineportal der archäologischen
+                                        Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:h2[.='Originalsammlung und Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div/@id[.='branding']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Onlineportal der archäologischen Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:p[contains(.,'Willkommen auf dem Onlineportal der archäologischen Sammlungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div[@class='panel-image']/xhtml:a/xhtml:img/@src[.='/arch/img/origslg_home.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div[@class='panel-body']/xhtml:a/xhtml:h4[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div[@class='panel-image']/xhtml:a/xhtml:img/@src[.='/arch/img/story_home.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch</url>
+       <xpath>//xhtml:div[@class='panel-body']/xhtml:a/xhtml:h4[.=' Virtueller Rundgang']</xpath>
+    </test>
+
+<!-- context:arch.g (Originalsammlung) tests -->
+<!-- context:arch.g navbar links -->
+	<test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- context:arch.g footer links -->
+	<test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>
+    
+<!-- context:arch.g other tests -->    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a/xhtml:span[.='Onlineportal der archäologischen
+                                        Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:h2[.='Originalsammlung und Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:div/@id[.='branding']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Originalsammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:h3[.='Objekttyp']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Architektur']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Aryballos']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:h3[.='Grabungsplatz/Historische Bezeichnung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Westabhang']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:a[.='Auf Karte anzeigen  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g</url>
+       <xpath>//xhtml:p[contains(.,'Die Originalsammlung ist hauptsächlich eine Lehrsammlung')]</xpath>
+    </test>
+    
+<!-- context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron Originalsammlung Menu sample tests-->    
+<!-- context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron navbar links-->    
+	<test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron footer links -->
+	<test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>
+    
+<!-- context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron other tests -->
+	<test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a/xhtml:span[.='Onlineportal der archäologischen
+                                        Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h2[.='Originalsammlung und Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:div/@id[.='branding']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Originalsammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h3[.='Objekttyp']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Architektur']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Aryballos']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h3[.='Grabungsplatz/Historische Bezeichnung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Westabhang']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Auf Karte anzeigen  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:arch.g.typ.gefaess.alabastron?context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+
+<!-- o:arch.2489/sdef:LIDO/get?mode=object&context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron Originalsammlung Object sample tests-->    
+<!-- o:arch.2489/sdef:LIDO/get?mode=object&context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron navbar links-->    
+	<test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- o:arch.2489/sdef:LIDO/get?mode=object&context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron footer links -->
+	<test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>
+    
+<!-- o:arch.2489/sdef:LIDO/get?mode=object&context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron other tests -->
+	<test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Gefäß, Alabastron']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Objekt']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'zurück zur Kategorie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:table/xhtml:tbody/xhtml:tr/xhtml:td[.='Objekttyp']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:table/xhtml:tbody/xhtml:tr/xhtml:td[.='Keramik']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:a[contains(.,'nächster Eintrag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.2489/sdef:LIDO/get?mode=object&amp;context=context:arch.g.typ.gefaess!context:arch.g.typ.gefaess.alabastron</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- o:arch.story (Virtueller Rundgang) tests -->
+<!-- o:arch.story navbar links -->
+	<test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- o:arch.story footer links -->
+	<test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>
+    
+<!-- o:arch.story other tests -->
+	<test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:a/xhtml:span[.='Onlineportal der archäologischen
+                                        Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:h2[.='Originalsammlung und Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:div/@id[.='branding']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:arch.story</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- archive/objects/context:arch/methods/sdef:Context/get?mode=bibl (Bibliografie) tests -->
+<!-- archive/objects/context:arch/methods/sdef:Context/get?mode=bibl navbar links -->
+	<test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.=' Home ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.=' Originalsammlung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.=' Virtueller Rundgang ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.=' Bibliografie ']</xpath>
+    </test>
+
+<!-- archive/objects/context:arch/methods/sdef:Context/get?mode=bibl footer links -->
+	<test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Institut für') and contains(.,'Archäologie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Zentrum für Informationsmodellierung - Austrian Centre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Projektbeschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_schwarz.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/logo_uni_graz_sw.jpg']</xpath>
+    </test>
+    
+<!-- archive/objects/context:arch/methods/sdef:Context/get?mode=bibl other tests -->
+	<test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:span[.='Onlineportal der archäologischen
+                                        Sammlungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:h2[.='Originalsammlung und Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:div/@id[.='branding']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:h3/xhtml:span[.='Bibliografie']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:arch/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:li[contains(.,': C. H. E. Haspels, Attic Black-figured Lekythoi (1936).')]</xpath>
+    </test>    
+	
+   
+</TestCase>

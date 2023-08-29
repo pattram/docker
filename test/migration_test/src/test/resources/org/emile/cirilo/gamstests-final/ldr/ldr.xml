@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ldr">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ldr -->
+    <test>
+       <url>/context:ldr</url>
+       <status>200</status>
+    </test>
+    
+   <test>
+       <url>/o:ldr.lieddrucke</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.115</url>
+       <status>200</status>
+    </test>        
+
+<!-- /context:ldr (Home) tests -->
+	<test>
+       <url>/context:ldr</url>
+       <matcher>a:matches(^HOME$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ldr</url>
+       <xpath>//xhtml:a[contains(.,'LIEDDRUCKE DER REFORMZEIT')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ldr</url>
+       <xpath>//xhtml:p[contains(.,'Dieses Webportal')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ldr</url>
+       <xpath>//xhtml:a[contains(.,'stephanie.marak@gym-kapfenberg.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ldr</url>
+       <xpath>//xhtml:strong[contains(.,'DISSERTATIONSPROJEKT UND WEBPORTAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ldr</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:ldr/datastreams/STARTBILD1/content']</xpath>
+    </test>
+
+<!-- /o:ldr.lieddrucke (Lieddrucke) tests -->    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a[contains(.,'LIEDDRUCKE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a[contains(.,'Liedflugblatt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a/@title[.='Springe zu Geistliches Liederbuch']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a[contains(.,'1524')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:h1[contains(.,'Geistliches Liederbuch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a/@title[contains(.,'Zum Seitenanfang')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:h2[contains(.,'1524')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:a[contains(.,'Eyn Enchiridion oder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:td[contains(.,'Erfurt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:p[contains(.,'gams.uni-graz.at/o:ldr.lieddrucke#LDR.110')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:img/@src[contains(.,'/templates/img/tei_icon.jpg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:img/@src[contains(.,'/templates/img/RDF_icon.png')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer (Drucker) tests -->
+	<test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:a[contains(.,'DRUCKER')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:h1[contains(.,'Drucker')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:h3[contains(.,'A')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:a[contains(.,'Apiarius, Matthias')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:ldr/datastreams/WIKI/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:button[contains(.,'Mehr Information')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/RDF_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=printer</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+    
+<!-- /archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer (Verfasser) tests -->
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:a[contains(.,'VERFASSER')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:h1[contains(.,'Verfasser')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:h3[contains(.,'B')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:a[contains(.,'Amman, Erasmus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/context:ldr/datastreams/WIKI/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:button[contains(.,'Mehr Information')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/RDF_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ldr.person/methods/sdef:TEI/get?mode=composer</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /o:ldr.place (Orte) tests -->
+	<test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:a[contains(.,'ORTE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:h1[contains(.,'Druckorte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:a[contains(.,'Annaberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/RDF_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.place</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ldr/methods/sdef:Context/get?mode=about (Dissertationsprojekt und Webportal) tests -->
+	<test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:strong[contains(.,'DISSERTATIONSPROJEKT UND WEBPORTAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Im Gefolge der Veröffentlichung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ldr/methods/sdef:Context/get?mode=information (Abkürzungen) tests -->
+	<test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <xpath>//xhtml:strong[contains(.,'DISSERTATIONSPROJEKT UND WEBPORTAL')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <xpath>//xhtml:h4[contains(.,'Informationen zu den Lieddrucken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <xpath>//xhtml:td[contains(.,'Aarau KB')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <xpath>//xhtml:p[contains(.,'Druckermarke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=information</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /o:ldr.lieddrucke#LDR.110 (sample) tests -->
+	<test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a[contains(.,'LIEDDRUCKE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a[contains(.,'Liedflugblatt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a/@title[.='Springe zu Geistliches Liederbuch']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a[contains(.,'1524')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:h1[contains(.,'Geistliches Liederbuch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a/@title[contains(.,'Zum Seitenanfang')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:h2[contains(.,'1524')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:a[contains(.,'Eyn Enchiridion oder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:td[contains(.,'Erfurt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:p[contains(.,'gams.uni-graz.at/o:ldr.lieddrucke#LDR.110')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:img/@src[contains(.,'/templates/img/tei_icon.jpg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:img/@src[contains(.,'/templates/img/RDF_icon.png')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ldr.lieddrucke#LDR.110</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint</url>
+       <matcher>a:matches(^Impressum$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Veröffentlicht 2018')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:ldr/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@placeholder[contains(.,'VOLLTEXTSUCHE')]</xpath>
+    </test>	
+    					   
+</TestCase>

@@ -1,0 +1,18 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rel: <info:fedora/fedora-system:def/relations-external#>
+PREFIX model: <info:fedora/fedora-system:def/model#>
+PREFIX fedora: <http://fedora.info/definitions/v4/repository#>
+PREFIX cm4f: <http://cm4f.org/>
+select distinct * where {  ?corpus dc:identifier 'corpus:emile'.
+ 				  ?corpus dc:title ?container .
+		          ?corpus dc:identifier ?cid .
+                  ?oid  rel:isMemberOf <http://apache:82/corpus:emile> .
+	              ?oid  model:hasModel ?model .
+                  ?oid  cm4f:owner ?ownerId .
+                  ?oid  fedora:created ?createdDate .
+                  ?oid  fedora:lastModified ?lastModified . 
+                  ?oid  dc:title ?title .
+                  ?oid  dc:identifier ?pid . 
+                  optional {?oid dc:creator ?creator} .  
+                  filter regex(str(?model), "^http://cm4f.org/") 
+             }

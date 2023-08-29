@@ -1,0 +1,1959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="vase">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests vase -->
+    <test>
+       <url>/context:vase</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=use</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=literature</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=partner</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vase&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=advancedSearch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?pid=vase&amp;mode=advancedSearch&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl&amp;queryAsAnd=&amp;subject=&amp;startDate=&amp;endDate=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=help</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=contact</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:vase?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+	<test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.100/methods/sdef:Context/get?mode=container&amp;context=context:siba.ocm!context:siba.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.200/methods/sdef:Context/get?mode=container&amp;context=context:baci.ocm!context:baci.200</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.103/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.100!context:vase.ocm.103</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.110/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.110</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.140/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.140</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.173/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.170!context:vase.ocm.173</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.204/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.200!context:vase.ocm.204</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.220/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.220</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.231/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.230!context:vase.ocm.231</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.270/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.270</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.280/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.280</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.301/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.300!context:vase.ocm.301</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.495/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.490!context:vase.ocm.495</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.670/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.670</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.881/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.880!context:vase.ocm.881</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=tagcloud</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/archive/objects/o:siba.4795/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4795/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.4854/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4854/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vase.387/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.387/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vase.684/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.684/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.4889/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4889/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.4065/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4065/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:baci.1002/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:baci.1002/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.1124/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1124/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.4880/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4880/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.4852/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4852/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.1080/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1080/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.273/methods/sdef:Context/get?mode=container&amp;context=context:vase.270!context:vase.273</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.370/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.370</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.614/methods/sdef:Context/get?mode=container&amp;context=context:vase.610!context:vase.614</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.764/methods/sdef:Context/get?mode=container&amp;context=context:vase.760!context:vase.764</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.890/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.890</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.gn.4ec225c7/methods/sdef:Context/get?mode=container&amp;context=context:vase.location!context:vase.gn.4ec225c7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.gn.fa5b4970/methods/sdef:Context/get?mode=container&amp;context=context:vase.location!context:vase.gn.fa5b4970</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.gn.249835/methods/sdef:Context/get?mode=container&amp;context=context:vase.location!context:vase.gn.249835</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.gn.5ea61781/methods/sdef:Context/get?mode=container&amp;context=context:vase.location!context:vase.gn.5ea61781</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.pn.a331eebc/methods/sdef:Context/get?mode=container&amp;context=context:vase.photographer!context:vase.pn.a331eebc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.pn.944d0852/methods/sdef:Context/get?mode=container&amp;context=context:vase.photographer!context:vase.pn.944d0852</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.pn.83477276/methods/sdef:Context/get?mode=container&amp;context=context:vase.photographer!context:vase.pn.83477276</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.pn.a27b1752/methods/sdef:Context/get?mode=container&amp;context=context:vase.photographer!context:vase.pn.a27b1752</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.100/methods/sdef:Context/get?mode=container&amp;context=context:siba.ocm!context:siba.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.173/methods/sdef:Context/get?mode=container&amp;context=context:siba.170!context:siba.173</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.341/methods/sdef:Context/get?mode=container&amp;context=context:siba.340!context:siba.341</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.444/methods/sdef:Context/get?mode=container&amp;context=context:siba.440!context:siba.444</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.540/methods/sdef:Context/get?mode=container&amp;context=context:siba.ocm!context:siba.540</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.650/methods/sdef:Context/get?mode=container&amp;context=context:siba.ocm!context:siba.650</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.gn.650f150e/methods/sdef:Context/get?mode=container&amp;context=context:siba.location!context:siba.gn.650f150e</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.gn.2e1ef902/methods/sdef:Context/get?mode=container&amp;context=context:siba.location!context:siba.gn.2e1ef902</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.pn.be7b6d09/methods/sdef:Context/get?mode=container&amp;context=context:siba.photographer!context:siba.pn.be7b6d09</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.pn.82a87715/methods/sdef:Context/get?mode=container&amp;context=context:siba.photographer!context:siba.pn.82a87715</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.pn.ae807613/methods/sdef:Context/get?mode=container&amp;context=context:siba.photographer!context:siba.pn.ae807613</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=tagcloud</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/archive/objects/context:baci.200/methods/sdef:Context/get?mode=container&amp;context=context:baci.ocm!context:baci.200</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.530/methods/sdef:Context/get?mode=container&amp;context=context:baci.ocm!context:baci.530</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.546/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.546</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.857/methods/sdef:Context/get?mode=container&amp;context=context:baci.ocm!context:baci.857</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=tagcloud</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:vif</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=use</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=literature</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=partner</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vif&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vif-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=advancedSearch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:siba</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=use</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=partner</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.glossar</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=siba&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fsiba%2F3siba-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=advancedSearch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=help</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=contact</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:baci</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=use</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=partner</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=baci&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fbaci%2Fbaci-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=advancedSearch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=help</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=contact</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.3037/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.3037/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.3082/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.3082/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.3127/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.3127/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.1161/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1161/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:siba.1055/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1055/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:baci.1002/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:baci.1002/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:baci.1002/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:baci.1002/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:baci.1064/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:baci.1064/sdef:TEI/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4795/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.584/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.210!context:vase.ocm.213</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1136/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.260</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.678/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.340!context:vase.ocm.344</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.2284/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.370!context:vase.ocm.373</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.3105/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.500!context:vase.ocm.507</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.1028/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.660!context:vase.ocm.665</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.693/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.870</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.2220/sdef:TEI/get?mode=object&amp;context=context:vase.location!context:vase.gn.3cfab4e</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.2407/sdef:TEI/get?mode=object&amp;context=context:vase.location!context:vase.gn.daed25e6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.2205/sdef:TEI/get?mode=object&amp;context=context:vase.photographer!context:vase.pn.d30c6919</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vase.761/sdef:TEI/get?mode=object&amp;context=context:vase.photographer!context:vase.pn.c5c735fb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1141/sdef:TEI/get?mode=object&amp;context=context:siba.180!context:siba.181</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4066/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.320</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.3362/sdef:TEI/get?mode=object&amp;context=context:siba.520!context:siba.522</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4033/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.750</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4793/sdef:TEI/get?mode=object&amp;context=context:siba.location!context:siba.gn.650f150e</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.4856/sdef:TEI/get?mode=object&amp;context=context:siba.location!context:siba.gn.814f17d1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1110/sdef:TEI/get?mode=object&amp;context=context:siba.photographer!context:siba.pn.2fd10fe1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:siba.1010/sdef:TEI/get?mode=object&amp;context=context:siba.photographer!context:siba.pn.ae807613</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:vase (Home) tests -->
+	<test>
+       <url>/context:vase</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase</url>
+       <xpath>//xhtml:div/@id[.='slide']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase</url>
+       <xpath>//xhtml:p[contains(.,'The main objective')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase</url>
+       <xpath>//xhtml:a[contains(.,'Enter Archive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/siba.1080.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=home (alternative Home link) tests -->
+	<test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:div/@id[.='slide']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:p[contains(.,'The main objective')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:a[contains(.,'Enter Archive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=home</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/siba.1080.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=about (About) tests -->	    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'The database may not')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Enter VIF')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=use (Terms of Use) tests -->
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:p[contains(.,'The Institute of History')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:span[contains(.,'Copyright © Copyright Holder')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=literature (Literature) tests -->    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:a[contains(.,'Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:li[contains(.,'Anagnostopoulos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:span[contains(.,'Literature')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=partner (Partners) tests -->    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'Partners')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:strong[contains(.,'Arkivi Qëndror Shtetëror i filmit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'http://www.bosnjackiinstitut.ba')]</xpath>
+    </test>
+
+<!-- /search/gsearch?queryAsAnd=&hitPageSize=10&hitPageStart=1&mode=simpleSearch&pid=vase&x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl (Search) tests -->    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vase&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl</url>
+       <xpath>//xhtml:input/@class[.='searchfield']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vase&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'When entering multiple')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vase&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vase-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Truncation')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=advancedSearch (Advanced Search) tests -->    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:dd[contains(.,'Keywords')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=help (Help on Search) tests -->    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:a[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:span[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:p[contains(.,'The subsequently described')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vase/methods/sdef:Context/get?mode=contact (Contact) tests -->    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'Contact')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:span[contains(.,'Contact')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:p[contains(.,'Institute of History')]</xpath>
+    </test>
+
+<!-- /context:vase?mode=imprint (Imprint) -->    
+    <test>
+       <url>/context:vase?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Publishers')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vase?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Middle Eastern Studies')]</xpath>
+    </test>
+
+<!-- Archive tests -->
+	<!-- /archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&context=context:vase-ocm!context:vase.ocm.100 -->    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.100/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.4852/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&context=context:vase.ocm.270!context:vase.ocm.278 -->
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.278/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm.270!context:vase.ocm.278</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.421/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&context=context:vase-ocm!context:vase.ocm.470 -->
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.ocm.470/methods/sdef:Context/get?mode=container&amp;context=context:vase-ocm!context:vase.ocm.470</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.1333/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+<!-- /context:vif (VIF Home) tests -->        
+    <test>
+       <url>/context:vif</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vif</url>
+       <xpath>//xhtml:p[contains(.,'Approximately 2,500')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:vif</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/vis01_1.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:vif/methods/sdef:Context/get?mode=about (VIF About) tests -->    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:span[contains(.,'Visualizing Family')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Approximately 2,500')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vif/methods/sdef:Context/get?mode=use (VIF Terms of Use) tests -->    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:span[contains(.,'Copyright')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:p[contains(.,'Material can be')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vif/methods/sdef:Context/get?mode=literature (VIF Literature) tests -->    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:a[contains(.,'Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:span[contains(.,'Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=literature</url>
+       <xpath>//xhtml:li[contains(.,'Becker, Howard')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vif/methods/sdef:Context/get?mode=partner (VIF Partners) tests -->    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'Partners')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:span[contains(.,'Partner Institutions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:strong[contains(.,'Етнографски институт')]</xpath>
+    </test>
+
+<!-- /search/gsearch?queryAsAnd=&hitPageSize=10&hitPageStart=1&mode=simpleSearch&pid=vif&x2=http%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vif-search.xsl (VIF Search) tests -->
+	<test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vif&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vif-search.xsl</url>
+       <xpath>//xhtml:input/@class[.='searchfield']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vif&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vif-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'When entering multiple')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=vif&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fvase%2F3vif-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Truncation')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:vif/methods/sdef:Context/get?mode=advancedSearch (VIF Advanced Search) tests -->        
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:dd[contains(.,'Keywords')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vif/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- VIF Archive tests -->
+	<!-- /archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&context=context:vase.ocm!context:vase.100 -->    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.100/methods/sdef:Context/get?mode=container&amp;context=context:vase.ocm!context:vase.100</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.1469/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&context=context:vase.200!context:vase.203 -->
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.203/methods/sdef:Context/get?mode=container&amp;context=context:vase.200!context:vase.203</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.2100/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+	<!-- /archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&context=context:vase.500!context:vase.509 -->    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:img/@src[.='/vase/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:vase.509/methods/sdef:Context/get?mode=container&amp;context=context:vase.500!context:vase.509</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.955/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /context:siba (SIBA Home) tests -->
+    <test>
+       <url>/context:siba</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:siba</url>
+       <xpath>//xhtml:p[contains(.,'all four cities')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:siba</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/siba.1072.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=about (SIBA About) tests -->    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'The photo editors')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:span[contains(.,'A Visual Approach')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=use (SIBA Terms of Use) tests -->   
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:span[contains(.,'Copyright © Copyright Holder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:p[contains(.,'Research Area')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=partner (SIBA Partners) tests -->    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'Partners')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:strong[contains(.,'Arhiva Naţională de Filme')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'http://www.bosnjackiinstitut.ba')]</xpath>
+    </test>
+
+<!-- /o:siba.glossar (SIBA Glossary) tests -->    
+    <test>
+       <url>/o:siba.glossar</url>
+       <xpath>//xhtml:a[contains(.,'Glossary')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.glossar</url>
+       <xpath>//xhtml:a[contains(.,'Babića bašča')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.glossar</url>
+       <xpath>//xhtml:h3[contains(.,'čakšire')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.glossar</url>
+       <xpath>//xhtml:p[contains(.,'Following soon')]</xpath>
+    </test>
+
+<!-- /search/gsearch?queryAsAnd=&hitPageSize=10&hitPageStart=1&mode=simpleSearch&pid=siba&x2=http%3A%2F%2Fgams.uni-graz.at%2Fsiba%2F3siba-search.xsl (SIBA Search) tests -->
+	<test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=siba&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fsiba%2F3siba-search.xsl</url>
+       <xpath>//xhtml:input/@class[.='searchfield']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=siba&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fsiba%2F3siba-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'When entering multiple')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=siba&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fsiba%2F3siba-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Truncation')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=advancedSearch (SIBA Advanced Search) tests -->
+	<test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:dd[contains(.,'Keywords')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=help (SIBA Help on Search) tests -->
+	<test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:a[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:span[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:p[contains(.,'The subsequently described')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=contact (SIBA Contact) tests -->		        
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'Contact')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'natasa.miskovic@unibas.ch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:p[contains(.,'University of Basel')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:siba/methods/sdef:Context/get?mode=imprint (SIBA Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:span[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'University of Graz')]</xpath>
+    </test>
+
+<!-- SIBA Archive tests -->
+	<!-- /archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&context=context:siba.200!context:siba.212 -->
+	<test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.212/methods/sdef:Context/get?mode=container&amp;context=context:siba.200!context:siba.212</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.3508/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&context=context:siba.620!context:siba.621 -->
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.621/methods/sdef:Context/get?mode=container&amp;context=context:siba.620!context:siba.621</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.4003/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&context=context:siba.760!context:siba.764 -->
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:a[contains(.,'Personal Names')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:a[contains(.,'Show on Map')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:img/@src[.='/siba/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:siba.764/methods/sdef:Context/get?mode=container&amp;context=context:siba.760!context:siba.764</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.4871/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /context:baci (BACI Home) tests -->
+	<test>
+       <url>/context:baci</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:baci</url>
+       <xpath>//xhtml:p[contains(.,'The Balkan Cinema')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:baci</url>
+       <xpath>//xhtml:img/@src[.='/baci/img/baci01.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=about (BACI About) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:span[contains(.,'BACI: Balkan Cinema')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'The visual materials')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=use (BACI Terms of Use) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Terms of Use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:span[contains(.,'Copyright')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:p[contains(.,'European History')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=partner (BACI Partners) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'Partners')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:strong[contains(.,'Arkivi Qëndror i Shtetit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=partner</url>
+       <xpath>//xhtml:a[contains(.,'http://www.albarchive.gov.al')]</xpath>
+    </test>
+
+<!-- /search/gsearch?queryAsAnd=&hitPageSize=10&hitPageStart=1&mode=simpleSearch&pid=baci&x2=http%3A%2F%2Fgams.uni-graz.at%2Fbaci%2Fbaci-search.xsl (BACI Search) tests -->    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=baci&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fbaci%2Fbaci-search.xsl</url>
+       <xpath>//xhtml:input/@class[.='searchfield']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=baci&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fbaci%2Fbaci-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'When entering multiple')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?queryAsAnd=&amp;hitPageSize=10&amp;hitPageStart=1&amp;mode=simpleSearch&amp;pid=baci&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fbaci%2Fbaci-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Truncation')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=advancedSearch (BACI Advanced Search) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:dd[contains(.,'Keywords')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=advancedSearch</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=help (BACI Help on Search) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:a[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:span[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:p[contains(.,'The subsequently described')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=contact (BACI contact) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'Contact')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:a[contains(.,'karl.kaser@uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=contact</url>
+       <xpath>//xhtml:p[contains(.,'Südosteuropäische Geschichte')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:baci/methods/sdef:Context/get?mode=imprint (BACI Imprint) tests -->    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Technical Implementation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'University of Graz')]</xpath>
+    </test>
+
+<!-- BACI Archive tests -->
+	<!-- /archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&context=context:baci.540!context:baci.541 -->
+	<test>
+       <url>/archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.541</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.541</url>
+       <xpath>//xhtml:a[contains(.,'Spectacles')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.541</url>
+       <xpath>//xhtml:img/@src[.='/baci/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.541</url>
+       <xpath>//xhtml:img/@src[.='/baci/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.541/methods/sdef:Context/get?mode=container&amp;context=context:baci.540!context:baci.541</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:baci.1002/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <!-- /archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&context=context:baci.720!context:baci.726 -->
+    <test>
+       <url>/archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&amp;context=context:baci.720!context:baci.726</url>
+       <xpath>//xhtml:a[contains(.,'Show as Tagcloud')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&amp;context=context:baci.720!context:baci.726</url>
+       <xpath>//xhtml:a[contains(.,'Spectacles')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&amp;context=context:baci.720!context:baci.726</url>
+       <xpath>//xhtml:img/@src[.='/baci/img/tei_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&amp;context=context:baci.720!context:baci.726</url>
+       <xpath>//xhtml:img/@src[.='/baci/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:baci.726/methods/sdef:Context/get?mode=container&amp;context=context:baci.720!context:baci.726</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:baci.1043/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- vase Object sample tests -->
+	<!-- /o:siba.4856/sdef:TEI/get?mode=object&context=context:vase-ocm!context:vase.ocm.100 -->        
+    <test>
+       <url>/o:siba.4856/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.4856/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4856/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:th[contains(.,'Description')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4856/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:td[contains(.,'The party is')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4856/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.100</url>
+       <xpath>//xhtml:a[contains(.,'Orientation')]</xpath>
+    </test>
+    
+    <!-- /o:vase.2280/sdef:TEI/get?mode=object&context=context:vase-ocm!context:vase.ocm.230 -->
+    <test>
+       <url>/o:vase.2280/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.230</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.2280/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2280/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.230</url>
+       <xpath>//xhtml:th[contains(.,'Date')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2280/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.230</url>
+       <xpath>//xhtml:td[contains(.,'Retouched background')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2280/sdef:TEI/get?mode=object&amp;context=context:vase-ocm!context:vase.ocm.230</url>
+       <xpath>//xhtml:a[contains(.,'Adornment')]</xpath>
+    </test>
+
+	<!-- /o:vase.2686/sdef:TEI/get?mode=object&context=context:vase.ocm.520!context:vase.ocm.524 -->    
+    <test>
+       <url>/o:vase.2686/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.520!context:vase.ocm.524</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.2686/datastreams/IMAGE.2/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2686/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.520!context:vase.ocm.524</url>
+       <xpath>//xhtml:th[contains(.,'Comment')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2686/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.520!context:vase.ocm.524</url>
+       <xpath>//xhtml:td[contains(.,'Donated to the The')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2686/sdef:TEI/get?mode=object&amp;context=context:vase.ocm.520!context:vase.ocm.524</url>
+       <xpath>//xhtml:a[contains(.,'Games')]</xpath>
+    </test>
+
+<!-- VIF Object sample tests -->
+	<!-- /o:vase.2660/sdef:TEI/get?mode=object&context=context:vase.310!context:vase.311 -->    
+    <test>
+       <url>/o:vase.2660/sdef:TEI/get?mode=object&amp;context=context:vase.310!context:vase.311</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.2660/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2660/sdef:TEI/get?mode=object&amp;context=context:vase.310!context:vase.311</url>
+       <xpath>//xhtml:th[contains(.,'Creator')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2660/sdef:TEI/get?mode=object&amp;context=context:vase.310!context:vase.311</url>
+       <xpath>//xhtml:td[contains(.,'Serbia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2660/sdef:TEI/get?mode=object&amp;context=context:vase.310!context:vase.311</url>
+       <xpath>//xhtml:a[contains(.,'Agriculture')]</xpath>
+    </test>
+    
+    <!-- /o:vase.2085/sdef:TEI/get?mode=object&context=context:vase.400!context:vase.404 -->
+    <test>
+       <url>/o:vase.2085/sdef:TEI/get?mode=object&amp;context=context:vase.400!context:vase.404</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.2085/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2085/sdef:TEI/get?mode=object&amp;context=context:vase.400!context:vase.404</url>
+       <xpath>//xhtml:th[contains(.,'Type')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2085/sdef:TEI/get?mode=object&amp;context=context:vase.400!context:vase.404</url>
+       <xpath>//xhtml:td[contains(.,'Artefact: 91mm x 140mm')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.2085/sdef:TEI/get?mode=object&amp;context=context:vase.400!context:vase.404</url>
+       <xpath>//xhtml:a[contains(.,'Gender Roles and Issues')]</xpath>
+    </test>
+    
+    <!-- /o:vase.1159/sdef:TEI/get?mode=object&context=context:vase.550!context:vase.553 -->
+    <test>
+       <url>/o:vase.1159/sdef:TEI/get?mode=object&amp;context=context:vase.550!context:vase.553</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:vase.1159/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.1159/sdef:TEI/get?mode=object&amp;context=context:vase.550!context:vase.553</url>
+       <xpath>//xhtml:th[contains(.,'Technique')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.1159/sdef:TEI/get?mode=object&amp;context=context:vase.550!context:vase.553</url>
+       <xpath>//xhtml:td[contains(.,'Not specified')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:vase.1159/sdef:TEI/get?mode=object&amp;context=context:vase.550!context:vase.553</url>
+       <xpath>//xhtml:a[contains(.,'Religious Practices')]</xpath>
+    </test>
+
+<!-- SIBA Object sample tests -->
+	<!-- /o:siba.1071/sdef:TEI/get?mode=object&context=context:siba.ocm!context:siba.160 -->
+	<test>
+       <url>/o:siba.1071/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.160</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.1071/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1071/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.160</url>
+       <xpath>//xhtml:th[contains(.,'Object')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1071/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.160</url>
+       <xpath>//xhtml:td[contains(.,'depicts a state')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1071/sdef:TEI/get?mode=object&amp;context=context:siba.ocm!context:siba.160</url>
+       <xpath>//xhtml:a[contains(.,'Demography')]</xpath>
+    </test>
+    
+    <!-- /o:siba.4849/sdef:TEI/get?mode=object&context=context:siba.290!context:siba.291 -->
+    <test>
+       <url>/o:siba.4849/sdef:TEI/get?mode=object&amp;context=context:siba.290!context:siba.291</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.4849/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4849/sdef:TEI/get?mode=object&amp;context=context:siba.290!context:siba.291</url>
+       <xpath>//xhtml:th[contains(.,'Dimensions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4849/sdef:TEI/get?mode=object&amp;context=context:siba.290!context:siba.291</url>
+       <xpath>//xhtml:td[contains(.,'Mehmed A. Akšamija')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.4849/sdef:TEI/get?mode=object&amp;context=context:siba.290!context:siba.291</url>
+       <xpath>//xhtml:a[contains(.,'Normal Garb')]</xpath>
+    </test>
+    
+    <!-- /o:siba.1144/sdef:TEI/get?mode=object&context=context:siba.430!context:siba.431 -->
+    <test>
+       <url>/o:siba.1144/sdef:TEI/get?mode=object&amp;context=context:siba.430!context:siba.431</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:siba.1144/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1144/sdef:TEI/get?mode=object&amp;context=context:siba.430!context:siba.431</url>
+       <xpath>//xhtml:th[contains(.,'Keywords')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1144/sdef:TEI/get?mode=object&amp;context=context:siba.430!context:siba.431</url>
+       <xpath>//xhtml:td[contains(.,'Photograph')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:siba.1144/sdef:TEI/get?mode=object&amp;context=context:siba.430!context:siba.431</url>
+       <xpath>//xhtml:a[contains(.,'Labor')]</xpath>
+    </test>
+
+<!-- BACI Objct sample tests -->
+	<!-- /o:baci.1129/sdef:TEI/get?mode=object&context=context:baci.540!context:baci.546 -->
+	<test>
+       <url>/o:baci.1129/sdef:TEI/get?mode=object&amp;context=context:baci.540!context:baci.546</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:baci.1129/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1129/sdef:TEI/get?mode=object&amp;context=context:baci.540!context:baci.546</url>
+       <xpath>//xhtml:th[contains(.,'Archive')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1129/sdef:TEI/get?mode=object&amp;context=context:baci.540!context:baci.546</url>
+       <xpath>//xhtml:td[contains(.,'https://gams.uni-graz.at/o:baci.1129')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1129/sdef:TEI/get?mode=object&amp;context=context:baci.540!context:baci.546</url>
+       <xpath>//xhtml:a[contains(.,'Jugoslovenska kinoteka')]</xpath>
+    </test>
+    
+    <!-- /o:baci.1054/sdef:TEI/get?mode=object&context=context:baci.ocm!context:baci.857 -->
+    <test>
+       <url>/o:baci.1054/sdef:TEI/get?mode=object&amp;context=context:baci.ocm!context:baci.857</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:baci.1054/datastreams/IMAGE.1/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1054/sdef:TEI/get?mode=object&amp;context=context:baci.ocm!context:baci.857</url>
+       <xpath>//xhtml:th[contains(.,'Editor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1054/sdef:TEI/get?mode=object&amp;context=context:baci.ocm!context:baci.857</url>
+       <xpath>//xhtml:td[contains(.,'Leaflet')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:baci.1054/sdef:TEI/get?mode=object&amp;context=context:baci.ocm!context:baci.857</url>
+       <xpath>//xhtml:a[contains(.,'Motion Picture Industry')]</xpath>
+    </test>
+      	          
+</TestCase>

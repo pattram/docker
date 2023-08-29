@@ -1,0 +1,2826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="km">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests km -->
+<!-- status 200 tests km navbar links -->
+    <test>
+       <url>/context:km</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+
+<!-- matcher and status 200 km footer links -->
+	<test>
+       <url>https://kriminalmuseum.uni-graz.at/</url>
+       <matcher>h1:matches(^Kriminalmuseum$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 sample tests km Bestand subpages (Chemikalien, Fotografien, etc.) -->
+	<test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:km.fotografien?context=context:km.fotografien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:km.kat.1?context=context:km.kat.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:km.kat.10?context=context:km.kat.10</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:km.kat.25?context=context:km.kat.25</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 sample tests single object subpages -->
+	<test>
+       <url>/o:km.8830/sdef:LIDO/get?mode=object&amp;context=context:km.kat.25</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:km.8173/sdef:LIDO/get?mode=object&amp;context=context:km.kat.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:km.8149/sdef:LIDO/get?mode=object&amp;context=context:km.kat.29</url>
+       <status>200</status>
+    </test>
+
+<!-- context:km (Home) tests -->
+<!-- context:km navbar links -->
+	<test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+
+<!-- context:km footer links -->
+	<test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km other tests -->
+	<test>
+       <url>/context:km</url>
+       <xpath>//xhtml:h3[.='Das Museum der etwas anderen Art']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:p[contains(.,'1895 eröffnete der Jurist Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:div/xhtml:span[contains(.,'Wildererprojekt')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'Museum')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'Kategorien')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:span[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_story.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_bestand.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_maske.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_koffer.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_gross.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/km/img/kachel_lade.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km</url>
+       <xpath>//xhtml:span/xhtml:button/@type[.='submit']</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=about (Museum) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=about navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=about footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=about other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[.='Museum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h4[.='Entstehung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Als das Hans Gross Kriminalmuseum mit der Gründung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[@href[.='https://kriminalmuseum.uni-graz.at/de/preise-und-oeffnungszeiten/'] and contains(.,'Informationen zum Museumsbesuch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=project (Virtuelle Sammlung) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=project navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=project footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=project other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:h3[.='Virtuelle Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:h4[.='Digitalisierung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:p[contains(.,'Sämtliche Forschungsdaten (Digitalisate und Metadaten)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Zentrum für
+              Informationsmodellierung - Austrian Centre for Digital Humanities']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='LIDO']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='TEI']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='GeoNames']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='SKOS']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='IIIF']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='GAMS']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Handles']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='CC
+              BY-NC-SA 4.0']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+
+<!-- context:km/methods/sdef:Context/get?mode=gross (Hans Gross) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=gross navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=gross footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=gross other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:h3[.='Hans Gross']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:h4[.='Eckdaten']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:p[contains(.,'Hans Gross wurde 26. Dezember 1847 in Graz geboren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Bachhiesl 2008']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Bachhiesl 2014']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:a[.='Zeitgeschichtetags']</xpath>
+    </test>
+        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:article/xhtml:div/xhtml:div/xhtml:img/@src[.='/km/img/gross_schilder.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=gross</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>    
+
+<!-- context:km/methods/sdef:Context/get?mode=categories (Kategorien) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=categories navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=categories footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=categories other tests -->
+
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:h3[.='Hans Gross Kategorien']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:p[.='Hans Gross unterteilte seine Lehrmittelsammlung in 32 Bereiche: 
+            ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:ol/xhtml:li[.='Instrumente, mit denen eine Körperverletzung zugefügt wurde ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=categories</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>    
+    
+<!-- context:km/methods/sdef:Context/get?mode=case (Tatortkoffer) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=case navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=case footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=case other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:h3[.='Tatortkoffer']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:p[contains(.,'Für die Vernehmung von Kindern beinhaltet der Tatortkoffer eine Dose mit Bonbons')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:a[.='Zum Objekt']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:article/xhtml:div/xhtml:img/@src[.='/km/img/koffer.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=case</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+
+<!-- context:km/methods/sdef:Context/get?mode=bibl (Literaturhinweise) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=bibl navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=bibl footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=bibl other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:h3[.='Literaturhinweise']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:p[contains(.,'Die hier vorgelegten Literaturhinweise dienen einer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[.='Webpräsenz des Kriminalmuseums']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:ul/xhtml:li[contains(.,'Christian Bachhiesl, Das Jahr 1938 und die Grazer Kriminologie.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=wilderer (Beschreibung) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=wilderer navbar links -->        
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=wilderer footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=wilderer other tests -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:h3[.='Wildererprojekt']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:p[contains(.,'Die virtuelle Sammlung des Hans Gross Kriminalmuseums bildete')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='EuroMACHS']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Objekte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Karteikarten']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:a[.='Virtueller Rundgang']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=wilderer</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>    
+    
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=objects (Objekte) tests -->
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=objects navbar links -->        
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=objects footer links -->
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=objects other tests -->
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:h3[.='Zum Bestand']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:p[contains(.,'Studierendenprojektes dem Themenbereich "Wilderertum" zugeordnet')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:h3[.='Objekte mit Wildererbezug']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:p[.='Anzahl der gefundenen Einträge: 40']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:ol/xhtml:li/xhtml:a/xhtml:img/@src[.='/o:km.8030/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:span/xhtml:a[.='Gewehr KM-O.42']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=objects</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=records (Karteikarten) tests -->
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=records navbar links -->
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=records footer links -->
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km.wilderer/methods/sdef:Context/get?mode=records other tests -->
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:h3[.='Zum Bestand']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:p[contains(.,'Die dem Themenbereich "Wilderertum"')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:h3[.='Karteikarten mit Wildererbezug']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:p[contains(.,'gefundenen Einträge: 70')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:ol/xhtml:li/xhtml:a/xhtml:img/@src[.='/o:km.9/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:span/xhtml:a[.='Karteikarte KM-KK.9']</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:km.wilderer/methods/sdef:Context/get?mode=records</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- query:km.wildererkk/methods/sdef:Query/get?mode=query (Darstellung der Delikte) tests -->
+<!-- query:km.wildererkk/methods/sdef:Query/get?mode=query navbar links -->
+	<test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- query:km.wildererkk/methods/sdef:Query/get?mode=query footer links -->
+	<test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- query:km.wildererkk/methods/sdef:Query/get?mode=query other tests -->
+	<test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:h3[.='Stöbern im Bestand der Wildererkarteikarten']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:p[contains(.,'Möglichkeit den ausgewählten Bestand der Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Berufs- und Altersstrukturen der
+              Täter']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Liste aller
+              Delikte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Karte Österreichs']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Timeline aller
+              Ausstellungsdaten']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Berufsgruppen und Altersverteilung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Delikten ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Orten ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Datum ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-user']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:span[.='§']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-map-marker']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-calendar']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:h4[.='Berufsgruppen und Altersverteilung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:canvas/@id[.='professionChartGOLLING']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:canvas/@id[.='myChartGOLLING']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:div[@class[.='col-sm-4 well']]/xhtml:h5/xhtml:b[.='Gegenstand:']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:a[.='Forellenreusche']</xpath>
+    </test>
+    
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:iframe/@id[.='geobrowser']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:input/@id[.='fit']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:div/@id[.='visualizationIssued']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:km.wildererkk/methods/sdef:Query/get?mode=query</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>    
+    
+<!-- o:km.story (Virtueller Rundgang) tests -->
+<!-- o:km.story navbar links -->
+	<test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- o:km.story footer links -->
+	<test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:km.story other tests -->
+	<test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.story</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=collection (Bestand) tests -->
+<!-- context:km/methods/sdef:Context/get?mode=collection navbar links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- context:km/methods/sdef:Context/get?mode=collection footer links -->
+	<test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:km/methods/sdef:Context/get?mode=collection other tests -->
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h3[.='Sammlungsbereiche']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Chemikalien']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Fotografien']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Karteikarten']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Lehrtafeln']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Objekte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='Pornografische Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='1: Forensische Medizin']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='2: Präparate']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='3: Giftstoffe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='4: Instrumente (Körperverletzung)']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='5: Projektile']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='6: Blutspuren (Muster)']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='7: Blutspuren (konserviert)']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='8: Fußspuren']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='10: Sonstige Spuren']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='11: Requisiten von Falschspielern']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='12: Falsifikate']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='13: Diebswerkzeuge']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='14: Unechte Kunstgegenstände']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='15: Brandlegungsapparate']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='16: Fotografien von Verbrechern']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='17: Handschriften von Verbrechern']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='20: Lokalaufnahmen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='22: Restaurierungen (Papier)']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='23: Waffen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='25: Gaunerzinken']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='26: Aberglauben']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='27: Bei Zigeunern beschlagnahmte Gegenstände']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='28: Verstellungskünste']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='29: Gefängniserzeugnisse']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='31: Vergleichsobjekte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='32: Varia']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[.='hier']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h3[.='Bestand']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:p[contains(.,'Materialität wie auch aus den inhaltlichen Bezügen der')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- Bestand > Chemikalien subpage sample tests -->
+<!-- Bestand > Chemikalien subpage sample navbar links -->
+	<test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- Bestand > Chemikalien subpage sample footer links -->
+	<test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- Bestand > Chemikalien subpage sample other tests -->
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:h3[.='Sammlungsbereiche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='Chemikalien']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='Fotografien']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='1: Forensische Medizin']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='2: Präparate']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:km.chemikalien?context=context:km.chemikalien</url>
+       <xpath>//xhtml:a[.='32: Varia']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:km/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:form/xhtml:div/xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- Bestand Single Object subpage sample tests -->
+<!-- Bestand Single Object subpage sample navbar links -->
+	<test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[.='Sammlungsgeschichte  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[.='Wildererprojekt  ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Museum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Virtuelle Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Hans Gross')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Tatortkoffer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Literaturhinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Beschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Objekte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Karteikarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung der Delikte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Virtueller Rundgang')]</xpath>
+    </test>
+    
+<!-- Bestand Single Object subpage sample footer links -->
+	<test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Nikolaus Reisinger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'Christian Bachhiesl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'http://kriminalmuseum.uni-graz.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- Bestand Single Object subpage sample other tests -->
+	<test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:div/@class[.='panel']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:h3[.='Fotografie KM-F.5']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'zurück zur Kategorie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:td[.='Beschreibung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-info-sign']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[.='Creative Commons BY-NC-SA 4.0']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'vorheriger Eintrag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:km.6022/sdef:LIDO/get?mode=object&amp;context=context:km.fotografien</url>
+       <xpath>//xhtml:a[contains(.,'nächster Eintrag')]</xpath>
+    </test>	
+	          
+</TestCase>

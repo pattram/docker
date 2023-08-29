@@ -1,0 +1,3195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="cantus">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests cantus -->
+    <test>
+       <url>/context:cantus</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/context:cantus/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=help&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=lit&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.hirsau/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb2/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.moosburg/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sp/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sve/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.knb/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=godehard&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.regensburg/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.emmeram.emm2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.emmeram.emm1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.emmeram.emm3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.ur/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.sal/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.vo/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau2/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=feasts&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/RDF</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=de</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.fulltext/methods/sdef:Query/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=help&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=lit&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>  
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb2/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb3/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.klosterneuburg.knb4/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sve/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.knb/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hartkirchen/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=godehard&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.regensburg.reg2/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm3/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.salzburg.ra/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.vo/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau2/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=feasts&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=en</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:cantus (Home) tests -->
+	<test>
+       <url>/context:cantus</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+	
+	<test>
+       <url>/context:cantus</url>
+       <xpath>//xhtml:p[contains(.,'Bei der wissenschaftlichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus</url>
+       <xpath>//xhtml:img/@src[.='/context:cantus/STARTPAGE_IMG']</xpath>
+    </test>
+
+<!-- /context:cantus/sdef:Context/get?mode=&locale=de (alternative Home Link) tests -->
+	<test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+	
+	<test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Bei der wissenschaftlichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/context:cantus/STARTPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+	
+	<test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'In scholarly studies')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/context:cantus/STARTPAGE_IMG']</xpath>
+    </test>
+
+<!-- /archive/objects/context:cantus/methods/sdef:Context/get?mode=about&locale=de (Über das Projekt) tests -->        
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Über das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Das von der')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'About the Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The research project')]</xpath>
+    </test>
+
+<!-- /context:cantus/sdef:Context/get?mode=help&locale=de (Hilfe) tests -->    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Hilfe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=help&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die Texte wurden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=help&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Help')]</xpath>
+    </test>
+    
+<!-- /context:cantus/sdef:Context/get?mode=lit&locale=de (Literatur) tests -->    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=lit&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=lit&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Iohannes Beleth')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=lit&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Literature')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cantus/sdef:Context/get?mode=lit&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Iohannes Beleth')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:cantus/methods/sdef:Context/get?mode=team&locale=de (Team) tests -->    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Franz Praßl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=team&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Franz Praßl')]</xpath>
+    </test>
+
+<!-- Brixen tests -->    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Bis zum Jahr')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.brixen/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Up until')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.brixen/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Quoniam diversarum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Brixinensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Quoniam diversarum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Brixinensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Quoniam diversarum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Quoniam diversarum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Quoniam')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Quoniam')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+   
+<!-- Freising tests -->
+	<test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die nach')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.freising/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'According to')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.freising/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Sabbato ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Freisingensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Sabbato ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Freisingensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'DOMINICA PRIMA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'DOMINICA PRIMA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ <!-- Hirsau tests -->
+	<test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Coming Soon')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.hirsau/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Hirsau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.hirsau/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'De diversitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Hirsaugiensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'De diversitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Hirsaugiensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'De diversitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'De diversitate')]</xpath>
+    </test>
+    
+ 
+<!-- Klosterneuburg tests -->
+	<test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die mittelalterliche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.klosterneuburg.knb1/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'A number of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.klosterneuburg.knb1/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Claustroneoburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Claustroneoburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'In adventu')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'In adventu')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.klosterneuburg.knb1/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+                 
+<!-- Moosburg tests -->
+	<test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'St. Kastulus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.moosburg/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'St. Kastulus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.moosburg/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Moosburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Moosburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Deum benedictum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+
+<!-- Diözese Passau tests -->
+	<test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Der mittelalterliche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.passau.ur/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The medieval')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.passau.ur/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad Vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Pataviensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad Vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Pataviensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Benedictus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Benedictus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.ur/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Incipit ordo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Incipit ordo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ 
+<!-- Seckau und Passau tests -->
+	<test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Im Jänner 1140')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.seckau1.pac/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'In January 1140')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.seckau1.pac/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber Ordinarius')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber Ordinarius')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ 
+<!-- St. Nikolai tests -->
+	<test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'In der Diözese')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.stnikola/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'In the diocese')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.stnikola/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius sancti Nicolai')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius sancti Nicolai')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ 
+<!-- Regensburg tests -->
+	<test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.regensburg/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The manuscript')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.regensburg/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Ratisbonensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Ratisbonensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+
+<!-- St. Emmeram tests -->
+	<test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die drei Exemplare')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.emmeram.emm2/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The three copies')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.emmeram.emm2/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Horae diurnae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius sancti Emmerami')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Horae diurnae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius sancti Emmerami')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Horae diurnae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Horae diurnae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Anno dominicae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Anno dominicae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.emmeram.emm2/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ 
+<!-- Salzburg tests -->
+	<test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Mit aller Wahrscheinlichkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.salzburg.ur/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The Salzburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.salzburg.ur/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Salisburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Salisburgensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.ur/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Secundum sex aetates')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ <!-- Seckau tests -->
+	<test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Im Jänner 1140')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.seckau1.se1/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'In January 1140')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.seckau1.se1/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber Ordinarius')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber Ordinarius')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.se1/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=de</url>
+       <xpath>//xhtml:h5[contains(.,'Variantenlegende')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:variants&amp;locale=en</url>
+       <xpath>//xhtml:h5[contains(.,'Variants legend')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Adventum domini')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau1.pac/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+
+<!-- Vorau tests -->
+	<test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Das Augustiner')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.vorau/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The Augustinian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:start&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:cantus.vorau/TRADITIONPAGE_IMG']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Voraviensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:edition&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Liber ordinarius Voraviensis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:structure&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:structure&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'super psalmos')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:b[contains(.,'Ad vesperas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.vorau/sdef:TEI/get?mode=view:facs&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+ 
+<!-- Sekundärquellen Passau tests -->                                    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Passau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Kalendarium, Missale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Passau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.passau.sp/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Kalendarium, Missale')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Salzburg tests -->    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Salzburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Ordinarium Missae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Salzburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.salzburg.sal/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Ordinarium Missae')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Freising tests -->    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Freising')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Procedentem sponsum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Freising')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.freising/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Procedentem sponsum')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Regensburg tests -->    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Regensburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Missale secundum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Regensburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.regensburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Missale secundum')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Brixen tests -->    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Brixen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Graduale, Kyriale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Brixen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.brixen/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Graduale, Kyriale')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Moosburg tests -->    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Moosburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Dominus Andreas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Moosburg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.moosburg/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Dominus Andreas')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Seckau tests -->    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Seckau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Graduale Magnum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Seckau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.seckau3/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Graduale Magnum')]</xpath>
+    </test>
+
+<!-- Sekundärquellen St. Nikola Passau tests -->    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'St. Nikola Passau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Dei Gratia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'St. Nikola Passau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.stnikola/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Dei Gratia')]</xpath>
+    </test>
+
+<!-- Sekundärquellen Hirsau tests -->    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Hirsau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Niederaltaicher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Hirsau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:cantus.hirsau/sdef:TEI/get?mode=view:secondary&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Niederaltaicher')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:cantus/methods/sdef:Context/get?mode=es&locale=de (Advances Search) tests -->    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=de</url>
+       <xpath>//xhtml:script/@src[.='/cantus/js/advSearch.js']</xpath>
+    </test>
+    
+	<test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=es&amp;locale=en</url>
+       <xpath>//xhtml:script/@src[.='/cantus/js/advSearch.js']</xpath>
+    </test>
+
+<!-- /archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C<https://gams.uni-graz.at/o:cantus.brixen>;%242%7C<https://gams.uni-graz.at/o:cantus.brixen>;%243%7C<https://gams.uni-graz.at/o:cantus.brixen>&mode=01011000&locale=de (Synoptische Anzeige) tests -->    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Synoptische Anzeige')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'von bis zu drei Liber')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='GAMS_WIDGET_TRIPLEFORM']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Synoptic visualization')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'von bis zu drei Liber')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:cantus.synopsis2/methods/sdef:Query/get?params=%241%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%242%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E;%243%7C%3Chttps://gams.uni-graz.at/o:cantus.brixen%3E&amp;mode=01011000&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='GAMS_WIDGET_TRIPLEFORM']</xpath>
+    </test>
+
+<!-- /archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&locale=de (Quantitative Korpusanalyse) tests -->    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Quantitative Korpusanalyse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Hier finden Sie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Die Daten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Quantitative Korpusanalyse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Hier finden Sie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=nlp&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Die Daten')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&locale=de (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Universität für Musik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cantus/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'University of Music')]</xpath>
+    </test>
+      	          
+</TestCase>

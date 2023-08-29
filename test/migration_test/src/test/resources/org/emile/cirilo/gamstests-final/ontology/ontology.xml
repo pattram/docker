@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ontology">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ontology -->
+    <test>
+       <url>/context:ontology</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ontology/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ocm/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23113</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23127</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23135</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23146</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23155</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23164</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23179</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23185</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23197</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%232010</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23214</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23228</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23232</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fwww.yale.edu%2Fhraf%2FOCM%2F2004%2F%23915</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:trachsler/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23101</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23201</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23601</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23702</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23801</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Atrachsler%2F%23900</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:mth/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Amth%2F%231010000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Amth%2F%231040100</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Amth%2F%232000000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Amth%2F%233060910</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Amth%2F%235010000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:pth/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23170060</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23170320</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23170620</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23170770</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23180020</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Apth%2F%23180090</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:oth/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%231020200</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%231021210</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%231023110</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%231050000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%236120000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%2318010510</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Aoth%2F%2323070000</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:vis/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%234</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%2326</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%2374</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%23147</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%23225</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%23278</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/getConceptByURI?uri=http%3A%2F%2Fgams.uni-graz.at%2Fskos%2Fscheme%2Fo%3Avis%2F%23319b</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get?locale=deu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get?locale=deu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get?locale=eng</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get?locale=deu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get?locale=eng</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get?locale=deu</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get?locale=eng</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=la</url>
+       <status>200</status>
+    </test>    
+    
+<!-- /context:ontology (Home) tests -->
+	<test>
+       <url>/context:ontology</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ontology</url>
+       <xpath>//xhtml:h3[contains(.,'Vokabularien und Ontologien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ontology</url>
+       <xpath>//xhtml:a[contains(.,'Outline of Cultural Materials')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ontology</url>
+       <xpath>//xhtml:p[contains(.,'Diese Seite')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:ocm/methods/sdef:SKOS/get (Outline of Cultural Materials (OCM)) tests -->    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Outline of Cultural Materials (OCM)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'The Outline of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'XML-Snippet zum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ocm/methods/sdef:SKOS/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Orientation')]</xpath>
+    </test>
+    
+<!-- /archive/objects/o:trachsler/methods/sdef:SKOS/get (Klassifikation von Funktionsgruppen nach Walter Trachsler) tests -->    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Klassifikation von Funktionsgruppen nach Walter Trachsler')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Angezeigt werden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'SKOS/XML anzeigen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:trachsler/methods/sdef:SKOS/get?locale=deu</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/skos/scheme/o:trachsler/#101')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:mth/methods/sdef:SKOS/get (Thesaurus für Materialien | Thesaurus for materials) tests -->    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Thesaurus für Materialien | Thesaurus for materials')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Sprachauswahl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/skos/scheme/o:mth/#1010100')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get?locale=deu</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/skos/scheme/o:mth/#1010100')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mth/methods/sdef:SKOS/get?locale=eng</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/skos/scheme/o:mth/#1010100')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:pth/methods/sdef:SKOS/get (Thesaurus für Perioden und Stile | Thesaurus for time periods and styles) tests -->    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Thesaurus für Perioden und Stile | Thesaurus for time periods and styles')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Zweisprachige kontrollierte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'hdl.handle.net/11471/521.10.4')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get?locale=deu</url>
+       <xpath>//xhtml:a[contains(.,'hdl.handle.net/11471/521.10.4')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:pth/methods/sdef:SKOS/get?locale=eng</url>
+       <xpath>//xhtml:span[contains(.,'Apulian')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:oth/methods/sdef:SKOS/get (Thesaurus für Objektklassifikation | Thesaurus for object classification) tests -->    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Thesaurus für Objektklassifikation | Thesaurus for object classification')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Permalink')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'eng')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get?locale=deu</url>
+       <xpath>//xhtml:a[contains(.,'eng')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:oth/methods/sdef:SKOS/get?locale=eng</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/skos/scheme/o:oth/#1020300')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:vis/methods/sdef:SKOS/get (Siegelvokabular | Vocabulaire Internationale de la Sigillographie) tests -->    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:h3[contains(.,'Siegelvokabular | Vocabulaire Internationale de la Sigillographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:p[contains(.,'Multilingual terminology')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at/o:vis')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Siegelkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=fr</url>
+       <xpath>//xhtml:span[contains(.,'sceau de validation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'tradition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=es</url>
+       <xpath>//xhtml:span[contains(.,'Romper el sello')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:vis/methods/sdef:SKOS/get?locale=la</url>
+       <xpath>//xhtml:span[contains(.,'Mould')]</xpath>
+    </test>
+      	          
+</TestCase>

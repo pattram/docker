@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="cord">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests cord -->
+    <test>
+       <url>/context:cord</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=collection&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=vokabulare&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=search&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.1&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.9fcdd833.cd3e.332b.91e1.0cdc2c9a6859/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.4&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.807b2f5f.c2de.3adb.8327.5791494f380b/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.15&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.b19e7f6e.0be4.37d1.baa3.9deb7100652d/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.60&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.98732985.7017.35b4.a3a7.a8797bac8f2c/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.92&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.4a087769.b671.3ca9.9053.dde3dc0a770a/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.100&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.f73ec1e9.7519.381c.900e.e85a14d17cbd/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.581e00fa.7fcb.398a.9b83.7c63ad767a8c/sdef:TEI/get?locale=de&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.581e00fa.7fcb.398a.9b83.7c63ad767a8c/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.668c7724.51d0.3d12.95ca.a993cf6b27dc/sdef:TEI/get?locale=de&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.668c7724.51d0.3d12.95ca.a993cf6b27dc/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.1554ebf3.9f7b.3f52.86dc.dfaa94a05978/sdef:TEI/get?locale=de&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.1554ebf3.9f7b.3f52.86dc.dfaa94a05978/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.66475969.b7ba.385b.9c91.ba6b6b0535bb/sdef:TEI/get?locale=de&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.66475969.b7ba.385b.9c91.ba6b6b0535bb/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.7b397edf.4c13.31d0.aa34.99bf55f96d58/sdef:TEI/get?locale=de&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.7b397edf.4c13.31d0.aa34.99bf55f96d58/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.controlledvocabulary.illurk-vocabulary/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=Fleuronne&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=SignumNotarile&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=WithAdditionalColours&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.controlledvocabulary.illurkglossar/ONTOLOGY</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurkglossar&amp;keytermsAsPhrase=Trifoliette&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurkglossar&amp;keytermsAsPhrase=Schreiber1&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=collection&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=vokabulare&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=search&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.8&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.a7ddca7c.e9a7.38e8.9598.18877b830193/sdef:TEI/get?locale=en&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.32&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.1ab342b2.7ded.37b5.8b92.4567803edf9d/sdef:TEI/get?locale=en&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?mode=page.93&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:cord.73fc614f.a243.3474.bdd6.bf303199a294/sdef:TEI/get?locale=en&amp;mode=datelist</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=en&amp;mode=vocabulare</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=DD-nh-Borders&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=en&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=en&amp;mode=vocabulare</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurkglossar&amp;keytermsAsPhrase=Blattrankentyp&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=en&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:cord (Home) tests -->
+	<test>
+       <url>/context:cord</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord</url>
+       <xpath>//xhtml:p[contains(.,'digitalen Archiv')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'digitalen Archiv')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'digital archive')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:cord/methods/sdef:Context/get?mode=about&locale=de (Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'monasterium.net')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'MOM-CA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'monasterium.net')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'MOM-CA')]</xpath>
+    </test>
+
+<!-- /context:cord?mode=collection&locale=de (Sammlungen) tests -->    
+    <test>
+       <url>/context:cord?mode=collection&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Sammlungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=collection&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Illuminierte Urkunden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=collection&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Collections')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=collection&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Illuminated Charters')]</xpath>
+    </test>
+
+<!-- /context:cord?mode=vokabulare&locale=de (Register) tests -->    
+    <test>
+       <url>/context:cord?mode=vokabulare&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Register')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=vokabulare&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Glossar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=vokabulare&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Index')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=vokabulare&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Glossary')]</xpath>
+    </test>
+
+<!-- /context:cord?mode=search&locale=de (Erweiterte Suche) tests -->    
+    <test>
+       <url>/context:cord?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Erweiterte Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'im Folgenden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:p/@id[.='slider-range']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Advanced Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'subsequently')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:p/@id[.='slider-range']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Nuernberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fcord%2Fcord-search.xsl&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1487-02-22_nach_Schandbrief-Nawber-Guttenberg_DRUCK.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Nuernberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1487-02-22_nach_Schandbrief-Nawber-Guttenberg_DRUCK.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&locale=de (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Urkunden als')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Charters Open')]</xpath>
+    </test>
+
+<!-- /context:cord.illuminierteurkunden?locale=de (Illuminierte Urkunden) tests -->    
+    <test>
+       <url>/context:cord.illuminierteurkunden?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1359')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Urkundentyp')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:cord.illuminierteurkunden?locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F877-05-05_Karl-d-Kahle-f-Compiegne_BnF-lat-8837-48v_Gallica.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1359')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'fraction of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F877-05-05_Karl-d-Kahle-f-Compiegne_BnF-lat-8837-48v_Gallica.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=page.57&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Bellinzona')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=page.57&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1412-12-08_Tessin-Marina-3.jpeg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=page.57&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Bellinzona')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:cord.illuminierteurkunden/methods/sdef:Context/get?mode=page.57&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1412-12-08_Tessin-Marina-3.jpeg/full/120,/0/default.jpg']</xpath>
+    </test>
+
+<!-- Object sample tests --> 
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'https://www.monasterium.net/mom/IlluminierteUrkunden/1414-07-28_Mailand/charter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=de</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=de</url>
+       <xpath>//xhtml:li[contains(.,'Dizionario')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://images.monasterium.net/illum/IllUrk/1414-07-28_milano-Osp-mag-perg14_SAM_6605.JPG']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'https://www.monasterium.net/mom/IlluminierteUrkunden/1414-07-28_Mailand/charter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=en</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=en</url>
+       <xpath>//xhtml:li[contains(.,'Dizionario')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.ea797a3e.fb28.358b.8dbb.2eac60ae470c/methods/sdef:TEI/get?mode=datelist&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://images.monasterium.net/illum/IllUrk/1414-07-28_milano-Osp-mag-perg14_SAM_6605.JPG']</xpath>
+    </test>
+
+<!-- /archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=de&mode=vocabulare (Niveaus Illuminierte Urkunden) tests -->    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:p[contains(.,'Rechtsinhalt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:a[contains(.,'mit zusätzlichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:span[contains(.,'Bordures')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Rechtsinhalt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'mit zusätzlichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurk-vocabulary/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Bordures')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=de&mode=vocabulare (Glossar zu Illuminierten Urkunden) tests -->    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:a[contains(.,'#KunsthistorischeBegriffe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:span[contains(.,'de: Scheibe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?locale=de&amp;mode=vocabulare</url>
+       <xpath>//xhtml:p[contains(.,'Die Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'#KunsthistorischeBegriffe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'de: Scheibe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:cord.controlledvocabulary.illurkglossar/methods/sdef:SKOS/get?mode=vocabulare&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'Die Sammlung')]</xpath>
+    </test>
+   
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=DepictiveMotives-not-historiated&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1403-07-26_San_Pedro_Rocas.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=DepictiveMotives-not-historiated&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=de&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl</url>
+       <xpath>//xhtml:input/@id[.='query2']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=DepictiveMotives-not-historiated&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=en&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='http://images.icar-us.eu/iiif/2/illum%2FIllUrk%2F1403-07-26_San_Pedro_Rocas.jpg/full/120,/0/default.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;mode=search-illurk-vocabulary&amp;keytermsAsPhrase=DepictiveMotives-not-historiated&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=cord&amp;search=advanced&amp;locale=en&amp;x2=https://gams.uni-graz.at/cord/cord-search.xsl</url>
+       <xpath>//xhtml:input/@id[.='query2']</xpath>
+    </test>
+      	          
+</TestCase>

@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="qm">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests qm -->
+    <test>
+       <url>/context:qm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>    
+    
+<!-- /context:qm (Home) tests -->
+	<test>
+       <url>/context:qm</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:qm</url>
+       <xpath>//xhtml:h3[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:qm</url>
+       <xpath>//xhtml:p[contains(.,'Durch Begriffe wie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:qm</url>
+       <xpath>//xhtml:img/@src[.='/qmv/img/intro.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:qm/methods/sdef:Context/get?locale=de (alternative German Home Link) tests  -->
+	<test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Einleitung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Durch Begriffe wie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/qmv/img/intro.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:qm/methods/sdef:Context/get?locale=en (English Home Link) tests -->
+	<test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'With terms like')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/qmv/img/intro.jpg']</xpath>
+    </test>
+
+<!-- /o:qm.1 (Wellen und Teilchenstrahlen) tests -->
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:a[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:h3[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:p[contains(.,'Am Anfang der Quantenmechanik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.1/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:li[contains(.,'Sie treten einzeln')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:span[contains(.,'Übung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.1</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.1/VIDEO.1']</xpath>
+    </test>
+
+<!-- /archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de (alternative German Wellen und Teilchenstrahlen Link) tests -->
+	<test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Am Anfang der Quantenmechanik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.1/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:li[contains(.,'Sie treten einzeln')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'Übung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.1/VIDEO.1']</xpath>
+    </test>
+    
+<!-- /archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp (Japanese Wellen und Teilchenstrahlen Link) tests -->
+	<test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:a[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:h3[contains(.,'波及び粒子光線')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:p[contains(.,'量子力学の歴史的最')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.1/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:li[contains(.,'それらはいつで')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:span[contains(.,'正弦型の波')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.1/VIDEO.3']</xpath>
+    </test>
+
+<!-- /archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en (English Wellen und Teilchenstrahlen Link) tests -->
+	<test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Wellen und Teilchenstrahlen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Waves and beams of particles')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The origin of quantum mechanics')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.1/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:li[contains(.,'If observed individually')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'Question')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.1/VIDEO.1']</xpath>
+    </test>
+
+<!-- /o:qm.2 (Das Doppelspaltexperiment) tests -->
+	<test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:a[contains(.,'Das Doppelspaltexperiment')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:h3[contains(.,'Das Doppelspaltexperiment')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:p[contains(.,'Dieses Experiment')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.2/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:span[contains(.,'Beobachtung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.2</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.2/VIDEO.1']</xpath>
+    </test>
+
+<!-- /archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp (Japanese Das Doppelspaltexperiment Link) tests -->
+	<test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:a[contains(.,'Das Doppelspaltexperiment')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:h3[contains(.,'ダブルスリット-波')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:p[contains(.,'この実験は')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.2/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:span[contains(.,'足す')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:qm.2/methods/sdef:TEI/get?locale=jp</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.2/VIDEO.1']</xpath>
+    </test>
+
+<!-- /o:qm.3 (Welle-Teilchen-Dualismus) tests -->
+	<test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:a[contains(.,'Welle-Teilchen-Dualismus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:h3[contains(.,'Welle-Teilchen-Dualismus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:p[contains(.,'Wir wollen das')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.3/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:td[contains(.,'rot')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:span[contains(.,'Beachte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.3</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.3/VIDEO.1']</xpath>
+    </test>
+
+<!-- /o:qm.4 (Wellenpakete) tests -->
+	<test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:a[contains(.,'Wellenpakete')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:h3[contains(.,'Wellenpakete')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:p[contains(.,'In der Quantenmechanik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.4/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:span[contains(.,'ebene Welle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.4</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.4/VIDEO.1']</xpath>
+    </test>
+
+<!-- /o:qm.5 (Das Wasserstoffatom) tests -->
+	<test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:a[contains(.,'Das Wasserstoffatom')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:h3[contains(.,'Das Wasserstoffatom')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:p[contains(.,'Die Quantenmechanik konnte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:img/@src[.='/o:qm.5/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:span[contains(.,'Wasserstoffatoms')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:qm.5</url>
+       <xpath>//xhtml:video/@src[.='/o:qm.5/VIDEO.1']</xpath>
+    </test>
+
+<!-- /archive/objects/context:qm/methods/sdef:Context/get?mode=notes (Hinweise für LehrerInnen) tests -->
+	<test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:a[contains(.,'Hinweise für LehrerInnen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:h3[contains(.,'Hinweise für LehrerInnen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:p[contains(.,'Dies ist eine Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:img/@src[.='/qmv/img/notes.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:span[contains(.,'Eigenschwingungen der')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:h4[contains(.,'波のダブル')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:span[contains(.,'生徒による可')]</xpath>
+    </test>     
+	
+	<test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:p[contains(.,'以下のことが')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=notes</url>
+       <xpath>//xhtml:a[contains(.,'Lerneinheit')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:qm/methods/sdef:Context/get?mode=imprint (Impressum und externe Links) tests -->
+	<test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Ziel des Projektes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:qm/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Visual Quantum Mechanics')]</xpath>
+    </test>
+
+      	          
+</TestCase>

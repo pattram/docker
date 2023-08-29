@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ginko">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ginko -->
+    <test>
+       <url>/context:ginko</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=help</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?hitPageSize=10&amp;hitPageStart=1&amp;pid=kug&amp;mode=search&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&amp;queryAsAnd=&amp;dc.creatorAsAnd=&amp;startDate=&amp;endDate=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotothek</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-steiermark</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-steiermark/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-autoren</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-autoren/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotografen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-fotografen/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-verlage</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-verlage/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-urheber</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-urheber/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-orte</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-orte/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:kug-kuenstler</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-kuenstler/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Autoren sample -->
+    <test>
+       <url>/archive/objects/context:kug-r.baravalle/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.76/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Fotografen sample -->
+    <test>
+       <url>/archive/objects/context:kug-h.bader/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>  
+    
+    <test>
+       <url>/archive/get/o:kug.247/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Fotoverlage sample -->
+    <test>
+       <url>/archive/objects/context:kug-fesaphot/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.347/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Weitere Urheber sample -->
+    <test>
+       <url>/archive/objects/context:kug-kunahsegg/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.326/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Orte sample -->
+    <test>
+       <url>/archive/objects/context:kug-at.stm.admont/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.300/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Künstler sample -->
+    <test>
+       <url>/archive/objects/context:kug-a.adalbert/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.107/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:ginko (Home) tests -->
+	<test>
+       <url>/context:ginko</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ginko</url>
+       <xpath>//xhtml:h1[contains(.,'GINKO')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ginko</url>
+       <xpath>//xhtml:img/@src[contains(.,'/archive/objects/context:kug-fotothek/datastreams/THUMBNAIL/content')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ginko</url>
+       <xpath>//xhtml:img/@src[contains(.,'/ginko/img/GInKO-logo.gif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ginko</url>
+       <xpath>//xhtml:p[contains(.,'Digitales Archiv zur Kunst- und Denkmaltopographie')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ginko/methods/sdef:Context/get?mode=about (About) tests -->
+	<test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h1[contains(.,'About')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'GINKO ist die offizielle')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ginko/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h1[contains(.,'Impressum')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Institut für Kunstgeschichte')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:ginko/methods/sdef:Context/get?mode=help (Hinweise) tests -->
+	<test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:a[contains(.,'Hinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:h1[contains(.,'Hinweise zum Onlinearchiv')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:ginko/methods/sdef:Context/get?mode=help</url>
+       <xpath>//xhtml:p[contains(.,'Das Institut für Kunstgeschichte')]</xpath>
+    </test>
+
+<!-- /search/gsearch?hitPageSize=10&hitPageStart=1&pid=kug&mode=search&x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&queryAsAnd=&dc.creatorAsAnd=&startDate=&endDate= (Suche) tests -->
+	<test>
+       <url>/search/gsearch?hitPageSize=10&amp;hitPageStart=1&amp;pid=kug&amp;mode=search&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&amp;queryAsAnd=&amp;dc.creatorAsAnd=&amp;startDate=&amp;endDate=</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?hitPageSize=10&amp;hitPageStart=1&amp;pid=kug&amp;mode=search&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&amp;queryAsAnd=&amp;dc.creatorAsAnd=&amp;startDate=&amp;endDate=</url>
+       <xpath>//xhtml:h1[contains(.,'Alle Suchergebnisse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?hitPageSize=10&amp;hitPageStart=1&amp;pid=kug&amp;mode=search&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&amp;queryAsAnd=&amp;dc.creatorAsAnd=&amp;startDate=&amp;endDate=</url>
+       <xpath>//xhtml:a[contains(.,'Stift Admont')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?hitPageSize=10&amp;hitPageStart=1&amp;pid=kug&amp;mode=search&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fginko%2F3ginko-search.xsl&amp;queryAsAnd=&amp;dc.creatorAsAnd=&amp;startDate=&amp;endDate=</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.10/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+	
+<!-- /context:kug-fotothek (Topographie) tests -->    
+    <test>
+       <url>/context:kug-fotothek</url>
+       <xpath>//xhtml:a[contains(.,'Topographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotothek</url>
+       <xpath>//xhtml:h1[contains(.,'Topographie von Steiermark und Kärnten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotothek</url>
+       <xpath>//xhtml:a[contains(.,'Topographie Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotothek</url>
+       <xpath>//xhtml:p[contains(.,'Auf der Basis des')]</xpath>
+    </test>
+
+<!-- /context:kug-steiermark (Steiermark) tests -->
+	<test>
+       <url>/context:kug-steiermark</url>
+       <xpath>//xhtml:a[contains(.,'Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-steiermark</url>
+       <xpath>//xhtml:h1[contains(.,'Topographie Steiermark')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-steiermark</url>
+       <xpath>//xhtml:a[contains(.,'Autoren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-steiermark</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+
+<!-- /context:kug-autoren (Autoren) tests -->
+	<test>
+       <url>/context:kug-autoren</url>
+       <xpath>//xhtml:a[contains(.,'Autoren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-autoren</url>
+       <xpath>//xhtml:h1[contains(.,'Autoren')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-autoren</url>
+       <xpath>//xhtml:a[contains(.,'Baravalle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-autoren</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+
+<!-- /context:kug-fotografen (Fotografen) tests -->
+	<test>
+       <url>/context:kug-fotografen</url>
+       <xpath>//xhtml:a[contains(.,'Fotografen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotografen</url>
+       <xpath>//xhtml:h1[contains(.,'Fotografen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotografen</url>
+       <xpath>//xhtml:a[contains(.,'Bader')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-fotografen</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+
+<!-- /context:kug-verlage (Fotoverlage) tests -->
+	<test>
+       <url>/context:kug-verlage</url>
+       <xpath>//xhtml:a[contains(.,'Fotoverlage')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-verlage</url>
+       <xpath>//xhtml:h1[contains(.,'Fotoverlage')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-verlage</url>
+       <xpath>//xhtml:a[contains(.,'Alpenlichtbildverlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-verlage</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+    
+<!-- /context:kug-urheber (Weitere Urheber) tests -->
+	<test>
+       <url>/context:kug-urheber</url>
+       <xpath>//xhtml:a[contains(.,'Weitere Urheber')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-urheber</url>
+       <xpath>//xhtml:h1[contains(.,'Weitere Urheber')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-urheber</url>
+       <xpath>//xhtml:a[contains(.,'Kunahsegg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-urheber</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+    
+<!-- /context:kug-orte (Orte) tests -->
+	<test>
+       <url>/context:kug-orte</url>
+       <xpath>//xhtml:a[contains(.,'Orte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-orte</url>
+       <xpath>//xhtml:h1[contains(.,'Orte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-orte</url>
+       <xpath>//xhtml:a[contains(.,'Admont')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-orte</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+
+<!-- /context:kug-kuenstler (Künstler) tests -->
+	<test>
+       <url>/context:kug-kuenstler</url>
+       <xpath>//xhtml:a[contains(.,'Künstler')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-kuenstler</url>
+       <xpath>//xhtml:h1[contains(.,'Künstler')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-kuenstler</url>
+       <xpath>//xhtml:a[contains(.,'Adalbert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kug-kuenstler</url>
+       <xpath>//xhtml:p[contains(.,'Alphabetisches Verzeichnis')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:kug-r.baravalle/methods/sdef:Context/get (Autoren sample) tests -->
+	<test>
+       <url>/archive/objects/context:kug-r.baravalle/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Zeitungsartikel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-r.baravalle/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Baravalle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-r.baravalle/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.76/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kug-h.bader/methods/sdef:Context/get (Fotografen sample) tests -->
+	<test>
+       <url>/archive/objects/context:kug-h.bader/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Eingang')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-h.bader/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Bader')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-h.bader/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.247/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kug-fesaphot/methods/sdef:Context/get (Fotoverlage sample) tests -->
+	<test>
+       <url>/archive/objects/context:kug-fesaphot/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Birkfeld')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-fesaphot/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Alpenlichtbildverlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-fesaphot/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.347/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /archive/objects/context:kug-kunahsegg/methods/sdef:Context/get (Weitere Urheber sample) tests -->
+	<test>
+       <url>/archive/objects/context:kug-kunahsegg/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Schloss')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-kunahsegg/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Kunahsegg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-kunahsegg/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.326/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kug-at.stm.admont/methods/sdef:Context/get (Orte sample) tests -->
+	<test>
+       <url>/archive/objects/context:kug-at.stm.admont/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Abschied')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-at.stm.admont/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Admont')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-at.stm.admont/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.300/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kug-a.adalbert/methods/sdef:Context/get (Künstler) tests -->
+	<test>
+       <url>/archive/objects/context:kug-a.adalbert/methods/sdef:Context/get</url>
+       <xpath>//xhtml:a[contains(.,'Kalvarienberg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-a.adalbert/methods/sdef:Context/get</url>
+       <xpath>//xhtml:h1[contains(.,'Adalbert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kug-a.adalbert/methods/sdef:Context/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.107/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+
+<!-- /archive/get/o:kug.76/sdef:TEI/get (object sample) tests -->
+	<test>
+       <url>/archive/get/o:kug.76/sdef:TEI/get</url>
+       <xpath>//xhtml:caption[contains(.,'Zeitungsartikel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.76/sdef:TEI/get</url>
+       <xpath>//xhtml:th[contains(.,'Artefakt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:kug.76/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:kug.76/datastreams/PREVIEW/content']</xpath>
+    </test>
+    			   
+</TestCase>

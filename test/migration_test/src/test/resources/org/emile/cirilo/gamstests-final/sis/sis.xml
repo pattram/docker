@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="sis">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests sis -->
+    <test>
+       <url>/context:sis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=history</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;ownerAsPhrase=&amp;sealtype=&amp;sealfunction=&amp;material=&amp;date=&amp;shape=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=sis&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fsis%2Fsis-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/LIDO_SOURCE</url>
+       <status>200</status>
+    </test>    
+
+<!-- context:sis (Home) tests -->
+	<test>
+       <url>/context:sis</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:sis</url>
+       <xpath>//xhtml:h3[contains(.,'Willkommen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:sis</url>
+       <xpath>//xhtml:p[contains(.,'Seit dem Mittelalter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:sis</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:sis</url>
+       <xpath>//xhtml:div/@class[.='item']</xpath>
+    </test>
+
+<!-- archive/objects/context:sis/methods/sdef:Context/get?mode=about (Über die Sammlung) tests-->
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Über die Sammlung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Die Siegelsammlung der Karl-Franzens-Universität')]</xpath>
+    </test>
+    
+<!-- archive/objects/context:sis/methods/sdef:Context/get?mode=collection (Bestand) tests -->
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:h3[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:option[contains(.,'Papst')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:a[contains(.,'Hilfe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:button[contains(.,'Suchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:p[contains(.,'Anzahl der gefundenen Einträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:img/@src[.='/o:sis.1-1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:span[contains(.,'Ludwig II')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+<!-- single object sample tests -->
+	<test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:a[contains(.,'zur Übersicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:h3[contains(.,'Ludwig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:td[.='Typ:']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/lido_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:sis.1-1/sdef:LIDO/get?mode=object&amp;context=context:sis</url>
+       <xpath>//xhtml:a[.='http://gams.uni-graz.at/o:sis.1-1']</xpath>
+    </test>
+	
+<!-- archive/objects/context:sis/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Günther Bernhard')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Steirisches Wissenschaftserbe')]</xpath>
+    </test>
+
+<!-- archive/objects/context:sis/methods/sdef:Context/get?mode=history (Projektgeschichte) tests -->
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[contains(.,'Projektgeschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:h3[.='Projektgeschichte']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:p[contains(.,'Ziel des Projektes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[.='Gemeinsamen Normdatei']</xpath>
+    </test>
+    
+<!-- archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp (Suchhilfe) -->
+	<test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:a[.='Suchhilfe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:h3[.='Hilfe zur Volltextsuche']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:p[contains(.,'Es müssen mindestens 3 Zeichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:sis/methods/sdef:Context/get?mode=searchHelp</url>
+       <xpath>//xhtml:h4[.='Trunkierung']</xpath>
+    </test>			
+   
+</TestCase>

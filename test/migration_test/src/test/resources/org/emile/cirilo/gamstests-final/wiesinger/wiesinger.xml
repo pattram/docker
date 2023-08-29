@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="wiesinger">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests wiesinger -->
+    <test>
+       <url>/context:wiesinger</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=tagebuecher</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=kommentar</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.persons</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.places</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.institutions</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.terms</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=editionsrichtlinien</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=literatur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1961</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.1961/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1962</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.1962/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1963</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.1963/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1964</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.1964/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1965</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.1965/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.persons/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.places/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.institutions/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wiesinger.terms/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:wiesinger (Home) tests -->    
+    <test>
+       <url>/context:wiesinger</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger</url>
+       <xpath>//xhtml:p[contains(.,'In einem Gefecht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger</url>
+       <xpath>//xhtml:span[contains(.,'Interview in')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger</url>
+       <xpath>//xhtml:img/@src[.='/wiesinger/img/6_Parteiausweis.jpg']</xpath>
+    </test>
+
+<!-- /archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about (About) tests -->    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Digital Humanist')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Lizenzierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:img/@src[contains(.,'/wiesinger/img/by-nc.png')]</xpath>
+    </test>	
+	
+<!-- /context:wiesinger?mode=tagebuecher (Tagebücher) tests -->    
+    <test>
+       <url>/context:wiesinger?mode=tagebuecher</url>
+       <xpath>//xhtml:a[contains(.,'Tagebücher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=tagebuecher</url>
+       <xpath>//xhtml:p[contains(.,'Werkverzeichnissen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=tagebuecher</url>
+       <xpath>//xhtml:span[contains(.,'Christiane Schnalzer')]</xpath>
+    </test>
+	
+	<!-- /o:wiesinger.1961 (1961) tests -->    
+    <test>
+       <url>/o:wiesinger.1961</url>
+       <xpath>//xhtml:a[contains(.,'1961')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1961</url>
+       <xpath>//xhtml:p[contains(.,'faszinierende wissenschaft')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1961</url>
+       <xpath>//xhtml:span[contains(.,'Kalter Krieg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1961</url>
+       <xpath>//xhtml:input/@id[.='show_kalterkrieg']</xpath>
+    </test>
+    
+    <!-- /o:wiesinger.1962 (1962) tests -->
+    <test>
+       <url>/o:wiesinger.1962</url>
+       <xpath>//xhtml:a[contains(.,'1962')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1962</url>
+       <xpath>//xhtml:p[contains(.,'metaphysisches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1962</url>
+       <xpath>//xhtml:span[contains(.,'Ästhetik/Poetik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1962</url>
+       <xpath>//xhtml:input/@id[.='show_poetik']</xpath>
+    </test>
+    
+    <!-- /o:wiesinger.1963 (1963) tests -->
+    <test>
+       <url>/o:wiesinger.1963</url>
+       <xpath>//xhtml:a[contains(.,'1963')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1963</url>
+       <xpath>//xhtml:p[contains(.,'bezaubernder')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1963</url>
+       <xpath>//xhtml:span[contains(.,'Biographisches')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1963</url>
+       <xpath>//xhtml:input/@id[.='show_bio']</xpath>
+    </test>
+
+	<!-- /o:wiesinger.1964 (1964) tests -->
+	<test>
+       <url>/o:wiesinger.1964</url>
+       <xpath>//xhtml:a[contains(.,'1964')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1964</url>
+       <xpath>//xhtml:p[contains(.,'buffets her')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1964</url>
+       <xpath>//xhtml:span[contains(.,'Linzer Kunst')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1964</url>
+       <xpath>//xhtml:input/@id[.='show_kultur']</xpath>
+    </test>
+	
+	<!-- /o:wiesinger.1965 (1965) tests -->
+	<test>
+       <url>/o:wiesinger.1965</url>
+       <xpath>//xhtml:a[contains(.,'1965')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1965</url>
+       <xpath>//xhtml:p[contains(.,'verwildert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1965</url>
+       <xpath>//xhtml:span[contains(.,'Sex-Reflexionen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.1965</url>
+       <xpath>//xhtml:input/@id[.='show_sex']</xpath>
+    </test>
+
+<!-- /context:wiesinger?mode=kommentar (Kommentar) tests -->            
+    <test>
+       <url>/context:wiesinger?mode=kommentar</url>
+       <xpath>//xhtml:a[contains(.,'Kommentar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=kommentar</url>
+       <xpath>//xhtml:a[contains(.,'5 Selbstbeschreibungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wiesinger?mode=kommentar</url>
+       <xpath>//xhtml:p[contains(.,'Bildungsreisen')]</xpath>
+    </test>
+
+<!-- /o:wiesinger.persons (Regiser/Personen) tests -->    
+    <test>
+       <url>/o:wiesinger.persons</url>
+       <xpath>//xhtml:a[contains(.,'Personen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.persons</url>
+       <xpath>//xhtml:input/@id[.='searchFilter']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.persons</url>
+       <xpath>//xhtml:div[contains(.,'Bunzl, John')]</xpath>
+    </test>
+
+<!-- /o:wiesinger.places (Register/Orte) tests -->    
+    <test>
+       <url>/o:wiesinger.places</url>
+       <xpath>//xhtml:a[contains(.,'Orte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.places</url>
+       <xpath>//xhtml:input/@id[.='searchFilter']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.places</url>
+       <xpath>//xhtml:div[contains(.,'Frontignan')]</xpath>
+    </test>
+
+<!-- /o:wiesinger.institutions (Register/Institutionen) tests -->    
+    <test>
+       <url>/o:wiesinger.institutions</url>
+       <xpath>//xhtml:a[contains(.,'Institutionen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.institutions</url>
+       <xpath>//xhtml:input/@id[.='searchFilter']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.institutions</url>
+       <xpath>//xhtml:div[contains(.,'Formosa')]</xpath>
+    </test>
+
+<!-- /o:wiesinger.terms (Register/Schlagworte) tests -->    
+    <test>
+       <url>/o:wiesinger.terms</url>
+       <xpath>//xhtml:a[contains(.,'Schlagworte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.terms</url>
+       <xpath>//xhtml:input/@id[.='searchFilter']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:wiesinger.terms</url>
+       <xpath>//xhtml:div[contains(.,'Der nackte Affe')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:wiesinger/methods/sdef:Context/get?mode=editionsrichtlinien (Dokumentation) tests -->    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=editionsrichtlinien</url>
+       <xpath>//xhtml:a[contains(.,'Dokumentation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=editionsrichtlinien</url>
+       <xpath>//xhtml:code[contains(.,'anonymization')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=editionsrichtlinien</url>
+       <xpath>//xhtml:a[contains(.,'3 Modellierung')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:wiesinger/methods/sdef:Context/get?mode=literatur (Literatur) tests -->    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=literatur</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=literatur</url>
+       <xpath>//xhtml:i[contains(.,'Der Wolf')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=literatur</url>
+       <xpath>//xhtml:h3[contains(.,'Neuausgaben:')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:wiesinger/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Information gemäß')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wiesinger/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Bundesministerium')]</xpath>
+    </test>	
+      	          
+</TestCase>

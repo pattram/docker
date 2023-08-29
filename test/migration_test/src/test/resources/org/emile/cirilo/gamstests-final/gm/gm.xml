@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="gm">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests gm -->
+    <test>
+       <url>/context:gm</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=use</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=terms</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:gm.bildort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:gm.produzent/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:gm.schlagwort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=links</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=history</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.story</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=impressum</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:gm.1/datastreams/LIDO_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.1/sdef:LIDO/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-ip.hauptplatz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-ip.hauptplatz/sdef:Context/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider/sdef:Context/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-sw.bruecke</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gm-sw.bruecke/sdef:Context/getPDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.zit</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.bib</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.pbo</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:gm.pbn</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:gm (Home) tests -->
+	<test>
+       <url>/context:gm</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm</url>
+       <xpath>//xhtml:p[contains(.,'Illustrierte Postkarten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm</url>
+       <xpath>//xhtml:img/@src[.='/gm/img/carousel/9.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=about (About) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Über das')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Das Konzept')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'GAMS')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=use (Nutzungshinweise) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:h3[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:p[contains(.,'Hier finden Sie Hinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=use</url>
+       <xpath>//xhtml:a[contains(.,'Postwege')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=terms (Rechtliches und Lizenzen) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:a[contains(.,'Rechtliches und Lizenzen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:h3[contains(.,'Rechtliches &amp; Lizenzen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:p[contains(.,'Das GrazMuseum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=terms</url>
+       <xpath>//xhtml:a[contains(.,'katharina.gabalier@ stadt.graz.at')]</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=gm&search=simple&x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl (Einfache Suche) tests -->    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Einfache Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Einfache Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:input/@id[contains(.,'query2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Admontergäßchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=simple&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.1/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=gm&search=advanced&x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl -->
+	<test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Einfache Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Suche im Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:input/@id[contains(.,'query2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Admontergäßchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=gm&amp;search=advanced&amp;x2=http://gams.uni-graz.at%2Fgm%2Fgm-search.xsl</url>
+       <xpath>//xhtml:div/@id[.='the-basics']</xpath>
+    </test>
+    
+<!-- /archive/objects/query:gm.bildort/methods/sdef:Query/get?locale=&mode=tagcloud&params (Bildorte) tests -->        
+    <test>
+       <url>/archive/objects/query:gm.bildort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:a[contains(.,'Bildorte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:gm.bildort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:div/@id[.='tagskeywords']</xpath>
+    </test>
+  
+<!-- /archive/objects/query:gm.schlagwort/methods/sdef:Query/get?locale=&mode=tagcloud&params (Schlagworte) tests -->
+    <test>
+       <url>/archive/objects/query:gm.schlagwort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:a[contains(.,'Schlagworte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:gm.schlagwort/methods/sdef:Query/get?locale=&amp;mode=tagcloud&amp;params</url>
+       <xpath>//xhtml:div/@id[.='tagskeywords']</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=technik (Technik) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <xpath>//xhtml:a[contains(.,'Technik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <xpath>//xhtml:h3[contains(.,'Reproduktionstechniken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <xpath>//xhtml:p[contains(.,'Finden Sie hier Informationen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.8192/RECTO']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=technik</url>
+       <xpath>//xhtml:img/@src[.='/context:gm/REPRO']</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung (Zitierweise) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <xpath>//xhtml:a[contains(.,'Zitierweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <xpath>//xhtml:h3[contains(.,'Zitierweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <xpath>//xhtml:p[contains(.,'Finden Sie hier Hinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <xpath>//xhtml:a[contains(.,'PDF Download')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=anleitung</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.6441/RECTO']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie (Bibliographie) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie</url>
+       <xpath>//xhtml:a[contains(.,'Bibliographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie</url>
+       <xpath>//xhtml:h3[contains(.,'Bibliographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie</url>
+       <xpath>//xhtml:p[contains(.,'Tropper, Eva')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=bibliographie</url>
+       <xpath>//xhtml:a[contains(.,'PDF Download')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=links (Links) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=links</url>
+       <xpath>//xhtml:a[contains(.,'Links')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=links</url>
+       <xpath>//xhtml:h3[contains(.,'Online-Portale illustrierter Postkarten in Österreich:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=links</url>
+       <xpath>//xhtml:p[contains(.,'Österreichische Nationalbibliothek')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=links</url>
+       <xpath>//xhtml:a[contains(.,'http://akon.onb.ac.at')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo (Postkartenbestände in Österreich) -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo</url>
+       <xpath>//xhtml:a[contains(.,'Postkartenbestände in Österreich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo</url>
+       <xpath>//xhtml:h3[contains(.,'Postkartenbestände in Österreich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo</url>
+       <xpath>//xhtml:p[contains(.,'Wir haben öffentliche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postkarteninfo</url>
+       <xpath>//xhtml:a[contains(.,'PDF Hinweise zur Nutzung')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=history (Über den Bestand) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:a[contains(.,'Über den Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:h3[contains(.,'Über den Bestand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=history</url>
+       <xpath>//xhtml:p[contains(.,'Hier erhalten Sie')]</xpath>
+    </test>
+
+<!-- /o:gm.story (Karten an Julia) tests -->    
+    <test>
+       <url>/o:gm.story</url>
+       <xpath>//xhtml:a[contains(.,'Karten an Julia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.story</url>
+       <xpath>//xhtml:h3[contains(.,'Karten an Julia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.story</url>
+       <xpath>//xhtml:div/@id[contains(.,'storymap-embed')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=postweg (Postwege) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <xpath>//xhtml:a[contains(.,'Postwege')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <xpath>//xhtml:h3[contains(.,'Kommunikation per Postkarte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <xpath>//xhtml:p[contains(.,'Wie und wohin wurde von Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <xpath>//xhtml:img/@src[.='/context:gm/SCREENSHOT1897']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=postweg</url>
+       <xpath>//xhtml:embed/@src[contains(.,'//geobrowser.de.dariah.eu/embed/?kml1=https://gams.uni-graz.at/context:gm-to/KML&amp;kml2=https://gams.uni-graz.at/context:gm-from/KML')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:gm/methods/sdef:Context/get?mode=impressum (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=impressum</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=impressum</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=impressum</url>
+       <xpath>//xhtml:p[contains(.,'GrazMuseum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gm/methods/sdef:Context/get?mode=impressum</url>
+       <xpath>//xhtml:a[contains(.,'www.graz.at')]</xpath>
+    </test>
+
+<!-- /o:gm.1 (Object sample) tests -->    
+    <test>
+       <url>/o:gm.1</url>
+       <xpath>//xhtml:h3[contains(.,'Alt-Graz. Admontergäßchen gegen den Paradeishof')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.1</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.1</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.1</url>
+       <xpath>//xhtml:td[contains(.,'Bildgegenstand')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gm.1</url>
+       <xpath>//xhtml:td[contains(.,'Gelatine-Papier')]</xpath>
+    </test>
+
+<!-- /context:gm-ip.hauptplatz (Bildorte/Hauptplatz) tests -->    
+    <test>
+       <url>/context:gm-ip.hauptplatz</url>
+       <xpath>//xhtml:h3[contains(.,'Bildort: Hauptplatz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-ip.hauptplatz</url>
+       <xpath>//xhtml:p[contains(.,'Ergebnisliste als PDF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-ip.hauptplatz</url>
+       <xpath>//xhtml:a[contains(.,'FROHE WEIHNACHTEN')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-ip.hauptplatz</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.1000/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /context:gm-p.ludwigstrohschneider (Produzent/-innen/Ludwig Strohscnneider) tests -->    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider</url>
+       <xpath>//xhtml:h3[contains(.,'Verlag: Ludwig Strohschneider')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider</url>
+       <xpath>//xhtml:p[contains(.,'Ergebnisliste als PDF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider</url>
+       <xpath>//xhtml:a[contains(.,'Graz. Bismarckplatz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-p.ludwigstrohschneider</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.101/THUMBNAIL']</xpath>
+    </test>
+
+<!-- /context:gm-sw.bruecke (Schlagworte/Brücke) tests -->    
+    <test>
+       <url>/context:gm-sw.bruecke</url>
+       <xpath>//xhtml:h3[contains(.,'Schlagwort: Brücke')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-sw.bruecke</url>
+       <xpath>//xhtml:p[contains(.,'Ergebnisliste als PDF')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-sw.bruecke</url>
+       <xpath>//xhtml:a[contains(.,'Graz - Hochhaus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gm-sw.bruecke</url>
+       <xpath>//xhtml:img/@src[.='/o:gm.167/THUMBNAIL']</xpath>
+    </test>  
+      	          
+</TestCase>

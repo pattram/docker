@@ -1,0 +1,25 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xmlns:geo="http://www.opengis.net/ont/geosparql#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ex="http://example.org/">
+   
+    <ex:Landmark rdf:about="http://example.org/eiffelTower">
+       <dc:title>Eiffel Tower</dc:title>
+        <geo:hasGeometry>
+            <sf:Point>
+                <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(2.2945 48.8584)</geo:asWKT>
+            </sf:Point>
+        </geo:hasGeometry>
+    </ex:Landmark>
+    
+    <ex:Landmark rdf:about="http://example.org/towerBridge">
+        <dc:title>Tower Bridge</dc:title>
+ 	    <geo:hasGeometry>
+            <sf:Point>
+                <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-0.0754 51.5055)</geo:asWKT>
+            </sf:Point>
+        </geo:hasGeometry>
+    </ex:Landmark>
+    
+</rdf:RDF>

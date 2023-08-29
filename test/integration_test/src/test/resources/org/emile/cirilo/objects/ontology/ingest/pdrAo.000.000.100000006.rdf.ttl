@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:aodl="http://pdr.bbaw.de/namespaces/aodl/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:void="http://rdfs.org/ns/void#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/o:emile.ingest.ontology.1">
+	<rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+	<dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProDomo pdrAo.000.000.100000001</dcterms:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/prodomo/pdrAo.000.000.100000006">
+	<rdf:type rdf:resource="http://pdr.bbaw.de/namespaces/aodl/aspect"/>
+	<aodl:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+	<aodl:relationDim rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></aodl:relationDim>
+	<aodl:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</aodl:revision>
+	<aodl:semanticDim rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></aodl:semanticDim>
+	<aodl:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pdrAo.000.000.100000006</aodl:subject>
+	<aodl:timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-06-08T12:47:41</aodl:timestamp>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1fpkd070sx1">
+	<rdf:type rdf:resource="http://pdr.bbaw.de/namespaces/aodl/validationStm"/>
+	<aodl:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+	<aodl:reference rdf:resource="http://gams.uni-graz.at/prodomo/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/prodomo/pdrAo.000.000.100000006">
+	<aodl:validation rdf:nodeID="node1fpkd070sx1"/>
+</rdf:Description>
+
+</rdf:RDF>

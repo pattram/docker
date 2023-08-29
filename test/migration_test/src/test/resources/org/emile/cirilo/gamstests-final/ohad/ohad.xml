@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ohad">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ohad -->
+    <test>
+       <url>/context:ohad</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=editionsplan&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=erschienen&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=rezensionen&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=reclam&amp;context=analog</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=codierung&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=hka&amp;context=forschungsergebnisse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=einzelstudien&amp;context=forschungsergebnisse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=de_dramennetzwerk&amp;context=forschungsergebnisse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1820</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1821</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1825</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.7662</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww&amp;mode=leseansicht&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww&amp;mode=personennetzwerk&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1817</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1818</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1819</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1813</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1814</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1815</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1811</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1812</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ohad.1810</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=GWW_K4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=GWW_K5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K4_BILD_7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_5</url>
+       <status>200</status>
+    </test>
+       
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_10</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_12</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_13</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_14</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ohad/methods/sdef:R/get?mode=K5_BUEHNENBILD_15</url>
+       <status>200</status>
+    </test>   
+    
+<!-- /context:ohad (Home) tests -->  
+    <test>
+       <url>/context:ohad</url>
+       <matcher>a:matches(^Home$)</matcher>
+    </test>
+        
+    <test>
+       <url>/context:ohad</url>
+       <matcher>h3:matches(^Herzlich willkommen$)</matcher>
+    </test>
+    
+ 
+<!-- /context:ohad/sdef:Context/get?locale=ueber&context=analog (Über die historisch-kritische Gesamtausgabe) tests -->    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <matcher>a:matches(^Über die historisch-kritische Ausgabe$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <matcher>h3:matches(^Über die historisch-kritische Gesamtausgabe$)</matcher>
+    </test>
+	
+	<test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <matcher>i:matches(^Kasimir und Karoline$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <matcher>a:matches(^Franz-Nabl-Institut der Karl-Franzens-Universität Graz$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=analog</url>
+       <matcher>li:matches(^Klaus Kastberger$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=editionsplan&context=analog (Editionsplan) tests -->
+	<test>
+       <url>/context:ohad/sdef:Context/get?locale=editionsplan&amp;context=analog</url>
+       <matcher>a:matches(^Editionsplan$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=editionsplan&amp;context=analog</url>
+       <matcher>h3:matches(^Editionsplan$)</matcher>
+    </test>
+
+	<test>
+       <url>/context:ohad/sdef:Context/get?locale=editionsplan&amp;context=analog</url>
+       <matcher>b:matches(^Ödön von Horváth: Wiener Ausgabe sämtlicher Werke. Historisch-kritische Edition. Am Literaturarchiv der Österreichischen Nationalbibliothek und am Franz-Nabl-Institut für Literaturforschung der Karl-Franzens-Universität Graz hg. v. Klaus Kastberger. Berlin: de Gruyter 2009ff.$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=editionsplan&amp;context=analog</url>
+       <matcher>td:matches(^Band 11 / Stücke 11$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=erschienen&context=analog (Bisher erschienen) tests -->
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=erschienen&amp;context=analog</url>
+       <matcher>a:matches(^Bisher erschienen$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=erschienen&amp;context=analog</url>
+       <matcher>h3:matches(^Bisher erschienen$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=erschienen&amp;context=analog</url>
+       <matcher>b:matches(^Ödön von Horváth: Kasimir und Karoline$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=erschienen&amp;context=analog</url>
+       <matcher>a:matches(^Vorwort$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=rezensionen&context=analog (Rezensionen und Pressestimmen) tests -->    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=rezensionen&amp;context=analog</url>
+       <matcher>a:matches(^Rezensionen und Pressestimmen$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=rezensionen&amp;context=analog</url>
+       <matcher>h3:matches(^Rezensionen und Pressestimmen$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=rezensionen&amp;context=analog</url>
+       <matcher>i:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=rezensionen&amp;context=analog</url>
+       <matcher>a:matches(^IFB – Digitales Rezensionsorgan für Bibliothek und Wissenschaft$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=prinzipien&context=analog (Editionsprinzipien) tests -->    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <matcher>a:matches(^Editionsprinzipien$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <matcher>h3:matches(^Editionsprinzipien$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <matcher>b:matches(^Vorwort$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <matcher>h6:matches(^1.1.3 Kritisch-genetischer Apparat$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=prinzipien&amp;context=analog</url>
+       <matcher>li:matches(^Mit Fragezeichen überschriebener oder mit Wellenlinie gekennzeichneter Text wird als solcher wiedergegeben.$)</matcher>
+    </test>
+    
+<!-- /context:ohad/sdef:Context/get?locale=reclam&context=analog (Studienausgabe Reclam) tests -->
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=reclam&amp;context=analog</url>
+       <matcher>a:matches(^Studienausgabe Reclam$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=reclam&amp;context=analog</url>
+       <matcher>h3:matches(^Studienausgabe Reclam$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=reclam&amp;context=analog</url>
+       <matcher>b:matches(^Ödön von Horváth: Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=reclam&amp;context=analog</url>
+       <matcher>a:matches(^Verlag$)</matcher>
+    </test>
+
+<!-- /o:ohad.5405/sdef:TEI/get?context=digital&locale=gww (Digitale Edition/Geschichten aus dem Wiener Wald) tests -->
+	<test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <matcher>a:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <matcher>b:matches(^Gesamtfassung in 7 Bildern$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <matcher>a:matches(^Leseansicht$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <matcher>h2:matches(^Benutzungshinweise$)</matcher>
+    </test>
+        
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?context=digital&amp;locale=gww</url>
+       <matcher>i:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>  
+
+<!-- /o:ohad.5405/sdef:TEI/get?locale=gww_k4&mode=leseansicht&context=digital (Leseansicht/7 Bilder) tests -->    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>button:matches(^Leseansicht$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>a:matches(^7 Bilder$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>p:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>span:matches(^achten Bezirk$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>h2:matches(^Lesetools$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>span:matches(^Personenhandlung$)</matcher>
+    </test>
+    
+<!-- /o:ohad.5405/sdef:TEI/get?locale=gww_k4&mode=personennetzwerk&context=digital (Netzwerk/7 Bilder) tests -->  
+	<test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>button:matches(^Netzwerk$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>a:matches(^7 Bilder$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>h3:matches(^Erstes Bild$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>a:matches(^1$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>h3:matches(^Szene: Grundlage des Netzwerks$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k4&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>span:matches(^Oskar$)</matcher>
+    </test>
+
+<!-- /o:ohad.5405/sdef:TEI/get?locale=gww_k5&mode=leseansicht&context=digital (Leseansicht/3 Teile) tests -->
+	<test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>button:matches(^Leseansicht$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>a:matches(^3 Teile$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>p:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>span:matches(^Alfred$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>h2:matches(^Lesetools$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=leseansicht&amp;context=digital</url>
+       <matcher>span:matches(^Personenhandlung$)</matcher>
+    </test>
+
+<!-- /o:ohad.5405/sdef:TEI/get?locale=gww_k5&mode=personennetzwerk&context=digital (Netzwerk/3 Teile) tests -->
+	<test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>button:matches(^Netzwerk$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>a:matches(^3 Teile$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>h3:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>a:matches(^1$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>h3:matches(^Szene: Grundlage des Netzwerks$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:ohad.5405/sdef:TEI/get?locale=gww_k5&amp;mode=personennetzwerk&amp;context=digital</url>
+       <matcher>span:matches(^Alfred$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=ueber&context=digital (Über die Digitale Edition) tests -->  
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=digital</url>
+       <matcher>a:matches(^Über die digitale Edition$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=digital</url>
+       <matcher>h4:matches(^Das Projekt$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=ueber&amp;context=digital</url>
+       <matcher>i:matches(^Geschichten aus dem Wiener Wald$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=codierung&context=digital (Codierungsrichtlinien) tests -->    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=codierung&amp;context=digital</url>
+       <matcher>a:matches(^Codierungsrichtlinien$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=codierung&amp;context=digital</url>
+       <matcher>h4:matches(^Grundlagen des Datenmodells$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=codierung&amp;context=digital</url>
+       <matcher>h5:matches(^Die Frontseite$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=codierung&amp;context=digital</url>
+       <matcher>u:matches(^Sprechakte$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=hka&context=forschungsergebnisse (Historisch-kritische Ausgabe: Grundlagen und Maximen) tests -->
+	<test>
+       <url>/context:ohad/sdef:Context/get?locale=hka&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^Historisch-kritische Ausgabe: Grundlagen und Maximen$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=hka&amp;context=forschungsergebnisse</url>
+       <matcher>h3:matches(^Historisch-kritische Ausgabe: Grundlagen und Maximen$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=hka&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^PDF$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=einzelstudien&context=forschungsergebnisse (Einzelstudien) tests -->    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=einzelstudien&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^Einzelstudien$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=einzelstudien&amp;context=forschungsergebnisse</url>
+       <matcher>h3:matches(^Einzelstudien$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=einzelstudien&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^Link$)</matcher>
+    </test>
+
+<!-- /context:ohad/sdef:Context/get?locale=de_dramennetzwerk&context=forschungsergebnisse (Digitale Edition: Dramennetzwerkanalyse) tests -->    
+	<test>
+       <url>/context:ohad/sdef:Context/get?locale=de_dramennetzwerk&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^Digitale Edition: Dramennetzwerkanalyse$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=de_dramennetzwerk&amp;context=forschungsergebnisse</url>
+       <matcher>h3:matches(^Digitale Edition: Dramennetzwerkanalyse$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?locale=de_dramennetzwerk&amp;context=forschungsergebnisse</url>
+       <matcher>a:matches(^Folien$)</matcher>
+    </test>
+    
+<!-- /context:ohad/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/context:ohad/sdef:Context/get?mode=imprint</url>
+       <matcher>a:matches(^Impressum$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?mode=imprint</url>
+       <matcher>h3:matches(^Impressum$)</matcher>
+    </test>
+    
+    <test>
+       <url>/context:ohad/sdef:Context/get?mode=imprint</url>
+       <matcher>p:matches(^Hans Clausen, MA$)</matcher>
+    </test>
+
+      	          
+</TestCase>

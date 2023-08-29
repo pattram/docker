@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="numis">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests numis -->
+    <test>
+       <url>/context:numis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>   
+    
+	<test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+
+	<test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=collection</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?regionAsPhrase=Aegyptus&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=numis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3numis-search.xsl&amp;mintingAsPhrase=&amp;regentAsPhrase=&amp;mintingForAsPhrase=&amp;mintMasterAsPhrase=&amp;settlementAsPhrase=&amp;materialAsPhrase=&amp;nominalAsPhrase=&amp;query=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis.entity.griechen/methods/sdef:Context/get?mode=container&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <status>200</status>
+    </test>
+	
+
+<!-- context:numis (Home) tests -->
+	<test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='branding']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='search']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='nav']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='container']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='footer']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:input/@name[.='x2']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:a[.='Erweiterte Suche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:numis</url>
+       <xpath>//xhtml:a[contains(.,'Objekte anzeigen')]</xpath>
+    </test>
+
+<!-- context:numis/methods/sdef:Context/get?mode=search (search) tests -->
+	<test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:select/@id[.='region']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:option/@value[.='Aegyptus']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:input/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?regionAsPhrase=Aegyptus&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=numis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3numis-search.xsl&amp;mintingAsPhrase=&amp;regentAsPhrase=&amp;mintingForAsPhrase=&amp;mintMasterAsPhrase=&amp;settlementAsPhrase=&amp;materialAsPhrase=&amp;nominalAsPhrase=&amp;query=</url>
+       <xpath>//xhtml:a[contains(.,'Aegyptus; Nero')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?regionAsPhrase=Aegyptus&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=numis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3numis-search.xsl&amp;mintingAsPhrase=&amp;regentAsPhrase=&amp;mintingForAsPhrase=&amp;mintMasterAsPhrase=&amp;settlementAsPhrase=&amp;materialAsPhrase=&amp;nominalAsPhrase=&amp;query=</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?regionAsPhrase=Aegyptus&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=numis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3numis-search.xsl&amp;mintingAsPhrase=&amp;regentAsPhrase=&amp;mintingForAsPhrase=&amp;mintMasterAsPhrase=&amp;settlementAsPhrase=&amp;materialAsPhrase=&amp;nominalAsPhrase=&amp;query=</url>
+       <xpath>//xhtml:img/@src[.='/reko/img/tei_icon.gif']</xpath>
+    </test>
+    
+<!-- context:numis/methods/sdef:Context/get?mode=collection (objects) tests -->	    
+	<test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=collection</url>
+       <xpath>//xhtml:li/xhtml:a[.='Griechen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis.entity.griechen/methods/sdef:Context/get?mode=container&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:li/xhtml:span/xhtml:a[contains(.,'Campania; Allifae')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis.entity.griechen/methods/sdef:Context/get?mode=container&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+
+<!-- context:numis/methods/sdef:Context/get?mode=bibl (Bibliografie) tests -->
+	<test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:a[contains(.,'zurück')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:numis/methods/sdef:Context/get?mode=bibl</url>
+       <xpath>//xhtml:dt[.='Alram']</xpath>
+    </test>	
+    
+<!-- single object sample tests -->
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:a[contains(.,'zurück zur Übersicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:a[contains(.,'nächste Münze')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:img/@src[.='/archive/get/o:numis.1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:img/@src[.='/archive/get/o:numis.1/IMAGE_2']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:img/@src[.='/age/img/lupe.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:a[contains(.,'BMC 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:a[contains(.,'Grose Nr. 167')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:numis.1/sdef:TEI/get?mode=object&amp;context=context:numis.entity!context:numis.entity.griechen</url>
+       <xpath>//xhtml:td[contains(.,'Allifae')]</xpath>
+    </test>	
+   
+</TestCase>

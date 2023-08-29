@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="wissg">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests wissg -->
+    <test>
+       <url>/context:wissg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wissg#m1</url>
+       <status>200</status>
+    </test>    
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wissg-wd-09b-2/PDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wi-09b-1/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wissg-wi-09b-1/PDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wissg-gw-09b-1/PDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-na-09b-3/methods/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:wissg-na-09b-3/PDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get#section-1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get#section-1.2.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get#section-1.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get#nd0e98</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wd-09b-2/methods/sdef:HTML/get#toc-1.7.5.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wi-09b-1/methods/sdef:HTML/get#section-1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wi-09b-1/methods/sdef:HTML/get#section-1.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wissg/WISSG-063-63</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wissg/WISSG-07C-894</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wi-09b-1/methods/sdef:HTML/get#d0e762</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-wi-09b-1/methods/sdef:HTML/get#nd0e8868</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get#section-1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get#section-1.3.8</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get#toc-1.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get#nd0e8248</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-gw-09b-1/methods/sdef:HTML/get#toc-1.3.9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-na-09b-3/methods/sdef:HTML/get#section-2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:wissg/WISSG-074-343</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-na-09b-3/methods/sdef:HTML/get#d0e1265</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-na-09b-3/methods/sdef:HTML/get#nd0e4416</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:wissg-na-09b-3/methods/sdef:HTML/get#toc-5.1.9.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:wissg/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:wissg (Home) tests -->
+	<test>
+       <url>/context:wissg</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg</url>
+       <xpath>//xhtml:h3[contains(.,'Vorbemerkungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg</url>
+       <xpath>//xhtml:p[contains(.,'In der hier vorliegenden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg</url>
+       <xpath>//xhtml:a[contains(.,'[1]')]</xpath>
+    </test>
+
+<!-- /context:wissg#m1 tests -->
+	<test>
+       <url>/context:wissg#m1</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg#m1</url>
+       <xpath>//xhtml:h3[contains(.,'Vorbemerkungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg#m1</url>
+       <xpath>//xhtml:p[contains(.,'In der hier vorliegenden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:wissg#m1</url>
+       <xpath>//xhtml:a[contains(.,'[1]')]</xpath>
+    </test>
+
+      	          
+</TestCase>

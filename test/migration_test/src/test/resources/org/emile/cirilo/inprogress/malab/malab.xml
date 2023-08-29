@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="malab">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests malab -->
+    <test>
+       <url>/context:malab</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#thema</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#ziele</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#design</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#methodik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#lvz</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.lagenbesch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#pharmazie</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#kulinarik</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#nachhaltigkeit</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#handschrift</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=unfinished</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=privacy</url>
+       <status>200</status>
+    </test>
+
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs#MS1609_0010r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs#Inhalt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs#MS1609_0094v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs#Inhalt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090095r/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090095r/sdef:TEI/get?mode=view:facs#MS1609_0134r</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090135r/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090135r/sdef:TEI/get?mode=view:facs#MS1609_0140v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090149v/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090149v/sdef:TEI/get?mode=view:facs#MS1609_0150v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090151r/sdef:TEI/get?mode=view:facs</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090151r/sdef:TEI/get?mode=view:facs#MS1609_0152v</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=viscoll</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:malab (Home) tests -->
+	<test>
+       <url>/context:malab</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:malab</url>
+       <xpath>//xhtml:p[contains(.,'Die Förderphase des Projekts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:malab</url>
+       <xpath>//xhtml:div/@id[.='carouselExampleControls']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:malab</url>
+       <xpath>//xhtml:h2[contains(.,'Die Handschrift')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:malab/methods/sdef:Context/get?mode=about (Projekt) tests -->    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h2[contains(.,'Inhaltsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Darstellung des Projektthemas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#thema</url>
+       <matcher>a:matches(^Thema$)</matcher>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:h2[contains(.,'Darstellung des Projektthemas')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#thema</url>
+       <xpath>//xhtml:p[contains(.,'Die Steiermark besitzt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#ziele</url>
+       <xpath>//xhtml:a[contains(.,'Projektziele')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#ziele</url>
+       <xpath>//xhtml:h2[contains(.,'Projektziele')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#ziele</url>
+       <xpath>//xhtml:p[contains(.,'Genau an dieser Stelle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#design</url>
+       <xpath>//xhtml:a[contains(.,'Projektdesign')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#design</url>
+       <xpath>//xhtml:h2[contains(.,'Projektdesign')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#design</url>
+       <xpath>//xhtml:p[contains(.,'Transkription der gesamten Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#methodik</url>
+       <xpath>//xhtml:a[contains(.,'Methodik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#methodik</url>
+       <xpath>//xhtml:h2[contains(.,'Methodik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#methodik</url>
+       <xpath>//xhtml:p[contains(.,'Das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#lvz</url>
+       <xpath>//xhtml:a[contains(.,'Literaturverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#lvz</url>
+       <xpath>//xhtml:h2[contains(.,'Literaturverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#lvz</url>
+       <xpath>//xhtml:p[contains(.,'Almer, Daniela / Hoffellner')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <xpath>//xhtml:a[contains(.,'MitarbeiterInnen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <xpath>//xhtml:h2[contains(.,'MitarbeiterInnen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#mitarbeiter</url>
+       <xpath>//xhtml:p[contains(.,'Mikrobiologin')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <xpath>//xhtml:a[contains(.,'Finanzierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <xpath>//xhtml:h2[contains(.,'Finanzierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=about#finanzierung</url>
+       <xpath>//xhtml:p[contains(.,'Das Projekt wurde')]</xpath>
+    </test>
+
+<!-- /o:malab.editorialdec (Editionsrichtlinien) tests -->    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:a[contains(.,'Editionsrichtlinien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:h2[contains(.,'Editionsrichtlinien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:a[contains(.,'Kürzungszeichen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/o:malab.editorialdec/IMAGE.1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:li[contains(.,'Seitenumbruch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:a[contains(.,'mod')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:td[contains(.,'ꝛ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.editorialdec</url>
+       <xpath>//xhtml:a[contains(.,'hdl.handle.net/11471/521.60')]</xpath>
+    </test>
+
+<!-- /o:malab.ms16090001r/sdef:TEI/get?mode=view:facs (Text) tests -->    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'Item wildw')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:h3[contains(.,'Leer. Transkription der Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'[VD]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div[contains(.,'[Deckel]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090001r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:a[contains(.,'zum Inhaltsverzeichnis')]</xpath>
+    </test>
+
+<!-- /o:malab.msdesc (Handschriftenbeschreibung) tests -->    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Handschriftenbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:h2[contains(.,'Inhaltsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/o:malab.msdesc/IMAGE.2']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:i[contains(.,'Zustand:')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:a[contains(.,'Synoptische Ansicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.msdesc</url>
+       <xpath>//xhtml:h4[contains(.,'Behandlung von gebrochnen Weinen')]</xpath>
+    </test>
+
+<!-- /o:malab.lagenbesch (Lagenvisualisierung) tests -->    
+    <test>
+       <url>/o:malab.lagenbesch</url>
+       <xpath>//xhtml:a[contains(.,'Lagenvisualisierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.lagenbesch</url>
+       <xpath>//xhtml:h2[contains(.,'Lagenbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.lagenbesch</url>
+       <xpath>//xhtml:p[contains(.,'Die Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.lagenbesch</url>
+       <xpath>//xhtml:a[contains(.,'Lagenvisualisierung')]</xpath>
+    </test>
+
+<!-- /o:malab.mitmachlabor (Mitmachlabor) tests -->    
+    <test>
+       <url>/o:malab.mitmachlabor</url>
+       <matcher>h2:matches(^Inhaltsverzeichnis$)</matcher>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#pharmazie</url>
+       <xpath>//xhtml:a[contains(.,'Pharmazie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#pharmazie</url>
+       <xpath>//xhtml:h2[contains(.,'Pharmazie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#pharmazie</url>
+       <xpath>//xhtml:p[contains(.,'Die mittelalterliche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#pharmazie</url>
+       <xpath>//xhtml:img/@src[.='//gams.uni-graz.at/o:malab.mitmachlabor/IMAGE.2']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#kulinarik</url>
+       <xpath>//xhtml:a[contains(.,'Kulinarik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#kulinarik</url>
+       <xpath>//xhtml:h2[contains(.,'Kulinarik')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#kulinarik</url>
+       <xpath>//xhtml:p[contains(.,'und ihre Rezepte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#nachhaltigkeit</url>
+       <xpath>//xhtml:a[contains(.,'Nachhaltigkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#nachhaltigkeit</url>
+       <xpath>//xhtml:h2[contains(.,'Nachhaltigkeit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#nachhaltigkeit</url>
+       <xpath>//xhtml:p[contains(.,'Mittelalterliche Hausbücher')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#handschrift</url>
+       <xpath>//xhtml:a[contains(.,'Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#handschrift</url>
+       <xpath>//xhtml:h2[contains(.,'Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.mitmachlabor#handschrift</url>
+       <xpath>//xhtml:p[contains(.,'Das Schreiben mit')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:malab/methods/sdef:Context/get?mode=unfinished (Unerledigt) tests -->    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=unfinished</url>
+       <xpath>//xhtml:a[contains(.,'Unerledigt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=unfinished</url>
+       <xpath>//xhtml:h2[contains(.,'Daten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=unfinished</url>
+       <xpath>//xhtml:p[contains(.,'Horizontale Textsynopse')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:malab/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h2[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Veröffentlicht mit Unterstützung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'http://gams.uni-graz.at')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:malab/methods/sdef:Context/get?mode=privacy (Datenschutz) tests -->    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=privacy</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=privacy</url>
+       <xpath>//xhtml:h2[contains(.,'Datenschutz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=privacy</url>
+       <xpath>//xhtml:p[contains(.,'Bei Aufruf der Webseiten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=privacy</url>
+       <xpath>//xhtml:a[contains(.,'Datenschutzerklärung')]</xpath>
+    </test>
+
+<!-- /o:malab.ms16090011r/sdef:TEI/get?mode=view:facs (Kochrezepte) tests -->    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:h3[contains(.,'Kochrezepte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:span[contains(.,'[I]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090011r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- /o:malab.ms16090095r/sdef:TEI/get?mode=view:facs (weiter zu: Leer) tests -->    
+    <test>
+       <url>/o:malab.ms16090095r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:h3[contains(.,'Leer. Transkription der Handschrift')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090095r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'[95v]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090095r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- /o:malab.ms16090135r/sdef:TEI/get?mode=view:facs (Färben Reinigen) tests -->    
+    <test>
+       <url>/o:malab.ms16090135r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:h3[contains(.,'Anleitungen zum Färben und Reinigen')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/o:malab.ms16090135r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:b[contains(.,'[135r]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090135r/sdef:TEI/get?mode=view:facs</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test> 
+
+<!-- /o:malab.ms16090149v/sdef:TEI/get?mode=view:facs#MS1609_0149v (Merck wie man das) tests -->    
+    <test>
+       <url>/o:malab.ms16090149v/sdef:TEI/get?mode=view:facs#MS1609_0149v</url>
+       <xpath>//xhtml:h3[contains(.,'Merck wie man')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090149v/sdef:TEI/get?mode=view:facs#MS1609_0149v</url>
+       <xpath>//xhtml:b[contains(.,'[149v]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:malab.ms16090149v/sdef:TEI/get?mode=view:facs#MS1609_0149v</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test> 
+
+<!-- /o:malab.ms16090151r/sdef:TEI/get?mode=view:facs#MS1609_0151r (Für den gries) tests -->    
+    <test>
+       <url>/o:malab.ms16090151r/sdef:TEI/get?mode=view:facs#MS1609_0151r</url>
+       <xpath>//xhtml:h3[contains(.,'Für den gries')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/o:malab.ms16090151r/sdef:TEI/get?mode=view:facs#MS1609_0151r</url>
+       <xpath>//xhtml:b[contains(.,'[151r]')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/o:malab.ms16090151r/sdef:TEI/get?mode=view:facs#MS1609_0151r</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>      
+
+<!-- /archive/objects/context:malab/methods/sdef:Context/get?mode=viscoll (viscoll) tests -->
+	<test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=viscoll</url>
+       <xpath>//xhtml:span[contains(.,'Select a Quire')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=viscoll</url>
+       <xpath>//xhtml:a[contains(.,'Quire 1, Unit 1, 10')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:malab/methods/sdef:Context/get?mode=viscoll</url>
+       <xpath>//xhtml:img/@src[.='http://glossa.uni-graz.at/o:malab.1609/IMAGE.4']</xpath>
+    </test>
+    	    
+	              
+</TestCase>

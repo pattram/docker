@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="epis">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests epis -->
+    <test>
+       <url>/context:epis</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Gurk.Guenther1072/methods/sdef:Context/get?mode=Gurk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Chiemsee.Ruediger1216/methods/sdef:Context/get?mode=Chiemsee</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Seckau.KarlI1218/methods/sdef:Context/get?mode=Seckau</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Lavant.UlrichI1228/methods/sdef:Context/get?mode=Lavant</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Leoben.Alexander1786/methods/sdef:Context/get?mode=Leoben</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Innsbruck.Sigismund1925/methods/sdef:Context/get?mode=Innsbruck</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Feldkirch.Sigismund1925/methods/sdef:Context/get?mode=Feldkirch</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;dc.coverage=&amp;repositoryAsPhrase=&amp;sealfunctionAsPhrase=&amp;sealtype=&amp;averstypeAsPhrase=&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epis.sa-1/LIDO_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:epis.sa-1/sdef:LIDO/getPDF</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:epis (Home) tests -->
+	<test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:a[contains(.,'Startseite')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:h3[contains(.,'Die Siegel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:p[contains(.,'Das Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:a[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:img/@src[.='/epis/img/epis-m221_F_350.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- /context:epis?mode=structure (Übersicht) tests -->    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <xpath>//xhtml:a[contains(.,'Übersicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <xpath>//xhtml:h3[contains(.,'Siegel nach Diözesen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <xpath>//xhtml:a[contains(.,'Friedrich I. (958-991), Erzbischof')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <xpath>//xhtml:h3[contains(.,'Treffen Sie eine Auswahl')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:epis?mode=structure</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:epis/methods/sdef:Context/get?mode=search (Suche) tests -->    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:h3[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:option[contains(.,'Gurk-Klagenfurt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:button[contains(.,'Zurücksetzen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=search</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:epis/methods/sdef:Context/get?mode=howto (Nutzungshinweise) tests -->    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <xpath>//xhtml:a[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <xpath>//xhtml:h3[contains(.,'Nutzungshinweise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <xpath>//xhtml:p[contains(.,'sind die Diözesen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <xpath>//xhtml:td[contains(.,'Die Auflösung von Wortkürzungen')]</xpath>
+    </test>
+
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=howto</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:epis/methods/sdef:Context/get?mode=about (Projektbeschreibung) tests -->
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Das hier vorgestellte Forschungsvorhaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg (Siegel Salzburg) tests -->    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:a[contains(.,'Friedrich I. (958-991), Erzbischof')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:p[contains(.,'Anzahl der gefundenen Einträge')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:img/@src[.='/o:epis.sa-1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:h3[contains(.,'Friedrich I.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis.Salzburg.FriedrichI0958/methods/sdef:Context/get?mode=Salzburg</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&mode=object (Object sample) tests -->    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:h3[contains(.,'Erzbischof Friedrich I.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:th[contains(.,'Hinweis zum Siegel')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:img/@src[.='/templates/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:td[contains(.,'Fälschung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:p[contains(.,'Franz Ortner')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:epis.sa-1/methods/sdef:LIDO/get?context=context:epis.Salzburg.FriedrichI0958&amp;mode=object</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&dc.coverage=&repositoryAsPhrase=&sealfunctionAsPhrase=&sealtype=&averstypeAsPhrase=&date=&hitPageSize=10&hitPageStart=1&pid=epis&search=advanced&x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl (Volltextsuche search) tests -->        
+    <test>
+       <url>/search/gsearch?query=&amp;dc.coverage=&amp;repositoryAsPhrase=&amp;sealfunctionAsPhrase=&amp;sealtype=&amp;averstypeAsPhrase=&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Siegel der Bischöfe der Salzburger Metropole')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;dc.coverage=&amp;repositoryAsPhrase=&amp;sealfunctionAsPhrase=&amp;sealtype=&amp;averstypeAsPhrase=&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Bischof Rüdiger')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;dc.coverage=&amp;repositoryAsPhrase=&amp;sealfunctionAsPhrase=&amp;sealtype=&amp;averstypeAsPhrase=&amp;date=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=advanced&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:img/@src[.='/o:epis.ch-1/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Hilfe zur Volltextsuche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'Es müssen mindestens')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:h4[contains(.,'Trunkierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=epis&amp;search=simple&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fepis%2Fepis-search.xsl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:epis/methods/sdef:Context/get?mode=imprint (Impressum) tests -->    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Institut für Kirchengeschichte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:epis/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Geisteswissenschaftliches Asset Management')]</xpath>
+    </test>
+      	          
+</TestCase>

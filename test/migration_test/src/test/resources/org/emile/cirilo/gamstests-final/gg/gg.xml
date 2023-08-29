@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="gg">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests gg -->
+    <test>
+       <url>/context:gg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gg.ko</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:gg.sosa</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:gg (Home) tests -->
+	<test>
+       <url>/context:gg</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg</url>
+       <xpath>//xhtml:h3[.='Einleitung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg</url>
+       <xpath>//xhtml:p[contains(.,'Bereits um 1900')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg</url>
+       <xpath>//xhtml:img/@src[.='/gg/img/Home.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:gg/methods/sdef:Context/get?mode=project (Projekt) tests -->
+	<test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[contains(.,'Projekt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:h3[.='Projekt: Steirische Gebrauchsgrafik']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:p[contains(.,'Als steirische Gebrauchsgrafiken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:a[.='Steiermärkischen Landesarchivs']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=project</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- context:gg.plk (Steiermärkisches Landesarchiv) tests -->
+	<test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:a[contains(.,'Steiermärkisches Landesarchiv')]</xpath>
+    </test>
+    
+	<test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:h3[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:p[contains(.,'Das Steiermärkische Landesarchiv')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:a[.='Alltag']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:img/@src[.='/o:gg.plk-1474102/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:a[.='Werbung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- context:gg.plk-alltag example category (Alltag) tests -->   
+	<test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:h3[.='Über die Sammlung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:p[contains(.,'Das Steiermärkische Landesarchiv')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:a[.='Alltag']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:img/@src[.='/o:gg.plk-354400/THUMBNAIL']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:a[.='Ausstellungsankündigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.plk-alltag</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- single object sample tests -->
+	<test>
+       <url>/o:gg.plk-1474102</url>
+       <xpath>//xhtml:h3[.='Werbung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gg.plk-1474102</url>
+       <xpath>//xhtml:td[contains(.,'Flugblatt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gg.plk-1474102</url>
+       <xpath>//xhtml:a[.='https://egov.stmk.gv.at/archivinformationssystem/objekt.jsp?id=1474102']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:gg.plk-1474102</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- context:gg.ko (Firmenarchiv Kastner & Öhler) tests -->
+	<test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:a[contains(.,'Firmenarchiv Kastner &amp; Öhler')]</xpath>
+    </test>
+    
+	<test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:h3[.='Firmenarchiv Kastner &amp; Öhler']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:p[contains(.,'Das Archiv der Firma')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:a[contains(.,'Plakate. Aufbruch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.ko</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- context:gg.sosa (Musikalien der Sondersammlung der Universitätsbibliothek) tests -->
+	<test>
+       <url>/context:gg.sosa</url>
+       <xpath>//xhtml:a[contains(.,'Musikalien der Sondersammlung der Universitätsbibliothek')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.sosa</url>
+       <xpath>//xhtml:h3[.='Musikalien der Sondersammlung der Universitätsbibliothek']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.sosa</url>
+       <xpath>//xhtml:p[contains(.,'Über 700 Musikalien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.sosa</url>
+       <xpath>//xhtml:div/@id[.='carousel-example-generic']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:gg.sosa</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- archive/objects/context:gg/methods/sdef:Context/get?mode=publication (Publikation) tests -->
+	<test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:a[contains(.,'Publikation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:h3[.='Plakate. Aufbruch in die Moderne']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:p[contains(.,'Bereits um 1900 eroberte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-file']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:a[contains(.,'Leseprobe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:img/@src[.='/gg/img/Cover.jpg']</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=publication</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- archive/objects/context:gg/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Eva Klein')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:gg/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>    			
+   
+</TestCase>

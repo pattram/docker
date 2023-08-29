@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="kofler">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests kofler -->
+    <test>
+       <url>/context:kofler</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Erinnerung:
+    Das ist der Test mit der url wie sie probleme gemacht hat
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20<http%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile>.</url>
+       <status>200</status>
+    </test>
+    
+    Das ist der Test mit der ausgebesserten url.
+    Spitze Klammern waren ein Problem.
+    Hier sind sie richtig encodet.
+    So funktioniert der Test
+    <test>
+ 	   <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <status>200</status>
+    </test>
+    -->
+    
+    <!-- Das ist der richtig encodete Test wie er funktioniert. Status 200 Test (Kommentar) -->
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=$1%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.w2.mordschein%253E.;$2%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.l%253E.</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=kofler&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.guggile.12</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.ida.428</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w2.schreibtisch.157</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:kofler (Home) tests -->
+	<test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:h2[contains(.,'KOMMENTAR ZUR WERKAUSGABE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/Kofler-Logo.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/WernerKofler-Portrait.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/KoflerDerWoche.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:a[contains(.,'Zitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/Werke1.svg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:a[contains(.,'Guggile')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/Werke2.svg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:a[contains(.,'Am Schreibtisch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[.='/kofler/img/Werke3.svg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:a[contains(.,'Herbst, Freiheit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:p[contains(.,'Kategorien suchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:a[contains(.,'Zitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:input/@id[contains(.,'query')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:span[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kofler</url>
+       <xpath>//xhtml:img/@src[contains(.,'/kofler/img/Sonderzahl-Logo.png')]</xpath>
+    </test>
+
+<!-- /query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E. (Kommentar) tests -->
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:a[contains(.,'Kommentar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:label[contains(.,'WERK')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:option[contains(.,'Guggile')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:label[contains(.,'KATEGORIE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:option[contains(.,'Zitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:option[contains(.,'Alle')]</xpath>
+    </test>
+      
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <matcher>a:matches(^Person$)</matcher>
+    </test> 
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <matcher>a:matches(^Topographie$)</matcher>
+    </test>
+    
+    <test>
+       <url>/query:kofler.search?params=%241%7C%3Fresource%20kofler%3Asubject%20%3Chttp%3A%2F%2Fgams.uni-graz.at%2Fcontext%3Akofler.w1.guggile%3E.</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:kofler/methods/sdef:Context/get?mode=note (Editorische Notiz) tests -->
+	<test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:a[contains(.,'Editorische Notiz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:h3[contains(.,'Editorische Notiz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:p[contains(.,'Diese Plattform zum Prosawerk')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:a[contains(.,'die 2018 im Sonderzahl Verlag')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:h3[contains(.,'Editorische Notiz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=note</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+<!-- /archive/objects/context:kofler/methods/sdef:Context/get?mode=print (Printausgabe) tests -->
+	<test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <xpath>//xhtml:a[contains(.,'Printausgabe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <xpath>//xhtml:h3[contains(.,'Printausgabe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <xpath>//xhtml:p[contains(.,'Die dreibändige Buchausgabe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <xpath>//xhtml:h4[contains(.,'Band I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=print</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>   
+    
+<!-- /archive/objects/context:kofler/methods/sdef:Context/get?mode=team (Team) tests -->
+	<test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:h3[contains(.,'Team')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:p[contains(.,'Literaturwissenschaftler, beschäftigte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:h4[contains(.,'Wolfgang Straub')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:a[contains(.,'www.weissgrad.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=team</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography (Bibliographie) tests -->
+	<test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <xpath>//xhtml:a[contains(.,'Bibliographie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <xpath>//xhtml:h3[contains(.,'Für den Kommentar herangezogene Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <xpath>//xhtml:span[contains(.,'Achleitner 1995')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <xpath>//xhtml:li[contains(.,'Achleitner, Friedrich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=bibliography</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Veröffentlicht mit Unterstützung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:img/@src[.='/context:kofler/FWF']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'wolfgang.straub@univie.ac.at')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h4[contains(.,'Projektmitarbeit')]</xpath>
+    </test>    
+    
+    <test>
+       <url>/archive/objects/context:kofler/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=kofler&x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl (Suche) tests -->    
+	<test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=kofler&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'Suchergebnisse für')]</xpath>
+    </test>    
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=kofler&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'denke ich')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=kofler&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl</url>
+       <xpath>//xhtml:div[contains(.,'Im gesamten Textabschnitt')]</xpath>
+    </test> 
+
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=kofler&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fkofler%2Fkofler-search.xsl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /o:kofler.w1.amok.1626 (object sample) tests -->
+	<test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:label[contains(.,'WERK')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:option[contains(.,'Alle')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:option[contains(.,'Guggile')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:label[contains(.,'KATEGORIE')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:option[contains(.,'Zitate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:p[contains(.,'denke ich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:h2[contains(.,'Kommentar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:i[contains(.,'Stadt und Anfall')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:span[contains(.,'Guggile')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:span[contains(.,'denke ich')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:div[contains(.,'Zitiervorschlag:')]</xpath>
+    </test> 
+
+    <test>
+       <url>/o:kofler.w1.amok.1626</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+
+<!-- /query:kofler.search?params=$1%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.w1.ida%253E.;$2%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.pmusiker%253E. (sample Suche nach Werk und Kategorie) tests -->
+   
+    <test>
+       <url>/query:kofler.search?params=$1%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.w1.ida%253E.;$2%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.pmusiker%253E.</url>
+       <matcher>a:matches(^Evelyn Künneke$)</matcher>
+    </test>    
+    
+    <test>
+       <url>/query:kofler.search?params=$1%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.w1.ida%253E.;$2%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.pmusiker%253E.</url>
+       <matcher>a:matches(^MusikerIn$)</matcher>
+    </test> 
+		
+    <test>
+       <url>/query:kofler.search?params=$1%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.w1.ida%253E.;$2%7C%253Fresource%2520kofler%253Asubject%2520%253Chttp%253A%252F%252Fgams.uni-graz.at%252Fcontext%253Akofler.pmusiker%253E.</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+           
+</TestCase>

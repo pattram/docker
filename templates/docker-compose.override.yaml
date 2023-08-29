@@ -1,0 +1,103 @@
+version: "3.4"
+
+
+
+
+services:
+
+  activemq:
+    volumes:
+    ports:
+      - "61616:61616"
+      - "4051:8161" 
+
+  apache:
+    ports:
+      - "443:443"
+    # uncomment to enable redirection from http to https
+    #    - "80:80"
+    volumes:
+
+  blazegraph:
+    volumes:
+    ports:
+      - "4040:8080"
+
+  cocoon:
+    volumes:
+    ports:
+      - "4047:8080"
+
+  fcgate:
+    volumes:
+
+  fcrepo4:
+    volumes:
+
+  fits:        
+    ports:
+      - "4044:8082"
+
+  latex:
+    ports:
+      - "4048:8888"
+
+  loris:
+    volumes:
+
+  rdf4j:
+    volumes:
+
+  nexuscube:
+    ports:
+      - 4049:8080
+
+  postgres:
+    volumes:
+
+  proai:
+    volumes:
+    ports:
+      - "4050:8080"
+
+  skosifier:
+    ports:
+      - "4045:5000"
+
+  solr:     
+    volumes: 
+    ports: 
+      - "4046:8983"
+
+
+  treetagger:
+    ports:
+      - "4043:8080"
+
+
+  triplestore:
+    volumes:
+    ports:
+      - "4041:8080"
+
+  verovio:  
+    ports:
+      - 4052:8080
+      
+  minio:
+    volumes:
+    ports:
+      - 9000:9000
+      - 9001:9001
+
+volumes:
+  activemq-vol:
+  blazegraph-vol:
+  fcrepo-vol:
+  loriscache-vol:
+  rdf4j-vol:
+  postgres-vol:
+  proai-vol:
+  solr-vol:
+  triplestore-vol:
+  minio-vol:

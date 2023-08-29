@@ -1,0 +1,10 @@
+<mv:book xmlns:mv="http://cm4f.org/mets_viewer/" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <mv:title>METS Viewer Test Object</mv:title>
+  <mv:idno>o:emile.ingest.mets.2</mv:idno>
+  <mv:structure>
+     <mv:div label="Abschnitt">
+     	<mv:page xlink:href="PAGE-1.jpg"/>
+     	<mv:page xlink:href="PAGE-2.jpg"/>
+	 </mv:div>
+  </mv:structure>
+</mv:book>

@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="mws">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests mws -->
+    <test>
+       <url>/archive/get/context:mws/sdef:Context/get?locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=about&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=about&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=about&amp;locale=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=about&amp;locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=about&amp;locale=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=pt</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=pt</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;locale=fr&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fmws%2F3mws-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=it</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=es</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=pt</url>
+       <status>200</status>
+    </test>
+
+	<!-- Object sample status 200 tests -->
+	<test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=fr</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=fr&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=fr&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=fr&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=fr&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=de&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=de&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=de&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=de&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=de&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=en&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=en&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=en&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=en&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=en&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=it&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=it&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=it&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=it&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=it&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=es&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=es&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=es&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=es&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=es&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=pt&amp;context=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=pt&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=pt&amp;mode=original</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/getPDF?locale=pt&amp;mode=analyse</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=pt&amp;mode=analyse&amp;context=en;context:mws-femalespectator</url>
+       <status>200</status>
+    </test>
+    
+<!-- /archive/get/context:mws/sdef:Context/get?locale=fr (Home French) tests -->
+	<test>
+       <url>/archive/get/context:mws/sdef:Context/get?locale=fr</url>
+       <xpath>//xhtml:strong[contains(.,'France')]</xpath>
+    </test>
+        
+    <test>
+       <url>/archive/get/context:mws/sdef:Context/get?locale=fr</url>
+       <xpath>//xhtml:p[contains(.,'Le genre journalistique')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/context:mws/sdef:Context/get?locale=fr</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+    	    
+<!-- /context:mws/sdef:Context/get?mode=&locale=fr (alternative Home link French) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=fr</url>
+       <xpath>//xhtml:strong[contains(.,'France')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=fr</url>
+       <xpath>//xhtml:p[contains(.,'Le genre journalistique')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=fr</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- /context:mws/sdef:Context/get?mode=&locale=de (Home German) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:strong[contains(.,'Deutschland')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die journalistische Gattung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- /context:mws/sdef:Context/get?mode=&locale=en (Home English) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:strong[contains(.,'England')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The journalistic genre')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- /context:mws/sdef:Context/get?mode=&locale=it (Home Italian) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=it</url>
+       <xpath>//xhtml:strong[contains(.,'Italia')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=it</url>
+       <xpath>//xhtml:p[contains(.,'sono un genere')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=it</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- /context:mws/sdef:Context/get?mode=&locale=es (Home Spanish) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=es</url>
+       <xpath>//xhtml:strong[contains(.,'España')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=es</url>
+       <xpath>//xhtml:p[contains(.,'El género periodístico')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=es</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- /context:mws/sdef:Context/get?mode=&locale=pt (Home Portuguese) tests -->
+	<test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=pt</url>
+       <xpath>//xhtml:strong[contains(.,'Portugal')]</xpath>
+    </test>
+        
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=pt</url>
+       <xpath>//xhtml:p[contains(.,'O gênero jornalístico')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:mws/sdef:Context/get?mode=&amp;locale=pt</url>
+       <xpath>//xhtml:img/@src[.='/mws/img/karte.jpg']</xpath>
+    </test>
+
+<!-- Project Description (various languages) tests -->
+	<test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=fr</url>
+       <xpath>//xhtml:p[contains(.,'Le phénomène des')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Das Phänomen der')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'The phenomenon of the')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=it</url>
+       <xpath>//xhtml:p[contains(.,'La ragione di questo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=es</url>
+       <xpath>//xhtml:p[contains(.,'Los “espectadores”')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=about&amp;locale=pt</url>
+       <xpath>//xhtml:p[contains(.,'O fenómeno dos')]</xpath>
+    </test>
+    
+<!-- Bibliography (various languages) tests -->
+	<test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?locale=fr&amp;mode=bibl&amp;context=</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=it</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=es</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-bibliographie/methods/sdef:Context/get?mode=bibl&amp;context=&amp;locale=pt</url>
+       <xpath>//xhtml:a[contains(.,'Dublin Core')]</xpath>
+    </test>
+
+<!-- England (various languages) tests -->
+	<test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Eliza Haywood')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Eliza Haywood')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Eliza Haywood')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Eliza Haywood')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Eliza Haywood')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-en/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=en</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Eliza Haywood')]</xpath>
+    </test>
+
+<!-- France (various languages) tests -->
+	<test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Justus Van Effen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Justus Van Effen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Justus Van Effen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Justus Van Effen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Justus Van Effen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-fr/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=fr</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Justus Van Effen')]</xpath>
+    </test>
+
+<!-- Germany (various languages) tests -->
+	<test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Anonymus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Anonymus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Anonymus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Anonymus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Anonymus')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-de/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=de</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Anonymus')]</xpath>
+    </test>
+
+<!-- Italy (various languages) tests -->
+	<test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Luca Magnanima')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Luca Magnanima')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Luca Magnanima')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Luca Magnanima')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Luca Magnanima')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-it/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=it</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Luca Magnanima')]</xpath>
+    </test>
+
+<!-- Spain (various languages) tests -->
+	<test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Vicente Serraller y Aemor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Vicente Serraller y Aemor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Vicente Serraller y Aemor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Vicente Serraller y Aemor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Vicente Serraller y Aemor')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-es/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=es</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Vicente Serraller y Aemor')]</xpath>
+    </test>
+
+<!-- Portugal (various languages) tests -->
+	<test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Bento Morganti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Bento Morganti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Bento Morganti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Bento Morganti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Bento Morganti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-pt/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=pt</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Bento Morganti')]</xpath>
+    </test>
+
+<!-- Complete List (various languages) tests -->
+	<test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=fr&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'Édité par Anónimo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=de&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'Herausgegeben von Anónimo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=en&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'Edited by Anónimo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=it&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'A cura di Anónimo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=es&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'Editado por Anónimo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:mws-gesamt/methods/sdef:Context/get?locale=pt&amp;mode=&amp;context=</url>
+       <xpath>//xhtml:p[contains(.,'Publicado por Anónimo')]</xpath>
+    </test>
+
+<!-- Imprint (various languages) tests -->
+	<test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=fr</url>
+       <xpath>//xhtml:h1[contains(.,'Information éditoriale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h1[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:h1[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=it</url>
+       <xpath>//xhtml:h1[contains(.,'Informazione editoriale')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&amp;locale=es</url>
+       <xpath>//xhtml:h1[contains(.,'Información editorial')]</xpath>
+    </test>
+    
+    <!-- Hier sind keine Imprint Infos enthalten (Portugiesisches Impressum nicht vorhanden)
+    <test>
+       <url>/archive/objects/context:mws/methods/sdef:Context/get?mode=imprint&locale=pt</url>
+       <xpath>//xhtml:h1[contains(.,'')]</xpath>
+    </test>	    -->
+
+<!-- Search (various languages) tests -->
+	<test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;locale=fr&amp;x2=http%3A%2F%2Fgams.uni-graz.at%2Fmws%2F3mws-search.xsl</url>
+       <xpath>//xhtml:h1[contains(.,'Tous résultats')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=de</url>
+       <xpath>//xhtml:h1[contains(.,'Alle Suchergebnisse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=en</url>
+       <xpath>//xhtml:h1[contains(.,'All results')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=it</url>
+       <xpath>//xhtml:h1[contains(.,'Tutti i risultati')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=es</url>
+       <xpath>//xhtml:h1[contains(.,'Todos los resultados')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?dc.coverage=&amp;dc.subject=&amp;genre=&amp;date=&amp;query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=mws&amp;search=simple&amp;x2=http://gams.uni-graz.at/mws/3mws-search.xsl&amp;locale=pt</url>
+       <xpath>//xhtml:h1[contains(.,'Todos os resultados da pesquisa')]</xpath>
+    </test>
+
+<!--  Object sample tests (The Female spectator) (various languages) -->
+	<test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=fr</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=it</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=es</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:mws-femalespectator/methods/sdef:Context/get?locale=pt</url>
+       <xpath>//xhtml:a[contains(.,'Book I')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=fr</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=it</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=es</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?locale=pt</url>
+       <xpath>//xhtml:p[contains(.,'is very much by')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=fr</url>
+       <xpath>//xhtml:h3[contains(.,'Niveau 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=de</url>
+       <xpath>//xhtml:h3[contains(.,'Ebene 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=en</url>
+       <xpath>//xhtml:h3[contains(.,'Level 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=it</url>
+       <xpath>//xhtml:h3[contains(.,'Livello 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=es</url>
+       <xpath>//xhtml:h3[contains(.,'Nivel 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:mws.4029/methods/sdef:TEI/get?mode=analyse&amp;context=en;context:mws-femalespectator&amp;locale=pt</url>
+       <xpath>//xhtml:h3[contains(.,'Nível 2')]</xpath>
+    </test>
+	          
+</TestCase>

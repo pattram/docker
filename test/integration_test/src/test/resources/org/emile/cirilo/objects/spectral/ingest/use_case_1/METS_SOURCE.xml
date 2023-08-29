@@ -1,0 +1,93 @@
+<!-- Hinweis: Server-Adressen, etwa: „http://glossa.uni-graz.at“ stets durch „info:fedora“ ersetzen -->
+<!-- in @OBJID den PID des Objektes schreiben, etwa „o:mmmr.k4984.1r“ -->
+<mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/METS/ https://www.loc.gov/standards/mets/mets.xsd"
+    xmlns:mets="http://www.loc.gov/METS/" xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="o:emile.ingest.spectral.1">
+    <mets:dmdSec ID="DMD">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS">
+            <mets:xmlData>
+                <!-- hier Metadaten zur Seite mittels MODS-Vokabular -->
+                <mods:mods>
+                    <mods:titleInfo>
+                        <mods:title>K 4984, Folio 1r</mods:title>
+                        <mods:subTitle>Wiener Moamin</mods:subTitle>
+                    </mods:titleInfo>
+                    <mods:relatedItem>
+                        <mods:titleInfo>
+                            <mods:title xml:lang="de">Manuskript K 4984, Kunsthistorisches Museum
+                                Wien</mods:title>
+                        </mods:titleInfo>
+                        <mods:typeOfResource manuscript="yes">digital representation of the
+                            manuscript</mods:typeOfResource>
+                        <mods:identifier type="uri">info:fedora/o:emile.ingest.spectral.1</mods:identifier>
+                        <mods:location>
+                            <mods:url>info:fedora/o:emile.ingest.spectral.1</mods:url>
+                        </mods:location>
+                    </mods:relatedItem>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:amdSec>
+        <mets:techMD ID="TMD.CLR">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.CLR"/>
+        </mets:techMD>
+        <mets:techMD ID="TMD.GRY">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.GRY"/>
+        </mets:techMD>
+        <mets:techMD ID="TMD.PCA">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.PCA"/>
+        </mets:techMD>
+        <mets:techMD ID="TMD.FTIR">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.FTIR"
+            />
+        </mets:techMD>
+        <mets:techMD ID="TMD.RAMAN">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.RAMAN"
+            />
+        </mets:techMD>
+        <mets:techMD ID="TMD.XRF">
+            <mets:mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:href="info:fedora/context:mmmr/TMD.XRF"/>
+        </mets:techMD>
+    </mets:amdSec>
+    <mets:fileSec>
+        <mets:fileGrp ID="REFERENCE" USE="Image"/>
+        <mets:fileGrp ID="IMAGE" USE="Image">
+            <mets:fileGrp ADMID="TMD.CLR" ID="CLR" USE="RGB Image">
+                <mets:fileGrp ID="DSP.CLR" USE="Display Format"/>
+                <mets:fileGrp ID="RAW.CLR" USE="Archive Format"/>
+                <mets:fileGrp ID="TRF.CLR" USE="Transformation File"/>
+            </mets:fileGrp>
+            <mets:fileGrp ADMID="TMD.GRY" ID="GRY" USE="Monochrome Image">
+                <mets:fileGrp ID="DSP.GRY" USE="Display Format"/>
+            </mets:fileGrp>
+            <mets:fileGrp ADMID="TMD.PCA" ID="PCA" USE="Principal Component Analysis">
+                <mets:fileGrp ID="DSP.PCA" USE="Display Format"/>
+            </mets:fileGrp>
+        </mets:fileGrp>
+        <mets:fileGrp ID="POINTDATA" USE="Dataset">
+            <mets:fileGrp ADMID="TMD.FTIR" ID="FTIR" USE="Fourier-transform infrared spectroscopy"/>
+            <mets:fileGrp ADMID="TMD.RAMAN" ID="RAMAN" USE="Raman spectroscopy"/>
+            <mets:fileGrp ADMID="TMD.XRF" ID="XRF" USE="X-ray fluorescence analysis"/>
+        </mets:fileGrp>
+        <mets:fileGrp ID="SKOS" USE="Text">
+            <mets:file ID="SKOS.MATERIALS">
+                <mets:FLocat LOCTYPE="URL" xlink:href="info:fedora/o:mmmr.materials/ONTOLOGY"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap TYPE="PHYSICAL">
+        <!-- in @LABEL den Titel der Seite, etwa: „K 4984, Folio 1r“ und in @ORDERLABEL die Seitennummer, etwa: „1r“ schreiben -->
+        <mets:div DMDID="DMD" LABEL="K 4984, Folio 1r" ORDERLABEL="1r" TYPE="page">
+            <mets:div TYPE="REFERENCE">
+                <mets:div LABEL="Image">
+                    <mets:div LABEL="RGB Images" TYPE="DSP.CLR"/>
+                    <mets:div LABEL="Monochrome Images" TYPE="DSP.GRY"/>
+                    <mets:div LABEL="Principal Component Analysis" TYPE="DSP.PCA"/>
+                </mets:div>
+                <mets:div LABEL="Measurement Points" TYPE="MP"/>
+            </mets:div>
+        </mets:div>
+    </mets:structMap>
+</mets:mets>

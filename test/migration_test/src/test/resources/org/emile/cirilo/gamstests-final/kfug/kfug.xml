@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="kfug">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests kfug -->
+<!-- status 200 tests kfug navbar links -->
+    <test>
+       <url>/context:kfug</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 tests kfug footer links-->
+	<test>
+       <url>/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test> <!-- matcher test Repositorium Steirisches Wissenschaftserbe -->
+       <url>https://wissenschaftserbe.uni-graz.at/</url>
+       <matcher>h1:matches(^Repositorium Steirisches Wissenschaftserbe$)</matcher>
+    </test>
+    
+    <test> <!-- matcher test ZIM -->
+       <url>https://informationsmodellierung.uni-graz.at/</url>
+       <matcher>h1:matches(^Institut Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities$)</matcher>
+    </test>
+    
+    <test> <!-- matcher test creative commons -->
+       <url>https://creativecommons.org/licenses/by-nc-sa/4.0//</url>
+       <matcher>p:matches(^Help us build a vibrant, collaborative global commons$)</matcher>
+    </test>
+
+<!-- status 200 kfug TEI SOURCE links-->
+	<test>
+       <url>/o:kfug.1/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+
+<!-- status 200 tests o:kfug.bib Literatur links -->
+<!-- PDF -->
+	<test>
+       <url>/archive/objects/o:kfug.bib/methods/sdef:BibTeX/getPDF</url>
+       <status>200</status>
+    </test>
+
+<!-- BiBTeX -->
+	<test>
+       <url>/archive/objects/o:kfug.bib/methods/sdef:BibTeX/getBIBTEX</url>
+       <status>200</status>
+    </test>
+
+<!-- RIS -->
+	<test>
+       <url>/archive/objects/o:kfug.bib/methods/sdef:BibTeX/getRIS</url>
+       <status>200</status>
+    </test>
+
+<!-- Endnote -->
+	<test>
+       <url>/archive/objects/o:kfug.bib/methods/sdef:BibTeX/getENDNOTE</url>
+       <status>200</status>
+    </test>
+
+<!-- context:kfug (= Home) tests -->
+<!-- context:kfug navbar links-->
+	<test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'urkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+	<test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- context:kfug footer links-->
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:kfug other tests -->
+	<test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:h3[.='Einleitung']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:p[contains(.,'Den Gründungsurkunden von Universitäten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:kfug</url>
+       <xpath>//xhtml:img/@src[.='/kfug/img/unigraz.jpg']</xpath>
+    </test>
+    
+<!-- o:kfug.1 (= Originaltext mit Übersetzungen) tests-->
+<!-- o:kfug.1 navbar links-->
+	<test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+	<test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.1 footer links-->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.1 other tests-->
+<!-- "Zur Entstehung"-text-expand-link -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Zur Entstehung ']</xpath>
+    </test>
+
+<!-- viewer -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+
+<!-- "Originaltext"-info-mouse-hover-link -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a/@title[contains(.,'Der lateinische Text ist')]</xpath>
+    </test>
+
+<!-- "Deutsch"-link -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Deutsch']</xpath>
+    </test>
+
+<!-- "Englisch link -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='Englisch']</xpath>
+    </test>
+    
+<!-- TEI icon img -->
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+
+<!-- footnote 3 mouse-hover-link -->    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[.='3']</xpath>
+    </test>
+    
+<!-- footnote 3 hover title -->    
+    <test>
+       <url>/o:kfug.1</url>
+       <xpath>//xhtml:a[@class and @title]/@title[.='D. = Dominus.']</xpath>
+    </test>
+
+<!-- o:kfug.1/methods/sdef:TEI/get?mode=summary (=Zusammenfassungen) tests -->
+<!-- o:kfug.1/methods/sdef:TEI/get?mode=summary navbar links -->
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.1/methods/sdef:TEI/get?mode=summary footer links -->
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+    
+<!-- o:kfug.1/methods/sdef:TEI/get?mode=summary other tests -->
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Slowenisch']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Kroatisch']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Ungarisch']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Slowakisch']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Tschechisch']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='Romani']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:p[contains(.,'1. januarja 1585 je')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:kfug.1/methods/sdef:TEI/get?mode=summary</url>
+       <xpath>//xhtml:a[.='zurück']</xpath>
+    </test>
+
+<!-- o:kfug.2 (= die kaiserliche Bestätigung) tests -->
+<!-- o:kfug.2 navbar links -->
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.2 footer links -->
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.2 other tests -->
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='Zur Entstehung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:tr/xhtml:th[contains(.,'Originaltext')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:div/xhtml:p[contains(.,'Der Text der kaiserlichen Bestätigung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[.='1']</xpath>
+    </test>
+    
+	<test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:a[@class and @title]/@title[contains(.,'Wir ergänzen; der lateinische Satz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.2</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-info-sign']</xpath>
+    </test>
+
+<!-- o:kfug.3 (= die päpstliche Bestätigung) tests -->
+<!-- o:kfug.3 navbar links -->
+	<test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.3 footer links -->
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.3 other tests -->
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='Zur Entstehung ']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:tr/xhtml:th[contains(.,'Originaltext')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:div/xhtml:p[contains(.,'Auch diese Bestätigung liegt nur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[.='1']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:a[@class and @title]/@title[contains(.,'Das in der Urkunde offenbar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.3</url>
+       <xpath>//xhtml:span/@class[.='glyphicon glyphicon-info-sign']</xpath>
+    </test>
+
+<!-- o:kfug.4 (= Wiedererhebung zur Universität) tests -->
+<!-- o:kfug.4 navbar links -->
+	<test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.4 footer links -->
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.4 other tests -->
+<!-- "Zur Entstehung"-text-expand-link -->
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a[.='Zur Entstehung ']</xpath>
+    </test>
+    
+<!-- viewer -->
+    <test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+<!-- TEI icon -->    
+	<test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+<!-- paragraph "Ich bewillige..." -->
+	<test>
+       <url>/o:kfug.4</url>
+       <xpath>//xhtml:p[contains(.,'Ich bewillige, daß das Lyceum zu Grätz')]</xpath>
+    </test>    
+    
+<!-- o:kfug.5 (= Namensgebung) tests -->
+<!-- o:kfug.5 navbar links -->    
+	<test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.5 footer links -->
+	<test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.5 other tests -->
+	<test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a[.='Zur Entstehung ']</xpath>
+    </test>
+
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+	<test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/tei_icon.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:p[@class and .='Transkription: Alois Kernbauer']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.5</url>
+       <xpath>//xhtml:p[contains(.,'An das Rektorat')]</xpath>
+    </test>
+
+<!-- o:kfug.6 (= Insignien) tests -->
+<!-- o:kfug.6 navbar links -->    
+	<test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.6 footer links -->
+	<test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.6 other tests -->
+	<test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:h3[.='Insignien']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:ul/@class[.='insignia']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.6</url>
+       <xpath>//xhtml:p[contains(.,'Die Fertigung wurde')]</xpath>
+    </test>
+
+<!-- o:kfug.7 (= Sub auspiciis-Ringe) tests -->
+<!-- o:kfug.7 navbar links -->    
+	<test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.7 footer links -->
+	<test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.7 other tests -->
+	<test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:h3[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:p[contains(.,'Text: Alois Kernbauer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.7</url>
+       <xpath>//xhtml:ul/xhtml:li/xhtml:p[contains(.,'Die Sub auspiciis-Promotion ist')]</xpath>
+    </test>
+    
+<!-- o:kfug.8 (= Wappen, Siegel, Logos) tests -->
+<!-- o:kfug.8 navbar links -->    
+	<test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.8 footer links -->
+	<test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.8 other tests -->
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:h3[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:div/@id[.='vwr-content']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.8</url>
+       <xpath>//xhtml:ul/xhtml:li/xhtml:p[contains(.,'Das Wappen der Jesuitenuniversität')]</xpath>
+    </test>
+
+<!-- o:kfug.bib (= Literatur) tests -->
+<!-- o:kfug.bib navbar links -->    
+	<test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- o:kfug.bib footer links -->
+	<test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- o:kfug.bib other tests -->
+	<test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:p[contains(.,'Dieser Onlineauftritt präsentiert')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:a[contains(.,'Höflechner Walter, Kernbauer Alois, Krapinger Gernot,')]</xpath>
+    </test>
+    
+    <test> <!-- matcher test amazon link -->
+        <url>https://www.amazon.de/Gr%C3%BCndungsurkunden-Insignien-Karl-Franzens-Universit%C3%A4t-Walter-H%C3%B6flechner/dp/3701102953</url>
+        <matcher>div:matches(Gründungsurkunde)</matcher>
+    </test>
+ 	
+ 	<test>
+       <url>/o:kfug.bib</url>
+       <xpath>//xhtml:p[@class and contains(.,'Hand-Lexikon der Maße und Gewichte')]/@class[.='bib']</xpath>
+    </test>
+
+<!-- context:kfug/methods/sdef:Context/get?mode=imprint (= Impressum) tests -->
+<!-- context:kfug/methods/sdef:Context/get?mode=imprint navbar links-->
+	<test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Gründungsurkunde')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Bestätigungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Insignien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Varia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Literatur')]</xpath>
+    </test>
+    
+	<test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Originaltext mit Übersetzung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Zusammenfassungen']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Die kaiserliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Die päpstliche Bestätigung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Wiedererhebung zur Universität']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Namensgebung']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Sub auspiciis-Ringe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Wappen, Siegel, Logos']</xpath>
+    </test>
+
+<!-- context:kfug/methods/sdef:Context/get?mode=imprint footer links-->
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Datenschutz']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/gamslogo_weiss.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/ZIM_weiss.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a/xhtml:img/@src[.='/templates/img/by-nc-sa.png']</xpath>
+    </test>
+
+<!-- context:kfug/methods/sdef:Context/get?mode=imprint other tests -->
+	<test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[.='Impressum']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Repositorium Steirisches Wissenschaftserbe']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='GAMS-Geisteswissenschaftliches Asset Management System']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='wukonig.com']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:kfug/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[.='Bootstrap']</xpath>
+    </test>    
+   
+</TestCase>

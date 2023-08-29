@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/mets/mets.xsd">
+  <mets:dmdSec ID="DMD.1">
+    <mets:mdWrap MDTYPE="MODS" MIMETYPE="text/xml">
+      <mets:xmlData>
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd">
+          <mods:identifier type="urn">o:emile.ingest.mets.3</mods:identifier>
+          <mods:titleInfo>
+            <mods:title>title</mods:title>
+          </mods:titleInfo>
+          <mods:name type="personal">
+            <mods:displayForm>author</mods:displayForm>
+          </mods:name>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="text">origin place</mods:placeTerm>
+            </mods:place>
+            <mods:dateCreated>2021-01-01</mods:dateCreated>
+          </mods:originInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec ID="AMD.1">
+    <mets:rightsMD ID="RMD.1">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS">
+        <mets:xmlData>
+          <dv:rights xmlns:dv="http://dfg-viewer.de/">
+            <dv:license>cc-by-nc</dv:license>
+          </dv:rights>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>
+    <mets:digiprovMD ID="PMD.1">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS">
+        <mets:xmlData>
+          <dv:links xmlns:dv="http://dfg-viewer.de/">
+            <dv:reference/>
+            <dv:presentation/>
+          </dv:links>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:digiprovMD>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp USE="DEFAULT">
+      <mets:file ID="PAGE.0" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="PAGE-1.jpg"/>
+      </mets:file>
+      <mets:file ID="PAGE.1" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="PAGE-2.jpg"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="PHYSICAL">
+    <mets:div ID="folio.0" TYPE="physSequence">
+      <mets:div ID="folio.page.0" LABEL="1" TYPE="page" ORDER="1">
+        <mets:fptr FILEID="PAGE.0"/>
+      </mets:div>
+      <mets:div ID="folio.page.1" LABEL="2" TYPE="page" ORDER="2">
+        <mets:fptr FILEID="PAGE.1"/>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structMap TYPE="LOGICAL">
+    <mets:div ADMID="AMD.1" DMDID="DMD.1" ID="seg.0" TYPE="monograph">
+      <mets:div ID="seg.1" LABEL="Abschnitt"/>
+    </mets:div>
+  </mets:structMap>
+  <mets:structLink>
+    <mets:smLink xlink:from="seg.0" xlink:to="folio.0"/>
+    <mets:smLink xlink:from="seg.1" xlink:to="folio.page.0"/>
+  </mets:structLink>
+</mets:mets>

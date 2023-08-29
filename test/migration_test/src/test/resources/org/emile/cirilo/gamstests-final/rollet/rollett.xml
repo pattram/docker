@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="rollett">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests rollet -->
+    <test>
+       <url>/context:rollett</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.undatierbares/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:rollett.bilder/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.11</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.398</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get#L.492</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    
+    
+<!-- context:rollett (Home) tests -->
+	<test>
+       <url>/context:rollett</url>
+       <xpath>//xhtml:div[@id[.='header']]/xhtml:h1/xhtml:a/xhtml:span[.='Alexander Rollett Briefedition']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett</url>
+       <xpath>//xhtml:div[@id[.='nav']]/xhtml:ul/xhtml:li[contains(.,'Briefe')]/xhtml:span/xhtml:a[contains(.,'1844')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett</url>
+       <xpath>//xhtml:h2[contains(.,'Alexander Rollett')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett</url>
+       <xpath>//xhtml:p[contains(.,'Der Physiologe Alexander Rollett')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett</url>
+       <xpath>//xhtml:div[@id[.='footer']]/xhtml:div/xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+
+<!-- context:rollett?mode=preface (Vorbemerkungen) tests -->
+	<test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:h2[contains(.,'Vorbemerkungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'Vorwort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:h3[contains(.,'Vorwort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:sup/xhtml:a[contains(.,'[13]')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:p[contains(.,'Auch Alexander Rolletts Großvater')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:p[@class[.='note'] and contains(.,'Es sei hier nochmals auf ')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=preface</url>
+       <xpath>//xhtml:li[contains(.,'Über freie Enden')]</xpath>
+    </test>
+	
+<!-- archive/get/o:rollett.bilder/sdef:TEI/get (Bildergalerie) tests -->
+	<test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:h2[contains(.,'Bildgalerie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Alle bezüglich ihrer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/o:rollett.bilder/IMAGE.2']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:a[.='Alexander Rollett']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:a[.='Rosa Rollett']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.bilder/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/o:rollett.bilder/IMAGE.102']</xpath>
+    </test>
+
+<!-- context:rollett?mode=list-id (Gesamtliste der Briefe) tests -->    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:h2[.='Gesamtliste']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:p[contains(.,'Die untenstehende Briefliste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:span[.='Absender']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:td[.='Alexander  Rollett']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:a[.='L.7']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:rollett?mode=list-id</url>
+       <xpath>//xhtml:img/@src[.='/rollett/img/rollett-pfeil.gif']</xpath>
+    </test>
+	    
+<!-- archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all (Liste der BriefsschreiberInnen) tests -->
+	<test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:h2[.='Liste der erfassbaren Briefschreiberinnen und Briefschreiber']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:p[contains(.,'Die untenstehende Liste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:span[.='Familienname']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:img/@src[.='/rollett/img/rollett-pfeil.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:a[.='Albini']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=creator-all</url>
+       <xpath>//xhtml:td[contains(.,'Vittorio')]</xpath>
+    </test>
+
+<!-- archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all (Liste der EmpfängerInnen) tests -->
+	<test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:h2[contains(.,'Liste der Empfängerinnen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:p[contains(.,'Die untenstehende Liste ist')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:span[.='Familienname']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:img/@src[.='/rollett/img/rollett-pfeil.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:a[.='Denhardt']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=addressee-all</url>
+       <xpath>//xhtml:td[contains(.,'Carl')]</xpath>
+    </test>
+
+<!-- archive/get/o:rollett.1870/sdef:TEI/get (Briefe 1870) sample tests -->
+	<test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:h2[.='Briefe 1870']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Die untenstehende Briefliste ist')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:span[.='Ort']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/rollett/img/rollett-pfeil.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:a[.='L.492']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1870/sdef:TEI/get</url>
+       <xpath>//xhtml:td[.='Wien']</xpath>
+    </test>
+	
+<!-- /archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392 (Briefe von an Alexander Rollett) sample tests -->
+	<test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:h2[contains(.,'Briefe von und an')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:p[contains(.,'Die untenstehende Briefliste')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:span[.='Empfänger']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:img/@src[.='/rollett/img/rollett-pfeil.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:a[.='L.17']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.persons/sdef:TEI/get?mode=PN.392</url>
+       <xpath>//xhtml:td[contains(.,'Emil  Rollett')]</xpath>
+    </test>
+    
+<!-- archive/get/o:rollett.1852/sdef:TEI/get#L.7 (Brief L.7) sample tests-->
+	<test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:div/@class[.='letter']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:a[.='L.7']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:b[.='Emil  Rollett']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:p[.='1852 XI 15, Melk']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:p[contains(.,'Ich benütze heute die Gelegenheit')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:span[contains(.,'Dieser Brief erliegt im Stadtarchiv Baden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:rollett.1852/sdef:TEI/get#L.7</url>
+       <xpath>//xhtml:img/@src[.='/styles/img/note.gif']</xpath>
+    </test>					        
+   
+</TestCase>

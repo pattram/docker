@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="me">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests me -->
+    <test>
+       <url>/collection:me</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/me/search/wordsearch?query=&amp;query_encoded=&amp;size=20&amp;start=1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=diakritika</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/me/search/diasearch?dia=S.0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/me/search/glyphsearch?size=20&amp;start=1&amp;dia=S.0</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.52v/sdef:TEI/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.1r/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.52v/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+<!-- /collection:me (Startseite) tests -->
+  	<test>
+       <url>/collection:me</url>
+       <xpath>//xhtml:a[contains(.,'Startseite')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me</url>
+       <xpath>//xhtml:a[contains(.,'Hugo von Montfort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me</url>
+       <matcher>a:matches(^Lesefassung$)</matcher>
+    </test>
+    
+    
+    <test>
+       <url>/collection:me</url>
+       <matcher>p:matches(^"Hugo von Montfort – das poetische Werk" ist eine Hybridedition, die auslotet, wie ein dichterisches Werk des Mittelalters in seiner multimedialen Form repräsentiert werden kann. Der Text kann in folgenden Formen rezipiert werden:$)</matcher>
+    </test>
+    
+
+<!-- /archive/objects/collection:me/methods/sdef:Context/get?mode=about (Über die Augenfassung) tests -->    
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Über die Augenfassung')]</xpath>
+    </test> 
+           
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=about</url>
+       <matcher>h4:matches(^Paläographische Codierungshinweise:$)</matcher>
+    </test>
+    
+<!-- /archive/get/o:me.2/sdef:HTML/get (Strukturansicht/Text) tests -->    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:a[contains(.,'Strukturansicht')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:a[contains(.,'Text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:div/@id[.='navi']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'Strophe')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:a[contains(.,'fol1.ra')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:img/@src[contains(.,'/me/img/folio-r.gif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:dd[contains(.,'dıch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.2/sdef:HTML/get</url>
+       <xpath>//xhtml:a[contains(.,'top')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:me.2/datastreams/HTML_STREAM2/content (Strukturansicht/Folio) tests -->
+	<test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:a[contains(.,'Folio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:a[contains(.,'recto')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:div/@id[.='navi']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'verso')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:a[contains(.,'fol1.rb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:img/@src[contains(.,'/me/img/folio-r.gif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:dd[contains(.,'das')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:me.2/datastreams/HTML_STREAM2/content</url>
+       <xpath>//xhtml:a[contains(.,'top')]</xpath>
+    </test>
+
+<!-- /archive/get/o:me.1r/sdef:TEI/get (folio1 recto) tests -->
+	<test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:a[contains(.,'Folioansicht')]</xpath>
+    </test>
+	
+	<test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/o:me.1r/COLUMN_A']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:div/@class[.='mglascontrol']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:span[contains(.,'geden')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:p[contains(.,'Hier wird dem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1r/sdef:TEI/get</url>
+       <xpath>//xhtml:img/@src[.='/arch/img/TEI-175.jpg']</xpath>
+    </test>
+    
+<!-- /archive/get/o:me.1v/sdef:TEI/get#a (folio1 verso) tests -->
+	<test>
+       <url>/archive/get/o:me.1v/sdef:TEI/get#a</url>
+       <xpath>//xhtml:img/@src[.='/o:me.1v/COLUMN_A']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1v/sdef:TEI/get#a</url>
+       <xpath>//xhtml:div/@class[.='mglascontrol']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1v/sdef:TEI/get#a</url>
+       <xpath>//xhtml:div[contains(.,'Fur alles vogeldönen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1v/sdef:TEI/get#a</url>
+       <xpath>//xhtml:p[contains(.,'Hier wird dem')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/get/o:me.1v/sdef:TEI/get#a</url>
+       <xpath>//xhtml:img/@src[.='/arch/img/TEI-175.jpg']</xpath>
+    </test>
+
+<!-- /collection:me?mode=search (Volltextsuche) tests -->
+	<test>
+       <url>/collection:me?mode=search</url>
+       <xpath>//xhtml:a[contains(.,'Suche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=search</url>
+       <xpath>//xhtml:form/@id[.='searchform']</xpath>
+    </test> 
+    
+    <test>
+       <url>/collection:me?mode=search</url>
+       <xpath>//xhtml:h3[contains(.,'Hilfe zur Volltextsuche')]</xpath>
+    </test> 
+    
+    <test>
+       <url>/collection:me?mode=search</url>
+       <xpath>//xhtml:p[contains(.,'Groß-/Kleinschreibung spielt')]</xpath>
+    </test>
+
+<!-- /me/search/wordsearch?query=&query_encoded=&size=20&start=1 (Volltextsuche result sample) tests -->
+	<test>
+       <url>/me/search/wordsearch?query=&amp;query_encoded=&amp;size=20&amp;start=1</url>
+       <matcher>h3:matches(^Erneute Volltextsuche$)</matcher>
+    </test>
+        
+    <test>
+       <url>/me/search/wordsearch?query=&amp;query_encoded=&amp;size=20&amp;start=1</url>
+       <matcher>form</matcher>
+    </test>
+    
+    <test>
+       <url>/me/search/wordsearch?query=&amp;query_encoded=&amp;size=20&amp;start=1</url>
+       <matcher>th:matches(^Spalte$)</matcher>
+    </test>
+    
+<!-- /collection:me?mode=diakritika (Diakritikasuche) tests -->
+	<test>
+       <url>/collection:me?mode=diakritika</url>
+       <xpath>//xhtml:a[contains(.,'Diakritikasuche')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=diakritika</url>
+       <xpath>//xhtml:h3[contains(.,'Suche nach Diakritika')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=diakritika</url>
+       <xpath>//xhtml:span[contains(.,'Punkt über Basisgraph')]</xpath>
+    </test>
+    
+    <test>
+       <url>/collection:me?mode=diakritika</url>
+       <xpath>//xhtml:input/@value[.='Suche starten']</xpath>
+    </test>
+
+<!-- /me/search/diasearch?dia=S.0 (Diakritikasuche result sample) tests -->
+	<test>
+       <url>/me/search/diasearch?dia=S.0</url>
+       <matcher>th:matches(^Basisgraph$)</matcher>
+    </test>
+        
+    <test>
+       <url>/me/search/diasearch?dia=S.0</url>
+       <matcher>td:matches(^Gesamt:$)</matcher>
+    </test>
+    
+<!-- /archive/objects/collection:me/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=imprint</url>
+       <matcher>h4:matches(^Herausgeber:$)</matcher>
+    </test>
+       
+    <test>
+       <url>/archive/objects/collection:me/methods/sdef:Context/get?mode=imprint</url>
+       <matcher>p:matches(^Eva Horvath$)</matcher>
+    </test>
+    		   
+</TestCase>

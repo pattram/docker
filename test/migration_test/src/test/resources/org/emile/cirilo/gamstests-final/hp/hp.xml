@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="hp">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests hp -->
+    <test>
+       <url>/context:hp</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=index-v1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie-v1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band1/datastreams/PDF/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band1-1/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band1-2/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band1-3/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band2.0/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band2.1/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band2.2/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band2.3/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band2.4/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1-0/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1-1/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1-2/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1-3/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.1-4/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>      
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-5/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-5.1.2/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-5.1.9/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-5.1.10/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-5.3/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-6/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-7/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-8/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-9/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-9.1/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-9.3/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-9.4/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-10/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-11/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-12/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:hpe.band3.2-13/methods/sdef:PDF/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/1_Vorwort.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/2_GesamtInhaltsverzeichnis.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/3_ZurOrientierung.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/4_ExzerptVorbemerkung.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/5_Exzerpt.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/10_BriefeVorbemerkungen.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/11_Briefe1790-1798.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/12_Briefe1799.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/13_Briefe1800.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/14_Briefe1801.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/15_Briefe1802.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/16_Briefe1803.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/33_Band3Vorbemerkungen.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/34_Personenlisten.pdf</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/hp/pdf/35_Brieflisten.pdf</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:hp (Home) tests -->
+	<test>
+       <url>/context:hp</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hp</url>
+       <xpath>//xhtml:h3[contains(.,'Joseph von Hammer-Purgstall')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:hp</url>
+       <xpath>//xhtml:p[contains(.,'Version 2 – 2018')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie (Bibliographische Angaben) tests -->    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie</url>
+       <xpath>//xhtml:h3[contains(.,'Bibliografische Angaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie</url>
+       <xpath>//xhtml:p[contains(.,'3 Bände in 8 Teilen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung (Gliederung) tests -->    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung</url>
+       <xpath>//xhtml:h3[contains(.,'Band 1')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung</url>
+       <xpath>//xhtml:li[contains(.,'Vorwort')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung</url>
+       <xpath>//xhtml:a[contains(.,'Zum Band')]</xpath>
+    </test>
+    
+<!-- /o:hpe.band1 (Band 1) tests -->
+	<test>
+       <url>/o:hpe.band1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band1</url>
+       <xpath>//xhtml:h3[contains(.,'Band 1')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band1</url>
+       <xpath>//xhtml:span[contains(.,'Die Organisation des Materials')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band1</url>
+       <xpath>//xhtml:a[contains(.,'Abschnitt anzeigen')]</xpath>
+    </test>
+    
+<!-- /o:hpe.band2 (Band 2) tests -->
+	<test>
+       <url>/o:hpe.band2</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band2</url>
+       <xpath>//xhtml:h3[contains(.,'Band 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band2</url>
+       <xpath>//xhtml:li[contains(.,'Briefe an und von Joseph von Hammer')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band2</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band2</url>
+       <xpath>//xhtml:a[contains(.,'Gesamtband anzeigen')]</xpath>
+    </test>
+
+<!-- /o:hpe.band3 (Band 3) tests -->
+	<test>
+       <url>/o:hpe.band3</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band3</url>
+       <xpath>//xhtml:h3[contains(.,'Band 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band3</url>
+       <xpath>//xhtml:span[contains(.,'Inhaltsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band3</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:hpe.band3</url>
+       <xpath>//xhtml:a[contains(.,'Abschnitt anzeigen')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=index-v1 (Version 2011 Titel) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=index-v1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=index-v1</url>
+       <xpath>//xhtml:h3[contains(.,'Joseph von Hammer-Purgstall')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=index-v1</url>
+       <xpath>//xhtml:p[contains(.,'Version 1')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie-v1 (Version 2011 Bibliografische Angaben) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie-v1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie-v1</url>
+       <xpath>//xhtml:h3[contains(.,'Bibliografische Angaben')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=bibliografie-v1</url>
+       <xpath>//xhtml:p[contains(.,'3 Bände')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1 (Version 2011 Gliederung) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1</url>
+       <xpath>//xhtml:li[contains(.,'Band 1')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1</url>
+       <xpath>//xhtml:li[contains(.,'Zur Orientierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=gliederung-v1</url>
+       <xpath>//xhtml:a[contains(.,'Zum Band')]</xpath>
+    </test>
+    
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=band1 (Version 2011 Band 1) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band1</url>
+       <xpath>//xhtml:h3[contains(.,'Band 1')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band1</url>
+       <xpath>//xhtml:li[contains(.,'Zur biographischen Orientierung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band1</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=band2 (Version 2011 Band 2) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band2</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band2</url>
+       <xpath>//xhtml:h3[contains(.,'Band 2')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band2</url>
+       <xpath>//xhtml:li[contains(.,'Allgemeines')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band2</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=band3 (Version 2011 Band 3) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band3</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band3</url>
+       <xpath>//xhtml:h3[contains(.,'Band 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band3</url>
+       <xpath>//xhtml:li[contains(.,'Organisatorische Vorbemerkung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=band3</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/pdf_icon.png']</xpath>
+    </test>
+
+<!-- /archive/objects/context:hp/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:img/@src[.='/hp/img/hpAbbildung.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:hp/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Zentrum für Wissenschaftsgeschichte')]</xpath>
+    </test>
+    		   
+</TestCase>

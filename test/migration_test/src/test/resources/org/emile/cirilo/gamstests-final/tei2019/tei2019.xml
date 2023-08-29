@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="tei2019">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests tei2019 -->
+    <test>
+       <url>/context:tei2019</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tei2019.workshops?context=context:tei2019.workshops</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.179/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.133/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.181/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.162/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.179/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.133/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.181/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.162/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.168/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tei2019.papers?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.127/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.168/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.151/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.106/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.106/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.106/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.100/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.145/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.125/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.164/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.121/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.120/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.171/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.139/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.139/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.128/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.123/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.157/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.189/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/IMAGE.10</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.141/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.146/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.131/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.148/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.148/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.148/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.122/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.5</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.6</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.7</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.8</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/IMAGE.9</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.116/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.116/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/IMAGE.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.129/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.180/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.170/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.166/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.160/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.187/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.108/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.158/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.177/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.156/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.155/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.155/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.159/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.173/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.138/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.114/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/IMAGE.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/IMAGE.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.107/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.140/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.174/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.188/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.165/sdef:TEI/get?context=context:tei2019.papers</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.127/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.168/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.151/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.106/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.100/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.145/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.125/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.164/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.121/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.120/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.171/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.139/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.128/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.123/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.157/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.189/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.141/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.146/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.131/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.148/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.122/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.116/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.129/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.180/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.170/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.166/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.160/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.187/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.108/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.158/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.177/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.156/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.155/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.159/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.173/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.138/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.114/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.107/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.140/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.174/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.188/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.165/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tei2019.panels?context=context:tei2019.panels</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.150/sdef:TEI/get?context=context:tei2019.panels</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.132/sdef:TEI/get?context=context:tei2019.panels</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.144/sdef:TEI/get?context=context:tei2019.panels</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.150/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.132/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.144/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tei2019.posters?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.105/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.153/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.137/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.194/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/IMAGE.3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/IMAGE.4</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.169/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.186/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.185/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.147/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.149/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.124/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.124/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.124/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.113/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.130/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.193/sdef:TEI/get?context=context:tei2019.posters</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.105/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.153/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.137/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.194/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.169/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.186/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.185/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.147/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.149/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.124/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.113/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.130/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.193/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:tei2019.demonstrations?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.143/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.142/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.126/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.126/IMAGE.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.126/IMAGE.2</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.112/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.175/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.184/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=tei2019&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.bookofabstracts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=program</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+<!-- /context:tei2019 (Home) tests -->
+	<test>
+       <url>/context:tei2019</url>
+       <xpath>//xhtml:p[contains(.,'The 2019 edition')]</xpath>
+    </test>
+
+<!-- Workshops tests -->    
+    <test>
+       <url>/context:tei2019.workshops?context=context:tei2019.workshops</url>
+       <xpath>//xhtml:a[contains(.,'Dario Kampkaspar')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.179/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <xpath>//xhtml:p[contains(.,'Diarium Digital')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.133/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <xpath>//xhtml:p[contains(.,'Schematron is a rule')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.181/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <xpath>//xhtml:p[contains(.,'Crossing the divide')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.162/sdef:TEI/get?context=context:tei2019.workshops</url>
+       <xpath>//xhtml:p[contains(.,'This half-day workshop')]</xpath>
+    </test>
+
+<!-- Papers tests -->    
+    <test>
+       <url>/context:tei2019.papers?context=context:tei2019.papers</url>
+       <xpath>//xhtml:a[contains(.,'Fabio Ciotti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.127/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Starting in 2015')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.168/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Locating and tracing')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.151/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'This paper discusses')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.106/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The focus of the')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.100/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The theoretical debate')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.145/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'As this paper examines')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.125/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The FAIR Principles')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.164/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Digitally managing')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.121/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Changes are not')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.120/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Building on the kind')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.171/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Whereas the online')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.139/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Answering the question')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.128/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'discussed concern')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.123/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The article')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.157/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Parliamentary')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.189/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'My presentation addresses')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.109/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'At the time of writing')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.141/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Coming from diverse')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.146/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'For small simple')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.131/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'How should historical')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.148/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The interface in')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.122/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Speakers deal')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.172/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'A model of text')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.116/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'We will use')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.102/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Nevertheless')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.129/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'One set of problems')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.180/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'What we consider')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.170/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'In the complex')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.166/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Manuscriptorium')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.160/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'large corpora')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.187/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'This talk will')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.108/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Great emphasis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.158/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Most of the')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.177/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'study of paper')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.156/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'One of the missions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.155/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'In Japanese texts')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.159/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Historical accounting')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.173/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Stratford Shakespeare')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.138/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Documents')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.114/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Modeling FRBR')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.152/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Manuscript Sales')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.107/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'Fortunately')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.140/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.174/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'solutions')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.188/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'The digital')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.165/sdef:TEI/get?context=context:tei2019.papers</url>
+       <xpath>//xhtml:p[contains(.,'European')]</xpath>
+    </test>
+
+<!-- Panels tests -->    
+    <test>
+       <url>/context:tei2019.panels?context=context:tei2019.panels</url>
+       <xpath>//xhtml:a[contains(.,'Roman Bleier')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.150/sdef:TEI/get?context=context:tei2019.panels</url>
+       <xpath>//xhtml:p[contains(.,'This panel addresses')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.132/sdef:TEI/get?context=context:tei2019.panels</url>
+       <xpath>//xhtml:p[contains(.,'Medieval studies')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.144/sdef:TEI/get?context=context:tei2019.panels</url>
+       <xpath>//xhtml:p[contains(.,'The widespread')]</xpath>
+    </test>
+
+<!-- Posters tests -->    
+    <test>
+       <url>/context:tei2019.posters?context=context:tei2019.posters</url>
+       <xpath>//xhtml:a[contains(.,'Anna Busch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.105/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The transformation')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.153/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The Text Encoding')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.137/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'digital scholarly')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.194/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'Where does')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.118/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'computational exploiting')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.169/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'Ethiopian Psalter')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.186/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The poster will')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.185/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'Traditional print')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.147/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'NAKI MK')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.149/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The Department')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.124/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'Linguistics')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.113/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The recent inclusion')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.130/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'The TEI mainly')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.193/sdef:TEI/get?context=context:tei2019.posters</url>
+       <xpath>//xhtml:p[contains(.,'Technical Council')]</xpath>
+    </test>
+
+<!-- Demonstrations tests -->    
+    <test>
+       <url>/context:tei2019.demonstrations?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:a[contains(.,'Syd Bauman')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.143/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'But add')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.142/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'With regards')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.126/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'In our system')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.112/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'MediaWiki')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.175/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'Gimena del Rio')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:tei2019.184/sdef:TEI/get?context=context:tei2019.demonstrations</url>
+       <xpath>//xhtml:p[contains(.,'Publisher version')]</xpath>
+    </test>
+
+<!-- /search/gsearch?query=&hitPageSize=10&hitPageStart=1&pid=tei2019&x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl (Search) tests -->    
+	<test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=tei2019&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl</url>
+       <xpath>//xhtml:p[contains(.,'Search terms')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=tei2019&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl</url>
+       <xpath>//xhtml:h3[contains(.,'Help on Search')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=tei2019&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl</url>
+       <xpath>//xhtml:a[contains(.,'Fabio Ciotti')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?query=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=tei2019&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Ftei2019%2Ftei2019-search.xsl</url>
+       <xpath>//xhtml:i[contains(.,'Getting Along')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:tei2019/methods/sdef:Context/get?mode=program (Program) tests -->
+	<test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=program</url>
+       <xpath>//xhtml:h3[contains(.,'Program')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=program</url>
+       <xpath>//xhtml:p[contains(.,'An introduction')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=program</url>
+       <xpath>//xhtml:td[contains(.,'5:00pm')]</xpath>
+    </test>
+
+<!-- /archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint (Imprint) tests -->
+	<test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'GAMS')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:tei2019/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Published 2019')]</xpath>
+    </test>	    
+      	          
+</TestCase>

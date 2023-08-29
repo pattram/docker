@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:js="http://cm4f.org/js/">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Excel to TEI template</title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>emile.org</authority>
+            <idno type="PID"><js:value-of select="$pid"/></idno>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div>
+            <head><js:value-of select="'Source: ' + $source + ' - ' + $place:1"/></head>
+             <list>
+               <head>Liste 1</head>
+                <js:for-each select="$geoid, $place">
+                   <item xml:id="{'P.'+counter()}" ana ="{$geoid}">
+                      <js:value-of select="$place"/>  
+                   </item>
+                </js:for-each>             
+            </list>
+            <list>
+               <head>Liste 2</head>
+               <js:for-each select="$geoid, $place">
+                  <item xml:id="{'P.'+counter()}" ana="{'http://sws.geonames.org/' + $geoid.substring(3)}">
+                     <js:value-of select="$place"/>
+                  </item>
+               </js:for-each>             
+            </list>
+         </div>
+      </body>
+  </text>
+</TEI>

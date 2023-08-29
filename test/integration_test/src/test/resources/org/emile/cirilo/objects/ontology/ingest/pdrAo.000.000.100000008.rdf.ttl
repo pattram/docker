@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:void="http://rdfs.org/ns/void#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cm4f="http://cm4f.org/"
+	xmlns:ns0="http://pdr.bbaw.de/namespaces/aodl/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/o:emile.ingest.ontology.2">
+	<rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+	<cm4f:useThisMetadataForObject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</cm4f:useThisMetadataForObject>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProDomo pdrAo.000.000.100000002</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/prodomo/pdrAo.000.000.100000008">
+	<rdf:type rdf:resource="http://pdr.bbaw.de/namespaces/aodl/aspect"/>
+	<ns0:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ns0:revision>
+	<ns0:timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-06-08T12:09:49</ns0:timestamp>
+	<ns0:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+	<ns0:relationDim rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns0:relationDim>
+	<ns0:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pdrAo.000.000.100000008</ns0:subject>
+	<ns0:semanticDim rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns0:semanticDim>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1fpkd070sx2">
+	<rdf:type rdf:resource="http://pdr.bbaw.de/namespaces/aodl/validationStm"/>
+	<ns0:reference rdf:resource="http://gams.uni-graz.at/prodomo/"/>
+	<ns0:authority rdf:resource="http://gams.uni-graz.at/prodomo/pdrUo.000.000.000000002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://gams.uni-graz.at/prodomo/pdrAo.000.000.100000008">
+	<ns0:validation rdf:nodeID="node1fpkd070sx2"/>
+</rdf:Description>
+
+</rdf:RDF>

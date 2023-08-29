@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="santonino">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests santonino -->
+    <test>
+       <url>/context:santonino</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=places</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:santonino.story.1</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=places</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+				        
+<!-- context:santonino (Home) tests -->
+	<test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:h3[contains(.,'Hintergrund')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:p[contains(.,'Privatsekretär des Patriarchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:a[contains(.,'Mehr lesen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:a[contains(.,'Reise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:h3[contains(.,'Benutzung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:santonino</url>
+       <xpath>//xhtml:img/@src[.='/santonino/img/Banquet_de_Charles_V_le_Sage.jpg']</xpath>
+    </test>
+    
+<!-- archive/objects/context:santonino/methods/sdef:Context/get?mode=about (About) tests -->
+	<test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'About')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'Der Privatsekretär des Patriarchen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:li[contains(.,'Hundsbichler, Helmut')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'https://www.dlib.si/?URN=URN:NBN:SI:doc-GPBDMYSD')]</xpath>
+    </test>
+
+<!-- archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=places (Reise 1 > Ortsindex) tests -->    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:a[contains(.,'Reise I')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:h3[contains(.,'Namensindex')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'Amlach')]</xpath>
+    </test>
+    
+<!-- archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts (Reise 1 > Mahlzeiten) tests -->
+	<test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:a[contains(.,'Mahlzeiten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:h3[contains(.,'Übersicht der Mahlzeiten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:a[contains(.,'Tolmezzo')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.1/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:li[contains(.,'nahm daselbst eine Mahlzeit')]</xpath>
+    </test>
+
+<!-- o:santonino.story.1 (Reise 1 > Interaktive Reise) tests -->    
+    <test>
+       <url>/o:santonino.story.1</url>
+       <xpath>//xhtml:a[contains(.,'Interaktive Reise')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:santonino.story.1</url>
+       <xpath>//xhtml:div/@id[.='storymap-embed']</xpath>
+    </test>
+
+<!-- archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=places (Reise 2 > Ortsindex) tests -->    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:a[contains(.,'Reise II')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:h3[contains(.,'Namensindex')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=places</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'Aquileia')]</xpath>
+    </test>
+
+<!-- archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts (Reise 2 > Mahlzeiten) tests -->   
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:a[contains(.,'Mahlzeiten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:h3[contains(.,'Übersicht der Mahlzeiten')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:a[contains(.,'Cividale del Friuli')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:santonino.itinerar.2/methods/sdef:TEI/get?mode=feasts</url>
+       <xpath>//xhtml:li[contains(.,'Dort nahm er das Mahl')]</xpath>
+    </test>
+
+<!-- archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint (Impressum) tests -->
+	<test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Impressum')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'Helmut W. Klug')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:santonino/methods/sdef:Context/get?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'GAMS - Geisteswissenschaftliches')]</xpath>
+    </test>
+		    
+	   
+</TestCase>

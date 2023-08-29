@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="aaif">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests aaif -->
+    <test>
+       <url>/context:aaif</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/query:aaif.db</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=howto</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=bibliography</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/context:aaif?mode=ontology_desc</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:aaif.fulltext/methods/sdef:Query/get?params=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.itaaaif</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:aaif.ptapmdeg</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapcordiam</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus#source</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.itaaaif/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:aaif.itaaaif/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.ptapmdeg/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.ptapmdeg/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapcordiam/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/o:aaif.spapcordiam/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh/TEI_SOURCE</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh/RDF</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get</url>
+       <status>200</status>
+    </test>
+	
+	<test>
+       <url>/context:aaif?mode=imprint</url>
+       <status>200</status>
+    </test>
+
+<!-- /context:aaif (Home) tests -->    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:a[contains(.,'Home')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:p[contains(.,'The database')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:img/@src[contains(.,'/aaif/img/scrabble.jpg')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:div/@id[contains(.,'results')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:p[contains(.,'Corpus of adjective-adverbs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif</url>
+       <xpath>//xhtml:button[contains(.,'Visualize')]</xpath>
+    </test>
+
+<!-- /query:aaif.db (Search Interface) tests -->    
+    <test>
+       <url>/query:aaif.db</url>
+       <xpath>//xhtml:a[contains(.,'Search Interface')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:aaif.db</url>
+       <xpath>//xhtml:a[contains(.,'Fr_A_DHAA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/query:aaif.db</url>
+       <xpath>//xhtml:script/@src[contains(.,'/aaif/js/datatable.js')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus (Corpus/Fr_A_DHAA) tests) -->    
+    <test>
+       <url>/archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Fr_A_DHAA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Heidinger, Steffen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fradhaa/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Dico_fr1001')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa</url>
+       <xpath>//xhtml:a[contains(.,'Fr_A_DHAA')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa</url>
+       <xpath>//xhtml:td[contains(.,'Heidinger, Steffen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fradhaa</url>
+       <xpath>//xhtml:a[contains(.,'Dico_fr1001')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus (Corpus/Fr_A_Web) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Fr_A_Web')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Telsnig, Helena')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.fraweb/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'DC1008')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb</url>
+       <xpath>//xhtml:a[contains(.,'Fr_A_Web')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb</url>
+       <xpath>//xhtml:td[contains(.,'Telsnig, Helena')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.fraweb</url>
+       <xpath>//xhtml:a[contains(.,'DC1008')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus (Corpus/It_A_aaif) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'It_A_aaif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Gerhalter, Katharina')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.itaaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Nap10')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.itaaaif</url>
+       <xpath>//xhtml:a[contains(.,'It_A_aaif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.itaaaif</url>
+       <xpath>//xhtml:td[contains(.,'Gerhalter, Katharina')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.itaaaif</url>
+       <xpath>//xhtml:a[contains(.,'Nap10')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus (Corpus/Pt_APM_DeG) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Pt_APM_DeG')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Furtado da Cunha')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ptapmdeg/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'DeG102')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.ptapmdeg</url>
+       <xpath>//xhtml:a[contains(.,'Pt_APM_DeG')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.ptapmdeg</url>
+       <xpath>//xhtml:td[contains(.,'Furtado da Cunha')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.ptapmdeg</url>
+       <xpath>//xhtml:a[contains(.,'DeG102')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus (Corpus/Ro_ADP_aaif) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Ro_ADP_aaif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Chircu, Adrian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.roadpaaif/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'OR3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif</url>
+       <xpath>//xhtml:a[contains(.,'Ro_ADP_aaif')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif</url>
+       <xpath>//xhtml:td[contains(.,'Chircu, Adrian')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.roadpaaif</url>
+       <xpath>//xhtml:a[contains(.,'OR3')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus (Corpus/Sp_AP_Cordiam) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Sp_AP_Cordiam')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Annotated Categories')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapcordiam/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Cordiam114')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapcordiam</url>
+       <xpath>//xhtml:a[contains(.,'Sp_AP_Cordiam')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapcordiam</url>
+       <xpath>//xhtml:td[contains(.,'Annotated Categories')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapcordiam</url>
+       <xpath>//xhtml:a[contains(.,'Cordiam114')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus (Corpus/Sp_AP_SH3) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Sp_AP_SH3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Adjective-Adverbs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spapsh3/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Sh3rk16')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3</url>
+       <xpath>//xhtml:a[contains(.,'Sp_AP_SH3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3</url>
+       <xpath>//xhtml:td[contains(.,'Adjective-Adverbs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spapsh3</url>
+       <xpath>//xhtml:a[contains(.,'Sh3rk16')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus (Corpus/Sp_A_CDH) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Sp_A_CDH')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:td[contains(.,'Tagged examples of adverbs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.spacdh/methods/sdef:TEI/get?mode=corpus</url>
+       <xpath>//xhtml:a[contains(.,'Cnde112')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh</url>
+       <xpath>//xhtml:a[contains(.,'Sp_A_CDH')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh</url>
+       <xpath>//xhtml:td[contains(.,'Tagged examples of adverbs')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:aaif.spacdh</url>
+       <xpath>//xhtml:a[contains(.,'Cnde112')]</xpath>
+    </test>
+
+<!-- /context:aaif?mode=about (About/Project) tests -->    
+    <test>
+       <url>/context:aaif?mode=about</url>
+       <xpath>//xhtml:a[contains(.,'Project')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=about</url>
+       <xpath>//xhtml:h3[contains(.,'Open Access Database')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=about</url>
+       <xpath>//xhtml:p[contains(.,'The project')]</xpath>
+    </test>
+
+<!-- /context:aaif?mode=howto (About/How to use the corpus) tests -->    
+    <test>
+       <url>/context:aaif?mode=howto</url>
+       <xpath>//xhtml:a[contains(.,'How to use the corpus?')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=howto</url>
+       <xpath>//xhtml:h3[contains(.,'How to use the corpus?')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=howto</url>
+       <xpath>//xhtml:p[contains(.,'The table of results')]</xpath>
+    </test>
+
+<!-- /context:aaif?mode=bibliography (About/Bibliography) tests -->    
+    <test>
+       <url>/context:aaif?mode=bibliography</url>
+       <xpath>//xhtml:a[contains(.,'Bibliography')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=bibliography</url>
+       <xpath>//xhtml:h3[contains(.,'Adjective-Adverb Interfaces')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=bibliography</url>
+       <xpath>//xhtml:span[contains(.,'Gerhalter, Katharina')]</xpath>
+    </test>
+
+<!-- /context:aaif?mode=ontology_desc (Annotation Model/Description) tests -->    
+    <test>
+       <url>/context:aaif?mode=ontology_desc</url>
+       <xpath>//xhtml:a[contains(.,'Description')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=ontology_desc</url>
+       <xpath>//xhtml:h1[contains(.,'Criteria for Linguistic')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=ontology_desc</url>
+       <xpath>//xhtml:p[contains(.,'For each attested')]</xpath>
+    </test>
+
+<!-- /archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology (Annotation Model/Ontology) tests -->    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology</url>
+       <xpath>//xhtml:a[contains(.,'Ontology')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology</url>
+       <xpath>//xhtml:h1[contains(.,'Database Adjective Adverb')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology</url>
+       <xpath>//xhtml:button[contains(.,'First Person')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:aaif.ontology/methods/sdef:Ontology/get?mode=ontology</url>
+       <xpath>//xhtml:img/@src[contains(.,'/templates/img/RDF_icon.png')]</xpath>
+    </test>
+
+<!-- /context:aaif?mode=imprint (Imprint) tests -->    
+    <test>
+       <url>/context:aaif?mode=imprint</url>
+       <xpath>//xhtml:a[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=imprint</url>
+       <xpath>//xhtml:h3[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:aaif?mode=imprint</url>
+       <xpath>//xhtml:p[contains(.,'FWF Austrian Science Fund')]</xpath>
+    </test>
+      	          
+</TestCase>

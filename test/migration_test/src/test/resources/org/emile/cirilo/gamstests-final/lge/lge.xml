@@ -1,0 +1,3370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="lge">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests lge -->
+    <test>
+       <url>/context:lge</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Personenindex: Stichprobenartig -->
+    <test>
+       <url>/archive/objects/container:lge-aleksander/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-banco/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-cavour/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-dante/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-elster/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-fischer/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-galilei/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-haenel/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-innocenz/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-jakob/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-kalinka/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-laband/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-macdonald/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-naum/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-oettinger/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-paulsen/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-quesnay/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-razel/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-salomon/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-tassilo/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ullbrich/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-vargha/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-wagener/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-zeissberg/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <status>200</status>
+    </test>
+    <!-- Ende Personenindex: Stichprobenartig -->
+
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Inhaltsverzeichnis Stichprobenartig -->
+    <test>
+       <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-145/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-175/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-186b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0d/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b3/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-62/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-75/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-110/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-131/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-1864/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b1/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-18641/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0e/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-73a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-124/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-151/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-163b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171c/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-183/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-169/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-64/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-73/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-114/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-117/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-120/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-121e/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-141/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-179/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    <!-- Ende Inhaltsverzeichnis Stichprobenartig -->
+    
+    <!-- Personentexte Stichprobenartig -->
+    <test>
+       <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-139/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-135a/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-186d/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-163c/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-135c/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    <!-- Ende Personentexte Stichprobenartig -->
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha1/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha2/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha3/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha4/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha5/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha6/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha8/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha9/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha10/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha11/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha12/methods/sdef:Image/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv1/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv2/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-b.4/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-b.2/methods/sdef:TEI/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <!-- Englisch -->
+	<test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <!-- Personenindex: Stichprobenartig -->
+    <test>
+        <url>/archive/objects/container:lge-aleksander/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-banco/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-cavour/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-dante/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-elster/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-fischer/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-galilei/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-haenel/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-innocenz/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-jakob/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-kalinka/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-laband/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-macdonald/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-naum/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-oettinger/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-paulsen/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-quesnay/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-razel/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-salomon/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-tassilo/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-ullbrich/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-vargha/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-wagener/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-zeissberg/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Personenindex: Stichprobenartig -->
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=en</url>
+        <status>200</status>
+    </test>
+
+    <!-- Inhaltsverzeichnis Stichprobenartig -->
+    <test>
+        <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-145/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-175/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-186b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0d/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-1867b3/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-62/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-75/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-110/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-131/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-1864/methods/sdef:Context/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-1867b1/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-18641/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0e/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-73a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-124/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-151/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-163b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171c/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-183/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-169/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-64/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-73/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-114/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-117/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-120/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121e/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-141/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-179/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Inhaltsverzeichnis Stichprobenartig -->
+
+    <!-- Personentexte Stichprobenartig -->
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-139/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-135a/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-186d/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-163c/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-135c/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Personentexte Stichprobenartig -->
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha1/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha2/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha3/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha4/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha5/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha6/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha8/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha9/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha10/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha11/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha12/methods/sdef:Image/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv1/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv2/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-b.4/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-b.2/methods/sdef:TEI/get?locale=en</url>
+        <status>200</status>
+    </test>
+    
+    <!-- Polnisch -->
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <!-- Personenindex: Stichprobenartig -->
+    <test>
+        <url>/archive/objects/container:lge-aleksander/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-banco/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-cavour/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-dante/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-elster/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-fischer/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-galilei/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-haenel/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-innocenz/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-jakob/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-kalinka/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-laband/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-macdonald/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-naum/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-oettinger/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-paulsen/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-quesnay/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-razel/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-salomon/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-tassilo/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-ullbrich/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-vargha/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-wagener/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-zeissberg/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Personenindex: Stichprobenartig -->
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <!-- Inhaltsverzeichnis Stichprobenartig -->
+    <test>
+        <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-145/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-175/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-186b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0d/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-1867b3/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-62/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-75/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-110/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-131/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/container:lge-1864/methods/sdef:Context/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-1867b1/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-18641/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0e/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0g/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-51e/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-54b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-60b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-73a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-115/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-124/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-137/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-142/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-151/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-159a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-163b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171c/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-178/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-180/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-183/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-171a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-169/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-64/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-73/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-81/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-98/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-107/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-114/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-117/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-120/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-121e/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-141/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-179/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Inhaltsverzeichnis Stichprobenartig -->
+
+    <!-- Personentexte Stichprobenartig -->
+    <test>
+        <url>/archive/objects/o:lge-143a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-139/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-135a/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-153/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-186d/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-176b/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-163c/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-135c/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-161/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+    <!-- Ende Personentexte Stichprobenartig -->
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha1/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha2/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha3/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha4/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha5/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha6/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha8/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha9/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha10/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha11/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-ha12/methods/sdef:Image/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv1/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv2/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-b.4/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+
+    <test>
+        <url>/archive/objects/o:lge-b.2/methods/sdef:TEI/get?locale=pl</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-0f/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-0i/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-171/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-96/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-105/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>
+    
+    <test>
+        <url>/archive/objects/o:lge-405a/methods/sdef:TEI/getPDF</url>
+        <status>200</status>
+    </test>    
+
+<!-- Home tests -->
+	<test>
+       <url>/context:lge</url>
+       <xpath>//xhtml:a[contains(.,'auf deutsch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lge</url>
+       <xpath>//xhtml:p[contains(.,'Geboren 1838 in Krakau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:lge</url>
+       <xpath>//xhtml:td[contains(.,'Editionsbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'auf deutsch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Geboren 1838 in Krakau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Editionsbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'auf deutsch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/lge/img/SurmanMozetic_cover.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:td[contains(.,'edition statement')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'auf deutsch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Urodzony w roku')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:td[contains(.,'Cele edycji')]</xpath>
+    </test>
+
+<!-- Inhaltsverzeichnis tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Inhaltsverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Webedition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=de</url>
+       <xpath>//xhtml:li[contains(.,'Das Gesamtverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'contents')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'English version')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Spis treści')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Biblioteka')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=contents&amp;locale=pl</url>
+       <xpath>//xhtml:li[contains(.,'pozwalają')]</xpath>
+    </test>
+
+<!-- Webedition tests -->    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/lge/img/gesamtvz.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Gesamtverzeichnis')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/lge/img/gesamtvz.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'list of all the works')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:img/@src[.='/lge/img/gesamtvz.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-bibliothek/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Publikacje chronologicznie')]</xpath>
+    </test>
+
+<!-- Personenregister tests -->    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Aleksander W')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Personenindex')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Aleksander W')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?mode=&amp;locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Personenindex')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Aleksander W')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-personen/methods/sdef:Context/get?mode=&amp;locale=pl</url>
+       <xpath>//xhtml:td[contains(.,'Personenindex')]</xpath>
+    </test>
+
+<!-- Biographie tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'LUDWIG GUMPLOWICZ (1838-1909)')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Ludwig Gumplowicz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'English version')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=pl</url>
+       <xpath>//xhtml:h2[contains(.,'Ludwik Gumplowicz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=biography&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Ludwik Gumplowicz')]</xpath>
+    </test>
+
+<!-- Bibliographie tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'französisch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1864')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'french')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1864')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'französisch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;locale=pl</url>
+       <xpath>//xhtml:span[contains(.,'1864')]</xpath>
+    </test>
+
+<!-- Sekundärliteratur tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Sekundärliteratur, 1910–1960')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Race und Staat')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'secondary literature, 1910–1960')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Race und Staat')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=pl</url>
+       <xpath>//xhtml:h2[contains(.,'Publikacje o Ludwiku Gumplowiczu, 1910–1960')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=sekundaer&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'Race und Staat')]</xpath>
+    </test>
+
+<!-- Archivmaterialien tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Habilitationsakt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Wir wollen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Habilitationsakt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'We would')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Habilitationsakt')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=archive&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Na tej stronie')]</xpath>
+    </test>
+
+<!-- Feedback tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Aufgrund des')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=de</url>
+       <xpath>//xhtml:td[contains(.,'Feedback')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'English version')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=en</url>
+       <xpath>//xhtml:td[contains(.,'feedback')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Z powodu')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=feedback&amp;locale=pl</url>
+       <xpath>//xhtml:td[contains(.,'Feedback')]</xpath>
+    </test>
+
+<!-- Kooperationen tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Staatsarchiv Krakau')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Archiwum Państwowe w Krakowie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=en</url>
+       <xpath>//xhtml:h2[contains(.,'Archiwum Państwowe w Krakowie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'ul. Sienna 16')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=pl</url>
+       <xpath>//xhtml:h2[contains(.,'Archiwum Państwowe w Krakowie')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=cooperation&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'ul. Sienna 16')]</xpath>
+    </test>
+
+<!-- Impressum tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:h2[contains(.,'Projektbeschreibung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Die Edition')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:td[contains(.,'Imprint')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'English version')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=pl</url>
+       <xpath>//xhtml:h2[contains(.,'Opis projektu')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=imprint&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Edycja powstaje')]</xpath>
+    </test>
+
+<!-- Suche tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:input/@value[.='-->']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:input/@value[.='-->']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=pl</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=search&amp;locale=pl</url>
+       <xpath>//xhtml:input/@value[.='-->']</xpath>
+    </test>
+
+<!-- Gesamtverzeichnis tests -->    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1861')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Korespondencja')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1861')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Korespondencja')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:span[contains(.,'1861')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-gesamtvz/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Korespondencja')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Kiedy zaraza')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1862b')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Kiedy zaraza')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1862b')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Kiedy zaraza')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0f/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1862b')]</xpath>
+    </test>
+    
+<!-- Bücher tests -->    
+    <test>
+       <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Ośm listów z Wiednia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Ośm listów z Wiednia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-buecher/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Ośm listów z Wiednia')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'IV. Żydzi')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'IV. Żydzi')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-1867b/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'IV. Żydzi')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1867B')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Rzućmy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1867B')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Rzućmy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1867B')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-1867b5/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Rzućmy')]</xpath>
+    </test>
+
+<!-- Aufsätze tests -->    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Trzy akta')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1883')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Trzy akta')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1883')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Trzy akta')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-aufsaetze/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:span[contains(.,'1883')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1863a')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Weszliśmy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1863a')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Weszliśmy')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1863a')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-0i/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Weszliśmy')]</xpath>
+    </test>
+
+<!-- Nachrufe tests -->    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Dem Andenken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1905')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Dem Andenken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1905')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Dem Andenken')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-nachrufe/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:span[contains(.,'1905')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1905k')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Altwiener')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1905k')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Altwiener')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1905k')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-171/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Altwiener')]</xpath>
+    </test>
+
+<!-- Rezensionen tests -->    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Macdonald: Humanitism.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:span[contains(.,'1891')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Macdonald: Humanitism.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:span[contains(.,'1891')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Macdonald: Humanitism.')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-rezensionen/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:span[contains(.,'1891')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Das Buch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1890j')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Das Buch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1890j')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Das Buch')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-96/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1890j')]</xpath>
+    </test>
+    
+<!-- Sekundärliteratur tests -->
+	<test>
+       <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-sekundaer/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1909')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'As one of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1909')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'As one of')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1909')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-405a/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'As one of')]</xpath>
+    </test>
+
+<!-- Personen tests -->    
+    <test>
+       <url>/archive/objects/container:lge-lassalle/methods/sdef:Context/get?locale=de&amp;mode=person</url>
+       <xpath>//xhtml:a[contains(.,'Emile von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-lassalle/methods/sdef:Context/get?locale=en&amp;mode=person</url>
+       <xpath>//xhtml:a[contains(.,'Emile von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-lassalle/methods/sdef:Context/get?locale=pl&amp;mode=person</url>
+       <xpath>//xhtml:a[contains(.,'Emile von')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'1891h')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Die 2. Abteilung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'1891h')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Die 2. Abteilung')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'1891h')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-105/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Die 2. Abteilung')]</xpath>
+    </test>
+
+ <!-- Bibliopgraphie deutsch tests -->   
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Sociologische Untersuchungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Sociologische Untersuchungen')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGde&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'Sociologische Untersuchungen')]</xpath>
+    </test>
+
+<!-- Bibliographie polnisch tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Konfederacya Barska')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Konfederacya Barska')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGpl&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'Konfederacya Barska')]</xpath>
+    </test>
+
+<!-- Bibliographie englisch tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'The Outlines')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'The Outlines')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGen&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'The Outlines')]</xpath>
+    </test>
+
+<!-- Bibliographie italienisch tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'La Famille')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'La Famille')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGit&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'La Famille')]</xpath>
+    </test>
+
+<!-- französisch tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=de</url>
+       <xpath>//xhtml:i[contains(.,'Les Anciennes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=en</url>
+       <xpath>//xhtml:i[contains(.,'Les Anciennes')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=bibliography&amp;context=LANGfr&amp;locale=pl</url>
+       <xpath>//xhtml:i[contains(.,'Les Anciennes')]</xpath>
+    </test>
+
+<!-- Habilitationsakt tests -->    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 07')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-ha7/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 07')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-ha7/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 07')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:lge-ar-ha/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-ha7/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Karl-Franzens-Universität Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Karl-Franzens-Universität Graz')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-ha7/methods/sdef:Image/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Karl-Franzens-Universität Graz')]</xpath>
+    </test>
+
+<!-- Curriculum Vitae -->    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-cv3/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-cv3/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Ludwig Gumplowicz, Nr 3')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-ar-cv/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:img/@src[.='/archive/objects/o:lge-ar-cv3/datastreams/THUMBNAIL/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Ich machte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/archive/objects/o:lge-ar-cv3/datastreams/IMAGE/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Ich machte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/archive/objects/o:lge-ar-cv3/datastreams/IMAGE/content']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Ich machte')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-ar-cv3/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/archive/objects/o:lge-ar-cv3/datastreams/IMAGE/content']</xpath>
+    </test>
+
+<!-- Briefe tests -->   
+    <test>
+       <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Gumplowicz, Ludwig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Gumplowicz, Ludwig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Gumplowicz, Ludwig')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe-durkheim/methods/sdef:Context/get?locale=de</url>
+       <xpath>//xhtml:a[contains(.,'Émile Durkheim')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe-durkheim/methods/sdef:Context/get?locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Émile Durkheim')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge-briefe-durkheim/methods/sdef:Context/get?locale=pl</url>
+       <xpath>//xhtml:a[contains(.,'Émile Durkheim')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-b.1/methods/sdef:TEI/get?locale=de</url>
+       <xpath>//xhtml:div[contains(.,'Paris, 13 Januar 1896')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-b.1/methods/sdef:TEI/get?locale=en</url>
+       <xpath>//xhtml:div[contains(.,'Paris, 13 Januar 1896')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:lge-b.1/methods/sdef:TEI/get?locale=pl</url>
+       <xpath>//xhtml:div[contains(.,'Paris, 13 Januar 1896')]</xpath>
+    </test>
+
+<!-- Bilddokumente tests -->    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/lge/img/lge-posner3.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=de</url>
+       <xpath>//xhtml:p[contains(.,'Vater Abraham')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/lge/img/lge-posner3.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=en</url>
+       <xpath>//xhtml:p[contains(.,'father Abraham')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=pl</url>
+       <xpath>//xhtml:img/@src[.='http://gams.uni-graz.at/lge/img/lge-posner3.jpg']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:lge/methods/sdef:Context/get?mode=images&amp;locale=pl</url>
+       <xpath>//xhtml:p[contains(.,'Gumplowicza Abraham')]</xpath>
+    </test>	
+      	          
+</TestCase>

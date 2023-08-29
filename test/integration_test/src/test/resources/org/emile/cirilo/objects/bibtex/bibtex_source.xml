@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file xmlns="http://bibtexml.sf.net/">
+    <title>Weiterführende Literatur</title>
+    <entry id="auboeck.1894">
+        <book>
+            <author>Auböck Josef</author>
+            <title>Hand-Lexikon der Maße und Gewichte</title>
+            <year>1894</year>
+            <address>Wien</address>
+        </book>
+    </entry>
+    <entry id="baravalle.1929">
+        <article>
+            <author>Baravalle Robert</author>
+            <year>1929</year>
+            <title>Zur Geschichte des Grazer Maßes</title>
+            <pages>47–78</pages>
+            <volume>25</volume>
+            <journal>Zeitschrift des
+                Historischen Vereines für Steiermark</journal>
+        </article>
+    </entry>
+    <entry id="baravalle.1931">
+        <article>
+            <author>Baravalle Robert</author>
+            <year>1931</year>
+            <title>Zur Geschichte des Judenburger Maßes</title>
+            <pages>190–199</pages>
+            <volume>26</volume>
+            <journal>Zeitschrift des
+                Historischen Vereines für Steiermark</journal>
+        </article>
+    </entry>
+    <entry id="baravalle.1935">
+        <article>
+            <author>Baravalle Robert</author>
+            <year>1935/1936</year>
+            <title>Zur Geschichte der steirischen Maße</title>
+            <pages>9-98/53–158</pages>
+            <volume>29/30</volume>
+            <journal>Zeitschrift des
+                Historischen Vereines für Steiermark</journal>
+        </article>
+    </entry>
+    <entry id="deutschmann.2013">
+        <book>
+            <author>Deutschmann Ortrun</author>
+            <title>Die mittelalterliche Ringmauer von Graz. Geisteswiss.
+                Dipl.- Arbeit</title>
+            <year>2013</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="domanig.1896">
+        <book>
+            <author>Domanig Karl</author>
+            <title>Porträtmedaillen des Erzhauses Österreich. Von Kaiser Friedrich
+                III. bis Kaiser Franz II. Aus der Medaillensammlung des allerhöchsten Erzhauses</title>
+            <year>1896</year>
+            <address>Wien</address>
+        </book>
+    </entry>
+    <entry id="engelbrecht.1983">
+        <book>
+            <author>Engelbrecht Helmut</author>
+            <title>Geschichte des österreichischen Bildungswesens. Erziehung
+                und Unterricht auf dem Boden Österreichs, Bd. 2: Das 16. und 17. Jahrhundert</title>
+            <year>1983</year>
+            <address>Wien</address>
+        </book>
+    </entry>
+    <entry id="unigraz.1936">
+        <book>
+            <title>Festschrift zur Feier des dreihundertfünfzigjährigen Bestandes der
+                Karl-Franzens-Universität zu Graz</title>
+            <year>1936</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="unigraz.1895">
+        <book>
+            <title>Festschrift zur Feier der Schlusssteinlegung des neuen Hauptgebäudes der
+                Grazer Universität am 4. Juni des Jahres 1895</title>
+            <year>1895</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="glaser.1967">
+        <book>
+            <author>Glaser Helmut</author>
+            <title>Die Herrschaft der Jesuiten in Millstatt 1600–1773. Phil. Diss.</title>
+            <year>1967</year>
+            <address>Wien</address>
+        </book>
+    </entry>
+    <entry id="heinz.1962">
+        <article>
+            <author>Heinz Günther</author>
+            <title>Studien zur Porträtmalerei an den Höfen der österreichischen
+                Erblande</title>
+            <pages>99–224</pages>
+            <volume>59</volume>
+            <journal>Jahrbuch der kunsthistorischen Sammlungen Wien</journal>
+            <year>1962</year>
+        </article>
+    </entry>      
+    <entry id="hoeflechner.2006">
+        <book>
+            <author>Höflechner Walter</author>
+            <title>Geschichte der Karl-Franzens-Universität Graz. Von den
+                Anfängen bis in das Jahr 2005</title>
+            <year>2006</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="hoeflechner.2007">
+        <incollection>
+            <author>Höflechner Walter</author>
+            <title>Die Promotio sub auspiciis Imperatoris beziehungsweise
+                Praesidentis rei publicae</title>
+            <pages>731–738</pages>
+            <editor>Rainer C. Schwinges</editor>
+            <booktitle>Examen, Titel,
+                Promotionen. Akademisches und staatliches Qualifikationswesen vom 13. bis zum 21.
+                Jahrhundert (= Veröffentlichungen der Gesellschaft für Universitäts- und
+                Wissenschaftsgeschichte 9)</booktitle>
+            <year>2007</year>
+            <address>Basel</address>
+        </incollection>
+    </entry>
+    <entry id="hoeflechner.2008">
+        <book>
+            <author>Höflechner Walter</author>
+            <title>Geschichte der Karl-Franzens-Universität Graz. Von den
+                Anfängen bis in das Jahr 2008. Unter Mitarbeit von Ingrid Maria Wagner und Alexandra Wagner</title>
+            <year>2009</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="kernbauer.2005">
+        <incollection>
+            <author>Kernbauer Alois</author>
+            <title>Graz</title>
+            <pages>52–53, 123–125</pages>
+            <editor>Jos. M. M. Hermans &amp;  Marc Nelissen</editor>
+            <booktitle>Charters of Foundation and Early Documents of the
+                Universities of the Coimbra Group, 2nd, revised edition</booktitle>
+            <year>2005</year>
+            <address>Leuven</address>
+        </incollection>
+    </entry>
+    <entry id="kernbauer.1995">
+        <book>
+            <editor>Kernbauer Alois</editor>
+            <title>Der Grazer „Campus“. Universitätsarchitektur aus vier
+                Jahrhunderten</title>
+            <year>1995</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="kernbauer.2000">
+        <article>
+            <author>Kernbauer Alois</author>
+            <title>Die Symbolik des Hauptgebäudes der Karl-Franzens-Universität</title>
+            <pages>32–38</pages>
+            <volume>74</volume>
+            <journal>Blätter für Heimatkunde</journal>
+            <year>2000</year>
+        </article>
+    </entry>
+    <entry id="krones.1886">
+        <book>
+            <author>Krones Franz von</author>
+            <title>Geschichte der Karl-Franzens-Universität in Graz. Festgabe
+                zur Feier ihres dreihundertjährigen Bestandes</title>
+            <year>1886</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="kubinzky.1987">
+        <book>
+            <author>Kubinzky Karl Albrecht</author>
+            <title>Graz im Wandel. Ein Spaziergang durch ein Stadtbild,
+                das es nicht mehr gibt</title>
+            <year>1987</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="oer.1927">
+        <article>
+            <author>Oer Franz</author>
+            <title>Das erzherzogliche Konvikt in Graz (jetzt Domherrenhaus)</title>
+            <pages>84–91</pages>
+            <volume>5</volume>
+            <journal>Blätter für Heimatkunde</journal>
+            <year>1927</year>
+        </article>
+    </entry>
+    <entry id="peinlich.oj">
+        <article>
+            <author>Peinlich Richard</author>
+            <title>Geschichte des Gymnasiums in Graz. Zweite Periode.
+                Collegium, Gymnasium und Universität unter den Jesuiten</title>
+            <journal>Jahresbericht des
+                kaiserl. königl. Ober-Gymnasiums zu Graz. Veröffentlicht am Schlusse des
+                Studien Jahres 1869</journal>
+            <year>o. J.</year>
+            <address>Graz</address>
+        </article>
+    </entry>
+    <entry id="perger.1997">
+        <article>
+            <author>Perger Richard</author>
+            <title>Das Wirken des Jesuitenordens in Millstatt</title>
+            <pages>531-545</pages>
+            <volume>78</volume>
+            <journal>Archiv für
+                vaterländische Geschichte und Topographie</journal>
+            <year>1997</year>
+        </article>
+    </entry>
+    <entry id="popelka.1928">
+        <book>
+            <author>Popelka Fritz</author>
+            <title>Geschichte der Stadt Graz, 2 Bde</title>
+            <year>1928–1935</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="rumpf.2003">
+        <book>
+            <author>Rumpf Klemens Konrad Maria</author>
+            <title>Von Naturbeobachtungen zur Nanophysik.
+                Experimente, Wissenschaftler, Motivation und Instrumente der physikalischen
+                Forschung und Lehre aus vier Jahrhunderten an der Universität Graz (=
+                Publikationen aus dem Archiv der Universität Graz 40)</title>
+            <year>2003</year>
+            <address>Graz</address>
+        </book>
+    </entry>
+    <entry id="schilder.1977">
+        <book>
+            <author>Schilder Otto</author>
+            <title>Heimatkunde heute. Wege zur Erstellung einer Ortskunde. Wort und
+                Sachregister für Heimatforscher</title>
+            <year>1977</year>
+            <address>Horn</address>
+        </book>
+    </entry>
+    <entry id="schweigert.1995">
+        <incollection>
+            <author>Schweigert Horst</author>
+            <title>Die „erste“ Alma Mater Graecensis. Ein Baudenkmal der
+                Gegenreformation und wissenschaftlicher Spiritualität</title>
+            <pages>17–32</pages>
+            <editor>Alois Kernbauer</editor>
+            <booktitle>Der Grazer „Campus“. Universitätsarchitektur aus vier Jahrhunderten</booktitle>
+            <year>1995</year>
+            <address>Graz</address>
+        </incollection>
+    </entry>
+    <entry id="smekal.1967">
+        <book>
+            <author>Smekal Ferdinand G.</author>
+            <title>Alma Universitas, Die Geschichte der Grazer Universität
+                in 4 Jahrhunderten</title>
+            <year>1967</year>
+            <address>Wien</address>
+        </book>
+    </entry>
+    <entry id="weiss.2008">
+        <book>
+            <author>Weiss Sabine</author>
+            <title>Zur Herrschaft geboren. Kindheit und Jugend im Haus Habsburg von
+                Kaiser Maximilian bis Kronprinz Rudolf</title>
+            <year>2008</year>
+            <address>Innsbruck</address>
+        </book>
+    </entry>
+    <entry id="wiesflecker.1968">
+        <article>
+            <author>Wiesflecker Hermann</author>
+            <title>Das Gründungsdatum der Universität Graz (Neue Beiträge
+                zur Gründungsgeschichte)</title>
+            <pages>48f</pages>
+            <volume>Sonderband 16</volume>
+            <journal>Zeitschrift des Historischen Vereins für Steiermark</journal>
+            <year>1968</year>
+        </article>
+    </entry>
+    <entry id="wurzbach.1943">
+        <book>
+            <author>Wurzbach-Tannenberg Wolfgang R. v.</author>
+            <title>Katalog meiner Sammlung von Medaillen,
+                Plaketten und Jetons, zugleich ein Handbuch für Sammler</title>
+            <year>1943</year>
+            <address>Zürich – Leipzig – Wien</address>
+        </book>
+    </entry>
+</file>
+

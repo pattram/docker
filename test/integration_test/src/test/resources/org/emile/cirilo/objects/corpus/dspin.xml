@@ -1,0 +1,28 @@
+<D-Spin xmlns="http://www.dspin.de/data" version="0.4">
+    <MetaData xmlns="http://www.dspin.de/data/metadata">
+        <source>CMDI collection</source>
+        <Services>
+            <cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2">
+                <cmd:MdCreator>emile.org</cmd:MdCreator>
+                <cmd:MdCreationDate>2020-01-10</cmd:MdCreationDate>
+                <cmd:MdCollectionDisplayName>CMDI collection</cmd:MdCollectionDisplayName>     
+            </cmd:CMD>
+        </Services>
+    </MetaData>
+    <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+        <text>CMDI corpus</text>
+        <tokens>
+            <token ID="t_0">CMDI</token>
+            <token ID="t_1">corpus</token>
+            <token ID="t_2">.</token>
+        </tokens>
+        <sentences>
+            <sentence ID="s_0" tokenIDs="t_0 t_1 t_2"></sentence>
+        </sentences>
+        <POStags tagset="stts">
+            <tag ID="pt_0" tokenIDs="t_0">NE</tag>
+            <tag ID="pt_1" tokenIDs="t_1">NE</tag>
+            <tag ID="pt_11" tokenIDs="t_11">$.</tag>
+        </POStags>
+    </TextCorpus>
+</D-Spin>

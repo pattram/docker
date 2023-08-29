@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="ethnos">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests ethnos -->
+    <test>
+       <url>/context:ethnos</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?creator=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=ethnos&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3ethnos-search.xsl&amp;worktitle=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;quality=&amp;keyword=&amp;coverage=&amp;groups=</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?creator=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=ethnos&amp;search=advanced&amp;locale=en&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3ethnos-search.xsl&amp;worktitle=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;quality=&amp;keyword=&amp;coverage=&amp;groups=</url>
+       <status>200</status>
+    </test>  
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=collection&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=collection&amp;context=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+
+    <test>
+       <url>/o:ethnos.84/sdef:TEI/get?locale=de&amp;mode=object</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:ethnos.84/sdef:TEI/get?locale=en&amp;mode=object</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ethnos.84/methods/sdef:TEI/get?mode=object&amp;context=&amp;locale=de</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ethnos.84/methods/sdef:TEI/get?mode=object&amp;context=&amp;locale=en</url>
+       <status>200</status>
+    </test>
+
+<!-- context:ethnos (Home) tests -->
+	<test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='branding']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='search']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='nav']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='container']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='footer']]</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:a[.='Erweiterte Suche']</xpath>
+    </test>
+    
+    <test>
+       <url>/context:ethnos</url>
+       <xpath>//xhtml:a[contains(.,'Textstellenanzeige über Kategorien')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:a[.='Home']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='branding']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='search']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='nav']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='container']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:div[@id[.='wrap']]/xhtml:div[@id[.='footer']]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:input/@id[.='query']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:a[.='Advanced search']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'Display of text')]</xpath>
+    </test>
+
+<!-- context:ethnos/methods/sdef:Context/get?mode=search&locale=de (search) tests -->    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:select/@id[.='startCentury']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:option[.='1. Jh.']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=de</url>
+       <xpath>//xhtml:input/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:select/@id[.='startCentury']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:option[.='1st Cen.']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=search&amp;locale=en</url>
+       <xpath>//xhtml:input/@type[.='submit']</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?creator=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=ethnos&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3ethnos-search.xsl&amp;worktitle=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;quality=&amp;keyword=&amp;coverage=&amp;groups=</url>
+       <xpath>//xhtml:a[contains(.,'Aristot')]</xpath>
+    </test>
+    
+    <test>
+       <url>/search/gsearch?creator=&amp;hitPageSize=10&amp;hitPageStart=1&amp;pid=ethnos&amp;search=advanced&amp;locale=de&amp;x2=https%3A%2F%2Fgams.uni-graz.at%2Fage%2F3ethnos-search.xsl&amp;worktitle=&amp;startCentury=&amp;startCenturyEra=&amp;endCentury=&amp;endCenturyEra=&amp;quality=&amp;keyword=&amp;coverage=&amp;groups=</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf.gif']</xpath>
+    </test>
+    
+<!-- context:ethnos/methods/sdef:Context/get?mode=collection&locale=de (Textstellen) tests -->
+   	<test>
+       <url>/archive/objects/context:ethnos/methods/sdef:Context/get?mode=collection&amp;locale=de</url>
+       <xpath>//xhtml:li/xhtml:a[.='Aristoteles']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:ethnos-aristoteles/methods/sdef:Context/get?mode=container&amp;context=container:ethnos-autoren!container:ethnos-aristoteles&amp;locale=de</url>
+       <xpath>//xhtml:li/xhtml:a[contains(.,'Aristot')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/container:ethnos-aristoteles/methods/sdef:Context/get?mode=container&amp;context=container:ethnos-autoren!container:ethnos-aristoteles&amp;locale=de</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf.gif']</xpath>
+    </test>
+    
+<!-- single object sample tests -->
+	<test>
+       <url>/o:ethnos.84/sdef:TEI/get?locale=de&amp;mode=object</url>
+       <xpath>//xhtml:a[contains(.,'zurück')]</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ethnos.84/sdef:TEI/get?locale=de&amp;mode=object</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/o:ethnos.84/sdef:TEI/get?locale=de&amp;mode=object</url>
+       <xpath>//xhtml:td[contains(.,'Aristoteles schildert hier')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ethnos.84/methods/sdef:TEI/get?mode=object&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:a[contains(.,'back')]</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ethnos.84/methods/sdef:TEI/get?mode=object&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:img/@src[.='/age/img/pdf_icon.gif']</xpath>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:ethnos.84/methods/sdef:TEI/get?mode=object&amp;context=&amp;locale=en</url>
+       <xpath>//xhtml:td[.='Aristotle']</xpath>
+    </test>
+    
+</TestCase>

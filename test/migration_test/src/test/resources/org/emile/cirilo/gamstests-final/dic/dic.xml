@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase name="dic">
+
+    <namespaces>
+        <namespace>
+            <prefix>cmd</prefix>
+            <uri>http://www.clarin.eu/cmd/1</uri>
+        </namespace>
+        <namespace>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </namespace>
+        <namespace>
+            <prefix>lido</prefix>
+            <uri>http://www.lido-schema.org</uri>
+        </namespace>
+        <namespace>
+            <prefix>g2o</prefix>
+            <uri>http://gams.uni-graz.at/ontology/#</uri>
+        </namespace>
+        <namespace>
+            <prefix>mets</prefix>
+            <uri>http://www.loc.gov/METS/</uri>
+        </namespace>
+        <namespace>
+            <prefix>oai</prefix>
+            <uri>http://www.openarchives.org/OAI/2.0/</uri>
+        </namespace>
+        <namespace>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </namespace>
+        <namespace>
+            <prefix>skos</prefix>
+            <uri>http://www.w3.org/2004/02/skos/core#</uri>
+        </namespace>
+        <namespace>
+            <prefix>sparql</prefix>
+            <uri>http://www.w3.org/2001/sw/DataAccess/rf1/result</uri>
+        </namespace>
+        <namespace>
+            <prefix>tcf</prefix>
+            <uri>http://www.dspin.de/data/textcorpus</uri>
+        </namespace>
+        <namespace>
+            <prefix>tei</prefix>
+            <uri>http://www.tei-c.org/ns/1.0</uri>
+        </namespace>
+    </namespaces>
+
+<!-- status 200 tests dic -->
+    <test>
+       <url>/context:dic</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=home</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?locale=alle&amp;mode=verfasser</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?mode=author&amp;locale=alle</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?mode=composer&amp;locale=alle</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic.sitemap/methods/sdef:Context/get?locale=alle&amp;mode=werke</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic.lyrics/methods/sdef:Context/get?locale=alle&amp;mode=lyrics</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic.drama/methods/sdef:Context/get?locale=alle&amp;mode=drama</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic.prose/methods/sdef:Context/get?locale=alle&amp;mode=prose</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:dic.genres/methods/sdef:Query/get?mode=tagcloud</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/query:dic.genres/methods/sdef:Query/get?mode=genres&amp;locale=alle</url>
+       <status>200</status>
+    </test>
+        
+    <test>
+       <url>/archive/objects/o:dic.sources/methods/sdef:TEI/get?locale=alle&amp;mode=quellen</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.sources/methods/sdef:TEI/get?locale=alle&amp;mode=manuscript</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.sources/methods/sdef:TEI/get?locale=alle&amp;mode=print</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.references/methods/sdef:TEI/get?locale=alle&amp;mode=literatur</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=search</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=imprint</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=manual</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=about</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?context=PER.108</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?context=PER.48</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/methods/sdef:TEI/get?context=PER.15</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.persons/datastreams/TEI_SOURCE/content</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dic.262</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dic.1022</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dic.1199</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/o:dic.553</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.sources/methods/sdef:TEI/get?context=SRC.129</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.sources/methods/sdef:TEI/get?context=SRC.435</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/o:dic.references/methods/sdef:TEI/get?context=REF.281</url>
+       <status>200</status>
+    </test>
+    
+    <test>
+       <url>/archive/objects/context:dic/methods/sdef:Context/get?mode=searchHelp#title</url>
+       <status>200</status>
+    </test>
+	
+<!-- context:dic (Home) tests -->
+	<test>
+       <url>/context:dic</url>
+       <xpath>//a[contains(.,'Home')]</xpath>
+    </test>
+    
+			    					   
+</TestCase>
